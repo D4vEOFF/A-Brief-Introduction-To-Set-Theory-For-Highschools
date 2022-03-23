@@ -21,3 +21,4 @@
 
 Otázky:
 - Jak vhodně formulovat, že množina "je menší" než jiná nebo že množiny mají stejnou velikost?
+- Je správné říci, že predikátová formule je i formule obsahující kvantifikátory? (viz Fuchs a jeho definice)
