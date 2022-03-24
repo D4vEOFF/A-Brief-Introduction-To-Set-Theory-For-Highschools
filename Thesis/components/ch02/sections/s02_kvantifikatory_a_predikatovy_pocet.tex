@@ -127,7 +127,7 @@ Zkusme se na problematiku podívat opět skrze příklad o obyvatelích Prahy. M
 \end{equation*}
 Jak by zněla negace takového výroku? Zamysleme se nad tím, v jakém případě by výrok neplatil. Pokud by v Praze byl obyvatel, který nemá zelené vlasy nebo modré oči, pak naše tvrzení neplatí. Zdá se tedy, že platí
 \begin{equation*}
-    \neg(\forall x : P_x\implies Z_x \land M_x) \iff \big(\exists x : \neg (P_x\implies Z_x \land M_x)\big)
+    \neg(\forall x : P_x\implies Z_x \land M_x) \iff \exists x : \neg (P_x\implies Z_x \land M_x)
 \end{equation*}
 Tj. existuje $x$ takové, že $x$ je obyvatelem Prahy a platí, že nemá zelené vlasy nebo nemá modré oči. Jak se tedy změnila naše formule? Obecný kvantifikátor se změnil na existenční a znegovali jsme formuli $P_x\implies Z_x \land M_x$. Užitím tautologií \ref{item:tautologie_3} a de Morganova pravidla pro negaci konjunkce \ref{item:de_morgan_1} ve větě \ref{thm:vyznamne_tautologie} můžeme ještě formuli upravit
 \begin{equation*}
