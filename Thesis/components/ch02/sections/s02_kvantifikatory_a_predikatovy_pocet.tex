@@ -83,19 +83,73 @@ můžeme též zapsat jako
 Čteme jako "pro všechna přirozená čísla $n$ platí, že $n$ je větší než nula". Obecněji formuli ve tvaru $\forall x(\varphi \implies \psi)$ lze psát jako $\forall \varphi : \psi$ . Stejně tak můžeme zapisovat i formule s existenčním kvantifikátorem, tj. $\exists \varphi : \psi$ místo $\exists x (\varphi \land \psi)$ .
 \medskip
 
-Často se nám může stát, že se kvantifikátory ve formuli kumulují. Zápis takových formulí dosavadním způsobem by mohl být značně komplikovaný. Jako příklad uvažme formuli
+Často se nám může stát, že se kvantifikátory ve formuli kumulují. Zápisy prováděné dosavadním způsobem by se mohly značně zkomplikovat. Jako příklad uvažme formuli
 \begin{equation*}
-    \forall x (x \in \N \implies \exists k (k > n))\; .
+    \forall x \big(x \in \N \implies \exists k (k > n)\big)\; .
 \end{equation*}
 Podle zmíněného již víme, že tento zápis můžeme zjednodušit na
 \begin{equation*}
     \forall x \in \N : \exists k : k > n\; .
 \end{equation*}
-V takovém případě můžeme dvojtečky mezi obecným a existenčním kvantifikátorem vynechat a ponechat je pouze před závěrem, tedy
+V takovém případě můžeme dvojtečku mezi obecným a existenčním kvantifikátorem vynechat a ponechat ji pouze před závěrem, nebo nahradit dvojtečku mezi kvantifikátory čárkou, tj. můžeme psát
 \begin{equation*}
-    \forall x \in \N\;\exists k : k > n\; .
+    \forall x \in \N\;\exists k : k > n\;\;\;\text{nebo}\;\;\;\forall x \in \N ,\;\exists k : k > n\; .
+\end{equation*}
+Čteme: "Pro všechna přirozená čísla $n$ existuje $k$ takové, že $k$ je větší než $n$". Speciálně, může se stát, že dvě nebo více proměnných jsou součástí stejného predikátu u stejného typu kvantifikátoru. Kupříkladu formuli
+\begin{equation*}
+    \forall n \big(n\in\N \implies \forall k(k\in\N \implies n^k \geq n)\big)
+\end{equation*}
+můžeme zjednodušit jako
+\begin{equation*}
+    \forall n\in\N ,\; \forall k\in\N : n^k\geq n\; .
+\end{equation*}
+Proměnné $n$ a $k$ však uvažujeme ze stejné množiny a jsou součástí stejného typu kvantifikátoru (obecného). V takových případech můžeme zápis sloučit a psát
+\begin{equation*}
+    \forall n,k\in\N : n^k\geq n\; .
 \end{equation*}
 
+Je třeba však upozornit na fakt, že pořadí kvantifikátorů může mít vliv na význam daného výroku (a tudíž i jeho pravdivostní hodnotu). Např. formule
+\begin{equation*}
+    \forall n\in\N,\; \exists k\in\N : k > n\;\;\;\text{a}\;\;\;\exists k\in\N,\;\forall n\in\N : k > n\; .
+\end{equation*}
+neříkají totéž (zkuste si je přečíst). První říká, že \textbf{pro každé $n$ existuje nějaké $k$ takové, že $k$ je větší než $n$}, kdežto druhá formule má význam takový, že \textbf{existuje $k$ takové, že pro všechna $n$ je $k$ větší než $n$}. Jinými slovy říkáme, že existuje jedno \textbf{univerzální} číslo $k$ tak, že je splněna daná podmínka. První formule je tak pravdivá, ale druhá již není.
+
 \subsection{Negace formulí s kvantifikátory}
+V sekci o výrokové logice \ref{sec:vyrokova_logika} jsme si zmínili některé důležité tautologie. Specificky, de Morganovy pravidla \ref{item:de_morgan_1} a \ref{item:de_morgan_2} zmíněné ve větě \ref{thm:vyznamne_tautologie}.
+\begin{align*}
+    \neg (A \land B) &\iff (\neg A \lor \neg B)\; ,\\
+    \neg (A \lor B) &\iff (\neg A \land \neg B)\; .
+\end{align*}
+Tyto tautologie nám dávaly způsob, jak negovat složené výroky obsahující konjunkci nebo disjunkci. Jak ovšem negovat formule s kvantifikátory?\par
+Zkusme se na problematiku podívat opět skrze příklad o obyvatelích Prahy. Měli jsme tvrzení, že každý obyvatel Prahy má zelené vlasy a modré oči, což jsme zapisovali
+\begin{equation*}
+    \forall x(P_x\implies Z_x \land M_x)\; .
+\end{equation*}
+Jak by zněla negace takového výroku? Zamysleme se nad tím, v jakém případě by výrok neplatil. Pokud by v Praze byl obyvatel, který nemá zelené vlasy nebo modré oči, pak naše tvrzení neplatí. Zdá se tedy, že platí
+\begin{equation*}
+    \neg\big(\forall x(P_x\implies Z_x \land M_x)\big) \iff \Big(\exists x\big(\neg (P_x\implies Z_x \land M_x)\big)\Big)
+\end{equation*}
+Tj. existuje $x$ takové, že $x$ je obyvatelem Prahy a platí, že nemá zelené vlasy nebo nemá modré oči. Jak se tedy změnila naše formule? Obecný kvantifikátor se změnil na existenční a znegovali jsme formuli $P_x\implies Z_x \land M_x$. Užitím tautologií \ref{item:tautologie_3} a de Morganova pravidla pro negaci konjunkce \ref{item:de_morgan_1} ve větě \ref{thm:vyznamne_tautologie} můžeme ještě formuli upravit
+\begin{equation*}
+    \exists x\big(P_x\land (\neg Z_x \lor \neg M_x)\big)\; .
+\end{equation*}
+Skutečně, toto je negace původního výroku. Ta nyní říká: "Existuje $x$ takové, že $x$ je obyvatelem Prahy a buď nemá zelené vlasy nebo nemá modré oči.". Jinak řečeno, tvrdíme, že existuje protipříklad.\par
+Funguje i opačná úvaha. Pokud naše tvrzení je, že existuje obyvatel Prahy se zelenými vlasy a modrými oči, pak negace naopak říká, že všichni obyvatelé Prahy nemají zelené vlasy nebo nemají modré oči. Tzn.
+\begin{equation*}
+    \neg\big(\exists x(P_x\land Z_x \land M_x)\big) \iff \forall x\big(P_x\implies \neg Z_x \lor \neg M_x\big)
+\end{equation*}
+Obecně řečeno, formule s kvantifikátory se negují tak, že kvantifikátory si prohodí roli, tj. obecný kvantifikátor se změní na existenční a naopak, a znegujeme dílčí formuli $\varphi$, tzn.
+\begin{align*}
+    \forall x : \varphi\;\;\;&\rightsquigarrow\;\;\;\exists x : \neg\varphi\\
+    \exists x : \varphi\;\;\;&\rightsquigarrow\;\;\;\forall x : \neg\varphi\\
+\end{align*}
+Kvantifikátory se mohou pochopitelně ve formulích různě kumulovat. V takovou chvíli postupujeme pořád stejně. Např. negace formule
+\begin{equation*}
+    \forall x\in\R,\;\exists y\in\R : y > x\; .
+\end{equation*}
+bude
+\begin{equation*}
+    \exists x\in\R,\;\forall y\in\R : y \leq x\; .
+\end{equation*}
 
 \todo{doplnit cvičení}
