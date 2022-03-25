@@ -82,16 +82,18 @@ Tj. dokázané tvrzení lze zobecnit klidně zobecnit.
 V sekci \ref{sec:mnoziny_a_cisla} jsme si ukázali \emph{de Morganovy vzorce} pro množiny. Nyní si ukážeme důkaz jejich platnosti. Zároveň si tak ukážeme příklad "množinového" důkazu.
 \begin{assertion}[de Morganovy vzorce]
     Nechť $A,X_1,X_2,\ldots,X_n$ jsou libovolné množiny. Pak platí
-    \begin{equation*}
-        A \setminus \left(\bigcup\limits_{i=1}^{n}{X_i}\right)=\bigcup\limits_{i=1}^{n}{(A \setminus X_i)}\;\;\;\text{a}\;\;\;A \setminus \left(\bigcap\limits_{i=1}^{n}{X_i}\right)=\bigcap\limits_{i=1}^{n}{(A \setminus X_i)}\; .
-    \end{equation*}
+    \begin{enumerate}[label=(\roman*)]
+        \item\label{item:de_morgan_sets_1} $\displaystyle A \setminus \left(\bigcup\limits_{i=1}^{n}{X_i}\right)=\bigcap\limits_{i=1}^{n}{(A \setminus X_i)}\; ,$
+        \item\label{item:de_morgan_sets_2} $\displaystyle A \setminus \left(\bigcap\limits_{i=1}^{n}{X_i}\right)=\bigcup\limits_{i=1}^{n}{(A \setminus X_i)}\; .$
+    \end{enumerate}
 \end{assertion}
 \begin{proof}
     Nejdříve si uvědomme, co vlastně říkají dané rovnosti. Říkají, že výsledné množiny jsou stejné. Kdy toto platí? Když dané množiny obsahují stejné prvky, tj.
     \begin{equation*}
         A=B \iff \forall x : x\in A \iff x\in B\; .     
     \end{equation*}
-    Myšlenka našeho důkazu bude tedy taková, že uvážíme libovolný prvek $x$ náležící pravé straně rovnosti a ukážeme, že rovněž náleží i straně druhé.
+    Myšlenka našeho důkazu bude tedy taková, že uvážíme libovolný prvek $x$ náležící pravé straně rovnosti a ukážeme, že rovněž náleží i straně druhé.\par
+    Nejdříve ukážeme platnost \ref{item:de_morgan_sets_1}, avšak důkaz \ref{item:de_morgan_sets_2} bude zcela analogický. Budiž dáno $x\in A \setminus \left(\bigcap_{i=1}^{n}{X_i}\right)$.
 \end{proof}
 
 \todo{Doplnit cvičení}
