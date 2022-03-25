@@ -1,5 +1,4 @@
-9. 3. 2022:
-- Přidána úmluva pro abecedu pro označení výrokových proměnných.
+
 
 10. 3. 2022:
 - Přeformulována úmluva pro "rovnost" logických formulí ~ (smazán dodatek ohledně pravdivostních hodnot a poznámka pod čarou).
@@ -18,6 +17,8 @@
 - U Grandiho řady přidáno stručné vysvětlení součtu nekonečné řady a opraveny znaménka u poslední rovnosti.
 - Upraven obrázek 1.2 (přidán vzorec pro obsah druhého obdélníku jako příklad).
 - Přidáno stručné vysvětlení určitého integrálu.
+- Dodělána podsekce s kvantifikátory.
+- Přidána sekce s důkazy.
 
 Otázky:
 - Jak vhodně formulovat, že množina "je menší" než jiná nebo že množiny mají stejnou velikost?

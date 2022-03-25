@@ -5,7 +5,7 @@ V této sekci si připomeneme některá značení pro práci s čísly, zavedeme
 \subsection{Čísla a sumy}
 
 \begin{convention}[Značení číselných oborů]
-    V dalším textu budeme obor \emph{přirozených čísel} značit písmenem $\N$, obor \emph{celých čísel} písmenem $\Z$, obor \emph{racionálních čísel} písmenem $\Q$ a obor \emph{reálných čísel} písmenem $\R$.
+    V dalším textu budeme obor \emph{přirozených čísel} značit písmenem $\N$, obor \emph{celých čísel} písmenem $\Z$, obor \emph{racionálních čísel} písmenem $\Q$ a obor \emph{reálných čísel} písmenem $\R$. Speciálně, horním indexem "$+$", resp. "$-$", budeme značit, že uvažujeme pouze všechna kladná, resp. záporná, čísla a dolním indexem "$0$" budeme značit, že v dané množině uvažujeme nulu. (Např. $\R_0^+$, $N_0$, $Z^-$, apod.) 
 \end{convention}
 
 Číselné intervaly budeme zapisovat pomocí kulatých závorek $(,)$ pro otevřené nebo polootevřené intervaly a pro uzavřené nebo polouzavřené intervaly budeme používat\footnote{V jiných textech se mohou používat i hranaté závorky $[,]$.} špičaté závorky $\langle,\rangle$.\par
@@ -149,6 +149,22 @@ Tento poznatek můžeme zobecnit užitím velkých operátorů $\bigcup,\;\bigca
     A \cup \left(\bigcap\limits_{i=1}^{n}{X_i}\right)&=\bigcap\limits_{i=1}^{n}{(A \cup X_i)}\; ,\\
     A \cap \left(\bigcup\limits_{i=1}^{n}{X_i}\right)&=\bigcup\limits_{i=1}^{n}{(A \cap X_i)}\; .
 \end{align*}
+
+Ještě jedny známé vztahy pro množiny jsou tzv. \emph{de Morganovy vzorce}
+\begin{align*}
+    A \setminus \left(\bigcup\limits_{i=1}^{n}{X_i}\right)&= \bigcup\limits_{i=1}^{n}{(A \setminus X_i)}
+    A \setminus \left(\bigcap\limits_{i=1}^{n}{X_i}\right)&= \bigcap\limits_{i=1}^{n}{(A \setminus X_i)}
+\end{align*}
+Později si ukážeme i jejich důkaz (viz sekce \ref{subsec:dukaz_primy}).
+
+\begin{definition}[Disjunktní množiny]
+    Nechť $X_1, X_2, \ldots, X_n$ jsou libovolné\\
+    množiny. Pokud platí
+    \begin{equation*}
+        \forall i,j\in\set{1, 2, \ldots, n} : X_i \cap X_j = \emptyset\; ,
+    \end{equation*}
+    pak říkáme, že množiny $X_1, X_2, \ldots, X_n$ jsou \emph{disjunktní}.
+\end{definition}
 
 \subsection{Ještě k velkým operátorům}\label{subsec:dodatek_velke_operatory}
 

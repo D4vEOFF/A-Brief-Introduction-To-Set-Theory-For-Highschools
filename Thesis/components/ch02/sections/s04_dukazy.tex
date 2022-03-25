@@ -1,0 +1,97 @@
+\section{Důkazy}\label{sec:dukazy}
+V matematice se lze setkat s celou řadou různých tvrzení. Od primitivních, jejichž platnost je zřejmá až po složitější, nad jejich platností je třeba se více zamyslet. Čtenář se nejspíše zatím spíše setkával s matematikou, která zahrnovala užívání jistých postupů. Např. zjednodušování algebraických výrazů, řešení soustav rovnic, ověřování trigonometrických identit, aj. Avšak hodně postupů v matematice je založeno na již známých výsledcích, o nichž bylo dokázáno, že jsou pravdivé. Pokud ovšem máme dokázat určité tvrzení, je třeba, aby bylo naše zdůvodnění jednoznačné a logicky správné. V této sekci se proto podíváme na důkazové techniky používané v matematice, které budeme dále v textu využívat.\par
+Matematická tvrzení jsou často různě klasifikována v závislosti na jejich povaze. Základními typy jsou tyto. 
+\begin{itemize}
+    \item \emph{Axióm}. Tvrzení, které implicitně považujeme za pravdivé a nedokazujeme jej. S axiomatikou jsme se již částečně seznámili v historické předmluvě (viz \ref{subsec:tm_soucasnost}).
+    \item \emph{Věta}. Matematické tvrzení, jehož pravdivost můžeme ověřit důkazem.
+    \item \emph{Lemma}. Pomocné tvrzení, které běžně využíváme pro důkaz jiného (typicky složitějšího) tvrzení.
+    \item \emph{Důsledek}. Tvrzení, které je přímým důsledkem jiného tvrzení.
+\end{itemize}
+Čistě formálně však mezi \textbf{větou}, \textbf{lemmatem} a \textbf{důsledkem} není žádný rozdíl.
+
+\subsection{Důkaz přímý}\label{subsec:dukaz_primy}
+Jedná se o asi nejjednodušší typ důkazu. Často jsou matematická tvrzení formulována jako implikace, tzn. "Jestliže platí $A$, pak platí $B$.". Konkrétně, např. "Je-li $x<0$, pak $x^2>0$.".\par
+Myšlenka důkazu je taková, že začínáme od předpokladu $A$, z něhož dále odvozujeme dílčí tvrzení tak dlouho, až dojdeme k požadovanému závěru $B$. Symbolicky, pokud si označíme dílčí tvrzení v důkazu $X_1, X_2, \ldots, X_n$, pak vlastně dokazujeme výrokovou formuli
+\begin{equation}\label{eq:primy_dukaz_formule}
+    (A \implies X_1) \land (X_1 \implies X_2) \land \cdots \land (X_{n-1}\implies X_n) \land (X_n \implies B)\; .
+\end{equation}
+V tomto procesu dokazování se využívá tautologie \ref{item:tautologie_4} z věty \ref{thm:vyznamne_tautologie}
+\begin{equation*}
+    (A \implies B) \land (B \implies C) \iff (A \implies C)\; .
+\end{equation*}
+Z tohoto faktu vyplývá, že pokud je každá z dílčích implikací pravdivá, pak je nutně pravdivá i implikace $A \implies B$, kterou jsme chtěli dokázat\footnote{Výrokové proměnné lze v konkrétním případě nahradit příslušnými predikáty.}. Podívejme se na příklad podobný příklad z úvodu.
+
+\begin{assertion}
+    Nechť $x\in\R$. Je-li $x<0$, pak $x^2+1>0$.
+\end{assertion}
+\begin{proof}
+    Předpokladem našeho tvrzení je $x\in\R \land x<0$. Víme, že pro každé reálné číslo $x$ platí, že $x^2\geq 0$. Z toho již plyne
+    \begin{equation*}
+        0 \leq x^2 < x^2+1 \implies x^2+1>0\; .
+    \end{equation*}
+\end{proof}
+Posloupnost dokázaných implikací bychom mohli podle \eqref{eq:primy_dukaz_formule} zapsat nyní jako
+\begin{equation*}
+    (x\in\R \land x<0 \implies x^2\geq 0) \land (x^2\geq 0 \implies x^2+1>0)\; ,
+\end{equation*}
+a tedy jsme dokázali i implikaci v původním tvrzení $x<0 \implies x^2+1>0$ .
+
+Všimněte si, že důkaz našeho tvrzení ve skutečnosti vůbec nezávisel na předpokladu, že $x<0$, neboť jak jsme správně konstatovali, tak platí
+\begin{equation*}
+    \forall x\in\R : x^2>0\; .
+\end{equation*}
+Tj. dokázané tvrzení lze zobecnit klidně zobecnit.
+\begin{assertion*}
+    Nechť $x\in\R$. Pak platí $x^2+1>0$ .
+\end{assertion*}
+\begin{remark}
+    Též bychom mohli psát "Je-li $x\in\R$, pak $x^2+1>0$."; význam by byl stejný.
+\end{remark}
+
+\begin{assertion}
+    Nechť $n\in\N$ je liché číslo. Pak $3n+7$ je sudé číslo.
+\end{assertion}
+\begin{proof}
+    Začneme opět u předpokladu, že $n\in\N$ je liché číslo. To znamená, že
+    \begin{equation*}
+        \exists k\in\N : n=2k+1\; .
+    \end{equation*}
+    Po dosazení obdržíme
+    \begin{equation*}
+        3(2k+1)+7=6k+3+7=6k+10=2(3k+5)\; .
+    \end{equation*}
+    Protože $3k+5$ je přirozené číslo, pak $3n+7$ je dělitelné dvěma a je tedy sudé, což jsme chtěli dokázat.
+\end{proof}
+(Převzato z \cite{ChartrandPolimeniZhang2014}.)
+\begin{assertion}[AG nerovnost]
+    Pro $a,b\in\R_0^+$ platí
+    \begin{equation*}
+        \sqrt{ab}\leq\dfrac{a+b}{2}\; .
+    \end{equation*}
+\end{assertion}
+\begin{proof}
+    Při důkazu tohoto tvrzení vyjdeme z jednoduchého pozorování:
+    \begin{equation*}
+        (\sqrt{a}+\sqrt{b})^2\geq 0\; .
+    \end{equation*}
+    Nyní stačí výraz upravit a dostaneme požadovanou nerovnost.
+    \begin{equation*}
+        (\sqrt{a}+\sqrt{b})^2 = a+2\sqrt{ab}+b\geq 0 \implies \sqrt{ab}\leq \dfrac{a+b}{2}\; .
+    \end{equation*}
+\end{proof}
+V sekci \ref{sec:mnoziny_a_cisla} jsme si ukázali \emph{de Morganovy vzorce} pro množiny. Nyní si ukážeme důkaz jejich platnosti. Zároveň si tak ukážeme příklad "množinového" důkazu.
+\begin{assertion}[de Morganovy vzorce]
+    Nechť $A,X_1,X_2,\ldots,X_n$ jsou libovolné množiny. Pak platí
+    \begin{equation*}
+        A \setminus \left(\bigcup\limits_{i=1}^{n}{X_i}\right)=\bigcup\limits_{i=1}^{n}{(A \setminus X_i)}\;\;\;\text{a}\;\;\;A \setminus \left(\bigcap\limits_{i=1}^{n}{X_i}\right)=\bigcap\limits_{i=1}^{n}{(A \setminus X_i)}\; .
+    \end{equation*}
+\end{assertion}
+\begin{proof}
+    Nejdříve si uvědomme, co vlastně říkají dané rovnosti. Říkají, že výsledné množiny jsou stejné. Kdy toto platí? Když dané množiny obsahují stejné prvky, tj.
+    \begin{equation*}
+        A=B \iff \forall x : x\in A \iff x\in B\; .     
+    \end{equation*}
+    Myšlenka našeho důkazu bude tedy taková, že uvážíme libovolný prvek $x$ náležící pravé straně rovnosti a ukážeme, že rovněž náleží i straně druhé.
+\end{proof}
+
+\todo{Doplnit cvičení}
