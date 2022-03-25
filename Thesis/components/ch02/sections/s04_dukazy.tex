@@ -62,7 +62,6 @@ Tj. dokázané tvrzení lze zobecnit klidně zobecnit.
     \end{equation*}
     Protože $3k+5$ je přirozené číslo, pak $3n+7$ je dělitelné dvěma a je tedy sudé, což jsme chtěli dokázat.
 \end{proof}
-(Převzato z \cite{ChartrandPolimeniZhang2014}.)
 \begin{assertion}[AG nerovnost]
     Pro $a,b\in\R_0^+$ platí
     \begin{equation*}
@@ -79,6 +78,27 @@ Tj. dokázané tvrzení lze zobecnit klidně zobecnit.
         (\sqrt{a}+\sqrt{b})^2 = a+2\sqrt{ab}+b\geq 0 \implies \sqrt{ab}\leq \dfrac{a+b}{2}\; .
     \end{equation*}
 \end{proof}
+\begin{assertion}
+    Pro $\forall x,y\in\R$ platí
+    \begin{equation*}
+        x<y \implies x < \dfrac{x+y}{2} < y\; .
+    \end{equation*}
+\end{assertion}
+\begin{proof}
+    Zde je třeba si všimnout "dvojité" nerovnosti v dokazovaném tvrzení. To nám již napovídá, že ve skutečnosti musíme dokázat 2 dílčí tvrzení, konkrétně
+    \begin{equation*}
+        x < \dfrac{x+y}{2}\;\;\;\text{a}\;\;\;\dfrac{x+y}{2} < y\; .
+    \end{equation*}
+    Při důkazu obou částí vyjdeme opět z předpokladu. Tedy mějme libovolná čísla $x,y\in\R$ taková, že $x<y$. Pak jistě platí
+    \begin{equation*}
+        x+x<x+y \implies 2x<x+y \implies x<\dfrac{x+y}{2}\; .
+    \end{equation*}
+    Tím jsme dokázali první nerovnost. Platnost druhé dokážeme analogicky:
+    \begin{equation*}
+        x+y<y+y \implies x+y<2y \implies \dfrac{x+y}{2}<y\; .
+    \end{equation*}
+\end{proof}
+(Převzato z \cite{ChartrandPolimeniZhang2014} a \cite{MatematickaLogikaUK2010}.)
 V sekci \ref{sec:mnoziny_a_cisla} jsme si ukázali \emph{de Morganovy vzorce} pro množiny. Nyní si ukážeme důkaz jejich platnosti. Zároveň si tak ukážeme příklad "množinového" důkazu.
 \begin{assertion}[de Morganovy vzorce]
     Nechť $A,X_1,X_2,\ldots,X_n$ jsou libovolné množiny. Pak platí
@@ -88,12 +108,43 @@ V sekci \ref{sec:mnoziny_a_cisla} jsme si ukázali \emph{de Morganovy vzorce} pr
     \end{enumerate}
 \end{assertion}
 \begin{proof}
-    Nejdříve si uvědomme, co vlastně říkají dané rovnosti. Říkají, že výsledné množiny jsou stejné. Kdy toto platí? Když dané množiny obsahují stejné prvky, tj.
+    Nejdříve si uvědomme, co vlastně říkají dané rovnosti. Vyjadřují, že výsledné množiny jsou stejné. Kdy toto platí? Právě když dané množiny obsahují stejné prvky, tj.
     \begin{equation*}
         A=B \iff \forall x : x\in A \iff x\in B\; .     
     \end{equation*}
     Myšlenka našeho důkazu bude tedy taková, že uvážíme libovolný prvek $x$ náležící pravé straně rovnosti a ukážeme, že rovněž náleží i straně druhé.\par
-    Nejdříve ukážeme platnost \ref{item:de_morgan_sets_1}, avšak důkaz \ref{item:de_morgan_sets_2} bude zcela analogický. Budiž dáno $x\in A \setminus \left(\bigcap_{i=1}^{n}{X_i}\right)$.
+    Ukážeme si platnost \ref{item:de_morgan_sets_1}, avšak důkaz \ref{item:de_morgan_sets_2} je zcela analogický. Tedy budiž dáno $x\in A \setminus \left(\bigcup_{i=1}^{n}{X_i}\right)$. Z definice rozdílu množin (viz \ref{def:zakladni_mnozinove_operace}) tedy musí platit
+    \begin{equation*}
+        x \in A \setminus \left(\bigcup\limits_{i=1}^{n}{X_i}\right) \iff x\in A \land x\notin \bigcup\limits_{i=1}^{n}{X_i}\; .
+    \end{equation*}
+    Protože však prvek $x$ nenáleží sjednocení množin $X_1,\ldots,X_n$, pak nenáleží žádné z nich:
+    \begin{equation*}
+        x\notin \bigcup\limits_{i=1}^{n}{X_i} \iff \forall i\in\set{1,\ldots,n} : x\notin X_i\; .
+    \end{equation*}
+    Celkově tedy nyní víme, že
+    \begin{equation}\label{eq:de_morgan_leva_strana}
+        x\in A \land \forall i\in\set{1,\ldots,n} : x\notin X_i
+    \end{equation}
+    Nyní se podívejme na pravou stranu zkoumané rovnosti. Z \eqref{eq:de_morgan_leva_strana} již plyne
+    \begin{align*}
+        x\in A \land \forall i\in\set{1,\ldots,n} : x\notin X_i &\iff \forall i\in\set{1,\ldots,n} : x\in (A \setminus X_i)\\
+        &\iff x\in\bigcap\limits_{i=1}^{n}{(A \setminus X_i)}\; ,
+    \end{align*}
+    a celkově tedy jsme dokázali implikaci
+    \begin{equation*}
+        x \in A \setminus \left(\bigcup\limits_{i=1}^{n}{X_i}\right) \implies x\in\bigcap\limits_{i=1}^{n}{(A \setminus X_i)}\; .
+    \end{equation*}
+    Prvek $x$ jsme však volili libovolně a náš argument výše je tak univerzální (platí pro všechny prvky). Zároveň si však všimněme, že všechna odvozená dílčí tvrzení jsou ekvivalencemi a tedy platí i opačná implikace
+    \begin{equation*}
+        x \in A \setminus \left(\bigcup\limits_{i=1}^{n}{X_i}\right) \impliedby x\in\bigcap\limits_{i=1}^{n}{(A \setminus X_i)}\; .
+    \end{equation*}
+
+    Z toho dostáváme platnost původní rovnosti v \ref{item:de_morgan_sets_1}. 
 \end{proof}
+Obecně pokud je tvrzení takové, že platí pro všechny objekty z jisté množiny, pak bývá právě častým způsobem důkazu, že se platnost ukáže obecně pro kterýkoliv objekt z dané množiny.
+
+\subsection{Důkaz nepřímý}\label{subsec:dukaz_neprimy}
+\subsection{Důkaz sporem}\label{subsec:dukaz_sporem}
+\subsection{Důkaz matematickou indukcí}\label{subsec:dukaz_indukci}
 
 \todo{Doplnit cvičení}

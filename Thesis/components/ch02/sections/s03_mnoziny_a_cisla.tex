@@ -5,7 +5,7 @@ V této sekci si připomeneme některá značení pro práci s čísly, zavedeme
 \subsection{Čísla a sumy}
 
 \begin{convention}[Značení číselných oborů]
-    V dalším textu budeme obor \emph{přirozených čísel} značit písmenem $\N$, obor \emph{celých čísel} písmenem $\Z$, obor \emph{racionálních čísel} písmenem $\Q$ a obor \emph{reálných čísel} písmenem $\R$. Speciálně, horním indexem "$+$", resp. "$-$", budeme značit, že uvažujeme pouze všechna kladná, resp. záporná, čísla a dolním indexem "$0$" budeme značit, že v dané množině uvažujeme nulu. (Např. $\R_0^+$, $N_0$, $Z^-$, apod.) 
+    V dalším textu budeme obor \emph{přirozených čísel} značit písmenem $\N$, obor \emph{celých čísel} písmenem $\Z$, obor \emph{racionálních čísel} písmenem $\Q$, obor \emph{reálných čísel} písmenem $\R$ a obor komplexních čísel písmenem $\C$. Speciálně, horním indexem "$+$", resp. "$-$", budeme značit, že uvažujeme pouze všechna kladná, resp. záporná, čísla a dolním indexem "$0$" budeme značit, že v dané množině uvažujeme nulu. (Např. $\R_0^+$, $N_0$, $Z^-$, apod.) 
 \end{convention}
 
 Číselné intervaly budeme zapisovat pomocí kulatých závorek $(,)$ pro otevřené nebo polootevřené intervaly a pro uzavřené nebo polouzavřené intervaly budeme používat\footnote{V jiných textech se mohou používat i hranaté závorky $[,]$.} špičaté závorky $\langle,\rangle$.\par
@@ -155,7 +155,12 @@ Ještě jedny známé vztahy pro množiny jsou tzv. \emph{de Morganovy vzorce}
     A \setminus \left(\bigcup\limits_{i=1}^{n}{X_i}\right)&= \bigcup\limits_{i=1}^{n}{(A \setminus X_i)}
     A \setminus \left(\bigcap\limits_{i=1}^{n}{X_i}\right)&= \bigcap\limits_{i=1}^{n}{(A \setminus X_i)}
 \end{align*}
-Později si ukážeme i jejich důkaz (viz sekce \ref{subsec:dukaz_primy}).
+Později si ukážeme i jejich důkaz (viz sekce \ref{subsec:dukaz_neprimy}). Platnost de Morganových vzorců lze i pěkně graficky znázornit pomocí Vennových diagramů (viz obrázek \ref{fig:vennuv_diagram_de_morgan}).
+\begin{figure}[h]\label{fig:vennuv_diagram_de_morgan}
+	\centering
+	\includegraphics{ch02_de_Morganovy_vzorce.pdf}
+    \caption{Vennův diagram pro de Morganovy vzorce při $n=2$.}
+\end{figure}
 
 \begin{definition}[Disjunktní množiny]
     Nechť $X_1, X_2, \ldots, X_n$ jsou libovolné\\

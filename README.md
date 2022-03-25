@@ -15,8 +15,20 @@ Práce obsahuje historickou předmluvu vysvětlující důvod vzniku dané teori
 
 ## Záznam změn
 
-### 9. 3. 2022
-- Přidána úmluva pro abecedu pro označení výrokových proměnných.
+### 24. 3. 2022 a 25. 3. 2022
+- Dodělána podsekce s kvantifikátory.
+- Přidána sekce s důkazy a vysvětlení přímého důkazu s příklady.
+- Do sekce **Množiny a čísla** přidána definice *disjunktních množin*.
+- Do sekce **Množiny a čísla** přidány na konec *de Morganovy vzorce*.
+- Do sekce **Množiny a čísla** přidána do úmluvy ohledně značení číselných množin dodatečná informace ohledně značení některých speciálních typů zmíněných množin.
+- Přidán Vennův diagram k de Morganovým zákonům.
+- Přidán důkaz de Morganových vzorců.
+
+### 21. 3. 2022
+- Opraveny některé překlepy a formátování v historickém úvodu.
+- U Grandiho řady přidáno stručné vysvětlení součtu nekonečné řady a opraveny znaménka u poslední rovnosti.
+- Upraven obrázek 1.2 (přidán vzorec pro obsah druhého obdélníku jako příklad).
+- Přidáno stručné vysvětlení určitého integrálu.
 
 ### 10. 3. 2022
 - Přeformulována úmluva pro "rovnost" logických formulí ~ (smazán dodatek ohledně pravdivostních hodnot a poznámka pod čarou).
@@ -28,16 +40,5 @@ Práce obsahuje historickou předmluvu vysvětlující důvod vzniku dané teori
 - Přepsán úvod u kvantifikátorů.
 - Změněn bibliografický styl (unsrt -> unsrtnat) kvůli zobrazování ISBN.
 
-## 21. 3. 2022
-- Opraveny některé překlepy a formátování v historickém úvodu.
-- U Grandiho řady přidáno stručné vysvětlení součtu nekonečné řady a opraveny znaménka u poslední rovnosti.
-- Upraven obrázek 1.2 (přidán vzorec pro obsah druhého obdélníku jako příklad).
-- Přidáno stručné vysvětlení určitého integrálu.
-
-## 25. 3. 2022
-- Dodělána podsekce s kvantifikátory.
-- Přidána sekce s důkazy a vysvětlení přímého důkazu s příklady.
-- Do sekce **Množiny a čísla** přidána definice *disjunktních množin*.
-- Do sekce **Množiny a čísla** přidány na konec *de Morganovy vzorce*.
-- Do sekce **Množiny a čísla** přidána do úmluvy ohledně značení číselných množin dodatečná informace ohledně značení některých speciálních typů zmíněných množin.
-- 
+### 9. 3. 2022
+- Přidána úmluva pro abecedu pro označení výrokových proměnných.
