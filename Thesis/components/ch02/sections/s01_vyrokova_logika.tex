@@ -47,8 +47,8 @@ Výroky uvedené výše obsahující dané logické spojky lze přehledně zapsa
 
 Vraťme se nyní ještě ke zmíněné implikaci. Ve skutečnosti tato logická spojka je pravděpodobně tou nejsložitější na pochopení ze všech čtyř zmíněných, neboť při neobezřetnosti je často (a to i v běžné mluvě) zaměňována za ekvivalenci. Uvažme tvrzení "Jestliže nebudeš jíst, nedostaneš zmrzlinu.". Synáček by v takovou chvíli očekával, že když naopak oběd sní, tak zmrzlinu dostane, avšak ze striktně matematického hlediska mu ji tatínek i tak dát nemusí a přesto by nelhal. Je důležité si uvědomit, že v případě nesplnění předpokladu nám implikace o závěru nic neříká.\par
 
+\subsection{Výrokové formule}
 Pokud se ohlédneme za výroky, které jsme zatím uvažovali, vždy se jednalo o výroky \emph{složené}. Vezmeme-li např. výrok "Číslo 2 je sudé nebo liché.", tak jej lze rozdělit na dva "jednodušší" výroky, tj. "Číslo 2 je sudé." a "Číslo 2 je liché.", přičemž dané výroky jsou spojeny disjunkcí $\lor$. Tyto výroky však již žádné logické spojky neobsahuje a tedy je nelze dále "rozložit". S tímto souvisí terminologie zavedená v definici \ref{def:vyrokova_a_atomicka_formule}.
-\needspace{1em}
 
 \begin{convention}[Abeceda pro výrokové formule]
     Pro označení výrokových formulí budeme používat malá písmena řecké abecedy, tj. $\alpha,\beta,\gamma,\ldots$, případně opatřenými indexy.
@@ -57,12 +57,12 @@ Pokud se ohlédneme za výroky, které jsme zatím uvažovali, vždy se jednalo 
 \begin{definition}[Výroková a atomická formule]\label{def:vyrokova_a_atomicka_formule}
     $ $\par
     \begin{enumerate}[label=(\roman*)]
-        \item\label{item:formule_1} Každá výroková proměnná nebo konstanta je \emph{výroková formule} (speciálně, tzv. \emph{atomická formule}).
+        \item\label{item:formule_1} Každá výroková proměnná je \emph{výroková formule} (tzv. \emph{atomická formule}).
         \item\label{item:formule_2} Jsou-li $\varphi$ a $\psi$ výrokové formule, pak $\neg (\varphi)$, $(\varphi) \land (\psi)$, $(\varphi) \lor (\psi)$, $(\varphi) \implies (\psi)$ a $(\varphi) \iff (\psi)$ jsou také výrokové formule.
         \item\label{item:formule_3} Výraz, který nelze získat pomocí pravidel \ref{item:formule_1} a \ref{item:formule_2} není výrokovou formulí.
     \end{enumerate}
 \end{definition}
-Převzato z \cite{Fuchs2003} (str. 14) a \cite{BalcarStepanek1986} (str. 30).
+(Převzato z \cite{Fuchs2003}, str. 14 a \cite{BalcarStepanek1986}, str. 30).
 
 \begin{remark}
     Občas budeme v této sekci zkráceně psát pouze \emph{formule}.\linebreak Nicméně vždy tím bude míněna výroková formule ve smyslu definice \ref{def:vyrokova_a_atomicka_formule}.
@@ -288,15 +288,19 @@ Některé tautologie jsme využili již pri řešení příkladu \ref{ex:vyrokov
         \item\label{item:zakon_vylouceneho_tretiho} $A \lor \neg A$ \rightnote{zákon vyloučeného třetího}
         \item\label{item:zakon_identity} $A \iff A$ \rightnote{zákon identity}
         \item\label{item:zakon_dvoji_negace} $\neg\neg A \iff A$ \rightnote{zákon dvojí negace}
-        \item\label{item:de_morgan_1} $\neg (A \land B) \iff (\neg A \lor \neg B)$ \rightnote{de Morganovo pravidlo}
-        \item\label{item:de_morgan_2} $\neg (A \lor B) \iff (\neg A \land \neg B)$ \rightnote{de Morganovo pravidlo}
+        \item\label{item:de_morgan_1} $\neg (A \land B) \iff \neg A \lor \neg B$ \rightnote{de Morganovo pravidlo}
+        \item\label{item:de_morgan_2} $\neg (A \lor B) \iff \neg A \land \neg B$ \rightnote{de Morganovo pravidlo}
         \item\label{item:modus_ponens} $\big(A \land (A \implies B)\big) \implies B)$ \rightnote{pravidlo Modus ponens\footnote{Česky \emph{pravidlo vynětí}.}}
         \item\label{item:modus_tollens_1} $\big((A \implies B) \land \neg B\big) \implies \neg A$ \rightnote{pravidlo Modus tollens\footnote{Česky \emph{popírání důsledku}.}}
-        \item\label{item:modus_tollens_2} $(A \implies B) \iff (\neg B \implies \neg A)$
+        \item\label{item:reductio_ad_absurdum} $(A \implies \neg A) \implies \neg A$\rightnote{reductio ad absurdum}
+        \item\label{item:tautologie_5} $(A \implies B) \iff (\neg B \implies \neg A)$
         \item\label{item:tautologie_2} $(A \iff B) \iff (A \implies B) \land (B \implies A)$
         \item\label{item:tautologie_3} $(A \implies B) \iff B \lor \neg A$
-        \item \label{item:tautologie_4} $(A \implies B) \land (B \implies C) \iff (A \implies C)$
+        \item\label{item:tautologie_4} $(A \implies B) \land (B \implies C) \iff (A \implies C)$
+        \item\label{item:tautologie_6} $A \land (B \lor C) \iff (A \land B) \lor (A \land C)$
+        \item\label{item:tautologie_7} $A \lor (B \land C) \iff (A \lor B) \land (A \lor C)$
+        \item\label{item:tautologie_8}
     \end{enumerate}
 \end{theorem}
 
-Čtenář si pravdivosti těchto výroků může ověřit prostým sestavením tabulek pravdivostních hodnot daných logických formulí. Tautologie \ref{item:modus_ponens}, \ref{item:modus_tollens_2} a \ref{item:tautologie_2} se hodně využívají při dokazování tvrzení (blíže nahlédneme v sekci \todo{doplnit odkaz na sekci důkazů}).
+Čtenář si pravdivosti těchto výroků může ověřit prostým sestavením tabulek pravdivostních hodnot daných logických formulí. Tautologie \ref{item:modus_ponens}, \ref{item:tautologie_5} a \ref{item:tautologie_2} se hodně využívají při dokazování tvrzení (blíže nahlédneme v sekci \ref{sec:dukazy}).

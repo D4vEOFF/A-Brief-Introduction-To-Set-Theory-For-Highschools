@@ -15,6 +15,13 @@ Práce obsahuje historickou předmluvu vysvětlující důvod vzniku dané teori
 
 ## Záznam změn
 
+### 26. 3. 2022
+- Doplněna podsekce o nepřímém důkazu.
+- K definici podmnožiny přidána poznámka o termínu *"inkluze"*.
+- Přidány některé další tautologie do sekce o výrokové logice (speciálně pak *reductio ad absurdum*).
+- Rozdělána sekce o důkazu sporem.
+- K citacím doplněny stránky.
+
 ### 24. 3. 2022 a 25. 3. 2022
 - Dodělána podsekce s kvantifikátory.
 - Přidána sekce s důkazy a vysvětlení přímého důkazu s příklady.
