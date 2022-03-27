@@ -266,9 +266,32 @@ To ostatně dává i smysl. Implikace je nepravdivá pouze, když platí její p
     \begin{equation*}
         a^2+2b^2=(2k)^2+2(2l-1)^2=4k^2+8l^2-8l+2=4(k^2+2l^2-2l)+2\; .
     \end{equation*}
-    Výraz $4(k^2+2l^2-2l)$ je jistě dělitelný 4. Avšak protože platí $4 \mid a^2+2b^2$, pak musí také platit $4 \mid 2$. To očividně však neplatí. To znamená, že znegované tvrzení tedy neplatí a platí tvrzení původní, což jsme chtěli dokázat.
+    Výraz $4(k^2+2l^2-2l)$ je jistě dělitelný 4. Avšak protože platí $4 \mid a^2+2b^2$, pak musí také platit $4 \mid 2$. To očividně však neplatí. To znamená, že znegované tvrzení je nepravdivé a platí tvrzení původní, což jsme chtěli dokázat.
 \end{proof}
 (Převzato z \cite{ChartrandPolimeniZhang2014}, str. 126)
+V případě důkazu sporem je asi nejznámější (a též i nejstarší dochovaný) důkaz, že číslo $\sqrt{2}$ je iracionální.
+\begin{assertion}
+    Číslo $\sqrt{2}$ je iracionální.
+\end{assertion}
+\begin{proof}
+    Než začneme s důkazem, trochu si rozmysleme dokazované tvrzení. Jak bude vypadat jeho negace? Opačným tvrzením je, že \emph{číslo $\sqrt{2}$ je racionální}. Z definice racionálního čísla to však znamená
+    \begin{equation*}
+        \exists p,q\in\Z : \sqrt{2}=\dfrac{p}{q}\; .
+    \end{equation*}
+    O každém zlomku však víme, že jej lze zapsat v základním tvaru, tj. můžeme zároveň předpokládat, že $p$ a $q$ jsou nesoudělná. S tímto budeme dále pracovat. Pišme
+    \begin{align*}
+        \sqrt{2}&=\dfrac{p}{q}\\
+        2&=\dfrac{p^2}{q^2}\\
+        2q^2&=p^2\; .
+    \end{align*}
+    Z posledního řádku lze vidět, že $p^2$ lze zapsat jako dvojnásobek nějakého jiného čísla. Tedy $p^2$ je určitě sudé. Co nám to říká o samotném $p$? Že $p$ je také sudé. (O tom není těžké se přesvědčit. Stačí si spočítat $(2k)^2$ a analogicky pro lichá čísla $(2l-1)^2$.) Tzn. že existuje $r\in\Z$ takové, že $p=2r$. Nyní dosadíme:
+    \begin{align*}
+        2q^2&=(2r)^2\\
+        2q^2&=4r^2\\
+        q^2&=2r^2\; .
+    \end{align*}
+    Tedy $q^2$ je také nutně sudé a tedy i $q$ je sudé. Dohromady tedy $p$ a $q$ jsou obě sudá. To je však spor, neboť jsme předpokládali, že $p$ a $q$ jsou nesoudělná. Tzn. nemůže neexistovat zlomek $p/q$, který by byl roven $\sqrt{2}$ a byl v základním tvaru.
+\end{proof}
 \begin{assertion}
     Prvočísel je nekonečně mnoho.
 \end{assertion}
@@ -285,9 +308,77 @@ To ostatně dává i smysl. Implikace je nepravdivá pouze, když platí její p
     \begin{equation*}
         \dfrac{m+1}{p_1}=\dfrac{p_1p_2\cdots p_n+1}{p_1}=p_2\cdots p_n+\dfrac{1}{p_1}\; .
     \end{equation*}
-    Číslo $p_2\cdots p_n$ je jistě přirozené, avšak $1/p_1$ již přirozené není (nejmenší prvočíslo je 2). Je vidět, že nově vzniklé přirozené číslo $m+1$ není dělitelné žádným z prvočísel $p_1, p_2, \ldots, p_n$. To však znamená, že $m+1$ buď samo je prvočíslo, nebo je dělitelné prvočíslem, které není součástí posloupnosti $p_1, p_2, \ldots, p_n$. V obou případech však dostáváme spor a prvočísel tedy nemůže být konečně mnoho.
+    Číslo $p_2\cdots p_n$ je jistě přirozené, avšak $1/p_1$ již přirozené není (nejmenší prvočíslo je 2). Je vidět, že nově vzniklé přirozené číslo $m+1$ není dělitelné žádným z prvočísel $p_1, p_2, \ldots, p_n$. To však znamená, že $m+1$ je buď samo prvočíslo, nebo je dělitelné prvočíslem, které není součástí posloupnosti $p_1, p_2, \ldots, p_n$. V obou případech však dostáváme spor, neboť jsme předpokládali, že posloupnost $p_1, p_2, \ldots, p_n$ obsahuje všechna prvočísla.
 \end{proof}
 
 \subsection{Důkaz matematickou indukcí}\label{subsec:dukaz_indukci}
+K této důkazové technice si na úvod ukažme příklad. Čtenáři je jistě znám vzorec pro součet prvních $n$ členů geometrické posloupnosti. Jistě tak pro nás neměl být problém určit součet
+\begin{equation*}
+    \sum_{k=0}^{n}{2^k}\; .
+\end{equation*}
+Představme si na chvíli, že bychom neznali daný vzorec. Zkusme si vypočítat prvních několik hodnot:
+\begin{align*}
+    2^0&=1\; ,\\
+    2^0+2^1&=3\; ,\\
+    2^0+2^1+2^2&=7\; ,\\
+    2^0+2^1+2^2+2^3&=15\; .
+\end{align*}
+Zdá se, že vzorec pro obecné $n$ by mohl být $2^{n+1}-1$. Ale i kdybychom to ověřili pro jakékoliv množství hodnot $n$, stále to nebude není důkaz. Jak na to? K podobným tvrzením se využívá tzv. \emph{matematická indukce} (někdy zkráceně jen \emph{indukce}). Ukažme si na tomto příkladu způsob použití (formální princip si vysvětlíme později).\par
+Naším cílem je tedy dokázat, že $\forall n\in\N_0$ platí
+\begin{equation*}
+    \sum_{k=0}^{n}{2^k}=2^{n+1}-1\; .
+\end{equation*}
+\begin{enumerate}[label=(\roman*)]
+    \item\label{item:zaklad_indukce} Nejdříve ověříme platnost vzorce pro nejmenší možné $n$, tj. pro $n=0$:
+    \begin{equation*}
+        \sum_{k=0}^{0}{2^k}=2^0=1\;\;\;\text{a}\;\;\;2^{0+1}-1=2-1=1\; .
+    \end{equation*}
+    Pro $n=0$ vzorec platí.
+    \item\label{item:indukcni_krok} Nyní předpokládejme, že tvrzení platí pro určité $n=n_0\in\N$. Ukážeme, že pak tvrzení nutně musí platit i pro $n=n_0+1$. Pišme
+    \begin{equation*}
+        \sum_{k=0}^{n_0+1}{2^k}=\sum_{k=0}^{n_0}{2^k}+2^{n_0+1}\; .
+    \end{equation*}
+    Podle předpokladu vzorec platí pro $n_0$, tedy za $\sum_{k=0}^{n_0}{2^k}$ můžeme dosadit $2^{n_0+1}-1$. Tedy
+    \begin{equation*}
+        \sum_{k=0}^{n_0}{2^k}+2^{n_0+1}=2^{n_0+1}-1+2^{n_0+1}=2\cdot 2^{n_0+1}-1=2^{n_0+2}-1\; .
+    \end{equation*}
+    To je ale přesně vzorec pro $n=n_0+1$.
+\end{enumerate}
+Tím jsme dokázali dané tvrzení. Jak? Podle \ref{item:zaklad_indukce} vzorec platí pro $n=0$. Podle \ref{item:indukcni_krok} pak platí, že když tvrzení platí pro $n=0$, pak platí i pro $n=1$ (pro $n_0=0$). Pro $n=1$ pak opět podle \ref{item:indukcni_krok} platí, že tvrzení platí i pro $n=2$. Opět podle \ref{item:indukcni_krok} víme, že když tvrzení platí pro $n=2$, pak platí i pro $n=3$ a tak dále. Z tohoto principu plyne, že tvrzení tedy platí pro všechna $n\in\N$. Krok \ref{item:indukcni_krok} se nazývá \emph{indukční krok} a předpoklad, že dokazované tvrzení platí pro nějaké $n=n_0$ se nazývá \emph{indukční předpoklad}. Někdy se v důkazech indukcí pro upřesnění specifikuje, podle jaké proměnné dané tvrzení dokazujeme. V tomto případě bychom řekli: \emph{"Indukcí podle $n$."} (Inspirováno \cite{MatousekNesetril2009}, str. 32.)\\
+Tento postup vychází tzv. \emph{principu matematické indukce}, který lze zformulovat jako větu.
+\begin{theorem}[Princip matematické indukce]
+    Nechť pro každé $n\in\N$ je $P_n$ predikátová formule. Pokud platí
+    \begin{enumerate}[label=(\roman*)]
+        \item platí $P_1$ a
+        \item platí $\forall k\in\N: P_k \implies P_{k+1}$,
+    \end{enumerate}
+    pak platí $\forall n\in\N: P_n$.
+\end{theorem}
+(Převzato z \cite{ChartrandPolimeniZhang2014}, str. 144.)\par
+Tuto větu v různých textech lze najít i v jiných formulacích. Důkaz této věty však vyžaduje složitější znalosti a uvedeme si jej proto až později (viz \todo{doplnit odkaz}). Uveďme si ještě jeden příklad.
+\begin{convention}
+    Při aplikaci indukčního předpokladu se někdy píše zkratka \emph{I.P.}, čehož se budeme držet v dalším textu.
+\end{convention}
+\begin{assertion}
+    Pro každé $n\geq 5$ platí $2^n>n^2$.
+\end{assertion}
+\begin{proof}
+    Tvrzení dokážeme indukcí podle $n$.
+    \begin{itemize}
+        \item Pro nejmenší hodnotu $n=5$ dostáváme $2^5=32>5^2=25$, což jistě platí.
+        \item Nyní dokážeme indukční krok. Tedy předpokládejme, že tvrzení platí pro libovolné $n_0\geq 5$; ukážeme platnost pro $n_0+1$:
+        \begin{equation*}
+            2^{n_0+1}=2^{n_0}\cdot 2\stackrel{\text{I.P.}}{>} n_0^2 \cdot 2\; .
+        \end{equation*}
+        Pro dokázání tvrzení nyní stačí ukázat, že $2n_0^2 > (n_0+1)^2$.
+        \begin{align*}
+            2n_0^2 &= n_0^2+n_0^2>n_0^2+5n_0=n_0^2+2n_0+3n_0=n_0^2+2n_0+15\\
+            &>n_0^2+2n_0+1=(n_0+1)^2\; .
+        \end{align*}
+        Celkově tedy dostáváme $2^{n_0+1}>(n_0+1)^2$.
+    \end{itemize}
+    Podle principu matematické indukce tedy platí $\forall n\geq 5: 2^n>n^2$, což jsme chtěli dokázat.
+\end{proof}
+(Převzato z \cite{ChartrandPolimeniZhang2014}, str. 153.)
 
 \todo{Doplnit cvičení}

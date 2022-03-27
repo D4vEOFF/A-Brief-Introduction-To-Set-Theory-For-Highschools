@@ -15,6 +15,11 @@ Práce obsahuje historickou předmluvu vysvětlující důvod vzniku dané teori
 
 ## Záznam změn
 
+### 27. 3. 2022
+- Přidán důkaz iracionality odmocniny ze dvou (ostatně jedná se o nejtypičtější příklad na důkaz sporem).
+- Dokončena podsekce o důkazu sporem.
+- Přidána podsekce o důkazu matematickou indukcí.
+
 ### 26. 3. 2022
 - Doplněna podsekce o nepřímém důkazu.
 - K definici podmnožiny přidána poznámka o termínu *"inkluze"*.
