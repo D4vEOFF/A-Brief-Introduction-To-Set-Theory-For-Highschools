@@ -19,6 +19,7 @@ Práce obsahuje historickou předmluvu vysvětlující důvod vzniku dané teori
 - Přidán důkaz iracionality odmocniny ze dvou (ostatně jedná se o nejtypičtější příklad na důkaz sporem).
 - Dokončena podsekce o důkazu sporem.
 - Přidána podsekce o důkazu matematickou indukcí.
+- K důkazu indukcí přidán obrázek pro ilustraci principu (domino).
 
 ### 26. 3. 2022
 - Doplněna podsekce o nepřímém důkazu.
