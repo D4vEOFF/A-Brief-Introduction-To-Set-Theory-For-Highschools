@@ -15,6 +15,9 @@ Práce obsahuje historickou předmluvu vysvětlující důvod vzniku dané teori
 
 ## Záznam změn
 
+### 28. 3. 2022
+- Vytvořena sekce "*Relace*" a přidány podsekce "*Kartézský součin*" a "*Zavedení relace*".
+
 ### 27. 3. 2022
 - Přidán důkaz iracionality odmocniny ze dvou (ostatně jedná se o nejtypičtější příklad na důkaz sporem).
 - Dokončena podsekce o důkazu sporem.

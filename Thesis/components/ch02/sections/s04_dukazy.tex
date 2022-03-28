@@ -352,19 +352,19 @@ Tím jsme dokázali dané tvrzení. Jak? Podle \ref{item:zaklad_indukce} vzorec 
     \label{fig:domino}
 \end{figure}
 Krok \ref{item:indukcni_krok} se nazývá \emph{indukční krok} a předpoklad, že dokazované tvrzení platí pro nějaké $n=n_0$ se nazývá \emph{indukční předpoklad}. Někdy se v důkazech indukcí pro upřesnění specifikuje, podle jaké proměnné dané tvrzení dokazujeme. V tomto případě bychom řekli \emph{"indukcí podle $n$"} (Inspirováno \cite{MatousekNesetril2009}, str. 32.)\\
-Tento postup vychází tzv. \emph{principu matematické indukce}, který lze zformulovat jako větu.
+Tento postup vychází z tzv. \emph{principu matematické indukce}, který lze zformulovat jako větu.
 \begin{theorem}[Princip matematické indukce]
-    Nechť pro každé $n\in\N$ je $P_n$ predikátová formule. Pokud platí
+    Nechť pro každé $n\in\N$ je $\varphi_n$ predikátová formule. Pokud
     \begin{enumerate}[label=(\roman*)]
-        \item platí $P_1$ a
-        \item platí $\forall k\in\N: P_k \implies P_{k+1}$,
+        \item platí $\varphi_1$ a
+        \item platí $\forall k\in\N: \varphi_k \implies \varphi_{k+1}$,
     \end{enumerate}
-    pak platí $\forall n\in\N: P_n$.
+    pak platí $\forall n\in\N: \varphi_n$.
 \end{theorem}
-\noindent (Převzato z \cite{ChartrandPolimeniZhang2014}, str. 144.)\\
+(Převzato z \cite{ChartrandPolimeniZhang2014}, str. 144.)\\
 Tuto větu v různých textech lze najít i v jiných formulacích. Důkaz této věty však vyžaduje složitější znalosti a uvedeme si jej proto až později (viz \todo{doplnit odkaz}). Uveďme si ještě jeden příklad.
 \begin{convention}
-    Při aplikaci indukčního předpokladu se někdy píše zkratka \emph{I. P.}, čehož se budeme držet v dalším textu.
+    Při aplikaci indukčního předpokladu se někdy píše zkratka \emph{I.~P.}, čehož se budeme držet v dalším textu.
 \end{convention}
 \begin{assertion}
     Pro každé přirozené $n\geq 5$ platí $2^n>n^2$.
@@ -373,7 +373,7 @@ Tuto větu v různých textech lze najít i v jiných formulacích. Důkaz této
     Tvrzení dokážeme indukcí podle $n$.
     \begin{itemize}
         \item Pro nejmenší hodnotu $n=5$ dostáváme $2^5=32>5^2=25$, což jistě platí.
-        \item Nyní dokážeme indukční krok. Tedy předpokládejme, že tvrzení platí pro libovolné $n_0\geq 5$; ukážeme platnost pro $n_0+1$:
+        \item Nyní dokážeme indukční krok. Předpokládejme, že tvrzení platí pro libovolné $n_0\geq 5$; ukážeme platnost pro $n_0+1$:
         \begin{equation*}
             2^{n_0+1}=2^{n_0}\cdot 2\stackrel{\text{I. P.}}{>} n_0^2 \cdot 2\; .
         \end{equation*}
@@ -384,7 +384,7 @@ Tuto větu v různých textech lze najít i v jiných formulacích. Důkaz této
         \end{align*}
         Celkově tedy dostáváme $2^{n_0+1}>(n_0+1)^2$.
     \end{itemize}
-    Podle principu matematické indukce tedy platí $\forall n\geq 5: 2^n>n^2$, což jsme chtěli dokázat.
+    Podle principu matematické indukce platí $\forall n\geq 5: 2^n>n^2$, což jsme chtěli dokázat.
 \end{proof}
 (Převzato z \cite{ChartrandPolimeniZhang2014}, str. 153.)
 
