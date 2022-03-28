@@ -354,10 +354,10 @@ Tím jsme dokázali dané tvrzení. Jak? Podle \ref{item:zaklad_indukce} vzorec 
 Krok \ref{item:indukcni_krok} se nazývá \emph{indukční krok} a předpoklad, že dokazované tvrzení platí pro nějaké $n=n_0$ se nazývá \emph{indukční předpoklad}. Někdy se v důkazech indukcí pro upřesnění specifikuje, podle jaké proměnné dané tvrzení dokazujeme. V tomto případě bychom řekli \emph{"indukcí podle $n$"} (Inspirováno \cite{MatousekNesetril2009}, str. 32.)\\
 Tento postup vychází z tzv. \emph{principu matematické indukce}, který lze zformulovat jako větu.
 \begin{theorem}[Princip matematické indukce]
-    Nechť pro každé $n\in\N$ je $\varphi_n$ predikátová formule. Pokud
+    Nechť pro každé $n\in\N$ je $\varphi_n$ libovolný výrok. Pokud platí
     \begin{enumerate}[label=(\roman*)]
-        \item platí $\varphi_1$ a
-        \item platí $\forall k\in\N: \varphi_k \implies \varphi_{k+1}$,
+        \item $\varphi_1$ a
+        \item $\forall k\in\N: \varphi_k \implies \varphi_{k+1}$,
     \end{enumerate}
     pak platí $\forall n\in\N: \varphi_n$.
 \end{theorem}
