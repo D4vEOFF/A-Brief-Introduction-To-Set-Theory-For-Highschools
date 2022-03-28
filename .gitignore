@@ -12,6 +12,9 @@
 *.cb2
 .*.lb
 
+*.pdf
+*.code-workspace
+
 ## Intermediate documents:
 *.dvi
 *.xdv
