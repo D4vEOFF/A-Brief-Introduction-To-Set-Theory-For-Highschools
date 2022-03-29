@@ -1,8 +1,8 @@
 \section{Zobrazení}
 Jedním z nejdůležitějších typů relací je tzv. \emph{zobrazení}. Zde se zároveň dostáváme trochu zpět k tématu, kterým se čtenář na střední škole jistě zabýval, akorát se o něm nemluvilo v souvislosti s relacemi, a to sice k \emph{funkcím}. Termíny jako definiční obor, obor hodnot, aj. nejspíše tak pro nás nebudou velkou neznámou, ale přesto nezanedbáme jejich formální zavedení.
+\medskip
 
-\subsection{Zavedení}
-V následující definici si zároveň představíme variantu existenčního kvantifikátoru se symbolem "$!$", tj. $\exists!$. Jeho význam je "\textbf{existuje právě jeden/jedno}".
+V následující definici si představíme variantu existenčního kvantifikátoru se symbolem "$!$", tj. $\exists!$. Jeho význam je "\textbf{existuje právě jeden/jedno}".
 \begin{definition}[Zobrazení]\label{def:zobrazeni}
     \emph{Zobrazením z množiny $X$ do množiny $Y$} nazýváme relaci $f\subseteq X\times Y$, když platí
     \begin{equation*}
@@ -13,12 +13,12 @@ V následující definici si zároveň představíme variantu existenčního kva
 \begin{equation*}
     \map{f}{X}{Y}\; ,
 \end{equation*}
-a to, že zobrazení $f$ přiřazuje prvku $x$ prvek $y$ zapisujeme
+a to, že zobrazení $f$ přiřazuje prvku $x$ prvek $y$ vyjádříme zápisem
 \begin{equation*}
     \mapto{f}{x}{y}\; .
 \end{equation*}
 Tato definice by nám měla být povědomá, neboť takto jsme si nejspíše na střední škole definovali funkci. Jaký je tedy rozdíl mezi \textbf{funkcí} a \textbf{zobrazením}? Ve skutečnosti toto není v matematice jednotné. V určitých odvětvích se tyto termíny považují za synonyma a jinde se zase naopak funkcí nazývá speciální typ zobrazení, kdy množina $Y$ je číselná, tj. $\R$, $\C$, $\Q$, \dots (tedy funkce je zobrazení, avšak ne naopak). My tyto pojmy budeme v dalším textu rozlišovat, aby byl výklad jasnější.\par
-Např. zobrazení $\map{f}{\set{1,2,3,4}}{\set{a,b,c}}$, kde $f=\set{(1,b),\,(2,b),\,(3,a),\,(4,c)}$ je znázorněno na obrázku 
+Např. zobrazení $\map{f}{\set{1,2,3,4}}{\set{a,b,c}}$, kde $f=\set{(1,b),\,(2,b),\,(3,a),\,(4,c)}$ je znázorněno na obrázku \ref{fig:zobrazeni}.
 \begin{figure}
     \centering
     \includegraphics{ch02_zobrazeni.pdf}
@@ -42,10 +42,9 @@ V případě funkce, co by podmnožiny kartézského součinu, byl čtenář nej
     \caption{Graf funkce $\map{f}{\R}{\R}$, kde $f(x)=x^3-x^2+1$.}
     \label{fig:funkce_graf}
 \end{figure}
-Tento způsob proto budeme používat i zobrazení (tedy nejen funkcí).
+Tento způsob proto budeme používat i u zobrazení (tedy nejen u funkcí).
 \medskip
 
-\subsection{Důležité vlastnosti}
 Skládání zobrazení je zcela stejné, jako v případě relací (ostatně zobrazení je relace). Avšak pro ujasnění si jej zformulujme jako samostatnou definici.
 \begin{definition}[Skládání zobrazení]\label{def:skladani_zobrazeni}
     Nechť $\map{f}{X}{Y}$ a $\map{g}{Y}{Z}$ jsou zobrazení. \emph{Složením zobrazení $f$ a $g$} nazveme zobrazení $\map{h}{X}{Z}$, pro které platí
