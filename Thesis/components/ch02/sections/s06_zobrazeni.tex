@@ -1,1 +1,74 @@
 \section{Zobrazení}
+Jedním z nejdůležitějších typů relací je tzv. \emph{zobrazení}. Zde se zároveň dostáváme trochu zpět k tématu, kterým se čtenář na střední škole jistě zabýval, akorát se o něm nemluvilo v souvislosti s relacemi, a to sice k \emph{funkcím}. Termíny jako definiční obor, obor hodnot, aj. nejspíše tak pro nás nebudou velkou neznámou, ale přesto nezanedbáme jejich formální zavedení.\par
+V následující definici si zároveň představíme variantu existenčního kvantifikátoru se symbolem "$!$", tj. $\exists!$. Jeho význam je "\textbf{existuje právě jeden/jedno}".
+\subsection{Zavedení}
+\begin{definition}[Zobrazení]\label{def:zobrazeni}
+    \emph{Zobrazením z množiny $X$ do množiny $Y$} nazýváme relaci $f\subseteq X\times Y$, když platí
+    \begin{equation*}
+        \forall x\in X,\; \exists! y\in Y : xfy\; .
+    \end{equation*}
+\end{definition}
+Že $f$ je zobrazení z $X$ do $Y$ zapisujeme jako
+\begin{equation*}
+    \map{f}{X}{Y}\; ,
+\end{equation*}
+a to, že zobrazení $f$ přiřazuje prvku $x$ prvek $y$ zapisujeme
+\begin{equation*}
+    \mapto{f}{x}{y}\; .
+\end{equation*}
+Tato definice by nám měla být povědomá, neboť takto jsme si nejspíše na střední škole definovali funkci. Jaký je tedy rozdíl mezi \textbf{funkcí} a \textbf{zobrazením}? Ve skutečnosti toto není v matematice jednotné. V určitých odvětvích se tyto termíny považují za synonyma a jinde se zase naopak funkcí nazývá speciální typ zobrazení, kdy množina $Y$ je číselná, tj. $\R$, $\C$, $\Q$, \dots (tedy funkce je zobrazení, avšak ne naopak). My tyto pojmy budeme v dalším textu rozlišovat, aby byl výklad jasnější.\par
+Např. zobrazení $\map{f}{\set{1,2,3,4}}{\set{a,b,c}}$, kde $f=\set{(1,b),\,(2,b),\,(3,a),\,(4,c)}$ je znázorněno na obrázku 
+\begin{figure}
+    \centering
+    \includegraphics{ch02_zobrazeni.pdf}
+    \caption{Grafické znázornění zobrazení $f=\set{(1,b),\,(2,b),\,(3,a),\,(4,c)}$.}
+    \label{fig:zobrazeni}
+\end{figure}
+U zobrazení $\map{f}{X}{Y}$, kde $\mapto{f}{x}{y}$, se
+\begin{itemize}
+    \item $x$ nazývá \emph{vzor} prvku $y$ a
+    \item $y$ se nazývá \emph{obraz} prvku $x$ nebo také \emph{hodnota zobrazení $f$ v bodě $x$}.
+\end{itemize}
+Množiny $X$ a $Y$ pak po řadě nazýváme \emph{množina vzorů} a \emph{množina obrazů}. U funkcí je zvykem tyto množiny nazývat \emph{definiční obor} a \emph{obor hodnot}.\par
+Též se zavádí \emph{obraz množiny}, tj. je-li $A\subseteq X$, pak
+\begin{equation*}
+    f(A)=\set{f(a) \admid a\in X}\; .
+\end{equation*}
+V případě funkce, co by podmnožiny kartézského součinu, byl čtenář nejspíše zvyklý je zadávat pomocí tzv. \emph{funkčního předpisu}, např. $\map{f}{\R}{\R}$, přičemž $f(x)=x^3-x^2+1$. Tu jsme znázorňovali pomocí \emph{grafu} (viz \ref{fig:funkce_graf}).
+\begin{figure}
+    \centering
+    \input{./components/images/ch02_funkce_graf.tex}
+    \caption{Graf funkce $\map{f}{\R}{\R}$, kde $f(x)=x^3-x^2+1$.}
+    \label{fig:funkce_graf}
+\end{figure}
+Tento způsob proto budeme používat i zobrazení (tedy nejen funkcí).
+\medskip
+
+Skládání zobrazení je zcela stejné, jako v případě relací (ostatně zobrazení je relace). Avšak pro ujasnění si jej zformulujme jako samostatnou definici.
+\begin{definition}[Skládání zobrazení]\label{def:skladani_zobrazeni}
+    Nechť $\map{f}{X}{Y}$ a $\map{g}{Y}{Z}$ jsou zobrazení. \emph{Složením zobrazení $f$ a $g$} nazveme zobrazení $\map{h}{X}{Z}$, pro které platí
+    \begin{equation*}
+        \forall x\in X: h(x)=g(f(x))\; .
+    \end{equation*}
+    Složení zobrazení $g$ a $f$ se značí (stejně jako u relací) $g\circ f$, tzn. $h=g \circ f$.
+\end{definition}
+Podle právě zformulované definice \ref{def:skladani_zobrazeni} tedy platí:
+\begin{equation*}
+    \forall x\in X: \big(g\circ f\big)(x)=g(f(x))\; .
+\end{equation*}
+\begin{definition}[Důležité druhy zobrazení]\label{def:druhy_zobrazeni}
+    Nechť je dáno zobrazení $\map{f}{X}{Y}$. Pak $f$ je
+    \begin{enumerate}[label=(\roman*)]
+        \item \emph{prosté} (též \emph{injektivní} či \emph{injekce}), jestliže $\forall x,y\in X: x\neq y \implies f(x)\neq f(y)$.
+        \item \emph{na} (též \emph{surjektivní}\footnote{Z francouzštiny, čteme "syrjektivní"/"syrjekce".} či \emph{surjekce}), jestliže $\forall y\in Y, \exists x\in X: f(x)=y$.
+        \item \emph{vzájemně jednoznačné} (též \emph{bijektivní} či \emph{bijekce}), když $f$ je prosté a na.
+    \end{enumerate}
+\end{definition}
+\begin{example}
+    Ukázky některých zobrazení a jejich vlastností.
+    \begin{enumerate}[label=(\roman*)]
+        \item Funkce $\map{f_1}{\R}{\R^+}$, kde $f(x)=e^x$ je \emph{prostá}, \emph{na} a tedy je \emph{bijekce}.
+        \item Funkce $\map{f_2}{\R}{\R}$, kde $f(x)=e^x$ je \emph{prostá}, ale není \emph{na}.
+        \item Nechť $X$ je libovolná množina. Zobrazení $\map{g}{\powset{X}}{}$
+    \end{enumerate}
+\end{example}

@@ -5,6 +5,7 @@ Otázky:
 - Uvádět důkaz principu mat. indukce? A pokud ano, kde?
 - Je správné říci, že v princip matematické indukce je P_n predikátová formule?
 - Je v pořádku zalamování v mat. prostředí?
+- Zavést exist. kvant. s ! v sekci logiky nebo stačí až u zobrazení?
 
 \begin{assertion}
     Nechť $X$ je libovolná $n$-prvková množina. Pak $\sizeof{\powset{X}}=2^n$.

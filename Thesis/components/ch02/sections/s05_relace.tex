@@ -108,22 +108,22 @@ Jako poslední si ještě zmíníme tzv. \emph{skládání relací}.
     \begin{equation*}
         xTz \iff \exists y\in Y : xRy \land ySz\; .
     \end{equation*}
-    Složení relací $R$ a $S$ značíme $R\circ S$, tzn. $T=R\circ S$.
+    Složení relací $R$ a $S$ značíme $S\circ R$, tzn. $T=S\circ R$.
 \end{definition}
 \begin{example}\label{ex:skladani_relaci}
     Mějme množiny $A=\set{a,b,c}$, $B=\set{x,y,z}$ a $C=\set{i,j,k,l}$. Na nich definujme relace
     \begin{equation*}
         R=\set{(a,z),\,(a,y),\,(c,x)}\subseteq A\times B\;\;\;\text{a}\;\;\;S=\set{(x,k),\,(y,i),\,(y,j),\,(z,j)}\subseteq B\times C\; .
     \end{equation*}
-    Určete $T=R\circ S$.
+    Určete $T=S\circ R$.
 \end{example}
 \begin{solution}
     Postupujme podle definice \ref{def:skladani_relaci} výše. Pro každou z dvojic v $R$ se podíváme, zda existuje nějaká dvojice v $S$ taková, že platí: $t_1Rt_2$ a $t_2St_3$, kde $t_1\in A$ $t_2\in B$ a $t_3\in C$.
     \begin{align*}
-        aRj \land zSj \implies aTj\; ,\\
-        aRy \land ySi \implies aTi\; ,\\
-        aRy \land ySj \implies aTj\;\text{(duplikátní)},\\
-        cRx \land xSk \implies cTk\; .
+        aRj \land zSj &\implies aTj\; ,\\
+        aRy \land ySi &\implies aTi\; ,\\
+        aRy \land ySj &\implies aTj\;\text{(duplikátní)},\\
+        cRx \land xSk &\implies cTk\; .
     \end{align*}
     Tedy $T=\set{(a,i),\,(a,j),\,(c,k)}$.
 \end{solution}
@@ -133,6 +133,23 @@ Jako poslední si ještě zmíníme tzv. \emph{skládání relací}.
     \caption{Grafické znázornění relace složení relací $R$ a $S$ z příkladu \ref{ex:skladani_relaci}.}
     \label{fig:relace_mezi_mnozinami}
 \end{figure}
+Podívejme se ještě na jeden příklad:
+\begin{example}\label{ex:skladani_relaci_2}
+    Mějme relace $R=\set{(x,x),\,(x,y),\,(y,z)}$ a $S=\set{(x,z),\,(z,y)}$. Určete $T=S\circ R$ a $T^\prime=R\circ S$.
+\end{example}
+\begin{solution}
+    Začneme s $T=S\circ R$.
+    \begin{align*}
+        xRx \land xSz &\implies xTz\\
+        yRz \land zSy &\implies yTy
+    \end{align*}
+    Tzn. $T=\set{(x,z),\,(y,y)}$. Nyní analogicky pro $T\prime$.
+    \begin{align*}
+        zSy \land yRz \implies zTz
+    \end{align*}
+    Tím získáváme $T^\prime=\set{(z,z)}$.
+\end{solution}
+Z příkladu \ref{ex:skladani_relaci_2} lze vidět, že skládání relací není komutativní a tedy záleží na pořadí.
 (Inspirováno \cite{MatousekNesetril2009}, str. 34--39.)
 
 \todo{Doplnit cvičení}

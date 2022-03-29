@@ -17,6 +17,10 @@ Práce obsahuje historickou předmluvu vysvětlující důvod vzniku dané teori
 
 ### 29. 3. 2022
 - Přidáno vysvětlení relace na příkladu ze života.
+- Přidána sekce *Zobrazení*.
+- Upraveny obrázky u relací, aby byly konzistentní.
+- Přidána vysvětlivka ohledně nekomutativity skládání relací do sekce *Relace*.
+- Změněn způsob zápisu skládání relací (opačný zápis, tj. S.R místo R.S), aby byl jednotný se skládáním zobrazení.
 
 ### 28. 3. 2022
 - Vytvořena sekce "*Relace*" a přidány podsekce "*Kartézský součin*" a "*Zavedení relace*".
