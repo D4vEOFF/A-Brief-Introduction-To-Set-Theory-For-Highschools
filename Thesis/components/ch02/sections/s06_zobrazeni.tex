@@ -1,7 +1,8 @@
 \section{Zobrazení}
-Jedním z nejdůležitějších typů relací je tzv. \emph{zobrazení}. Zde se zároveň dostáváme trochu zpět k tématu, kterým se čtenář na střední škole jistě zabýval, akorát se o něm nemluvilo v souvislosti s relacemi, a to sice k \emph{funkcím}. Termíny jako definiční obor, obor hodnot, aj. nejspíše tak pro nás nebudou velkou neznámou, ale přesto nezanedbáme jejich formální zavedení.\par
-V následující definici si zároveň představíme variantu existenčního kvantifikátoru se symbolem "$!$", tj. $\exists!$. Jeho význam je "\textbf{existuje právě jeden/jedno}".
+Jedním z nejdůležitějších typů relací je tzv. \emph{zobrazení}. Zde se zároveň dostáváme trochu zpět k tématu, kterým se čtenář na střední škole jistě zabýval, akorát se o něm nemluvilo v souvislosti s relacemi, a to sice k \emph{funkcím}. Termíny jako definiční obor, obor hodnot, aj. nejspíše tak pro nás nebudou velkou neznámou, ale přesto nezanedbáme jejich formální zavedení.
+
 \subsection{Zavedení}
+V následující definici si zároveň představíme variantu existenčního kvantifikátoru se symbolem "$!$", tj. $\exists!$. Jeho význam je "\textbf{existuje právě jeden/jedno}".
 \begin{definition}[Zobrazení]\label{def:zobrazeni}
     \emph{Zobrazením z množiny $X$ do množiny $Y$} nazýváme relaci $f\subseteq X\times Y$, když platí
     \begin{equation*}
@@ -44,6 +45,7 @@ V případě funkce, co by podmnožiny kartézského součinu, byl čtenář nej
 Tento způsob proto budeme používat i zobrazení (tedy nejen funkcí).
 \medskip
 
+\subsection{Důležité vlastnosti}
 Skládání zobrazení je zcela stejné, jako v případě relací (ostatně zobrazení je relace). Avšak pro ujasnění si jej zformulujme jako samostatnou definici.
 \begin{definition}[Skládání zobrazení]\label{def:skladani_zobrazeni}
     Nechť $\map{f}{X}{Y}$ a $\map{g}{Y}{Z}$ jsou zobrazení. \emph{Složením zobrazení $f$ a $g$} nazveme zobrazení $\map{h}{X}{Z}$, pro které platí
@@ -56,7 +58,7 @@ Podle právě zformulované definice \ref{def:skladani_zobrazeni} tedy platí:
 \begin{equation*}
     \forall x\in X: \big(g\circ f\big)(x)=g(f(x))\; .
 \end{equation*}
-\begin{definition}[Důležité druhy zobrazení]\label{def:druhy_zobrazeni}
+\begin{definition}[Důležité vlastnosti zobrazení]\label{def:vlastnosti_zobrazeni}
     Nechť je dáno zobrazení $\map{f}{X}{Y}$. Pak $f$ je
     \begin{enumerate}[label=(\roman*)]
         \item \emph{prosté} (též \emph{injektivní} či \emph{injekce}), jestliže $\forall x,y\in X: x\neq y \implies f(x)\neq f(y)$.
