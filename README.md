@@ -15,6 +15,9 @@ Práce obsahuje historickou předmluvu vysvětlující důvod vzniku dané teori
 
 ## Záznam změn
 
+### 29. 3. 2022
+- Přidáno vysvětlení relace na příkladu ze života.
+
 ### 28. 3. 2022
 - Vytvořena sekce "*Relace*" a přidány podsekce "*Kartézský součin*" a "*Zavedení relace*".
 
