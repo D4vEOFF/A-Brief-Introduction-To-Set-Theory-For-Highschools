@@ -112,7 +112,15 @@ Je třeba však upozornit na fakt, že pořadí kvantifikátorů může mít vli
 \begin{equation*}
     \forall n\in\N,\; \exists k\in\N : k > n\;\;\;\text{a}\;\;\;\exists k\in\N,\;\forall n\in\N : k > n\; .
 \end{equation*}
-neříkají totéž (zkuste si je přečíst). První říká, že \textbf{pro každé $n$ existuje nějaké $k$ takové, že $k$ je větší než $n$}, kdežto druhá formule má význam takový, že \textbf{existuje $k$ takové, že pro všechna $n$ je $k$ větší než $n$}. Jinými slovy říkáme, že existuje jedno \textbf{univerzální} číslo $k$ tak, že je splněna daná podmínka. První formule je tak pravdivá, ale druhá již není.
+neříkají totéž (zkuste si je přečíst). První říká, že \textbf{pro každé $n$ existuje nějaké $k$ takové, že $k$ je větší než $n$}, kdežto druhá formule má význam takový, že \textbf{existuje $k$ takové, že pro všechna $n$ je $k$ větší než $n$}. Jinými slovy říkáme, že existuje jedno \textbf{univerzální} číslo $k$ tak, že je splněna daná podmínka. První formule je tak pravdivá, ale druhá již není.\par
+Tento způsob zápisu však neplatí pouze pro kvantifikátory. Mějme např. formuli
+\begin{equation*}
+    \forall x,y\in\R: x\neq y \implies x < y \lor x > y\; .
+\end{equation*}
+Zde též není nutné explicitně psát implikaci. Stačí předpoklad uvést před dvojtečkou.
+\begin{equation*}
+    \forall x,y\in\R,\;x\neq y: x < y \lor x > y
+\end{equation*}
 
 \subsection{Negace formulí s kvantifikátory}
 V sekci o výrokové logice \ref{sec:vyrokova_logika} jsme si zmínili některé důležité tautologie. Specificky, de Morganovy pravidla \ref{item:de_morgan_1} a \ref{item:de_morgan_2} zmíněné ve větě \ref{thm:vyznamne_tautologie}.

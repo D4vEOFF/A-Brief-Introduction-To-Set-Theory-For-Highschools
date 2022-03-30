@@ -17,6 +17,9 @@ Práce obsahuje historickou předmluvu vysvětlující důvod vzniku dané teori
 
 ### 30. 3. 2022
 - Dokončena sekce *Zobrazení*.
+- Opravena definice zobrazení a důkaz tvrzení o vlastnostech skládání.
+- Opravena definice *disjunktních množin* (přidán dodatek, že i a j jsou různá).
+- Přidán dodatek o zápisu predikátových formulí (psaní předpokladů před dvojtečku).
 
 ### 29. 3. 2022
 - Přidáno vysvětlení relace na příkladu ze života.
