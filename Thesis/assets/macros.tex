@@ -114,6 +114,11 @@
       {\ensuremath{\,\mathrm{d}#1}}%
 } % diferenciál
 
+% Čítače
+\newcommand{\createcnt}[2][0]{\newcounter{#2}\setcounter{#2}{#1}}
+\newcommand{\printcnt}[1]{\arabic{#1}}
+\newcommand{\printnstepcnt}[1]{\stepcounter{#1}\arabic{#1}}
+
 %%% Vychytávky pro tabulky
 \newcommand{\pulrad}[1]{\raisebox{1.5ex}[0pt]{#1}}
 \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}

@@ -15,6 +15,9 @@ Práce obsahuje historickou předmluvu vysvětlující důvod vzniku dané teori
 
 ## Záznam změn
 
+### 30. 3. 2022
+- Dokončena sekce *Zobrazení*.
+
 ### 29. 3. 2022
 - Přidáno vysvětlení relace na příkladu ze života.
 - Přidána sekce *Zobrazení*.
