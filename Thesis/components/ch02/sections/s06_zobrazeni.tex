@@ -1,7 +1,7 @@
 \section{Zobrazení}
 Jedním z nejdůležitějších typů relací je tzv. \emph{zobrazení}. Zde se zároveň dostáváme trochu zpět k tématu, kterým se čtenář na střední škole jistě zabýval, akorát se o něm nemluvilo v souvislosti s relacemi, a to sice k \emph{funkcím}. Termíny jako definiční obor, obor hodnot, aj. nejspíše tak pro nás nebudou velkou neznámou, ale přesto nezanedbáme jejich formální zavedení.
-\medskip
 
+\subsection{Zavedení a související pojmy}
 V následující definici si představíme variantu existenčního kvantifikátoru se symbolem "$!$", tj. $\exists!$. Jeho význam je "\textbf{existuje právě jeden/jedno}".
 \begin{definition}[Zobrazení]\label{def:zobrazeni}
     \emph{Zobrazením z množiny $X$ do množiny $Y$} nazýváme relaci $f\subseteq X\times Y$, když platí
@@ -9,6 +9,10 @@ V následující definici si představíme variantu existenčního kvantifikáto
         \forall x\in X,\; \exists! y\in Y : xfy\; .
     \end{equation*}
 \end{definition}
+U relací jsme si zaváděli úmluvu, kde jsme si pro jejich značení rezervovali velká písmena latinské abecedy. U zobrazení je tomu trochu jinak.
+\begin{convention}
+    \sloppy Zobrazení budeme značit malými písmeny latinské abecedy $a,b,c,\ldots,x,y,z$, nebo případně malými písmeny řecké abecedy $\alpha,\beta,\gamma,\ldots,\chi,\psi,\omega$.
+\end{convention}
 Že $f$ je zobrazení z $X$ do $Y$ zapisujeme jako
 \begin{equation*}
     \map{f}{X}{Y}\; ,
@@ -82,11 +86,11 @@ Podle právě zformulované definice \ref{def:skladani_zobrazeni} tedy platí:
 \end{example}
 Psát v matematice $f\big((x_1,x_2,\ldots,x_n)\big)$ je nezvyklé (jak jsme provedli v \ref{item:inverzni_zobrazeni}). Nejspíše by dávalo větší smysl v takovém případě nepsat vnořené závorky. Proto si zaveďme následující úmluvu.
 \begin{convention}
-    \sloppy Zápis $f\big((x_1,x_2,\ldots,x_n)\big)$ budeme nahrazovat symbolem $f(x_1,x_2,\ldots,x_n)$ stejného výzanmu (tj. obraz uspořádané $n$-tice).
+    \sloppy Zápis $f\big((x_1,x_2,\ldots,x_n)\big)$ budeme nahrazovat symbolem $f(x_1,x_2,\ldots,x_n)$ stejného významu (tj. obraz uspořádané $n$-tice).
 \end{convention}
 Poslední bod \ref{item:identita} je dosti významným příkladem zobrazení, které si zaslouží vlastní definici (viz \ref{def:identita}).
 \begin{definition}[Identita]\label{def:identita}
-    Nechť $\map{f}{A}{A}$ je zobrazení takové, že $f(x)=x$. Pak $f$ nazýváme \emph{identitou}. Identické zobrazení z $A$ do $A$ značíme $1_A$.
+    Nechť $\map{f}{A}{A}$ je zobrazení takové, že $f(x)=x$. Pak $f$ nazýváme \emph{identitou} nebo též \emph{identické zobrazení}a značíme jej $1_A$.
 \end{definition}
 (Inspirováno \cite{Becvar2019}, str. 10.)\\
 U zobrazení a jejich skládání můžeme pozorovat jisté závislosti. Jejich důkazy jsou triviální a plynou přímo z definice, ale přesto si je zde uvedeme.
@@ -104,3 +108,5 @@ U zobrazení a jejich skládání můžeme pozorovat jisté závislosti. Jejich 
     \textit{(iii)}. Přímý důsledek \textit{(i)} a \textit{(ii)}.
 \end{proof}
 (Kapitola inspirována \cite{MatousekNesetril2009}, str. 39--43.)
+
+\todo{Doplnit cvičení.}

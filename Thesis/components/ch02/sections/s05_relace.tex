@@ -87,7 +87,10 @@ To však v řeči matematiky není nic jiného, než uspořádaná dvojice prvk�
 \begin{definition}[Relace]\label{def:relace}
     Nechť $X$ a $Y$ jsou libovolné množiny. Pak \emph{relací mezi $X$ a $Y$} nazýváme libovolnou podmnožinu $R$ kartézského součinu $X\times Y$, tj. $R\subseteq X \times Y$. Speciálně, pokud $X=Y$, pak mluvíme o \emph{relaci na množině $X$}, tzn. $R\subseteq X^2$.
 \end{definition}
-Pokud $(x,y)\in R$, pak říkáme, že \emph{prvky $x$ a $y$ jsou v relaci $R$}, což ekvivalentně zapisujeme jako $xRy$. Jak už jsme si zmínili, tak relace již známe a i v tomto textu jsme je mnohokrát použili. Např. relace rovnosti "$=$" na $\N$ by obsahovala prvky $(1,1),\,(2,2),\,(3,3),\ldots$. Pochopitelně bychom mohli psát "$(2,2)\in\;=$", ale to neděláme; místo toho zkrátka píšeme "$2=2$". Podobně např. relace "$\leq$" na množině $\R$, "$>$", "$\geq$", aj.\par
+Pokud $(x,y)\in R$, pak říkáme, že \emph{prvky $x$ a $y$ jsou v relaci $R$}, což ekvivalentně zapisujeme jako $xRy$. Jak už jsme si zmínili, tak relace již známe a i v tomto textu jsme je mnohokrát použili. Např. relace rovnosti "$=$" na $\N$ by obsahovala prvky $(1,1),\,(2,2),\,(3,3),\ldots$. Pochopitelně bychom mohli psát "$(2,2)\in\;=$", ale to neděláme; místo toho zkrátka píšeme "$2=2$". Podobně např. relace "$\leq$" na množině $\R$, "$>$", "$\geq$", aj.
+\begin{convention}
+    Pro značení relací budeme používat velká písmena latinské abecedy $A,B,C,\ldots,X,Y,Z$.
+\end{convention}
 Relace můžeme znázornit více způsoby v závislosti na jejich typu. Např. máme-li relaci $R=\set{(1,b),\,(1,d),\,(2,d),\,(3,c),\,(4,a)}$ mezi množinami $A=\set{1,2,3,4}$ a $B=\set{1,2,3,4,5}$, pak ji můžeme znázornit způsobem uvedeným na obrázku \ref{fig:relace_mezi_mnozinami}.
 \begin{figure}[h]
     \centering
@@ -133,6 +136,7 @@ Jako poslední si ještě zmíníme tzv. \emph{skládání relací}.
     \caption{Grafické znázornění relace složení relací $R$ a $S$ z příkladu \ref{ex:skladani_relaci}.}
     \label{fig:relace_mezi_mnozinami}
 \end{figure}
+
 Podívejme se ještě na jeden příklad:
 \begin{example}\label{ex:skladani_relaci_2}
     Mějme relace $R=\set{(x,x),\,(x,y),\,(y,z)}$ a $S=\set{(x,z),\,(z,y)}$. Určete $T=S\circ R$ a $T^\prime=R\circ S$.
@@ -149,7 +153,7 @@ Podívejme se ještě na jeden příklad:
     \end{align*}
     Tím získáváme $T^\prime=\set{(z,z)}$.
 \end{solution}
-Z příkladu \ref{ex:skladani_relaci_2} lze vidět, že skládání relací není komutativní a tedy záleží na pořadí.
+Z příkladu \ref{ex:skladani_relaci_2} lze vidět, že skládání relací není komutativní a tedy záleží na pořadí.\\
 (Kapitola inspirována \cite{MatousekNesetril2009}, str. 34--39.)
 
 \todo{Doplnit cvičení}
