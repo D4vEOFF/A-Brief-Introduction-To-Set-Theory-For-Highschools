@@ -6,10 +6,12 @@ Otázky:
 - Je správné říci, že v princip matematické indukce je P_n predikátová formule?
 - Je v pořádku zalamování v mat. prostředí?
 - Zavést exist. kvant. s ! v sekci logiky nebo stačí až u zobrazení?
+- Rozlišovat zobrazení a funkci?
+- Používat float specifier H místo h u obrázků?
 
-\begin{assertion}
+\begin{proportion}
     Nechť $X$ je libovolná $n$-prvková množina. Pak $\sizeof{\powset{X}}=2^n$.
-\end{assertion}
+\end{proportion}
 \begin{proof}
     Postupujme indukcí podle mohutnosti $n$ množiny $X$. Pro $n=0$ obsahuje potenční množina množiny $X$ pouze prázdnou množinu, tj. $\sizeof{\powset{\emptyset}}=2^0=1$.\par
     Předpokládejme, že tvrzení platí pro množinu o $n_0$ prvcích. Pro důkaz indukčního kroku mějme množinu $X$ o $n_0+1$ Vezměme libovolný prvek $x \in X$. Prvky potenční množiny $\powset{X}$ si rozdělíme do množin $T$ a $T^\prime$ takto:

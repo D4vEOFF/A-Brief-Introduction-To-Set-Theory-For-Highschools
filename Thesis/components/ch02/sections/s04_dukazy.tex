@@ -21,9 +21,9 @@ V tomto procesu dokazování se využívá tautologie \ref{item:tautologie_4} z 
 \end{equation*}
 Z tohoto faktu vyplývá, že pokud je každá z dílčích implikací pravdivá, pak je nutně pravdivá i implikace $A \implies B$, kterou jsme chtěli dokázat\footnote{Výrokové proměnné lze v konkrétním případě nahradit příslušnými predikáty.}. Podívejme se na příklad podobný příklad z úvodu.
 
-\begin{assertion}
+\begin{proportion}
     Nechť $x\in\R$. Je-li $x<0$, pak $x^2+1>0$.
-\end{assertion}
+\end{proportion}
 \begin{proof}
     Předpokladem našeho tvrzení je $x\in\R \land x<0$. Víme, že pro každé reálné číslo $x$ platí, že $x^2\geq 0$. Z toho již plyne
     \begin{equation*}
@@ -41,16 +41,16 @@ Všimněte si, že důkaz našeho tvrzení ve skutečnosti vůbec nezávisel na 
     \forall x\in\R : x^2>0\; .
 \end{equation*}
 Tj. dokázané tvrzení lze zobecnit klidně zobecnit.
-\begin{assertion*}
+\begin{proportion*}
     Nechť $x\in\R$. Pak platí $x^2+1>0$ .
-\end{assertion*}
+\end{proportion*}
 \begin{remark}
     Též bychom mohli psát "Je-li $x\in\R$, pak $x^2+1>0$."; význam by byl stejný.
 \end{remark}
 
-\begin{assertion}
+\begin{proportion}
     Nechť $n\in\N$ je liché číslo. Pak $3n+7$ je sudé číslo.
-\end{assertion}
+\end{proportion}
 \begin{proof}
     Začneme opět u předpokladu, že $n\in\N$ je liché číslo. To znamená, že
     \begin{equation*}
@@ -62,12 +62,12 @@ Tj. dokázané tvrzení lze zobecnit klidně zobecnit.
     \end{equation*}
     Protože $3k+5$ je přirozené číslo, pak $3n+7$ je dělitelné dvěma a je tedy sudé, což jsme chtěli dokázat.
 \end{proof}
-\begin{assertion}[AG nerovnost]
+\begin{proportion}[AG nerovnost]
     Pro $a,b\in\R_0^+$ platí
     \begin{equation*}
         \sqrt{ab}\leq\dfrac{a+b}{2}\; .
     \end{equation*}
-\end{assertion}
+\end{proportion}
 \begin{proof}
     Při důkazu tohoto tvrzení vyjdeme z jednoduchého pozorování:
     \begin{equation*}
@@ -78,12 +78,12 @@ Tj. dokázané tvrzení lze zobecnit klidně zobecnit.
         (\sqrt{a}+\sqrt{b})^2 = a+2\sqrt{ab}+b\geq 0 \implies \sqrt{ab}\leq \dfrac{a+b}{2}\; .
     \end{equation*}
 \end{proof}
-\begin{assertion}
+\begin{proportion}
     Pro $\forall x,y\in\R$ platí
     \begin{equation*}
         x<y \implies x < \dfrac{x+y}{2} < y\; .
     \end{equation*}
-\end{assertion}
+\end{proportion}
 \begin{proof}
     Zde je třeba si všimnout "dvojité" nerovnosti v dokazovaném tvrzení. To nám již napovídá, že ve skutečnosti musíme dokázat 2 dílčí tvrzení, konkrétně
     \begin{equation*}
@@ -104,9 +104,9 @@ Ne všechna tvrzení jsou v matematice nutně formulována jako implikace. Čast
     (A \iff B) \iff (A \implies B) \land (B \implies A)\; .
 \end{equation*}
 Z toho je již vidět, jak u takových tvrzení při důkazu postupovat. Zkrátka dokážeme zvlášť $A \implies B$ a $A \impliedby B$.
-\begin{assertion}
+\begin{proportion}
     Nechť $x,y\in\Z$. Pak $3 \mid xy$ právě tehdy, když $3 \mid x$ nebo $3 \mid y$\; .
-\end{assertion}
+\end{proportion}
 \begin{proof}
     \textit{($\implies$)}. Začneme s předpokladem, že $3 \mid xy$. Víme, že pokud je číslo dělitelné třemi, pak jej lze zapsat jako $3k$, kde $k\in\Z$. Uvažujme následující případy:
     \begin{itemize}
@@ -126,13 +126,13 @@ Z toho je již vidět, jak u takových tvrzení při důkazu postupovat. Zkrátk
     Tedy dokázali jsme obě implikace a tím i původní tvrzení.
 \end{proof}
 V sekci \ref{sec:mnoziny_a_cisla} jsme si ukázali \emph{de Morganovy vzorce} pro množiny. Nyní si ukážeme důkaz jejich platnosti. Zároveň si tak ukážeme příklad "množinového" důkazu.
-\begin{assertion}[de Morganovy vzorce]
+\begin{proportion}[de Morganovy vzorce]
     Nechť $A,X_1,X_2,\ldots,X_n$ jsou libovolné množiny. Pak platí
     \begin{enumerate}[label=(\roman*)]
         \item\label{item:de_morgan_sets_1} $\displaystyle A \setminus \left(\bigcup\limits_{i=1}^{n}{X_i}\right)=\bigcap\limits_{i=1}^{n}{(A \setminus X_i)}\; ,$
         \item\label{item:de_morgan_sets_2} $\displaystyle A \setminus \left(\bigcap\limits_{i=1}^{n}{X_i}\right)=\bigcup\limits_{i=1}^{n}{(A \setminus X_i)}\; .$
     \end{enumerate}
-\end{assertion}
+\end{proportion}
 \begin{proof}
     Nejdříve si uvědomme, co vlastně říkají dané rovnosti. Vyjadřují, že výsledné množiny jsou stejné. Kdy toto platí? Právě když dané množiny obsahují stejné prvky, tj.
     \begin{equation*}
@@ -178,9 +178,9 @@ Obecně pokud je tvrzení takové, že platí pro všechny objekty z jisté mno�
     (A \implies B) \iff (\neg B \implies \neg A)\; .
 \end{equation}
 Implikace je ve skutečnosti ekvivalentní s tvrzením, že pokud neplatí závěr, pak neplatí ani předpoklad. Na této skutečnosti je založen \emph{důkaz nepřímý} (též \emph{důkaz obměnou}). Podívejme se na příklady užití.
-\begin{assertion}
+\begin{proportion}
     Nechť $x\in\Z$ a $3 \nmid (x^2-1)$. Pak $3 \mid x$.
-\end{assertion}
+\end{proportion}
 V tomto případě máme dvě možnosti. Buď začneme s předpokladem $3 \nmid (x^2-1)$~a dokážeme, že $3 \mid x$ (tedy dokážeme tvrzení přímo), nebo naopak budeme předpokládat, že $3 \nmid x$ a dokážeme negaci původního předpokladu. Ačkoliv by se jistě našla možnost, jak tvrzení dokázat přímo, přesto se nejspíše zdá jednodušší začít s předpokladem, že $x$ není dělitelné třemi.
 \begin{proof}
     Nechť $3 \nmid x$. Ukážeme, že platí $3 \mid (x^2-1)$. Podle předpokladu lze $x$ zapsat jako $3k+1$ nebo $3k+2$, kde $k\in\Z$. Bez újmy na obecnosti pišme $x=3k+1$. Pak
@@ -197,12 +197,12 @@ V tomto případě máme dvě možnosti. Buď začneme s předpokladem $3 \nmid 
     \end{equation*}
     a původní tvrzení je tak dokázané.
 \end{proof}
-\begin{assertion}
+\begin{proportion}
     Nechť jsou dány množiny $A$ a $B$. Pak
     \begin{equation*}
         A \cup B=A \iff B \subseteq A\; .
     \end{equation*}
-\end{assertion}
+\end{proportion}
 \begin{proof}
     \textit{($\implies$)}. Tuto implikaci dokážeme obměnou. Nechť jsou dány množiny $A$ a $B$ takové, že $B$ není podmnožinou $A$. Pak
     \begin{equation*}
@@ -254,9 +254,9 @@ Pomocí ní můžeme psát
     \neg (A \implies B) \equiv \neg (B \lor \neg A) \equiv A \land \neg B\; .
 \end{equation*}
 To ostatně dává i smysl. Implikace je nepravdivá pouze, když platí její předpoklad, ale neplatí její závěr.
-\begin{assertion}
+\begin{proportion}
     Nechť jsou dána $a,b\in\Z$, kde $a$ je sudé a $b$ je liché. Pak\linebreak $4 \nmid (a^2+2b^2)$.
-\end{assertion}
+\end{proportion}
 \begin{proof}
     Nejprve znegujeme dokazované tvrzení, tj.
     \begin{equation*}
@@ -270,9 +270,9 @@ To ostatně dává i smysl. Implikace je nepravdivá pouze, když platí její p
 \end{proof}
 (Převzato z \cite{ChartrandPolimeniZhang2014}, str. 126)
 V případě důkazu sporem je asi nejznámější (a též i nejstarší dochovaný) důkaz, že číslo $\sqrt{2}$ je iracionální.
-\begin{assertion}
+\begin{proportion}
     Číslo $\sqrt{2}$ je iracionální.
-\end{assertion}
+\end{proportion}
 \begin{proof}
     Než začneme s důkazem, trochu si rozmysleme dokazované tvrzení. Jak bude vypadat jeho negace? Opačným tvrzením je, že \emph{číslo $\sqrt{2}$ je racionální}. Z~definice racionálního čísla to však znamená
     \begin{equation*}
@@ -292,9 +292,9 @@ V případě důkazu sporem je asi nejznámější (a též i nejstarší dochov
     \end{align*}
     Tedy $q^2$ je také nutně sudé a tedy i $q$ je sudé. Dohromady tedy $p$ a $q$ jsou obě sudá. To je však spor, neboť jsme předpokládali, že $p$ a $q$ jsou nesoudělná. Tzn. nemůže neexistovat zlomek $p/q$, který by byl roven $\sqrt{2}$ a byl v základním tvaru.
 \end{proof}
-\begin{assertion}
+\begin{proportion}
     Prvočísel je nekonečně mnoho.
-\end{assertion}
+\end{proportion}
 \begin{proof}
     Pro spor naopak uvažujme, že prvočísel je konečně mnoho; označme si je $p_1, p_2, \ldots, p_n$. Definujeme číslo $m$ následovně:
     \begin{equation*}
@@ -366,9 +366,9 @@ Tuto větu v různých textech lze najít i v jiných formulacích. Důkaz této
 \begin{convention}
     Při aplikaci indukčního předpokladu se někdy píše zkratka \emph{I.~P.}, čehož se budeme držet v dalším textu.
 \end{convention}
-\begin{assertion}
+\begin{proportion}
     Pro každé přirozené $n\geq 5$ platí $2^n>n^2$.
-\end{assertion}
+\end{proportion}
 \begin{proof}
     Tvrzení dokážeme indukcí podle $n$.
     \begin{itemize}

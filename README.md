@@ -1,10 +1,13 @@
 # Bakalářská práce
+
+## Základní informace a obsah
+
 Bakalářská práce psaná na MFF UK. 
 - **Název**: ***Stručný úvod do teorie množin pro středoškoláky***
 - **Téma**: *Teorie množin*
 - **Autor:** *David Weber*
 - **Studijní program:** *Matematika se zaměřením na vzdělávání se sdruženým studiem informatika se zaměřením na vzdělávání*
-- **Vedoucí práce:** *RNDr. Martin Rmoutil. Ph.D.*
+- **Vedoucí práce:** *RNDr. Martin Rmoutil, Ph.D.*
 - **Katedra**: *Katedra didaktiky matematiky*
 - **Rok:** *2022*
 
@@ -15,21 +18,25 @@ Práce obsahuje historickou předmluvu vysvětlující důvod vzniku dané teori
 
 ## Záznam změn
 
+### 31. 3. 2022
+- Přidána sekce *"Relace podrobněji"*.
+- Upraveno značení identity z *i* na *1*.
+
 ### 30. 3. 2022
-- Dokončena sekce *Zobrazení*.
+- Dokončena sekce **Zobrazení**.
 - Opravena definice zobrazení a důkaz tvrzení o vlastnostech skládání.
 - Opravena definice *disjunktních množin* (přidán dodatek, že i a j jsou různá).
 - Přidán dodatek o zápisu predikátových formulí (psaní předpokladů před dvojtečku).
 
 ### 29. 3. 2022
 - Přidáno vysvětlení relace na příkladu ze života.
-- Přidána sekce *Zobrazení*.
+- Přidána sekce **Zobrazení**.
 - Upraveny obrázky u relací, aby byly konzistentní.
 - Přidána vysvětlivka ohledně nekomutativity skládání relací do sekce *Relace*.
 - Změněn způsob zápisu skládání relací (opačný zápis, tj. S.R místo R.S), aby byl jednotný se skládáním zobrazení.
 
 ### 28. 3. 2022
-- Vytvořena sekce "*Relace*" a přidány podsekce "*Kartézský součin*" a "*Zavedení relace*".
+- Vytvořena sekce **"Relace"** a přidány podsekce *"Kartézský součin"* a *"Zavedení relace"*.
 
 ### 27. 3. 2022
 - Přidán důkaz iracionality odmocniny ze dvou (ostatně jedná se o nejtypičtější příklad na důkaz sporem).
@@ -47,9 +54,9 @@ Práce obsahuje historickou předmluvu vysvětlující důvod vzniku dané teori
 ### 24. 3. 2022 a 25. 3. 2022
 - Dodělána podsekce s kvantifikátory.
 - Přidána sekce s důkazy a vysvětlení přímého důkazu s příklady.
-- Do sekce **Množiny a čísla** přidána definice *disjunktních množin*.
-- Do sekce **Množiny a čísla** přidány na konec *de Morganovy vzorce*.
-- Do sekce **Množiny a čísla** přidána do úmluvy ohledně značení číselných množin dodatečná informace ohledně značení některých speciálních typů zmíněných množin.
+- Do sekce **"Množiny a čísla"** přidána definice *disjunktních množin*.
+- Do sekce **"Množiny a čísla"** přidány na konec *de Morganovy vzorce*.
+- Do sekce **"Množiny a čísla"** přidána do úmluvy ohledně značení číselných množin dodatečná informace ohledně značení některých speciálních typů zmíněných množin.
 - Přidán Vennův diagram k de Morganovým zákonům.
 - Přidán důkaz de Morganových vzorců.
 
