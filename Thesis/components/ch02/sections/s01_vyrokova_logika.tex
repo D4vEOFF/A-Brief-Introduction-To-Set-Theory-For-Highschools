@@ -16,7 +16,7 @@ Mezi logické spojky řadíme \emph{negaci} $\neg$, \emph{konjunkci} $\land$, \e
 
 \begin{convention}[Abeceda pro výrokové proměnné]
     \label{conv:abeceda_vyrokovych_promennych}
-    Pro označení \emph{výroků} nebo též \emph{výrokových proměnných} budeme používat velká písmena latinské abecedy\linebreak $A,B,\ldots,X,Y,Z$, případně opatřenými indexy.
+    Pro označení \emph{výroků} nebo též \emph{výrokových proměnných} budeme používat velká písmena latinské abecedy\linebreak $A,B,\dots,X,Y,Z$, případně opatřenými indexy.
 \end{convention}
 
 Uvažujme libovolné výroky $A$ a $B$.
@@ -51,7 +51,7 @@ Vraťme se nyní ještě ke zmíněné implikaci. Ve skutečnosti tato logická 
 Pokud se ohlédneme za výroky, které jsme zatím uvažovali, vždy se jednalo o výroky \emph{složené}. Vezmeme-li např. výrok "Číslo 2 je sudé nebo liché.", tak jej lze rozdělit na dva "jednodušší" výroky, tj. "Číslo 2 je sudé." a "Číslo 2 je liché.", přičemž dané výroky jsou spojeny disjunkcí $\lor$. Tyto výroky však již žádné logické spojky neobsahuje a tedy je nelze dále "rozložit". S tímto souvisí terminologie zavedená v definici \ref{def:vyrokova_a_atomicka_formule}.
 
 \begin{convention}[Abeceda pro výrokové formule]
-    Pro označení výrokových formulí budeme používat malá písmena řecké abecedy, tj. $\alpha,\beta,\gamma,\ldots$, případně opatřenými indexy.
+    Pro označení výrokových formulí budeme používat malá písmena řecké abecedy, tj. $\alpha,\beta,\gamma,\dots$, případně opatřenými indexy.
 \end{convention}
 
 \begin{definition}[Výroková a atomická formule]\label{def:vyrokova_a_atomicka_formule}
@@ -75,9 +75,9 @@ Pokud se ohlédneme za výroky, které jsme zatím uvažovali, vždy se jednalo 
 
 Řekneme-li, že výrokové formule "jsou stejné", pak se formule shodují ve svém zápisu. Máme-li např. výrokové formule
 \begin{align*}
-    \varphi_1&\sim (A) \land \big((B) \lor (C)\big)\; ,\\
+    \varphi_1&\sim (A) \land \big((B) \lor (C)\big),\\
     \varphi_2&\sim \big((A) \land (B)\big) \lor \big((A) \land (C)\big )\;\text{a}\\
-    \varphi_3&\sim \big((A) \land (B)\big) \lor \big((A) \land (C)\big)\; ,
+    \varphi_3&\sim \big((A) \land (B)\big) \lor \big((A) \land (C)\big),
 \end{align*}
 pak můžeme psát, že $\varphi_2\sim\varphi_3$, ale nikoliv $\varphi_1\sim\varphi_2$, byť $\varphi_1$ a $\varphi_2$ mají shodnou tabulku pravdivostních hodnot.\par
 
@@ -88,24 +88,24 @@ Definice výrokové formule \ref{def:vyrokova_a_atomicka_formule} nám v podstat
 
 Nyní můžeme opakovaně použít \ref{item:formule_2} k sestrojení dalších složitějších formulí. Tedy užitím formulí \eqref{eq:vyrokove_formule_z_definice} můžeme dále postupně sestrojit např. výrazy
 \begin{equation*}
-    \big((A) \land (B)\big) \implies \big((A) \lor (C)\big)\;\;\;\text{a}\;\;\;\Big((A) \land \big(\neg(B)\big)\Big) \iff \Big(\neg\big((A) \lor (B)\big)\Big)\; ,
+    \big((A) \land (B)\big) \implies \big((A) \lor (C)\big)\quad\text{a}\quad\Big((A) \land \big(\neg(B)\big)\Big) \iff \Big(\neg\big((A) \lor (B)\big)\Big),
 \end{equation*}
 které jsou opět podle \ref{item:formule_2} výrokovými formulemi. Opětovným užitím \ref{item:formule_2} pak je dále výrokovou formulí např.
 \begin{equation*}
-    \Big(\big((A) \land (B)\big) \implies \big((A) \lor (C)\big)\Big) \implies \bigg(\Big((A) \land \big(\neg(B)\big)\Big) \iff \Big(\neg\big((A) \lor (B)\big)\Big)\bigg)\; .
+    \Big(\big((A) \land (B)\big) \implies \big((A) \lor (C)\big)\Big) \implies \bigg(\Big((A) \land \big(\neg(B)\big)\Big) \iff \Big(\neg\big((A) \lor (B)\big)\Big)\bigg).
 \end{equation*}
 Takto můžeme postupovat dál a opakovanou aplikací pravidla \ref{item:formule_2} vytvořit ještě složitější výrokové formule.\par
 Naopak pokud bychom uvážili nějaký výraz, můžeme obdobně zjistit, jestli se jedná o výrokovou formuli či nikoliv.
 \begin{example}\label{ex:overeni_formule}
     Mějme výraz
     \begin{equation*}
-        \varphi\sim\big((A) \land (C)\big) \iff \Big(\big((A) \lor (B)\big) \implies \neg(C)\Big)\; .
+        \varphi\sim\big((A) \land (C)\big) \iff \Big(\big((A) \lor (B)\big) \implies \neg(C)\Big).
     \end{equation*}
     Ověřte, zda $\varphi$ je výroková formule.\par
     \begin{solution}
         Aby $\varphi$ byla formule, musí být
         \begin{equation*}
-            \varphi_1\sim(A) \land (C)\;\;\;\text{a}\;\;\;\varphi_2\sim\big((A) \lor (B)\big) \implies \neg(C)
+            \varphi_1\sim(A) \land (C)\quad\text{a}\quad\varphi_2\sim\big((A) \lor (B)\big) \implies \neg(C)
         \end{equation*}
         též formulemi. Výraz $\varphi_1$ zřejmě je formulí, neboť $A$ a $C$ jsou atomické formule. Ovšem u $\varphi_2$ lze již vidět, že výraz nesplňuje definici výrokové formule, neboť u $\neg(C)$ chybí vnější závorky. Z bodu \ref{item:formule_3} definice \ref{def:vyrokova_a_atomicka_formule} tedy plyne, že výraz $\varphi$ \textbf{není výrokovou formulí}, neboť jej nelze získat pomocí pravidel \ref{item:formule_1} a \ref{item:formule_2}.
     \end{solution}
@@ -113,7 +113,7 @@ Naopak pokud bychom uvážili nějaký výraz, můžeme obdobně zjistit, jestli
 
 Čtenáře možná již napadlo, že formule, které jsme sestrojili z definice \ref{def:vyrokova_a_atomicka_formule}, jsou zapsány poměrně komplikovaně, především co do nadměrného používání závorek. Např. výraz
 \begin{equation}\label{eq:poradi_operaci}
-    A \land \neg C\; ,
+    A \land \neg C,
 \end{equation}
 není podle \ref{def:vyrokova_a_atomicka_formule} výrokovou formulí. I přesto je však nejspíše zřejmé, že tímto zápisem vyjadřujeme výrok "Platí $A$ a zároveň neplatí $C$.". Nebo vrátíme-li se k příkladu \ref{ex:overeni_formule}, i při vypuštění uzávorkování u výrazu $\varphi_2$ by dávalo smysl interpretovat výraz
 \begin{equation*}\label{eq:vypusteni_uzavorkovani}
@@ -132,10 +132,10 @@ jako výrok "Jestliže platí $A$ a zároveň $B$, pak neplatí $C$.". Pro zjedn
 \begin{example}
     Zjednodušení některých formulí při aplikaci zavedeného pořadí logických operací v úmluvě \ref{conv:poradi_operaci}.
     \begin{enumerate}[label=(\roman*)]
-        \item $(A) \land (B)\;\;\;\rightsquigarrow\;\;\; A \land B$,
-        \item $\neg(\neg A)\;\;\;\rightsquigarrow\;\;\; \neg\neg A$,
-        \item $\neg \big((A) \lor (B)\big)\;\;\; \rightsquigarrow\;\;\; \neg(A \lor B)$,
-        \item $\Big(\big((A) \land (B)\big) \lor \big(\neg (C)\big)\Big) \implies \big(\neg (A)\big) \land \big(\neg (C)\big)\\ \rightsquigarrow\;\;\;(A \land B) \lor \neg C \implies \neg A \land \neg C$.
+        \item $(A) \land (B)\quad\rightsquigarrow\quad A \land B$,
+        \item $\neg(\neg A)\quad\rightsquigarrow\quad \neg\neg A$,
+        \item $\neg \big((A) \lor (B)\big)\quad \rightsquigarrow\quad \neg(A \lor B)$,
+        \item $\Big(\big((A) \land (B)\big) \lor \big(\neg (C)\big)\Big) \implies \big(\neg (A)\big) \land \big(\neg (C)\big)\\ \rightsquigarrow\quad(A \land B) \lor \neg C \implies \neg A \land \neg C$.
     \end{enumerate}
 \end{example}
 
@@ -148,8 +148,8 @@ Před ukázkou na příkladech si ještě zavedeme jedno značení, které budem
 
 Pokud tedy budeme mít např. formule
 \begin{align*}
-    \varphi_1 &\sim \neg (A \land B)\; ,\\
-    \varphi_2 &\sim \neg A \lor \neg B\; ,
+    \varphi_1 &\sim \neg (A \land B),\\
+    \varphi_2 &\sim \neg A \lor \neg B,
 \end{align*}
 pak můžeme psát $\varphi\equiv\psi$, neboť jak se lze přesvědčit, formule $\neg (A \land B) \iff \neg A \lor \neg B$ je vždy pravdivá.\par
 Nabízí se otázka: jaký je rozdíl mezi $\equiv$ a $\iff$? Formálně vzato bychom mohli mezi formule jednoduše vkládat ekvivalenci, avšak pak se nám tato logická spojka mohla plést s ekvivalencemi, které jsou součástí $\varphi$ a $\psi$.
@@ -157,17 +157,17 @@ Nabízí se otázka: jaký je rozdíl mezi $\equiv$ a $\iff$? Formálně vzato b
 \begin{example}\label{ex:vyrokova_formule_1}
     Mějme formuli
     \begin{equation*}
-        \varphi\sim A \land \neg B \iff A \lor B\; .
+        \varphi\sim A \land \neg B \iff A \lor B.
     \end{equation*}
     Pro jaké pravdivostní hodnoty výroků $A$ a $B$ je formule $\varphi$ pravdivá?
     \begin{solution}
         Postupujme způsobem popsaným výše, tj. rozdělme nejdříve danou formuli na dílčí formule. V tomto případě dílčími formulemi $\varphi$ jsou
         \begin{equation*}
-            \varphi_1\sim A \land \neg B \quad \text{a} \quad \varphi_2\sim A \lor B\; ,
+            \varphi_1\sim A \land \neg B \quad \text{a} \quad \varphi_2\sim A \lor B,
         \end{equation*}
         které jsou spojeny ekvivalencí $\iff$, tj.
         \begin{equation*}
-            \varphi\sim \varphi_1 \iff \varphi_2\; .
+            \varphi\sim \varphi_1 \iff \varphi_2.
         \end{equation*}
         Formule $\varphi_1$ obsahuje atomický výrok $A$ a formuli $\neg B$ spojené konjunkcí $\land$.\linebreak Označme tedy ještě
         \begin{equation*}
@@ -196,35 +196,35 @@ Tento středoškolský postup je zcela jistě vždy funkční. Avšak ne vždy j
 \begin{example}\label{ex:vyrokova_formule_2}
     Mějme logickou formuli
     \begin{equation*}
-        \psi\sim (A \land \neg A \implies B) \lor \big((A \iff B) \land (C \lor \neg C)\big)\; .
+        \psi\sim (A \land \neg A \implies B) \lor \big((A \iff B) \land (C \lor \neg C)\big).
     \end{equation*}
     Pro jaké pravdivostní hodnoty výroků $A,B,C$ je formule $\psi$ pravdivá?
     \begin{solution}
         V tuto chvíli bychom aplikací metody použité v příkladu \ref{ex:vyrokova_formule_1} museli vyšetřit pravdivostní hodnotu formule $\psi$ pro celkem $2^3=8$ různých kombinací pravdivostních hodnot $A,B,C$. Jistě bychom takto též došli k řešení, nicméně práci si můžeme značně ulehčit. (Prosím čtenáře, aby se zde pozorněji zaměřil na formuli $\psi$ v zadání.)\par
         Ve skutečnosti jsou některé dílčí formule zjednodušitelné. Zaměřme se pro začátek na formuli
         \begin{equation*}
-            A \land \neg A\; .
+            A \land \neg A.
         \end{equation*}
         Může tato formule být někdy pravdivá? Jistě, že nemůže. Libovolný výrok buď \textbf{platí a nebo platí jeho negace}, což nikdy nemůže nastat současně. Taková formule má pak vždy pravdivostní hodnotu 0 bez ohledu na pravdivostní hodnotu $A$. Tedy
         \begin{equation*}
-            A \land \neg A\equiv 0\; .
+            A \land \neg A\equiv 0.
         \end{equation*}
         Z výše uvedeného také ovšem plyne, že formule
         \begin{equation*}
-            C \lor \neg C\equiv 1\; ,
+            C \lor \neg C\equiv 1,
         \end{equation*}
         neboť opět platí buď $C$, nebo jeho negace $\neg C$.\par
         Vyšetřovanou formuli $\psi$ tedy můžeme zjednodušit
         \begin{align*}
-            \psi&\sim \big((\overbrace{A \land \neg A}^{\equiv 0}) \implies B\big) \lor \big((A \iff B) \land (\overbrace{C \lor \neg C}^{\equiv 1})\big)\equiv  \\ &\equiv (0 \implies B) \lor \big((A \iff B) \land 1\big)\; .
+            \psi&\sim \big((\overbrace{A \land \neg A}^{\equiv 0}) \implies B\big) \lor \big((A \iff B) \land (\overbrace{C \lor \neg C}^{\equiv 1})\big)\equiv  \\ &\equiv (0 \implies B) \lor \big((A \iff B) \land 1\big).
         \end{align*}
         Tento krok nám však umožňuje provést další úpravy. Podívejme se blíže na formuli
         \begin{equation*}
-            (A \iff B) \land 1\; .
+            (A \iff B) \land 1.
         \end{equation*}
         Výsledek této konjunkce vždy bude záviset na pouze na pravdivostní hodnotě $A \iff B$, tzn. konjunkce je zde nadbytečná a můžeme psát
         \begin{equation*}
-            (A \iff B) \land 1 \equiv  A \iff B\; .
+            (A \iff B) \land 1 \equiv  A \iff B.
         \end{equation*}
         Čeho si lze dále všimnout je, že výrok
         \begin{equation*}
@@ -232,11 +232,11 @@ Tento středoškolský postup je zcela jistě vždy funkční. Avšak ne vždy j
         \end{equation*}
         je také vždy pravdivý (viz tabulka \ref{tab:logicke_spojky}). Celkově se tedy výroková formule $\psi$ zjednoduší takto
         \begin{align*}
-            \psi&\sim (\overbrace{0 \implies B}^{\equiv 1}) \lor \big(\overbrace{(A \iff B) \land 1}^{\equiv A \iff B}\big)\equiv  \\ &\equiv 1 \lor (A \iff B)\; .
+            \psi&\sim (\overbrace{0 \implies B}^{\equiv 1}) \lor \big(\overbrace{(A \iff B) \land 1}^{\equiv A \iff B}\big)\equiv  \\ &\equiv 1 \lor (A \iff B).
         \end{align*}
         Disjunkce je však pravdivá právě tehdy, když je alespoň jeden z výroků pravdivý, což zde platí. Z tohoto dostáváme výsledek, že
         \begin{equation*}
-            \psi\equiv 1\; .
+            \psi\equiv 1.
         \end{equation*}
         Tedy bez ohledu na to, jaké pravdivostní hodnoty budou mít výroky $A,B,C$, bude formule $\psi$ vždy pravdivá. Pokud bychom přeci jen přistoupili na použití tabulkové metody, které jsme se zpočátku vyhnuli, můžeme se skutečně přesvědčit, že náš závěr je správný (viz tabulky \ref{tab:ex_vyrokova_formule_2_cast_1} a \ref{tab:ex_vyrokova_formule_2_cast_2}).
         \begin{table}[h]

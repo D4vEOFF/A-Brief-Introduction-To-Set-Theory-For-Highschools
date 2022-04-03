@@ -18,19 +18,28 @@ Práce obsahuje historickou předmluvu vysvětlující důvod vzniku dané teori
 
 ## Záznam změn
 
+### 2. 4. 2022
+- Do sekce **"Kvantifikátory a predikátový počet"** přidán jednodušší příklad na negaci v úvodu.
+- V sekci **"Množiny a čísla"** zaveden termín *systém množin*.
+- V sekce **"Množiny a čísla"** přeformulována definice *disjunktních množin* a přidány příklady.
+- V sekci **"Důkazy"** rozepsán příklad prvního důkazu.
+- V sekci **"Relace"** zavedeno značení relace *(X, R)*.
+- Dokončena sekce **"Relace podrobněji"**.
+- Do sekce **"Důkaz matematickou indukcí"** přidán důkaz mohutnosti P(X).
+
 ### 31. 3. 2022
 - Přidána sekce *"Relace podrobněji"*.
 - Upraveno značení identity z *i* na *1*.
 
 ### 30. 3. 2022
-- Dokončena sekce **Zobrazení**.
+- Dokončena sekce **"Zobrazení"**.
 - Opravena definice zobrazení a důkaz tvrzení o vlastnostech skládání.
 - Opravena definice *disjunktních množin* (přidán dodatek, že i a j jsou různá).
 - Přidán dodatek o zápisu predikátových formulí (psaní předpokladů před dvojtečku).
 
 ### 29. 3. 2022
 - Přidáno vysvětlení relace na příkladu ze života.
-- Přidána sekce **Zobrazení**.
+- Přidána sekce **"Zobrazení"**.
 - Upraveny obrázky u relací, aby byly konzistentní.
 - Přidána vysvětlivka ohledně nekomutativity skládání relací do sekce *Relace*.
 - Změněn způsob zápisu skládání relací (opačný zápis, tj. S.R místo R.S), aby byl jednotný se skládáním zobrazení.

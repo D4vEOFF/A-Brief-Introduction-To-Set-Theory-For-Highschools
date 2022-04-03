@@ -22,7 +22,7 @@ Reflexivní relace je jednoduše taková relace, kdy jsou všechny prvky v relac
         \caption{Reflexivní relace na čtyřech prvcích.}
         \label{subfig:reflexivni_relace}
     \end{subfigure}
-    \qquad
+    \quad
     \begin{subfigure}{6cm}
         \centering
         \includegraphics{ch02_nejmensi_reflexivni_relace.pdf}
@@ -78,13 +78,13 @@ Stejně je tomu i u zobrazení. Čtenář pravděpodobně již slyšel termín \
 \item Funkce $\map{f_{\printnstepcnt{funcex_cnt}}}{\R}{\R}$, kde $f_{\printcnt{funcex_cnt}}(x)=x^3-1$; inverzní funkce $\map{f_{\printcnt{funcex_cnt}}^{-1}}{\R}{\R}$, kde $f_{\printcnt{funcex_cnt}}^{-1}(x)=\sqrt[3]{x+1}$.
 \end{enumerate}
 Je vidět, že složením libovolné $f_i$ s $f_i^{-1}$ dostaneme identitu $\big(f_i\circ f_i^{-1}\big)(x)=x$.\par
-\medskip
 
+\subsection{Relace ekvivalence}\label{subsec:relace_ekvivalence}
 Zmíněné druhy relací nám dovolují definovat dva jejich nejdůležitější typy, jednomu z nichž se budeme dále přednostně věnovat. Začneme prvním z nich.
 \begin{definition}[Relace ekvivalence]\label{def:relace_ekvivalence}
     Nechť $R$ je relace na množině $X$. Řekneme, že $R$ je \emph{relací ekvivalence na $X$} (nebo jen \emph{ekvivalencí na $X$}), pokud je \emph{reflexivní}, \emph{symetrická} a \emph{tranzitivní}.
 \end{definition}
-Ač se to nemusí zdát, tento typ relace má velmi příjemné vlastnosti. Jak si ji představit? Příkladem může být třeba relace $R$ na množině $X=\set{x_1,\ldots,x_7}$ znázorněná na obrázku \ref{fig:priklad_relace_ekvivalence} níže.
+Ač se to nemusí zdát, tento typ relace má velmi příjemné vlastnosti. Jak si ji představit? Příkladem může být třeba relace $R$ na množině $X=\set{x_1,\dots,x_7}$ znázorněná na obrázku \ref{fig:priklad_relace_ekvivalence} níže.
 \begin{figure}[H]
     \centering
     \includegraphics{ch02_relace_ekvivalence.pdf}
@@ -109,43 +109,76 @@ Definujme si nyní tyto "ostrůvky" trochu formálněji.
 \begin{definition}[Třída ekvivalence]
     Nechť $R$ je relace ekvivalence na množině $X$ a nechť $x\in X$. Pak definujeme množinu
     \begin{equation*}
-        R[x]=\set{y \admid xRy},
+        [x]_R=\set{y \admid xRy},
     \end{equation*}
     kterou nazýváme \emph{třída ekvivalence $R$ určená prvkem $x$}.
 \end{definition}
-Třída ekvivalence $R[x]$ jistého prvku $x$ tak obsahuje všechny prvky, které jsou s $x$ ekvivalentní. Z příkladu výše je vidět že platí:
+Třída ekvivalence $[x]_R$ jistého prvku $x$ tak obsahuje všechny prvky, které jsou s $x$ ekvivalentní. Z příkladu výše je vidět že platí:
 \begin{itemize}
-    \item $R[x_1]=R[x_2]=R[x_3]=\set{x_1,x_2,x_3}$,
-    \item $R[x_4]=R[x_5]=\set{x_4,x_5}$,
-    \item $R[x_6]=R[x_7]=R[x_8]=\set{x_6,x_7,x_8}$.
+    \item $[x_1]_R=[x_2]_R=[x_3]_R=\set{x_1,x_2,x_3}$,
+    \item $[x_4]_R=[x_5]_R=\set{x_4,x_5}$,
+    \item $[x_6]_R=[x_7]_R=[x_8]_R=\set{x_6,x_7,x_8}$.
 \end{itemize}
-\todo{Doplnit další příklady na ekvivalenci}
+\begin{example}
+    Další příklady relací ekvivalence a jejich tříd.
+    \begin{enumerate}[label=(\roman*)]
+        \item $(\N,=)$ (rovnost přirozených čísel) je relace ekvivalence, kde každý prvek tvoří samostatnou třídu ekvivalence.
+        \begin{align*}
+            [1]_R&=\set{1}\\
+            [2]_R&=\set{2}\\
+            &\vdots
+        \end{align*}
+        \item Relace \emph{"mít stejnou paritu"}\footnote{Tzn. obě čísla jsou sudá nebo lichá.} na množině $\Z$ je relace ekvivalence o dvou třídách (sudá a lichá čísla).
+        \begin{align*}
+            [1]_R&=\set{-1,1,-3,3,-5,5,\dots}\\
+            [2]_R&=\set{0,-2,2,-4,4\dots}\\
+            &\vdots
+        \end{align*}
+        \item Relace "mít stejný zbytek po celočíselném dělení 5" na množině $\Z$ je relace ekvivalence o deseti třídách (čísla 0--9 jako zbytek po celočíselném dělení).
+        \begin{align*}
+            [0]_R&=\set{0,5,10,\dots}\\
+            [1]_R&=\set{1,6,11,\dots}\\
+            [2]_R&=\set{2,7,12,\dots}\\
+            [3]_R&=\set{3,8,13,\dots}\\
+            [4]_R&=\set{4,9,14,\dots}
+        \end{align*}
+        \item Relace "mít stejnou absolutní hodnotu" na množině $\R$ je relace ekvivalence, kde každá třída obsahuje prvek $x$ a $-x$ pro všechna $x\in\R$.
+        \begin{align*}
+            [0]_R&=\set{0}\\
+            [1]_R&=\set{-1,1}\\
+            [\sqrt{2}]_R&=\set{\sqrt{2},-\sqrt{2}}\\
+            [\sqrt[4]{30}]_R&=\set{\sqrt[4]{30},-\sqrt[4]{30}}\\
+            &\vdots
+        \end{align*}
+    \end{enumerate}
+\end{example}
 O třídách ekvivalence můžeme dokázat následující větu \ref{thm:vlastnosti_trid_ekvivalence}.
+\needspace{5mm}
 \begin{theorem}[Vlastnosti tříd ekvivalence]\label{thm:vlastnosti_trid_ekvivalence}
     Mějme ekvivalenci $R$ na $X$. Pak
     \begin{enumerate}[label=(\roman*)]
-        \item $\forall x\in X: R[x]\neq\emptyset$.
-        \item $\forall x,y\in X: R[x]=R[y] \lor R[x]\cap R[y]=\emptyset$.
-        \item Pokud pro ekvivalenci $S$ na $X$ platí $\forall x\in X: S[x]=R[x]$, pak $S=R$.
+        \item $\forall x\in X: [x]_R\neq\emptyset$.
+        \item $\forall x,y\in X: [x]_R=[y]_R \lor [x]_R\cap [y]_R=\emptyset$.
+        \item pokud pro ekvivalenci $S$ na $X$ platí $\forall x\in X: [x]_S=[x]_R$, pak $S=R$.
     \end{enumerate}
 \end{theorem}
-První dva body této věty jsou víceméně jednoduchá pozorování (jak uvidíme za chvíli), avšak bod třetí již může svou formulací působit trochu zvláštně. Co nám to vlastně říká? Tvrdíme, že pokud má nějaká jiná ekvivalence stejné třídy jako $R$, pak jsou nutně stejné. To znamená, že třídy ekvivalence \textbf{jednoznačně určují danou relaci $R$}.
+První dva body této věty jsou víceméně jednoduchá pozorování (jak uvidíme za chvíli), avšak bod třetí již může svou formulací působit trochu zvláštně. Co nám to vlastně říká? Tvrdíme, že pokud má nějaká jiná ekvivalence stejné třídy jako $R$, pak jsou tyto relace nutně stejné. To znamená, že třídy ekvivalence \textbf{jednoznačně určují danou relaci $R$}.
 \begin{proof}
     \textit{(i)}. Tvrzení je takové, že každá třída ekvivalence je neprázdná. To triviálně plyne z faktu, že relace ekvivalence je reflexivní a tedy každá třída má alespoň jeden prvek.\\
     \textit{(ii)}. Říkáme, že každé dvě třídy ekvivalence jsou buď stejné nebo nemají žádný společný prvek. To můžeme rozdělit na dva případy, přičemž každý dokážeme zvlášť. Uvažujme prvky $x,y\in X$.
     \begin{enumerate}[label=(\alph*)]
-        \item Nechť platí $xRy$. Chceme ukázat, že $R[x]=R[y]$, tj. prvky $x,y$ jsou ve stejné třídě. Volme libovolné $z\in R[x]$, tzn. $xRz$. Protože $xRy$, pak ze symetrie rovněž platí $yRx$. Dále platí
+        \item Nechť platí $xRy$. Chceme ukázat, že $[x]_R=[y]_R$, tj. prvky $x,y$ jsou ve stejné třídě. Volme libovolné $z\in [x]_R$, tzn. $xRz$. Protože $xRy$, pak ze symetrie rovněž platí $yRx$. Dále platí
         \begin{equation*}
             yRx \land xRz \implies yRz,
         \end{equation*}
-        protože $R$ je tranzitivní, a tedy $z\in R[y]$. Analogicky bychom zdůvodnili i opačnou implikaci, tj.
+        protože $R$ je tranzitivní, a tedy $z\in [y]_R$. Analogicky bychom zdůvodnili i opačnou implikaci, tj.
         \begin{equation*}
-            z\in R[y] \implies z\in R[x].
+            z\in [y]_R \implies z\in [x]_R.
         \end{equation*}
-        Tedy $R[x]=R[y]$.
-        \item Nyní naopak předpokládejme, že $x\cancel{R}y$ (tj. že $x$ a $y$ nejsou v relaci). Ukážeme, že $R[x]\cap R[y]$. Na to lze jít třeba sporem, tj. nechť $R[x]\cap R[y]\neq\emptyset$. Pak
+        Tedy $[x]_R=[y]_R$.
+        \item Nyní naopak předpokládejme, že $x\cancel{R}y$ (tj. že $x$ a $y$ nejsou v relaci). Ukážeme, že $[x]_R\cap [y]_R=\emptyset$. Na to lze jít třeba sporem, tj. nechť $[x]_R\cap [y]_R\neq\emptyset$. Pak
         \begin{equation*}
-            \exists z: z\in R[x]\cap R[y] \implies z\in R[x] \land z\in R[y] \implies xRz \land yRz
+            \exists z: z\in [x]_R\cap [y]_R \implies z\in [x]_R \land z\in [y]_R \implies xRz \land yRz
         \end{equation*}
         Protože $R$ je symetrická, pak $zRy$ a z tranzitivity máme
         \begin{equation*}
@@ -153,11 +186,84 @@ První dva body této věty jsou víceméně jednoduchá pozorování (jak uvid�
         \end{equation*}
         To je však spor.
     \end{enumerate}
-    \textit{(iii)}. Předpokládejme, že $\forall x\in X: S[x]=R[x]$. Mějme uspořádanou dvojici $(x,y)\in S$. Pak
+    \textit{(iii)}. Předpokládejme, že $\forall x\in X: [x]_S=[x]_R$. Mějme uspořádanou dvojici $(x,y)\in S$. Pak
     \begin{align*}
-        (x,y)\in S &\iff xSy \iff x\in S[x] \land y\in S[x] \iff x\in R[x] \land y\in R[x] \iff xRy\\
+        (x,y)\in S &\iff xSy \iff x\in [x]_S \land y\in [x]_S \iff x\in [x]_R \land y\in [x]_R \iff xRy\\
         &\iff (x,y)\in R.
     \end{align*}
     Tedy $S=R$.
 \end{proof}
-(Sekce inspirována \cite{MatousekNesetril2009}, str. 44--48)
+\subsection{Relace uspořádání}\label{subsec:relace_usporadani}
+Druhým a též asi nejpodstatnějším termínem pro nás bude tzv. \emph{uspořádání}. Oproti ekvivalenci zde bude pouze jedna změna v definici, avšak má velké důsledky.
+\begin{definition}[Uspořádání]
+    Nechť $R$ je relace na množině $X$. Řekneme, že $R$ je relací \emph{uspořádání} (též jen \emph{uspořádání}), pokud je \emph{reflexivní}, \emph{antisymetrická} a \emph{tranzitivní}.
+\end{definition}
+Začněme opět příklady, ať víme, jak si takový typ relace vlastně představit. Mějme relace $R_1$ a $R_2$. (Zkuste si sami rozmyslet, zda $R_1,R_2$ splňují podmínky uspořádání.)
+\begin{figure}[H]
+    \centering
+    \includegraphics{ch02_relace_usporadani_1.pdf}
+    \caption{Relace uspořádání $R_1$ na šesti prvcích.}
+    \label{subfig:relace_usporadani_1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics{ch02_relace_usporadani_2.pdf}
+    \caption{Relace uspořádání $R_2$ na devíti prvcích.}
+    \label{subfig:relace_usporadani_2}
+\end{figure}
+Naopak ukázky modifikací relací $R_1,R_2$ níže \textbf{nejsou} uspořádáními.
+\begin{figure}[H]
+    \centering
+    \includegraphics{ch02_relace_neusporadani_1.pdf}
+    \caption{Relace $R_1\cup (x_4,x_6)$, která není uspořádáním.}
+    \label{subfig:relace_neusporadani_1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics{ch02_relace_neusporadani_2.pdf}
+    \caption{Relace $R_2\setminus (x_9,x_6)$, která není uspořádáním.}
+    \label{subfig:relace_neusporadani_2}
+\end{figure}
+\begin{example}
+    Další příklady uspořádání:
+    \begin{enumerate}[label=(\roman*)]
+        \item Relace "$\leq$" na množině $\N$ je uspořádání.
+        \item Relace "$\geq$" na množině $\R$ je uspořádání.
+        \item Relace "$\mid$" ("býti dělitelem") na množině $\N$ je uspořádání.
+        \item Relace "$\subseteq$" na množině $\powset{X}$ je uspořádání, kde $X$ je konečná množina.
+    \end{enumerate}
+\end{example}
+Stejně jako u ekvivalence, i zde si můžeme všimnout jisté redundance při zakreslování. Konkrétně dvojice vyplývající z tranzitivity bychom v těchto případech mohli klidně vynechat a považovat za samozřejmé. Zároveň jsme cíleně zakreslili relace $R_1$ a $R_2$ tak, aby šipky vedly pouze nahoru, neboť to činí obrázek přehlednějším. (Toto funguje díky tomu, že v relaci uspořádání se nemohou vyskytnout cykly kvůli podmínce antisymetrie a tranzitivity.) Zkuste se schválně podívat na znázornění relace $R_1$ na obrázku \ref{subfig:relace_usporadani_1_jinak} pro srovnání.
+\begin{figure}[H]
+    \centering
+    \includegraphics{ch02_relace_usporadani_1_jinak.pdf}
+    \caption{Relace $R_1$ zakreslená podle pořadí indexů prvků.}
+    \label{subfig:relace_usporadani_1_jinak}
+\end{figure}
+Tím se dostáváme k tzv. \emph{Hasseovým diagramům}, které se nám poskytují velmi komfortní reprezentaci uspořádání. Dosavadní způsoby reprezentace relací v sobě obsahovaly jistou míru libovůle, co do umístění prvků v diagramech, neboť důležité byly pouze šipky mezi nimi. Zde toto již neplatí, neboť umístěním prvků budeme určovat, které jsou společně v relaci. Přijmeme konvenci, že šipky mezi prvky povedou pouze směrem nahoru. Tzn. pokud $xRy$, pak $x$ bude nakresleno níž oproti $y$. Níže na obrázku \ref{fig:relace_usporadani_zakresleni} máme zakreslené uspořádání na množině $\set{y_1,y_2,y_3,y_4}$.
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{6cm}
+        \centering
+        \includegraphics{ch02_relace_usporadani_standard.pdf}
+        \caption{Standardní zakreslení}
+        \label{subfig:relace_usporadani_standard}
+    \end{subfigure}
+    \qquad
+    \begin{subfigure}{6cm}
+        \centering
+        \includegraphics{ch02_relace_usporadani_hasseuv_diagram.pdf}
+        \caption{Hasseův diagram}
+        \label{subfig:relace_usporadani_hasseuv_diagram}
+    \end{subfigure}
+    \caption{Relace $S$ zakreslená standardně a pomocí Hasseova diagramu.}
+    \label{fig:relace_usporadani_zakresleni}
+\end{figure}
+Podobně bychom můžeme zakreslit i relaci $R_1$ z obrázku \ref{subfig:relace_usporadani_1}.
+\begin{figure}[H]
+    \centering
+    \includegraphics{ch02_relace_usporadani_1_hasseuv_diagram.pdf}
+    \caption{Hasseův diagram relace $R_1$.}
+    \label{fig:relace_usporadani_1_hasseuv_diagram}
+\end{figure}
+(Sekce inspirována \cite{MatousekNesetril2009}, str. 44--48 a str. 55)

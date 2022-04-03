@@ -6,20 +6,20 @@ V následující definici si představíme variantu existenčního kvantifikáto
 \begin{definition}[Zobrazení]\label{def:zobrazeni}
     \emph{Zobrazením z množiny $X$ do množiny $Y$} nazýváme relaci $f\subseteq X\times Y$, když platí
     \begin{equation*}
-        \forall y\in Y,\; \exists! x\in X : xfy\; .
+        \forall y\in Y,\; \exists! x\in X : xfy.
     \end{equation*}
 \end{definition}
 U relací jsme si zaváděli úmluvu, kde jsme si pro jejich značení rezervovali velká písmena latinské abecedy. U zobrazení je tomu trochu jinak.
 \begin{convention}
-    \sloppy Zobrazení budeme značit malými písmeny latinské abecedy $a,b,c,\ldots,x,y,z$, nebo případně malými písmeny řecké abecedy $\alpha,\beta,\gamma,\ldots,\chi,\psi,\omega$.
+    \sloppy Zobrazení budeme značit malými písmeny latinské abecedy $a,b,c,\dots,x,y,z$, nebo případně malými písmeny řecké abecedy $\alpha,\beta,\gamma,\dots,\chi,\psi,\omega$.
 \end{convention}
 Že $f$ je zobrazení z $X$ do $Y$ zapisujeme jako
 \begin{equation*}
-    \map{f}{X}{Y}\; ,
+    \map{f}{X}{Y},
 \end{equation*}
 a to, že zobrazení $f$ přiřazuje prvku $x$ prvek $y$ vyjádříme zápisem
 \begin{equation*}
-    \mapto{f}{x}{y}\; .
+    \mapto{f}{x}{y}.
 \end{equation*}
 Tato definice by nám měla být povědomá, neboť takto jsme si nejspíše na střední škole definovali funkci. Jaký je tedy rozdíl mezi \textbf{funkcí} a \textbf{zobrazením}? Ve skutečnosti toto není v matematice jednotné. V určitých odvětvích se tyto termíny považují za synonyma a jinde se zase naopak funkcí nazývá speciální typ zobrazení, kdy množina $Y$ je číselná, tj. $\R$, $\C$, $\Q$, \dots (tedy funkce je zobrazení, avšak ne naopak). My tyto pojmy budeme v dalším textu rozlišovat, aby byl výklad jasnější.\par
 Např. zobrazení $\map{f}{\set{1,2,3,4}}{\set{a,b,c}}$, kde $f=\set{(1,b),\,(2,b),\,(3,a),\,(4,c)}$ je znázorněno na obrázku \ref{fig:zobrazeni}.
@@ -37,7 +37,7 @@ U zobrazení $\map{f}{X}{Y}$, kde $\mapto{f}{x}{y}$, se
 Množiny $X$ a $Y$ pak po řadě nazýváme \emph{množina vzorů} a \emph{množina obrazů}. U funkcí je zvykem tyto množiny nazývat \emph{definiční obor} a \emph{obor hodnot}.\par
 Též se zavádí \emph{obraz množiny}, tj. je-li $A\subseteq X$, pak
 \begin{equation*}
-    f(A)=\set{f(a) \admid a\in X}\; .
+    f(A)=\set{f(a) \admid a\in X}.
 \end{equation*}
 V případě funkce, co by podmnožiny kartézského součinu, byl čtenář nejspíše zvyklý je zadávat pomocí tzv. \emph{funkčního předpisu}, např. $\map{f}{\R}{\R}$, přičemž $f(x)=x^3-x^2+1$. Tu jsme znázorňovali pomocí \emph{grafu} (viz \ref{fig:funkce_graf}).
 \begin{figure}[h]
@@ -53,13 +53,13 @@ Skládání zobrazení je zcela stejné, jako v případě relací (ostatně zob
 \begin{definition}[Skládání zobrazení]\label{def:skladani_zobrazeni}
     Nechť $\map{f}{X}{Y}$ a $\map{g}{Y}{Z}$ jsou zobrazení. \emph{Složením zobrazení $f$ a $g$} nazveme zobrazení $\map{h}{X}{Z}$, pro které platí
     \begin{equation*}
-        \forall x\in X: h(x)=g(f(x))\; .
+        \forall x\in X: h(x)=g(f(x)).
     \end{equation*}
     Složení zobrazení $g$ a $f$ se značí (stejně jako u relací) $g\circ f$, tzn. $h=g \circ f$.
 \end{definition}
 Podle právě zformulované definice \ref{def:skladani_zobrazeni} tedy platí:
 \begin{equation*}
-    \forall x\in X: \big(g\circ f\big)(x)=g(f(x))\; .
+    \forall x\in X: \big(g\circ f\big)(x)=g(f(x)).
 \end{equation*}
 \needspace{1cm}
 \begin{definition}[Důležité druhy zobrazení]\label{def:druhy_zobrazeni}
@@ -84,9 +84,9 @@ Podle právě zformulované definice \ref{def:skladani_zobrazeni} tedy platí:
         \item \sloppy Zobrazení $\map{f_{\printnstepcnt{funccnt}}}{A}{\powset{A}}$, kde $A$ je libovolná množina a $f_{\printcnt{funccnt}}(a)=\set{X\in\powset{A}\admid a\in X}$, je \emph{bijekce}.
     \end{enumerate}
 \end{example}
-Psát v matematice $f\big((x_1,x_2,\ldots,x_n)\big)$ je nezvyklé (jak jsme provedli v \ref{item:inverzni_zobrazeni}). Nejspíše by dávalo větší smysl v takovém případě nepsat vnořené závorky. Proto si zaveďme následující úmluvu.
+Psát v matematice $f\big((x_1,x_2,\dots,x_n)\big)$ je nezvyklé (jak jsme provedli v \ref{item:inverzni_zobrazeni}). Nejspíše by dávalo větší smysl v takovém případě nepsat vnořené závorky. Proto si zaveďme následující úmluvu.
 \begin{convention}
-    \sloppy Zápis $f\big((x_1,x_2,\ldots,x_n)\big)$ budeme nahrazovat symbolem $f(x_1,x_2,\ldots,x_n)$ stejného významu (tj. obraz uspořádané $n$-tice).
+    \sloppy Zápis $f\big((x_1,x_2,\dots,x_n)\big)$ budeme nahrazovat symbolem $f(x_1,x_2,\dots,x_n)$ stejného významu (tj. obraz uspořádané $n$-tice).
 \end{convention}
 Poslední bod \ref{item:identita} je dosti významným příkladem zobrazení, které si zaslouží vlastní definici (viz \ref{def:identita}).
 \begin{definition}[Identita]\label{def:identita}

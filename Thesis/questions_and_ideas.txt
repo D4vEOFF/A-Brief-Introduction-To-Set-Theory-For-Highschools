@@ -9,16 +9,4 @@ Otázky:
 - Rozlišovat zobrazení a funkci?
 - Používat float specifier H místo h u obrázků?
 
-\begin{proportion}
-    Nechť $X$ je libovolná $n$-prvková množina. Pak $\sizeof{\powset{X}}=2^n$.
-\end{proportion}
-\begin{proof}
-    Postupujme indukcí podle mohutnosti $n$ množiny $X$. Pro $n=0$ obsahuje potenční množina množiny $X$ pouze prázdnou množinu, tj. $\sizeof{\powset{\emptyset}}=2^0=1$.\par
-    Předpokládejme, že tvrzení platí pro množinu o $n_0$ prvcích. Pro důkaz indukčního kroku mějme množinu $X$ o $n_0+1$ Vezměme libovolný prvek $x \in X$. Prvky potenční množiny $\powset{X}$ si rozdělíme do množin $T$ a $T^\prime$ takto:
-    \begin{itemize}
-        \item $T=\set{Q \in \powset{X} \admid x\in Q}$ a
-        \item $T^\prime=\set{Q \in \powset{X} \admid x\notin Q}$.
-    \end{itemize}
-    Tedy v $T$ se nachází všechny podmnožiny množiny $X$ obsahující prvek $x$ a v $T^\prime$ všechny podmnožiny, které jej neobsahují. Z definice lze vidět, že $T$ a $T^\prime$ jsou disjunktní, tj. $T \cap T^\prime=\emptyset$ a tedy $X=T\cup T^\prime$. Jaké jsou mohutnosti $T$ a $T^\prime$? Množina $T^\prime$ obsahuje všechny podmnožiny množiny $X\setminus\set{x}$ a tedy podle indukčního předpokladu má $2^{n_0}$ podmnožin, tj. $\sizeof{\powset{X\setminus\set{x}}}=2^{n_0}$.\par
-    Jak vypadají množiny obsažené v $T$? Uvažme libovolnou podmnožinu $A^\prime$ množiny $X$, která obsahuje prvek $x$. Taková množina musí být (z definice) prvkem množiny $T$.
-\end{proof}
+Možná poznámka pod čarou (bijekce), ale jinak v pořádku uvést.

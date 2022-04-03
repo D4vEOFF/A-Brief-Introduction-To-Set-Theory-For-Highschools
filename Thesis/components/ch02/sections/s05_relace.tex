@@ -4,20 +4,20 @@ V sekci \ref{sec:mnoziny_a_cisla} jsme si již zopakovali, jakým způsobem prac
 \subsection{Kartézský součin}
 Nejprve si zavedeme označení pro tzv. \emph{uspořádanou dvojici}. Tento pojem čtenář již možná slyšel, ostatně s podobným objektem jsme pracovali např. v analytické geometrii -- bodem v rovině. Pokud si vezmeme dvouprvkovou množinu $\set{x,y}$, zde nezávisí na pořadí zápisu prvků $x$ a $y$, tj. $\set{x,y}=\set{y,x}$. Uspořádanou dvojici prvků $x,y$ budeme značit $(x,y)$, přičemž $(x,y)\neq (y,x)$ nebo též:
 \begin{equation*}
-    (x,y)=(a,b) \iff x=a \land y=b\; .
+    (x,y)=(a,b) \iff x=a \land y=b.
 \end{equation*}
 Ačkoliv to není zřejmé, uspořádanou dvojici můžeme definovat také pomocí množin.
 \begin{definition}[Uspořádaná dvojice]
     \emph{Uspořádanou dvojici} prvků $x,y$ definujeme jako
     \begin{equation*}
-        (x,y)=\set{\set{x},\set{x,y}}\; .
+        (x,y)=\set{\set{x},\set{x,y}}.
     \end{equation*}
 \end{definition}
-Zkuste si schválně rozmyslet, zda takto definovaná uspořádaná dvojice odpovídá vlastnostem výše. Stejným způsobem lze zavést obecně i uspořádanou $n$-tici $(x_1, x_2, \ldots, x_n)$, přičemž zavádíme, že $(x_1, x_2, \ldots, x_n)=(x_1, (x_2, \ldots, x_n))$.
+Zkuste si schválně rozmyslet, zda takto definovaná uspořádaná dvojice odpovídá vlastnostem výše. Stejným způsobem lze zavést obecně i uspořádanou $n$-tici $(x_1, x_2, \dots, x_n)$, přičemž zavádíme, že $(x_1, x_2, \dots, x_n)=(x_1, (x_2, \dots, x_n))$.
 \begin{definition}[Kartézský součin množin]
     Nechť $X$ a $Y$ jsou libovolné množiny. Pak \emph{kartézský součin} $X$ a $Y$ značíme $X\times Y$ a definujeme jej jako
     \begin{equation*}
-        X\times Y=\set{(x,y) \admid x\in X \land y\in Y}\; .
+        X\times Y=\set{(x,y) \admid x\in X \land y\in Y}.
     \end{equation*}
 \end{definition}
 Slovně řečeno, kartézský součin $X\times Y$ je množina všech uspořádaných dvojic $(x,y)$, kde $x\in X$ a $y\in Y$.
@@ -27,7 +27,7 @@ Slovně řečeno, kartézský součin $X\times Y$ je množina všech uspořádan
 \begin{solution}
     Stačí postupovat podle definice, tj.
     \begin{equation*}
-        A\times B=\set{(a,1),\,(a,2),\,(a,3),\,(a,4),\,(b,1),\,(b,2),\,(b,3),\,(b,4),\,(c,1),\,(c,2),\,(c,3),\,(c,4)}\; .
+        A\times B=\set{(a,1),\,(a,2),\,(a,3),\,(a,4),\,(b,1),\,(b,2),\,(b,3),\,(b,4),\,(c,1),\,(c,2),\,(c,3),\,(c,4)}.
     \end{equation*}
     Kartézský součin množin $A,\,B$ lze interpretovat i graficky (viz obrázek \ref{fig:kartezsky_soucin}).
 \end{solution}
@@ -46,17 +46,17 @@ Pokud budeme však pracovat např. s intervaly reálných čísel, pak již nem�
 \end{figure}
 Podobně jako v případě součinu čísel, i zde můžeme kartézské součiny stejných množin značit pomocí horního indexu (tzv. \emph{kartézské mocniny}), např. $X\times X=X^2$, $X\times X\times X=X^3$, atd. Obecně lze definovat
 \begin{align*}
-    A^1=A\; ,
-    A^n=A^{n-1}\times A\; .
+    A^1=A,
+    A^n=A^{n-1}\times A.
 \end{align*}
 I pro kartézský součin lze zavést velký operátor $\prod$ (stejně jako pro číselný součin), tj.
 \begin{equation*}
-    A_1\times A_2 \times\cdots\times A_n=\prod\limits_{i=1}^{n}{A_i}\; .
+    A_1\times A_2 \times\cdots\times A_n=\prod\limits_{i=1}^{n}{A_i}.
 \end{equation*}
 Neplatí zde však asociativní ani komutativní zákon:
 \begin{align*}
-    (X\times Y)\times Z\neq X\times (Y\times Z)\; ,\\
-    X\times Y\neq Y\times X\; ,
+    (X\times Y)\times Z\neq X\times (Y\times Z),\\
+    X\times Y\neq Y\times X,
 \end{align*}
 protože jak jsme si již uvedli, tak $(x,y)\neq (y,x)$. (Zkuste si rozmyslet.)
 \begin{example}
@@ -70,26 +70,26 @@ protože jak jsme si již uvedli, tak $(x,y)\neq (y,x)$. (Zkuste si rozmyslet.)
     Nyní stačí dopočítat $A^2\times A=A^3=\set{(a,a),\,(a,b),\,(b,a),\,(b,b)}\times\set{a,b}$, čímž obdržíme
     \begin{align*}
         A^3=&\{(a,(a,a)),\,(a,(a,b)),\,(a,(b,a)),\,(a,(b,b)),\,(b,(a,a)),\,(b,(a,b)),\,(b,(b,a)),\\
-        &(b,(b,b))\}\; .
+        &(b,(b,b))\}.
     \end{align*}
     Ovšem jak jsme již zmiňovali, tak $(x,(y,z))=(x,y,z)$, tedy množina $A^3$ jednoduše obsahuje všechny uspořádané trojice prvků z $A$.
     \begin{equation*}
-        A^3=\set{(a,a,a),\,(a,a,b),\,(a,b,a),\,(a,b,b),\,(b,a,a),\,(b,a,b),\,(b,b,a),\,(b,b,b)}\; .
+        A^3=\set{(a,a,a),\,(a,a,b),\,(a,b,a),\,(a,b,b),\,(b,a,a),\,(b,a,b),\,(b,b,a),\,(b,b,b)}.
     \end{equation*}
 \end{solution}
 
 \subsection{Zavedení relace}
 Relace (jak název napovídá) odpovídá jistému "vztahu". Z reálného života takové příklady známe, např. vztah "matka -- dcera", "stát -- hlavní město státu", apod. Jsou-li např. Jitka a Lenka spolu ve vztahu "matka -- dcera", pak bychom mohli jednoduše psát
 \begin{equation*}
-    (\text{Jitka}, \text{Lenka})\; .
+    (\text{Jitka}, \text{Lenka}).
 \end{equation*}
 To však v řeči matematiky není nic jiného, než uspořádaná dvojice prvků. K tomu se nám bude hodit již zavedený kartézský součin.
 \begin{definition}[Relace]\label{def:relace}
     Nechť $X$ a $Y$ jsou libovolné množiny. Pak \emph{relací mezi $X$ a $Y$} nazýváme libovolnou podmnožinu $R$ kartézského součinu $X\times Y$, tj. $R\subseteq X \times Y$. Speciálně, pokud $X=Y$, pak mluvíme o \emph{relaci na množině $X$}, tzn. $R\subseteq X^2$.
 \end{definition}
-Pokud $(x,y)\in R$, pak říkáme, že \emph{prvky $x$ a $y$ jsou v relaci $R$}, což ekvivalentně zapisujeme jako $xRy$. Jak už jsme si zmínili, tak relace již známe a i v tomto textu jsme je mnohokrát použili. Např. relace rovnosti "$=$" na $\N$ by obsahovala prvky $(1,1),\,(2,2),\,(3,3),\ldots$. Pochopitelně bychom mohli psát "$(2,2)\in\;=$", ale to neděláme; místo toho zkrátka píšeme "$2=2$". Podobně např. relace "$\leq$" na množině $\R$, "$>$", "$\geq$", aj.
+Pokud $(x,y)\in R$, pak říkáme, že \emph{prvky $x$ a $y$ jsou v relaci $R$}, což ekvivalentně zapisujeme jako $xRy$. Jak už jsme si zmínili, tak relace již známe a i v tomto textu jsme je mnohokrát použili. Např. relace rovnosti "$=$" na $\N$ by obsahovala prvky $(1,1),\,(2,2),\,(3,3),\dots$. Pochopitelně bychom mohli psát "$(2,2)\in\;=$", ale to neděláme; místo toho zkrátka píšeme "$2=2$". Podobně např. relace "$\leq$" na množině $\R$, "$>$", "$\geq$", aj.
 \begin{convention}
-    Pro značení relací budeme používat velká písmena latinské abecedy $A,B,C,\ldots,X,Y,Z$.
+    Pro značení relací budeme používat velká písmena latinské abecedy $A,B,C,\dots,X,Y,Z$.
 \end{convention}
 Relace můžeme znázornit více způsoby v závislosti na jejich typu. Např. máme-li relaci $R=\set{(1,b),\,(1,d),\,(2,d),\,(3,c),\,(4,a)}$ mezi množinami $A=\set{1,2,3,4}$ a $B=\set{1,2,3,4,5}$, pak ji můžeme znázornit způsobem uvedeným na obrázku \ref{fig:relace_mezi_mnozinami}.
 \begin{figure}[h]
@@ -105,28 +105,31 @@ Avšak pokud máme relaci $S$ \textbf{na množině} $C=\set{x,y,z}$, kupříklad
     \caption{Grafické znázornění relace $S$ na množině $C$.}
     \label{fig:relace_mezi_mnozinami}
 \end{figure}
+\begin{remark}
+    Relaci $R$ na množině $X$ někdy zapisujeme jako uspořádanou dvojici $(X, R)$.
+\end{remark}
 Jako poslední si ještě zmíníme tzv. \emph{skládání relací}.
 \begin{definition}[Složení relací]\label{def:skladani_relaci}
     Nechť $X,Y,Z$ jsou libovolné množiny, $R\subseteq X\times Y$ a $S\subseteq Y\times Z$. Relaci $T\subseteq X\times Z$ definujeme následovně:
     \begin{equation*}
-        xTz \iff \exists y\in Y : xRy \land ySz\; .
+        xTz \iff \exists y\in Y : xRy \land ySz.
     \end{equation*}
     Složení relací $R$ a $S$ značíme $S\circ R$, tzn. $T=S\circ R$.
 \end{definition}
 \begin{example}\label{ex:skladani_relaci}
     Mějme množiny $A=\set{a,b,c}$, $B=\set{x,y,z}$ a $C=\set{i,j,k,l}$. Na nich definujme relace
     \begin{equation*}
-        R=\set{(a,z),\,(a,y),\,(c,x)}\subseteq A\times B\;\;\;\text{a}\;\;\;S=\set{(x,k),\,(y,i),\,(y,j),\,(z,j)}\subseteq B\times C\; .
+        R=\set{(a,z),\,(a,y),\,(c,x)}\subseteq A\times B\quad\text{a}\quad S=\set{(x,k),\,(y,i),\,(y,j),\,(z,j)}\subseteq B\times C.
     \end{equation*}
     Určete $T=S\circ R$.
 \end{example}
 \begin{solution}
     Postupujme podle definice \ref{def:skladani_relaci} výše. Pro každou z dvojic v $R$ se podíváme, zda existuje nějaká dvojice v $S$ taková, že platí: $t_1Rt_2$ a $t_2St_3$, kde $t_1\in A$ $t_2\in B$ a $t_3\in C$.
     \begin{align*}
-        aRj \land zSj &\implies aTj\; ,\\
-        aRy \land ySi &\implies aTi\; ,\\
+        aRj \land zSj &\implies aTj,\\
+        aRy \land ySi &\implies aTi,\\
         aRy \land ySj &\implies aTj\;\text{(duplikátní)},\\
-        cRx \land xSk &\implies cTk\; .
+        cRx \land xSk &\implies cTk.
     \end{align*}
     Tedy $T=\set{(a,i),\,(a,j),\,(c,k)}$.
 \end{solution}
