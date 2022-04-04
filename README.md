@@ -18,12 +18,19 @@ Práce obsahuje historickou předmluvu vysvětlující důvod vzniku dané teori
 
 ## Záznam změn
 
+### 4. 4. 2022
+- Opraveny obrázky v sekci o *uspořádáních* (přidána reflexivita).
+- 
+
+### 3. 4. 2022
+- Opravena definice *zobrazení*.
+- Přejmenována sekce "*Speciálně o uspořádáních*" na "*Speciálně o uspořádáních a uspořádaných množinách*"
+
 ### 2. 4. 2022
 - Do sekce **"Kvantifikátory a predikátový počet"** přidán jednodušší příklad na negaci v úvodu.
 - V sekci **"Množiny a čísla"** zaveden termín *systém množin*.
 - V sekce **"Množiny a čísla"** přeformulována definice *disjunktních množin* a přidány příklady.
 - V sekci **"Důkazy"** rozepsán příklad prvního důkazu.
-- V sekci **"Relace"** zavedeno značení relace *(X, R)*.
 - Dokončena sekce **"Relace podrobněji"**.
 - Do sekce **"Důkaz matematickou indukcí"** přidán důkaz mohutnosti P(X).
 

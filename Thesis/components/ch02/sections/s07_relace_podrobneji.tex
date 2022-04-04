@@ -193,36 +193,37 @@ První dva body této věty jsou víceméně jednoduchá pozorování (jak uvid�
     \end{align*}
     Tedy $S=R$.
 \end{proof}
+
 \subsection{Relace uspořádání}\label{subsec:relace_usporadani}
 Druhým a též asi nejpodstatnějším termínem pro nás bude tzv. \emph{uspořádání}. Oproti ekvivalenci zde bude pouze jedna změna v definici, avšak má velké důsledky.
 \begin{definition}[Uspořádání]
     Nechť $R$ je relace na množině $X$. Řekneme, že $R$ je relací \emph{uspořádání} (též jen \emph{uspořádání}), pokud je \emph{reflexivní}, \emph{antisymetrická} a \emph{tranzitivní}.
 \end{definition}
-Začněme opět příklady, ať víme, jak si takový typ relace vlastně představit. Mějme relace $R_1$ a $R_2$. (Zkuste si sami rozmyslet, zda $R_1,R_2$ splňují podmínky uspořádání.)
+Začněme opět příklady, ať víme, jak si takový typ relace vlastně představit. Mějme relace $R_1$ a $R_2$ na obrázcích \ref{fig:relace_usporadani_1} a \ref{fig:relace_usporadani_2}. (Zkuste si sami rozmyslet, zda $R_1,R_2$ splňují podmínky uspořádání.)
 \begin{figure}[H]
     \centering
     \includegraphics{ch02_relace_usporadani_1.pdf}
     \caption{Relace uspořádání $R_1$ na šesti prvcích.}
-    \label{subfig:relace_usporadani_1}
+    \label{fig:relace_usporadani_1}
 \end{figure}
 \begin{figure}[H]
     \centering
     \includegraphics{ch02_relace_usporadani_2.pdf}
     \caption{Relace uspořádání $R_2$ na devíti prvcích.}
-    \label{subfig:relace_usporadani_2}
+    \label{fig:relace_usporadani_2}
 \end{figure}
 Naopak ukázky modifikací relací $R_1,R_2$ níže \textbf{nejsou} uspořádáními.
 \begin{figure}[H]
     \centering
     \includegraphics{ch02_relace_neusporadani_1.pdf}
     \caption{Relace $R_1\cup (x_4,x_6)$, která není uspořádáním.}
-    \label{subfig:relace_neusporadani_1}
+    \label{fig:relace_neusporadani_1}
 \end{figure}
 \begin{figure}[H]
     \centering
     \includegraphics{ch02_relace_neusporadani_2.pdf}
-    \caption{Relace $R_2\setminus (x_9,x_6)$, která není uspořádáním.}
-    \label{subfig:relace_neusporadani_2}
+    \caption{Relace $R_2\setminus (x_6,x_9)$, která není uspořádáním.}
+    \label{fig:relace_neusporadani_2}
 \end{figure}
 \begin{example}
     Další příklady uspořádání:
@@ -233,12 +234,12 @@ Naopak ukázky modifikací relací $R_1,R_2$ níže \textbf{nejsou} uspořádán
         \item Relace "$\subseteq$" na množině $\powset{X}$ je uspořádání, kde $X$ je konečná množina.
     \end{enumerate}
 \end{example}
-Stejně jako u ekvivalence, i zde si můžeme všimnout jisté redundance při zakreslování. Konkrétně dvojice vyplývající z tranzitivity bychom v těchto případech mohli klidně vynechat a považovat za samozřejmé. Zároveň jsme cíleně zakreslili relace $R_1$ a $R_2$ tak, aby šipky vedly pouze nahoru, neboť to činí obrázek přehlednějším. (Toto funguje díky tomu, že v relaci uspořádání se nemohou vyskytnout cykly kvůli podmínce antisymetrie a tranzitivity.) Zkuste se schválně podívat na znázornění relace $R_1$ na obrázku \ref{subfig:relace_usporadani_1_jinak} pro srovnání.
+Stejně jako u ekvivalence, i zde si můžeme všimnout jisté redundance při zakreslování. Konkrétně dvojice vyplývající z tranzitivity a reflexivity bychom v těchto případech mohli klidně vynechat a považovat za samozřejmé. Zároveň jsme cíleně zakreslili relace $R_1$ a $R_2$ tak, aby šipky vedly pouze nahoru, neboť to činí obrázek přehlednějším. (Toto funguje díky tomu, že v relaci uspořádání se nemohou vyskytnout cykly kvůli podmínce antisymetrie a tranzitivity, nepočítáme-li cykly z reflexivity.) Zkuste se schválně podívat na znázornění relace $R_1$ na obrázku \ref{fig:relace_usporadani_1_jinak} pro srovnání.
 \begin{figure}[H]
     \centering
     \includegraphics{ch02_relace_usporadani_1_jinak.pdf}
     \caption{Relace $R_1$ zakreslená podle pořadí indexů prvků.}
-    \label{subfig:relace_usporadani_1_jinak}
+    \label{fig:relace_usporadani_1_jinak}
 \end{figure}
 Tím se dostáváme k tzv. \emph{Hasseovým diagramům}, které se nám poskytují velmi komfortní reprezentaci uspořádání. Dosavadní způsoby reprezentace relací v sobě obsahovaly jistou míru libovůle, co do umístění prvků v diagramech, neboť důležité byly pouze šipky mezi nimi. Zde toto již neplatí, neboť umístěním prvků budeme určovat, které jsou společně v relaci. Přijmeme konvenci, že šipky mezi prvky povedou pouze směrem nahoru. Tzn. pokud $xRy$, pak $x$ bude nakresleno níž oproti $y$. Níže na obrázku \ref{fig:relace_usporadani_zakresleni} máme zakreslené uspořádání na množině $\set{y_1,y_2,y_3,y_4}$.
 \begin{figure}[H]
@@ -246,20 +247,20 @@ Tím se dostáváme k tzv. \emph{Hasseovým diagramům}, které se nám poskytuj
     \begin{subfigure}{6cm}
         \centering
         \includegraphics{ch02_relace_usporadani_standard.pdf}
-        \caption{Standardní zakreslení}
+        \caption{Standardní zakreslení $S$}
         \label{subfig:relace_usporadani_standard}
     \end{subfigure}
     \qquad
     \begin{subfigure}{6cm}
         \centering
         \includegraphics{ch02_relace_usporadani_hasseuv_diagram.pdf}
-        \caption{Hasseův diagram}
+        \caption{Hasseův diagram $S$}
         \label{subfig:relace_usporadani_hasseuv_diagram}
     \end{subfigure}
     \caption{Relace $S$ zakreslená standardně a pomocí Hasseova diagramu.}
     \label{fig:relace_usporadani_zakresleni}
 \end{figure}
-Podobně bychom můžeme zakreslit i relaci $R_1$ z obrázku \ref{subfig:relace_usporadani_1}.
+Podobně bychom můžeme zakreslit i relaci $R_1$ z obrázku \ref{fig:relace_usporadani_1}.
 \begin{figure}[H]
     \centering
     \includegraphics{ch02_relace_usporadani_1_hasseuv_diagram.pdf}
