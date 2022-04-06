@@ -8,5 +8,5 @@ Otázky:
 - Zavést exist. kvant. s ! v sekci logiky nebo stačí až u zobrazení?
 - Rozlišovat zobrazení a funkci?
 - Používat float specifier H místo h u obrázků?
-
-Možná poznámka pod čarou (bijekce), ale jinak v pořádku uvést.
+- Zmiňovat ostré/neostré uspořádání, popř. jak? ANO.
+- Zmiňovat tvrzení o uspořádáních z kapitol?

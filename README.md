@@ -18,13 +18,17 @@ Práce obsahuje historickou předmluvu vysvětlující důvod vzniku dané teori
 
 ## Záznam změn
 
+### 5. 4. 2022
+- 
+
 ### 4. 4. 2022
 - Opraveny obrázky v sekci o *uspořádáních* (přidána reflexivita).
-- 
+- Do sekce **"Speciálně o uspořádaných množinách"** přidána definice *lineárního* a *částečného uspořádání* s příklady.
+- Do sekce **"Speciálně o uspořádaných množinách"** přidány definice *minimálního/maximálního*, resp. *nejmenšího/největšího* prvku s příklady.
 
 ### 3. 4. 2022
 - Opravena definice *zobrazení*.
-- Přejmenována sekce "*Speciálně o uspořádáních*" na "*Speciálně o uspořádáních a uspořádaných množinách*"
+- Přejmenována sekce "*Speciálně o uspořádáních*" na "*Speciálně o uspořádaných množinách*"
 
 ### 2. 4. 2022
 - Do sekce **"Kvantifikátory a predikátový počet"** přidán jednodušší příklad na negaci v úvodu.
