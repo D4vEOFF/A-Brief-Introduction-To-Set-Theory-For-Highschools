@@ -19,7 +19,7 @@ Práce obsahuje historickou předmluvu vysvětlující důvod vzniku dané teori
 ## Záznam změn
 
 ### 7. 4. 2022
-- 
+- Změna struktury projektu.
 
 ### 6. 4. 2022
 - Přesunuto do přílohy:
