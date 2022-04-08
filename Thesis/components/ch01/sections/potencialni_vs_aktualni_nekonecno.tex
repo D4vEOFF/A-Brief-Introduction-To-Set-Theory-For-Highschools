@@ -119,12 +119,13 @@ Velká část matematické analýzy je založená na úvahách s \emph{nekonečn
 
 Obrázek \ref{fig:urcity_integral_ukazka} a obrázky jemu podobné se často uvádí ve spojitosti s tzv. \emph{určitým integrálem}. Zde bychom mohli psát
 \begin{align*}
-S=\int_{a}^{b}{f(x)\,\dx{x}}.
+S=\int_{a}^{b}{f(x)\,\dx{}}.
 \end{align*}
-Pro upřesnění, pokud platí, že funkce $f$ je na intervalu $\langle a,b \rangle$ kladná, pak integrál $\int_a^b{f(x)\,\dx{x}}$ je obsah plochy pod grafem funkce $f$ na intervalu $\langle a,b \rangle$. Výpočet obsahu takové složitě vypadající plochy, jako na obrázku \ref{fig:urcity_integral_ukazka}, se může zdát bez znalosti integrálního počtu takřka nemožným úkolem. Pokusme se ale na danou problematiku podívat právě optikou infinitezimálního počtu. (Znalý čtenář snad promine, že se zatím zdržím formalismů a pouze jednoduše naznačím myšlenku.)\par
+Pro upřesnění, pokud platí, že funkce $f$ je na intervalu $\langle a,b \rangle$ kladná, pak integrál $\int_a^b{f(x)\,\dx{}}$ je obsah plochy pod grafem funkce $f$ na intervalu $\langle a,b \rangle$. Výpočet obsahu takové složitě vypadající plochy, jako na obrázku \ref{fig:urcity_integral_ukazka}, se může zdát bez znalosti integrálního počtu takřka nemožným úkolem. Pokusme se ale na danou problematiku podívat právě optikou infinitezimálního počtu. (Znalý čtenář snad promine, že se zatím zdržím formalismů a pouze jednoduše naznačím myšlenku.)\par
 Pro začátek zkusíme plochu pouze aproximovat. K tomu využijeme tvar, jehož obsah jsme schopni triviálně vypočítat -- obdélníka. Pro začátek zkusíme plochu aproximovat pomocí 4 obdélníků (viz obrázek \ref{fig:urcity_integral_aproximace1}).
 \begin{figure}[h]
-	\centering	\includegraphics{ch01_urcity_integral_aproximace1.pdf}
+	\centering
+	\includegraphics{ch01_urcity_integral_aproximace1.pdf}
 	\caption{Aproximace plochy pod grafem funkce $f$ na intervalu $\langle a,b \rangle$ pomocí 4 obdélníků.}
 	\label{fig:urcity_integral_aproximace1}
 \end{figure}
@@ -149,7 +150,7 @@ Pro rostoucí $n$, tedy počet dílčích intervalů $\langle x_{i-1},x_i \rangl
 S=\int_{a}^{b}{f(x)\,\dx},
 \end{align*}
 kde rozdíl $x_i-x_{i-1}$ přešel v diferenciál $\dx$ a minimum $\min\limits_{x_{n-1} \leq x \leq x_n}{f(x)}$ přešlo přímo ve funkční hodnotu $f(x)$.\par
-V matematice značíme součty pomocí řeckého symbolu $\sum$ (velké písmeno \emph{sigma}). (Podrobněji toto značení zavedeme v kapitole \ref{chap:zakladni_pojmy_a_znaceni} v sekci \ref{sec:mnoziny_a_cisla}.) Proto se čtenář může často setkat v jiných textech se zápisem
+V matematice značíme součty pomocí řeckého symbolu $\sum$ (velké písmeno \emph{sigma}). Proto se čtenář může často setkat v jiných textech se zápisem
 \begin{align*}
 S \approx \sum_{i=1}^{n}{(x_i-x_{i-1}) \cdot \min\limits_{x_{i-1} \leq x \leq x_i}{f(x)}}.
 \end{align*}
