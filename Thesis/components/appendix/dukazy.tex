@@ -130,52 +130,6 @@ Z toho je již vidět, jak u takových tvrzení při důkazu postupovat. Zkrátk
     \end{equation*}
     Tedy dokázali jsme obě implikace a tím i původní tvrzení.
 \end{proof}
-V sekci \ref{sec:mnoziny_a_cisla} jsme si ukázali \emph{de Morganovy vzorce} pro množiny. Nyní si ukážeme důkaz jejich platnosti. Zároveň si tak ukážeme příklad "množinového" důkazu.
-\begin{proposition}[de Morganovy vzorce]
-    Nechť $A,X_1,X_2,\dots,X_n$ jsou libovolné množiny. Pak platí
-    \begin{enumerate}[label=(\roman*)]
-        \item\label{item:de_morgan_sets_1} $\displaystyle A \setminus \left(\bigcup\limits_{i=1}^{n}{X_i}\right)=\bigcap\limits_{i=1}^{n}{(A \setminus X_i)},$
-        \item\label{item:de_morgan_sets_2} $\displaystyle A \setminus \left(\bigcap\limits_{i=1}^{n}{X_i}\right)=\bigcup\limits_{i=1}^{n}{(A \setminus X_i)}.$
-    \end{enumerate}
-\end{proposition}
-\begin{proof}
-    Nejdříve si uvědomme, co vlastně říkají dané rovnosti. Vyjadřují, že výsledné množiny jsou stejné. Kdy toto platí? Právě když dané množiny obsahují stejné prvky, tj.
-    \begin{equation*}
-        A=B \iff \left(\forall x : x\in A \iff x\in B\right).     
-    \end{equation*}
-    Myšlenka našeho důkazu bude tedy taková, že uvážíme libovolný prvek $x$ náležící pravé straně rovnosti a ukážeme, že rovněž náleží i straně druhé.\par
-    Ukážeme si platnost \ref{item:de_morgan_sets_1}, avšak důkaz \ref{item:de_morgan_sets_2} je zcela analogický. Tedy budiž dáno $x\in A \setminus \left(\bigcup_{i=1}^{n}{X_i}\right)$. Z definice rozdílu množin (viz \todo{doplnit odkaz}) tedy musí platit
-    \begin{equation*}
-        x \in A \setminus \left(\bigcup\limits_{i=1}^{n}{X_i}\right) \iff x\in A \land x\notin \bigcup\limits_{i=1}^{n}{X_i}.
-    \end{equation*}
-    Protože však prvek $x$ nenáleží sjednocení množin $X_1,\dots,X_n$, pak nenáleží žádné z nich:
-    \begin{equation*}
-        x\notin \bigcup\limits_{i=1}^{n}{X_i} \iff \forall i\in\set{1,\dots,n} : x\notin X_i.
-    \end{equation*}
-    Celkově tedy nyní víme, že
-    \begin{equation}\label{eq:de_morgan_leva_strana}
-        x\in A \land \forall i\in\set{1,\dots,n} : x\notin X_i
-    \end{equation}
-    Nyní se podívejme na pravou stranu zkoumané rovnosti. Z \eqref{eq:de_morgan_leva_strana} již plyne
-    \begin{align*}
-        x\in A \land \left(\forall i\in\set{1,\dots,n} : x\notin X_i\right) &\iff \forall i\in\set{1,\dots,n} : x\in (A \setminus X_i)\\
-        &\iff x\in\bigcap\limits_{i=1}^{n}{(A \setminus X_i)},
-    \end{align*}
-    a celkově tedy jsme dokázali implikaci
-    \begin{equation*}
-        x \in A \setminus \left(\bigcup\limits_{i=1}^{n}{X_i}\right) \implies x\in\bigcap\limits_{i=1}^{n}{(A \setminus X_i)}.
-    \end{equation*}
-    Prvek $x$ jsme však volili libovolně a náš argument výše je tak univerzální (platí pro všechny prvky). Zároveň si však všimněme, že všechna odvozená dílčí tvrzení jsou ekvivalencemi a tedy platí i opačná implikace
-    \begin{equation*}
-        x \in A \setminus \left(\bigcup\limits_{i=1}^{n}{X_i}\right) \impliedby x\in\bigcap\limits_{i=1}^{n}{(A \setminus X_i)}.
-    \end{equation*}
-
-    Z toho dostáváme platnost původní rovnosti v \ref{item:de_morgan_sets_1}. Tj.
-    \begin{equation*}
-        \left(\forall x : x \in A \setminus \left(\bigcup\limits_{i=1}^{n}{X_i}\right) \iff x\in\bigcap\limits_{i=1}^{n}{(A \setminus X_i)}\right) \iff A \setminus \left(\bigcup\limits_{i=1}^{n}{X_i}\right)=\bigcap\limits_{i=1}^{n}{(A \setminus X_i)}.
-    \end{equation*}
-\end{proof}
-Obecně pokud je tvrzení takové, že platí pro všechny objekty z jisté množiny, pak bývá právě častým způsobem důkazu, že se platnost ukáže obecně pro kterýkoliv objekt z dané množiny nezávisle na jeho volbě.
 
 \subsection{Důkaz nepřímý}\label{subsec:dukaz_neprimy}
 Řada tvrzení v matematice však není až tak jednoduchá na dokázání přímo. Důkazy, které jsme si ukazovali, vždy začínaly od předpokladu a postupně jsme došli k požadovanému závěru. Lze ale postupovat i jinak. Opět se odkážeme na dříve zmíněné tautologie věty \ref{thm:vyznamne_tautologie}, konkrétně na \ref{item:tautologie_5}:
@@ -392,7 +346,7 @@ Tuto větu v různých textech lze najít i v jiných formulacích. Důkaz této
     Podle principu matematické indukce platí $\forall n\geq 5: 2^n>n^2$, což jsme chtěli dokázat.
 \end{proof}
 (Převzato z \cite{ChartrandPolimeniZhang2014}, str. 153.)
-V sekci \ref{sec:mnoziny_a_cisla} o množinách a číslech jsme si slíbili, že si dokážeme tvrzení o mohutnosti potenční množiny libovolné konečné množiny. Existuje více způsobů, jak platnost tohoto tvrzení dokázat (hodně z nich jsou více kombinatorického charakteru). My si jej však dokážeme indukcí pomocí poměrně hezkého triku.
+% V sekci \ref{sec:mnoziny_a_cisla} o množinách a číslech jsme si slíbili, že si dokážeme tvrzení o mohutnosti potenční množiny libovolné konečné množiny. Existuje více způsobů, jak platnost tohoto tvrzení dokázat (hodně z nich jsou více kombinatorického charakteru). My si jej však dokážeme indukcí pomocí poměrně hezkého triku.
 \begin{proposition}
     Nechť $X$ je libovolná $n$-prvková množina. Pak $\sizeof{\powset{X}}=2^n$.
 \end{proposition}

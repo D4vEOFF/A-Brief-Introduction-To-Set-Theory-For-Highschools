@@ -1,2 +1,50 @@
-\chapter{Axiomy teorie množin}
-\todo{Doplnit úvodní popis.}
+\chapter{Axiomy teorie množin}\label{sec:axiomy_tm}
+Jak jsme si již zmínili v historickém úvodu tohoto textu, teorie množin se po objevu různých paradoxů (viz Russellův paradox a jiné v \ref{subsec:cantor}) v Cantorově zavedení začala později budovat axiomaticky. K tomu jsme měli možnost nahlédnout v sekci \ref{subsec:tm_soucasnost}. Jednou z variant axiomatické teorie množin je tzv. \textbf{Zermelova-Fraenkelova teorie množin}, která je literatuře pravděpodobně tou nejrozšířenější; označujeme ji zkratkou \emph{ZF}\footnote{Obdobně Gödelova-Bernaysova teorie množin je označována \emph{GB}.}. Proto se právě jí budeme v této sekci věnovat. V dalších odstavcích se postupně zaměříme na jednotlivé axiomy ZF a ukážeme si, jak z nich vyplývají definice dalších pojmů (i některých nám již známých).\par
+Nutno dodat, že ZF má více variant a tak v různých textech se může "soubor" axiomů, s nimiž se pracuje, jemně lišit. Odlišné přístupy v této axiomatické teorii lze krásně vidět např. v knihách \cite{BalcarStepanek1986} a \cite{Goldrei2017}. Lze však ukázat, že tyto varianty jsou si ekvivalentní. (Zmíníme se ještě později.)\par
+Pro začátek si zde přehledně vypišme všechny axiomy ZF, s nimiž budeme pracovat, a v dalších sekcích si je detailněji popíšeme.
+\medskip
+
+\noindent\textbf{Axiomy Zermelovy-Fraenkelovy teorie množin}:
+\begin{enumerate}[label=({ZF}\arabic*)]
+    \item\label{item:axiom_extenzionality} \emph{Axiom extenzionality}.
+    \begin{equation*}
+        \forall x\,\forall y\,\big(x=y \iff \forall z\,(z\in x \iff z\in y)\big)
+    \end{equation*}
+    \item\label{item:axiom_existence} \emph{Axiom existence}.
+    \begin{equation*}
+        \exists x: x=x
+    \end{equation*}
+    \item\label{item:axiom_dvojice} \emph{Axiom dvojice}.
+    \begin{equation*}
+        \forall a\,\forall b\,\exists y\,\forall x\,(x \in y \iff x=a \lor x=b)
+    \end{equation*}
+    \item\label{item:schema_axiomu_vydeleni} \emph{Schéma axiomů vydělení}.
+    \begin{equation*}
+        \forall a\,\exists y\,\forall x\,(x\in y \iff x\in a \land \varphi(x)),
+    \end{equation*}
+    kde $\varphi(x)$ je formule neobsahující proměnnou $y$.
+    \item\label{item:axiom_potence} \emph{Axiom potence}.
+    \begin{equation*}
+        \forall a\,\exists y\,\forall x\,\big(x\in y \iff x\subseteq a\big)
+    \end{equation*}
+    \item\label{item:axiom_sumy} \emph{Axiom sumy}.
+    \begin{equation*}
+        \forall a\,\exists z\,\forall x\,(x\in z\iff \exists y\,(x\in y \land y\in a))
+    \end{equation*}
+    \item\label{item:axiom_nekonecna} \emph{Axiom nekonečna}.
+    \begin{equation*}
+        \exists y\, (\emptyset\in y \land \forall x\,(x\in y\implies x\cup\set{x}\in y)
+    \end{equation*}
+    \item\label{item:schema_axiomu_nahrazeni} \emph{Schéma axiomů nahrazení}.
+    \begin{align*}
+        \forall u\,\Big(\forall v\,\forall v^\prime\,(\varphi(u,v) \land \varphi(u,v^\prime) \implies v=v^\prime)\implies\\ \implies \forall a\,\exists z\,\forall x\,\big(x\in y \iff \exists y\,(y\in a \land \varphi(u,y))\big)\Big),
+    \end{align*}
+    kde formule $\varphi(u,v)$ neobsahuje proměnné $v^\prime$ a $z$.
+    \item\label{item:axiom_fundovanosti} \emph{Axiom fundovanosti}.
+    \begin{equation*}
+        \forall a\,\Big(a\neq\emptyset \implies \exists x:\big(x\in a \land x\cap a=\emptyset\big)\Big)
+    \end{equation*}
+\end{enumerate}
+Mohlo by se zdát zarážející, že ve formulaci axiomů \ref{item:axiom_potence}, \ref{item:axiom_nekonecna} a \ref{item:axiom_fundovanosti} jsme využili symboly $\emptyset$ a $\subseteq$, které jsme zatím formálně nedefinovali. Učinili jsme tak z didaktického hlediska, aby byly dané axiomy jasnější. Nicméně čtenář si může zkusit rozmyslet, že tyto symboly lze definovat pomocí predikátu $x\in y$ jako zbytek axiomů.
+
+\input{\sectionpath{03}/axiomy_1_az_3.tex}

@@ -1,12 +1,4 @@
 Otázky:
-- Jak vhodně formulovat, že množina "je menší" než jiná nebo že množiny mají stejnou velikost?
-- Je správné říci, že predikátová formule je i formule obsahující kvantifikátory? (viz Fuchs a jeho definice)
-- Zavádět logickou ekvivalenci i pro predikátové formule?
-- Uvádět důkaz principu mat. indukce? A pokud ano, kde?
-- Je správné říci, že v princip matematické indukce je P_n predikátová formule?
-- Je v pořádku zalamování v mat. prostředí?
-- Zavést exist. kvant. s ! v sekci logiky nebo stačí až u zobrazení?
-- Rozlišovat zobrazení a funkci?
-- Používat float specifier H místo h u obrázků?
-- Zmiňovat ostré/neostré uspořádání, popř. jak? ANO.
-- Zmiňovat tvrzení o uspořádáních z kapitol?
+- "Axiom" nebo "axióm"?
+- Je správný překlad "empty set axiom" název "axiom prázdné množiny"?
+- Používat velká nebo malá písmena pro množiny.
