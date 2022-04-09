@@ -2,50 +2,50 @@
 
 Logické spojky nám jistě poskytují nástroj pro vyjádření celé řady různých výroků. Vyjádřit např. výrok "Anička má zelené vlasy ($Z$) a modré oči ($M$)." tak pro nás není problém. Symbolicky bychom mohli napsat např.
 \begin{equation*}
-    Z_{\text{Anička}} \land M_{\text{Anička}}.
+    Z({\text{Anička}}) \land M({\text{Anička}}).
 \end{equation*}
 Co kdybychom toto chtěli prohlásit místo o jednom člověku např. o všech obyvatelích Prahy? Užitím čistě logických spojek, jak jsme prováděli doposud, bychom museli napsat např.
 \begin{equation*}
-    (Z_{\text{Anička}} \land M_{\text{Anička}}) \land (Z_{\text{Eva}} \land M_{\text{Eva}}) \land (Z_{\text{Tomáš}} \land M_{\text{Tomáš}}) \land \cdots \land (Z_{\text{Jiří}} \land M_{\text{Jiří}}).
+    (Z({\text{Anička}}) \land M({\text{Anička}})) \land (Z({\text{Eva}}) \land M({\text{Eva}})) \land (Z({\text{Tomáš}}) \land M({\text{Tomáš}})) \land \cdots \land (Z({\text{Jiří}}) \land M({\text{Jiří}})).
 \end{equation*}
 To je sice správné, ale poměrně těžkopádné vyjádření tak jednoduchého výroku. Jistě bychom neřekli "Anička má zelené vlasy a modré oči a zároveň Eva má zelené vlasy a modré oči a zároveň \dots". Čtenář nejspíše tuší, že existuje jednodušší způsob vyjádření takového výroku, resp. výrokové formule. K tomu v logice slouží právě takzvané \emph{kvantifikátory}.\par
 V praxi bychom zkrátka řekli: "Všichni obyvatelé Prahy mají zelené vlasy a modré oči." (takové tvrzení je jistě výrok). Tímto způsobem formulujeme podobné výroky i v logice. Zkrátka prohlásíme, že pro každého obyvatele Prahy $x$ platí
 \begin{equation*}
-    M_x \land Z_x.
+    M(x) \land Z(x).
 \end{equation*}
 K formálnímu zápisu podobných tvrzení využíváme tzv. \emph{univerzální kvantifikátor} (též \emph{obecným}), který zapisujeme pomocí $\forall$.\par
-Nyní se ještě zamysleme, co nám toto říká z pohledu logiky. Tvrzení je takové, že je-li $x$ obyvatelem Prahy, pak má zelené vlasy a modré oči. V řeči logických spojek toto není nic jiného, než implikace. Označíme-li výrok "$x$ je obyvatelem Prahy." jako $P_x$, pak bychom mohli napsat
+Nyní se ještě zamysleme, co nám toto říká z pohledu logiky. Tvrzení je takové, že je-li $x$ obyvatelem Prahy, pak má zelené vlasy a modré oči. V řeči logických spojek toto není nic jiného, než implikace. Označíme-li výrok "$x$ je obyvatelem Prahy." jako $P(x)$, pak bychom mohli napsat
 \begin{equation}\label{eq:univ_kvatifikator_priklad}
-    \forall x \big(P_x \implies Z_x \land M_x\big),
+    \forall x \big(P(x) \implies Z(x) \land M(x)\big),
 \end{equation}
 nebo podle \ref{item:tautologie_3} ve větě \ref{thm:vyznamne_tautologie} o tautologiích
 \begin{equation*}
-    \forall x \big(Z_x \lor M_x \lor \neg P_x\big).
+    \forall x \big(Z(x) \lor M(x) \lor \neg P(x)\big).
 \end{equation*}
-Takový výrok bychom četli: "\textbf{pro všechna $x$ platí}, že pokud platí $P_x$, pak platí $Z_x$ a zároveň $M_x$". Ve výrazu \eqref{eq:univ_kvatifikator_priklad} můžeme uvažovat libovolná $x$ (nemusí se ani jednat o lidi), avšak pouze u $x$, která splňují předpoklad $P_x$ tvrdíme, že splňují i závěr $Z_x \land M_x$. Proto jsme ve výrazu nepoužili konjunkci, tj.
+Takový výrok bychom četli: "\textbf{pro všechna $x$ platí}, že pokud platí $P(x)$, pak platí $Z(x)$ a zároveň $M(x)$". Ve výrazu \eqref{eq:univ_kvatifikator_priklad} můžeme uvažovat libovolná $x$ (nemusí se ani jednat o lidi), avšak pouze u $x$, která splňují předpoklad $P(x)$ tvrdíme, že splňují i závěr $Z(x) \land M(x)$. Proto jsme ve výrazu nepoužili konjunkci, tj.
 \begin{equation*}
-    \forall x \big(P_x \land Z_x \land M_x\big),
+    \forall x \big(P(x) \land Z(x) \land M(x)\big),
 \end{equation*}
-neboť bychom vzali např. obyvatele Brna, pak by byl již výrok nepravdivý (kvůli $P_x$).
+neboť bychom vzali např. obyvatele Brna, pak by byl již výrok nepravdivý (kvůli $P(x)$).
 
 Druhým typem kvantifikátoru je tzv. \emph{existenční kvantifikátor}. Uvažme, že bychom chtěli naopak říci, že ze všech obyvatel Prahy má alespoň jeden zelené vlasy a modré oči. S využitím čistě logických spojek by pak znamenalo, že jedna z dílčích formulí je pravdivá
 \begin{equation*}
-    (Z_{\text{Anička}} \land M_{\text{Anička}}) \lor (Z_{\text{Eva}} \land M_{\text{Eva}}) \lor (Z_{\text{Tomáš}} \land M_{\text{Tomáš}}) \lor \cdots \lor (Z_{\text{Jiří}} \land M_{\text{Jiří}}).
+    (Z({\text{Anička}}) \land M({\text{Anička}})) \lor (Z({\text{Eva}}) \land M({\text{Eva}})) \lor (Z({\text{Tomáš}}) \land M({\text{Tomáš}})) \lor \cdots \lor (Z({\text{Jiří}}) \land M({\text{Jiří}})).
 \end{equation*}
 I zde však máme kratší alternativu, a to s využitím symbolu $\exists$ pro existenční kvantifikátor. Opět se však nejdřív podívejme na naše tvrzení. To říká, že existuje $x$ takové, že $x$ je obyvatelem Prahy a zároveň má zelené vlasy a modré oči. Zde si tedy naopak vystačíme pouze s konjunkcí:
 \begin{equation}\label{eq:exist_kvatifikator_priklad}
-    \exists x \big(P_x \land Z_x \land M_x\big).
+    \exists x \big(P(x) \land Z(x) \land M(x)\big).
 \end{equation}
 Přirozeně se zde nabízí otázka, proč jen nenahradit univerzální kvantifikátor ve výrazu \eqref{eq:univ_kvatifikator_priklad} za existenční. Pokud bychom napsali
 \begin{equation}\label{eq:exist_kvatifikator_priklad_implikace}
-    \exists x \big(P_x \implies Z_x \land M_x\big),
+    \exists x \big(P(x) \implies Z(x) \land M(x)\big),
 \end{equation}
 pak by tvrzení již neplatilo pouze na obyvatele Prahy (v případě nesplněného předpokladu je implikace pravdivá), ale třeba pro obyvatele Brna by toto tvrzení také byla pravda. Pokud by však v Praze neexistoval občan se zelenými vlasy a modrýma očima, pak by výraz \eqref{eq:exist_kvatifikator_priklad} by nepravdivý, ale výraz \eqref{eq:exist_kvatifikator_priklad_implikace} by pravdivý již byl.
 \medskip
 
 \subsection{Primitivní predikáty}
 
-Vzpomeneme-li si na definici výrokových formulí (viz \ref{def:vyrokova_a_atomicka_formule}), tak zde jsme formule tvořili opakovanou aplikací jistých pravidel, přičemž "nejtriviálnější" výrokovou formulí (tj. atomickou formulí) pro nás byly \textbf{výrokové proměnné}. Těm jsme přiřazovali pravdivostní hodnotu 0 (nepravda) nebo 1 (pravda). V tomto se však nachází jisté omezení. U předešlého příkladu jsme, kromě jiných, uvažovali výrok "$x$ je obyvatelem Prahy.", který jsme značili výrokovou proměnnou $P_x$. Tím jsme přiřadili $P_x$ jistý význam.\par
+Vzpomeneme-li si na definici výrokových formulí (viz \ref{def:vyrokova_a_atomicka_formule}), tak zde jsme formule tvořili opakovanou aplikací jistých pravidel, přičemž "nejtriviálnější" výrokovou formulí (tj. atomickou formulí) pro nás byly \textbf{výrokové proměnné}. Těm jsme přiřazovali pravdivostní hodnotu 0 (nepravda) nebo 1 (pravda). V tomto se však nachází jisté omezení. U předešlého příkladu jsme, kromě jiných, uvažovali výrok "$x$ je obyvatelem Prahy.", který jsme značili výrokovou proměnnou $P(x)$. Tím jsme přiřadili $P(x)$ jistý význam.\par
 Zkusme takto zapsat matematické tvrzení "Pokud je $x$ větší než $y$ a zároveň $y$ je větší než $z$, pak $x$ je větší než $z$". Výrok "$x$ je větší než $y$" označme $A$, "$y$ je větší než $z$" označme $B$ a "$x$ je větší než $z$" označme $C$. Pak původní výrok bychom symbolicky zapsali jako
 \begin{equation*}
     A \land B \implies C.
@@ -131,28 +131,28 @@ V sekci o výrokové logice \ref{sec:vyrokova_logika} jsme si zmínili některé
 Tyto tautologie nám dávaly způsob, jak negovat složené výroky obsahující konjunkci nebo disjunkci. Jak ovšem negovat formule s kvantifikátory?\par
 Zkusme se na problematiku podívat opět skrze příklad o obyvatelích Prahy. Měli jsme tvrzení, že každý obyvatel Prahy má zelené vlasy a modré oči, což jsme zapisovali
 \begin{equation*}
-    \forall x : P_x\implies Z_x \land M_x.
+    \forall x : P(x)\implies Z(x) \land M(x).
 \end{equation*}
 Pro začátek si vezměme jednodušší variantu bez konjunkce:
 \begin{equation*}
-    \forall x : P_x\implies M_x.
+    \forall x : P(x)\implies M(x).
 \end{equation*}
 Tedy uvažovaný výrok je "Každý obyvatel Prahy má zelené vlasy.". Jak by zněla negace takového výroku? Zamysleme se nad tím, v jakém případě by výrok neplatil. Pokud by v Praze byl obyvatel, který nemá modré oči, pak naše tvrzení neplatí. Zdá se tedy, že by mohlo platit
 \begin{equation*}
-    \neg(\forall x : P_x\implies M_x) \iff \exists x: P_x \land \neg M_x.
+    \neg(\forall x : P(x)\implies M(x)) \iff \exists x: P(x) \land \neg M(x).
 \end{equation*}
-Tj. tvrdíme, že existuje $x$ takové, že $x$ je obyvatelem Prahy a $x$ nemá modré oči. Jak se tedy změnila naše formule? Obecný kvantifikátor se změnil na existenční a znegovali jsme formuli $P_x\implies M_x$ (viz tautologie \ref{item:tautologie_3} ve větě \ref{thm:vyznamne_tautologie}). Skutečně, toto je negace původního výroku.\par
+Tj. tvrdíme, že existuje $x$ takové, že $x$ je obyvatelem Prahy a $x$ nemá modré oči. Jak se tedy změnila naše formule? Obecný kvantifikátor se změnil na existenční a znegovali jsme formuli $P(x)\implies M(x)$ (viz tautologie \ref{item:tautologie_3} ve větě \ref{thm:vyznamne_tautologie}). Skutečně, toto je negace původního výroku.\par
 Podobně tomu bude i pro náš původní výrok s konjunkcí:
 \begin{equation*}
-    \neg(\forall x : P_x\implies Z_x \land M_x) \iff \exists x : \neg (P_x\implies Z_x \land M_x).
+    \neg(\forall x : P(x)\implies Z(x) \land M(x)) \iff \exists x : \neg (P(x)\implies Z(x) \land M(x)).
 \end{equation*}
 Tj. existuje $x$ takové, že $x$ je obyvatelem Prahy a platí, že nemá zelené vlasy nebo nemá modré oči. Opět užitím tautologie \ref{item:tautologie_3} a následně de Morganova pravidla pro negaci konjunkce \ref{item:de_morgan_1} ve větě \ref{thm:vyznamne_tautologie} můžeme formuli upravit na
 \begin{equation*}
-    \exists x : P_x\land (\neg Z_x \lor \neg M_x).
+    \exists x : P(x)\land (\neg Z(x) \lor \neg M(x)).
 \end{equation*}
 Funguje i opačná úvaha. Pokud naše tvrzení je, že existuje obyvatel Prahy se zelenými vlasy a modrými oči, pak negace naopak říká, že všichni obyvatelé Prahy nemají zelené vlasy nebo nemají modré oči. Tzn.
 \begin{equation*}
-    \neg(\exists x : P_x\land Z_x \land M_x) \iff \forall x : P_x\implies \neg Z_x \lor \neg M_x.
+    \neg(\exists x : P(x)\land Z(x) \land M(x)) \iff \forall x : P(x)\implies \neg Z(x) \lor \neg M(x).
 \end{equation*}
 Obecně řečeno, formule s kvantifikátory se negují tak, že kvantifikátory si prohodí roli, tj. obecný kvantifikátor se změní na existenční a naopak, a znegujeme dílčí formuli $\varphi$, tzn.
 \begin{align*}
