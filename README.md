@@ -18,6 +18,9 @@ Práce obsahuje historickou předmluvu vysvětlující důvod vzniku dané teori
 
 ## Záznam změn
 
+### 9. 4. 2022
+- Rozepsána kapitola **"Axiomy teorie množin"**.
+
 ### 7. 4. 2022
 - Změna struktury projektu.
 
