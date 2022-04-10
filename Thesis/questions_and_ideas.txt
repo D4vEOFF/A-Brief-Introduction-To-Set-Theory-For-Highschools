@@ -1,4 +1,4 @@
 Otázky:
 - "Axiom" nebo "axióm"?
-- Je správný překlad "empty set axiom" název "axiom prázdné množiny"?
+- Je správný překlad "empty set axiom" název "axiom prázdné množiny" nebo v češtině se mu nazývá jinak?
 - Používat velká nebo malá písmena pro množiny.

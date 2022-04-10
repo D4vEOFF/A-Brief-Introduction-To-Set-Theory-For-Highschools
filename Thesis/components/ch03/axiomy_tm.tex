@@ -37,7 +37,7 @@ Pro začátek si zde přehledně vypišme všechny axiomy ZF, s nimiž budeme pr
     \end{equation*}
     \item\label{item:schema_axiomu_nahrazeni} \emph{Schéma axiomů nahrazení}.
     \begin{align*}
-        \forall u\,\Big(\forall v\,\forall v^\prime\,(\varphi(u,v) \land \varphi(u,v^\prime) \implies v=v^\prime)\implies\\ \implies \forall a\,\exists z\,\forall x\,\big(x\in y \iff \exists y\,(y\in a \land \varphi(u,y))\big)\Big),
+        \forall u\,\Big(\forall v\,\forall v^\prime\,(\varphi(u,v) \land \varphi(u,v^\prime) \implies v=v^\prime)\implies\\ \implies \forall a\,\exists z\,\forall x\,\big(x\in z \iff \exists y\,(y\in a \land \varphi(y,x))\big)\Big),
     \end{align*}
     kde formule $\varphi(u,v)$ neobsahuje proměnné $v^\prime$ a $z$.
     \item\label{item:axiom_fundovanosti} \emph{Axiom fundovanosti}.
@@ -48,3 +48,4 @@ Pro začátek si zde přehledně vypišme všechny axiomy ZF, s nimiž budeme pr
 Mohlo by se zdát zarážející, že ve formulaci axiomů \ref{item:axiom_potence}, \ref{item:axiom_nekonecna} a \ref{item:axiom_fundovanosti} jsme využili symboly $\emptyset$ a $\subseteq$, které jsme zatím formálně nedefinovali. Učinili jsme tak z didaktického hlediska, aby byly dané axiomy jasnější. Nicméně čtenář si může zkusit rozmyslet, že tyto symboly lze definovat pomocí predikátu $x\in y$ jako zbytek axiomů.
 
 \input{\sectionpath{03}/axiomy_1_az_3.tex}
+\input{\sectionpath{03}/axiomy_4_az_6.tex}

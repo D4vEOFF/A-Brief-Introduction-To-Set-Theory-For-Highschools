@@ -1,0 +1,43 @@
+\section{Axiomy 4 až 6}\label{sec:axiomy_4_az_6}
+První trojice axiomů se zdá být dobrým základem, avšak stále je stále hodně typů množin, jejichž existence z nich neplyne. Trochu "podvodným" způsobem jeden takový typ použili v diskuzi axiomu extenzionality, konkrétně množinu $\set{a,b,c}$. Při zamyšlení zjistíme, že čistě z axiomů \ref{item:axiom_extenzionality}, \ref{item:axiom_existence} a \ref{item:axiom_dvojice} nelze takovou množinu "sestrojit". Pomocí axiomu dvojice plyne pro množiny $a,b,c$ existence množin
+\begin{equation*}
+    \set{a,b}\;\text{a tudíž i}\;\set{\set{a,b},c},
+\end{equation*}
+což jak víme, není to samé co $\set{a,b,c}$. Její existenci a existenci mnoha dalších množin nám zaručí (společně se \ref{item:axiom_extenzionality}, \ref{item:axiom_existence} a \ref{item:axiom_dvojice}) axiomy \ref{item:schema_axiomu_vydeleni}, \ref{item:axiom_potence} a \ref{item:axiom_sumy}.
+
+\subsubsection{Schéma axiomů vydělení}
+\begin{equation}\label{eq:schema_axiomu_vydeleni}
+    \forall a\,\exists y\,\forall x\,(x\in y \iff x\in a \land \varphi(x)),
+\end{equation}
+kde $\varphi(x)$ je formule neobsahující proměnnou $y$.\\
+Často potřebujeme z určité množiny prvků vybrat množinu prvků takových, že všechny sdílejí jistou vlastnost. Např.
+\begin{itemize}
+    \item všechna sudá čísla z množiny $\Z$,
+    \item všechna nezáporná čísla z množiny $\R$,
+    \item všechna prvočísla z množiny $\N$, apod.
+\end{itemize}
+Schéma axiomů vydělení\footnote{Slovo "schéma" přidáváme z důvodu, že pro každou volbu formule $\varphi$ dostáváme jeden konkrétní axiom teorie -- axiom vydělení. Tedy schéma axiomů vydělení představuje nekonečně mnoho různých axiomů, které vzniknou tím, že $\varphi$ proběhne všechny možné formule s proměnnou $x$.} nám obecně říká, že pro každou množinu $a$ existuje množina $y$ taková, že každý její prvek $x$ je zároveň prvek $a$ splňuje určitou formuli $\varphi(x)$ (ta reprezentuje danou vlastnost). Podle axiomu extenzionality \ref{item:axiom_extenzionality} je množina v \eqref{eq:schema_axiomu_vydeleni} jednoznačně určena. Čtenář je nejspíše zvyklý množiny, jejichž prvky sdílejí určitou vlastnost, zapisovat např. jako
+\begin{equation*}
+    \set{x\in\R \admid x\geq 0}.
+\end{equation*}
+Obecněji množinu z \eqref{eq:schema_axiomu_vydeleni} zapisujeme výrazem
+\begin{equation*}
+    \set{x \admid x\in a \land \varphi(x)}\;\text{nebo též}\;\set{x\in a\admid \varphi(x)}.
+\end{equation*}
+Pokud se nyní vrátíme k množinám, se kterými jsme doteď pracovali, můžeme pro množiny $a$ a $b$ definovat množinu
+\begin{equation*}
+    \set{x\in a\admid x\notin b},
+\end{equation*}
+kde formule $\varphi(x)$ je $x\notin b$. Toto schéma axiomů má následující důsledek.
+\begin{corollary}
+    Existuje množina, která nemá žádné prvky.
+\end{corollary}
+\begin{proof}
+    Důkaz je jednoduchý. Máme-li libovolnou množinu $a$, pak podle schématu axiomů vydělení lze sestrojit množinu, která nemá žádné prvky. Toho docílíme volbou formule $\varphi(x)$ jako $x\neq x$, tzn.
+    \begin{equation*}
+        \set{x\in a \admid x\neq x}
+    \end{equation*}
+    je také množina.
+\end{proof}
+Takovou množinu pak nazýváme \emph{prázdná množina} a typicky ji označujeme znakem $\emptyset$ nebo též někdy prázdnými složenými závorkami $\set{}$. Toto tvrzení se v jiných variantách ZF považuje za axiom a nahrazuje axiom existence. Všimněte si, že důkaz výše (a prakticky důkazy všech zatím zformulovaných tvrzení) závisely (mimo jiné) právě na axiomu existence. Jinak bychom množinu $a$ vůbec nemohli uvažovat. Naopak pokud bychom přijali existenci prázdné množiny jako axiom, pak to automaticky implikuje existenci množiny obecně, kterou nám zaručuje axiom existence.\par
+Pomocí schématu axiomů vydělení můžeme definovat některé základní operace s množinami.
