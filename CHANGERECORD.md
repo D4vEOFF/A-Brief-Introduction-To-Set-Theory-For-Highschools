@@ -1,5 +1,9 @@
 # Záznam změn
 
+## 10. 4. 2020
+- Doděláno vysvětlení prvních tří axiomů.
+- Rozepsáno vysvětlení axiomů 4 až 6.
+
 ## 9. 4. 2022
 - Rozepsána kapitola **"Axiomy teorie množin"**.
 - Sekce **"Relace"** a **"Zobrazení"** přesunuty pod kapitolu **"Axiomy teorie množin"**.
