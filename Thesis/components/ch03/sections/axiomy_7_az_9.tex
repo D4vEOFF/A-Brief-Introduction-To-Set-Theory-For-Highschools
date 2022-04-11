@@ -1,0 +1,9 @@
+\section{Axiomy 7 až 9}\label{sec:axiomy_7_az_9}
+Nyní se dostáváme k poslední trojici axiomů ZF. Už jsme zde ukázkově zmínili nám asi jedny z nejznámějších množin jako jsou přirozená čísla $\N$ nebo reálná čísla $\R$. Ačkoliv je šestice již zmíněných axiomů poměrně silná a umožňuje nám pracovat velkou škálou množin, přesto by bylo stále ambiciózní tvrdit např. o přirozených, racionálních či reálných číslech jako o množinách. Axiom dvojice nebo axiomy sumy nám zatím dávají možnost mluvit pouze o konečných množinách, byť libovolně velkých. Mohli bychom ještě udat jako důvod, že množiny jsou pro nás jediným přípustným objektem (jak jsme zmiňovali na začátku kapitoly) a prvky množin musí být opět množiny. Jak ale později uvidíme (viz \todo{doplnit odkaz}), číselné obory jsou také množinami v ZF. Začneme proto axiomem nekonečna.
+
+\subsection{Axiom nekonečna}\label{subsec:axiom_nekonecna}
+\begin{equation*}
+    \exists y\, (\emptyset\in y \land \forall x\,(x\in y\implies x\cup\set{x}\in y)
+\end{equation*}
+Existuje množina $y$, kde pro každý její prvek $x$ platí, že je prvkem i $x\cap\set{x}$. Zkráceně tento axiom postuluje existenci \textbf{aktuálně} nekonečné množiny.\par
+Zde opět narážíme na problematiku, kterou jsme diskutovali v historické části, a to sice \textbf{potenciální} vs \textbf{aktuální} nekonečno. Axiomy dvojice a sumy nám zaručovaly existenci \textbf{potenciálně} nekonečných množin, zatímco axiom nekonečna nám zaručuje existenci \textbf{aktuálně} nekonečné množiny (bez udání způsobu, jak takovou sestavit z již existujících množin). 

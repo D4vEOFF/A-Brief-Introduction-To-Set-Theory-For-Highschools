@@ -56,11 +56,12 @@ Pomocí schématu axiomů vydělení můžeme definovat některé základní ope
     \end{enumerate}
 \end{definition}
 \begin{example}
-    $ $
+    Ukázky průniku a rozdílu množin:
     \begin{enumerate}[label=(\roman*)]
-        \item $\set{a,b,c}\cap\set{a,c,d}=\set{a,c}$
-        \item $\set{x,y,z}\setminus\set{y}=\set{x,z}$
-        \item $\set{y,z}\setminus\set{y,w}=\set{z}$
+        \item $\set{a,b,c}\cap\set{a,c,d}=\set{a,c}$,
+        \item $\set{a,b,c}\cap\emptyset=\emptyset$,
+        \item $\set{x,y,z}\setminus\set{y}=\set{x,z}$,
+        \item $\set{y,z}\setminus\emptyset=\emptyset$.
     \end{enumerate}
 \end{example}
 Proč rovnou nedefinovat i \emph{sjednocení} množin? Protože schéma axiomů vydělení \ref{item:schema_axiomu_vydeleni} garantuje existenci pouze takové množiny $y$, že všechny její prvky náleží množině $a$. To však při sjednocení množin neplatí, neboť některé prvky množiny $b$ nemusí být prvky množiny $a$. S touto vlastností všech množin, jejichž existenci máme díky schématu axiomů vydělení se pojí ještě jeden termín.
@@ -166,3 +167,10 @@ Zde si můžeme všimnout souvislosti se sumou množiny, neboť sjednocení mno�
     a\cup b=\bigcup\set{a,b}.
 \end{equation*}
 (Zkuste si rozmyslet z definice.) Z toho je také vidět, že definice sjednocení množin je zcela oprávněná, neboť je v souladu s axiomem sumy.
+\begin{example}
+    Ukázky sjednocení:
+    \begin{enumerate}[label=(\roman*)]
+        \item $\set{a,b,c}\cup\set{c,d}=\set{a,b,c,d}$,
+        \item $\set{x,y}\cup\emptyset=\set{x,y}$
+    \end{enumerate}
+\end{example}

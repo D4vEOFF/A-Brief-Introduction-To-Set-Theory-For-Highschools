@@ -1,5 +1,9 @@
 # Záznam změn
 
+## 11. 4. 2022
+- Doplněny a upraveny příklady v sekci **"Axiomy 4 až 6"**.
+- Rozepsána sekce **"Axiomy 7 až 9"**.
+
 ## 10. 4. 2020
 - Doděláno vysvětlení prvních tří axiomů.
 - Přidáno vysvětlení axiomů 4 až 6.
