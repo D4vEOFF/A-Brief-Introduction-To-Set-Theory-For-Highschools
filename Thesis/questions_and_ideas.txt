@@ -3,3 +3,4 @@ Otázky:
 - Je správný překlad "empty set axiom" název "axiom prázdné množiny" nebo v češtině se mu nazývá jinak?
 - Používat velká nebo malá písmena pro množiny.
 - Jak vhodně vysvětlit pravdivost formule s obecným kvantifikátorem, když množina, z níž uvažujeme "kvantifikační" proměnnou je prázdná?
+- Vhodný příklad na vysvětlení významu schématu axiomu nahrazení.

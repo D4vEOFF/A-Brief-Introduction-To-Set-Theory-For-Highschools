@@ -4,21 +4,21 @@ Množiny nám dávají možnost definovat řadu rozličných matematických pojm
 
 \subsection{Kartézský součin}
 \begin{definition}[Kartézský součin množin]
-    Nechť $X$ a $Y$ jsou libovolné množiny. Pak \emph{kartézský součin} $a$ a $b$ značíme $a\times b$ a definujeme jej jako
+    Nechť $a,b$ jsou libovolné množiny. Pak \emph{kartézský součin} $a$ a $b$ značíme $a\times b$ a definujeme jej jako
     \begin{equation*}
-        a\times b=\set{(x,y) \admid x\in a \land y\in b}.
+        A\times B=\set{(x,y) \admid x\in A \land y\in B}.
     \end{equation*}
 \end{definition}
-Slovně řečeno, kartézský součin $a\times b$ je množina všech uspořádaných dvojic $(x,y)$, kde $x\in a$ a $y\in b$. Takový objekt je podle axiomu dvojice \ref{item:axiom_dvojice} a axiomu sumy \ref{item:axiom_sumy} množinou v ZF.
+Slovně řečeno, kartézský součin $A\times B$ je množina všech uspořádaných dvojic $(x,y)$, kde $x\in A$ a $y\in B$. Takový objekt je podle axiomu dvojice \ref{item:axiom_dvojice} a axiomu sumy \ref{item:axiom_sumy} množinou v ZF.
 \begin{example}\label{ex:kartezsky_soucin}
-    Mějme množiny $a=\set{x,y,z}$ a $b=\set{1,2,3,4}$. Vypočítejte kartézský součin $x\times y$.
+    Mějme množiny $A=\set{x,y,z}$ a $B=\set{1,2,3,4}$. Vypočítejte kartézský součin $A\times B$.
 \end{example}
 \begin{solution}
     Stačí postupovat podle definice, tj.
     \begin{equation*}
-        a\times b=\set{(x,1),\,(x,2),\,(x,3),\,(x,4),\,(y,1),\,(y,2),\,(y,3),\,(y,4),\,(z,1),\,(z,2),\,(z,3),\,(z,4)}.
+        A\times B=\set{(x,1),\,(x,2),\,(x,3),\,(x,4),\,(y,1),\,(y,2),\,(y,3),\,(y,4),\,(z,1),\,(z,2),\,(z,3),\,(z,4)}.
     \end{equation*}
-    Kartézský součin množin $x,\,y$ lze interpretovat i graficky (viz obrázek \ref{fig:kartezsky_soucin}).
+    Kartézský součin množin $A,\,B$ lze interpretovat i graficky (viz obrázek \ref{fig:kartezsky_soucin}).
 \end{solution}
 \begin{figure}[h]
     \centering
@@ -26,40 +26,40 @@ Slovně řečeno, kartézský součin $a\times b$ je množina všech uspořádan
     \caption{Grafické znázornění kartézského součinu z příkladu \ref{ex:kartezsky_soucin}.}
     \label{fig:kartezsky_soucin}
 \end{figure}
-Pokud budeme však pracovat např. s intervaly reálných čísel, pak již nemůžeme takto kartézský součin znázornit, ale můžeme reprezentovat uspořádané dvojice jako body v rovině. Např. pro $a=(2, 6\rangle$ a $b=\langle 1,3 \rangle$ je grafické znázornění na obrázku \ref{fig:kartezsky_soucin_intervaly}.
+Pokud budeme však pracovat např. s intervaly reálných čísel, pak již nemůžeme takto kartézský součin znázornit, ale můžeme reprezentovat uspořádané dvojice jako body v rovině. Např. pro $A=(2, 6\rangle$ a $B=\langle 1,3 \rangle$ je grafické znázornění na obrázku \ref{fig:kartezsky_soucin_intervaly}.
 \begin{figure}[h]
     \centering
     \includegraphics{ch02_relace_mezi_mnozinami_intervaly.pdf}
     \caption{Grafické znázornění kartézského součinu intervalů $(2, 6\rangle$ a $\langle 1,3 \rangle$.}
     \label{fig:kartezsky_soucin_intervaly}
 \end{figure}
-Podobně jako v případě součinu čísel, i zde můžeme kartézské součiny stejných množin značit pomocí horního indexu (tzv. \emph{kartézské mocniny}), např. $a\times a=a^2$, $a\times a\times a=a^3$, atd. Obecně lze definovat
+Podobně jako v případě součinu čísel, i zde můžeme kartézské součiny stejných množin značit pomocí horního indexu (tzv. \emph{kartézské mocniny}), např. $A\times A=A^2$, $A\times A\times A=A^3$, atd. Obecně lze definovat
 \begin{align*}
-    a^1=a,
-    a^n=a^{n-1}\times a.
+    A^1=A,
+    A^n=A^{n-1}\times A.
 \end{align*}
 Neplatí zde však asociativní ani komutativní zákon:
 \begin{align*}
-    (a\times b)\times c&\neq a\times (b\times c),\\
-    a\times b&\neq b\times a,
+    (A\times B)\times C&\neq A\times (B\times C),\\
+    A\times B&\neq C\times A,
 \end{align*}
 protože jak jsme si již dříve uvedli, tak obecně $(x,y)\neq (y,x)$. (Zkuste si rozmyslet.)
 \begin{example}
-    Nechť je dána množina $x=\set{a,b}$. Vypočítejte $x^3$.
+    Nechť je dána množina $X=\set{a,b}$. Vypočítejte $x^3$.
 \end{example}
 \begin{solution}
     Kartézský součin $A^3$ můžeme vypočítat jako $x^2\times x$.
     \begin{equation*}
-        x^2=\set{(a,a),\,(a,b),\,(b,a),\,(b,b)}
+        X^2=\set{(a,a),\,(a,b),\,(b,a),\,(b,b)}
     \end{equation*}
     Nyní stačí dopočítat $x^2\times x=x^3=\set{(a,a),\,(a,b),\,(b,a),\,(b,b)}\times\set{a,b}$, čímž obdržíme
     \begin{align*}
-        x^3=&\{(a,(a,a)),\,(a,(a,b)),\,(a,(b,a)),\,(a,(b,b)),\,(b,(a,a)),\,(b,(a,b)),\,(b,(b,a)),\\
+        X^3=&\{(a,(a,a)),\,(a,(a,b)),\,(a,(b,a)),\,(a,(b,b)),\,(b,(a,a)),\,(b,(a,b)),\,(b,(b,a)),\\
         &(b,(b,b))\}.
     \end{align*}
-    Ovšem jak jsme již zmiňovali, tak $(x^\prime,(y^\prime,z^\prime))=(x^\prime,y^\prime,z^\prime)$, tedy množina $x^3$ jednoduše obsahuje všechny uspořádané trojice prvků z $x$.
+    Ovšem jak jsme již zmiňovali, tak $(x^\prime,(y^\prime,z^\prime))=(x^\prime,y^\prime,z^\prime)$, tedy množina $X^3$ jednoduše obsahuje všechny uspořádané trojice prvků z $x$.
     \begin{equation*}
-        x^3=\set{(a,a,a),\,(a,a,b),\,(a,b,a),\,(a,b,b),\,(b,a,a),\,(b,a,b),\,(b,b,a),\,(b,b,b)}.
+        X^3=\set{(a,a,a),\,(a,a,b),\,(a,b,a),\,(a,b,b),\,(b,a,a),\,(b,a,b),\,(b,b,a),\,(b,b,b)}.
     \end{equation*}
 \end{solution}
 
@@ -70,7 +70,7 @@ Relace (jak název napovídá) odpovídá jistému "vztahu". Z reálného život
 \end{equation*}
 To však v řeči matematiky není nic jiného, než uspořádaná dvojice prvků. K tomu se nám bude hodit již zavedený kartézský součin.
 \begin{definition}[Relace]\label{def:relace}
-    Nechť $X$ a $Y$ jsou libovolné množiny. Pak \emph{relací mezi $X$ a $Y$} nazýváme libovolnou podmnožinu $R$ kartézského součinu $X\times Y$, tj. \linebreak $R\subseteq X \times Y$. Speciálně, pokud $X=Y$, pak mluvíme o \emph{relaci na množině $X$}, tzn. $R\subseteq X^2$.
+    Nechť $X,Y$ jsou libovolné množiny. Pak \emph{relací mezi $X$ a $X$} nazýváme libovolnou podmnožinu $R$ kartézského součinu $X\times Y$, tj. $R\subseteq X \times Y$. Speciálně, pokud $X=Y$, pak mluvíme o \emph{relaci na množině $X$}, tzn. $R\subseteq X^2$.
 \end{definition}
 Pokud $(x,y)\in R$, pak říkáme, že \emph{prvky $x$ a $y$ jsou v relaci $R$}, což ekvivalentně zapisujeme jako $xRy$. Jak už jsme si zmínili, tak relace již známe a i v tomto textu jsme je mnohokrát použili. Např. relace rovnosti "$=$" na $\N$ by obsahovala prvky $(1,1),\,(2,2),\,(3,3),\dots$. Pochopitelně bychom mohli psát "$(2,2)\in\;=$", ale to neděláme; místo toho zkrátka píšeme "$2=2$". Podobně např. relace "$\leq$" na množině $\R$, "$>$", "$\geq$", aj.
 \begin{convention}
@@ -106,7 +106,7 @@ Jako poslední si ještě zmíníme tzv. \emph{skládání relací}.
     Určete $T=S\circ R$.
 \end{example}
 \begin{solution}
-    Postupujme podle definice \ref{def:skladani_relaci} výše. Pro každou z dvojic v $R$ se podíváme, zda existuje nějaká dvojice v $S$ taková, že platí: $t_1Rt_2$ a $t_2St_3$, kde $t_1\in A$ $t_2\in B$ a $t_3\in C$.
+    Postupujme podle definice \ref{def:skladani_relaci} výše. Pro každou z dvojic v $R$ se podíváme, zda existuje nějaká dvojice v $s$ taková, že platí: $t_1Rt_2$ a $t_2St_3$, kde $t_1\in a$ $t_2\in b$ a $t_3\in C$.
     \begin{align*}
         aRj \land zSj &\implies aTj,\\
         aRy \land ySi &\implies aTi,\\
