@@ -1,35 +1,24 @@
 \section{Relace}\label{sec:relace}
-V sekci \ref{sec:mnoziny_a_cisla} jsme si již zopakovali, jakým způsobem pracujeme s množinami a definovali jsme některé nové pojmy. Množiny nám dávají možnost definovat řadu rozličných matematických pojmů. Jedním z nich je tzv. \emph{relace}. Jak čtenář později zjistí, tento termín nám ve skutečnosti není tak vzdálený a setkáváme se s ním v matematice neustále. Před jeho zavedením však budeme potřebovat ještě jiné pojmy.
+Axiom nekonečna opět posiluje "souhrn" množin, se kterými můžeme pracovat, avšak stále nemůžeme hovořit o všech. K pochopení \textbf{schématu axiomu nahrazení}, budeme potřebovat zavést nový termín, s nímž budeme nejen v tomto kontextu dále pracovat.\par
+Množiny nám dávají možnost definovat řadu rozličných matematických pojmů. Jedním z nich je tzv. \emph{relace}. Jak čtenář později zjistí, tento termín nám ve skutečnosti není tak vzdálený a setkáváme se s ním v matematice neustále. Před jeho zavedením však budeme potřebovat ještě jiné pojmy.
 
 \subsection{Kartézský součin}
-Nejprve si zavedeme označení pro tzv. \emph{uspořádanou dvojici}. Tento pojem čtenář již možná slyšel, ostatně s podobným objektem jsme pracovali např. v analytické geometrii -- bodem v rovině. Pokud si vezmeme dvouprvkovou množinu $\set{x,y}$, zde nezávisí na pořadí zápisu prvků $x$ a $y$, tj. $\set{x,y}=\set{y,x}$. Uspořádanou dvojici prvků $x,y$ budeme značit $(x,y)$, přičemž $(x,y)\neq (y,x)$ nebo též:
-\begin{equation*}
-    (x,y)=(a,b) \iff x=a \land y=b.
-\end{equation*}
-Ačkoliv to není zřejmé, uspořádanou dvojici můžeme definovat také pomocí množin.
-\begin{definition}[Uspořádaná dvojice]
-    \emph{Uspořádanou dvojici} prvků $x,y$ definujeme jako
-    \begin{equation*}
-        (x,y)=\set{\set{x},\set{x,y}}.
-    \end{equation*}
-\end{definition}
-Zkuste si schválně rozmyslet, zda takto definovaná uspořádaná dvojice odpovídá vlastnostem výše. Stejným způsobem lze zavést obecně i uspořádanou $n$-tici $(x_1, x_2, \dots, x_n)$, přičemž zavádíme, že $(x_1, x_2, \dots, x_n)=(x_1, (x_2, \dots, x_n))$.
 \begin{definition}[Kartézský součin množin]
-    Nechť $X$ a $Y$ jsou libovolné množiny. Pak \emph{kartézský součin} $X$ a $Y$ značíme $X\times Y$ a definujeme jej jako
+    Nechť $X$ a $Y$ jsou libovolné množiny. Pak \emph{kartézský součin} $a$ a $b$ značíme $a\times b$ a definujeme jej jako
     \begin{equation*}
-        X\times Y=\set{(x,y) \admid x\in X \land y\in Y}.
+        a\times b=\set{(x,y) \admid x\in a \land y\in b}.
     \end{equation*}
 \end{definition}
-Slovně řečeno, kartézský součin $X\times Y$ je množina všech uspořádaných dvojic $(x,y)$, kde $x\in X$ a $y\in Y$.
+Slovně řečeno, kartézský součin $a\times b$ je množina všech uspořádaných dvojic $(x,y)$, kde $x\in a$ a $y\in b$. Takový objekt je podle axiomu dvojice \ref{item:axiom_dvojice} a axiomu sumy \ref{item:axiom_sumy} množinou v ZF.
 \begin{example}\label{ex:kartezsky_soucin}
-    Mějme množiny $A=\set{a,b,c}$ a $B=\set{1,2,3,4}$. Vypočítejte kartézský součin $A\times B$.
+    Mějme množiny $a=\set{x,y,z}$ a $b=\set{1,2,3,4}$. Vypočítejte kartézský součin $x\times y$.
 \end{example}
 \begin{solution}
     Stačí postupovat podle definice, tj.
     \begin{equation*}
-        A\times B=\set{(a,1),\,(a,2),\,(a,3),\,(a,4),\,(b,1),\,(b,2),\,(b,3),\,(b,4),\,(c,1),\,(c,2),\,(c,3),\,(c,4)}.
+        a\times b=\set{(x,1),\,(x,2),\,(x,3),\,(x,4),\,(y,1),\,(y,2),\,(y,3),\,(y,4),\,(z,1),\,(z,2),\,(z,3),\,(z,4)}.
     \end{equation*}
-    Kartézský součin množin $A,\,B$ lze interpretovat i graficky (viz obrázek \ref{fig:kartezsky_soucin}).
+    Kartézský součin množin $x,\,y$ lze interpretovat i graficky (viz obrázek \ref{fig:kartezsky_soucin}).
 \end{solution}
 \begin{figure}[h]
     \centering
@@ -37,44 +26,40 @@ Slovně řečeno, kartézský součin $X\times Y$ je množina všech uspořádan
     \caption{Grafické znázornění kartézského součinu z příkladu \ref{ex:kartezsky_soucin}.}
     \label{fig:kartezsky_soucin}
 \end{figure}
-Pokud budeme však pracovat např. s intervaly reálných čísel, pak již nemůžeme takto kartézský součin znázornit, ale můžeme reprezentovat uspořádané dvojice jako body v rovině. Např. pro $A=(2, 6\rangle$ a $B=\langle 1,3 \rangle$ je grafické znázornění na obrázku \ref{fig:kartezsky_soucin_intervaly}.
+Pokud budeme však pracovat např. s intervaly reálných čísel, pak již nemůžeme takto kartézský součin znázornit, ale můžeme reprezentovat uspořádané dvojice jako body v rovině. Např. pro $a=(2, 6\rangle$ a $b=\langle 1,3 \rangle$ je grafické znázornění na obrázku \ref{fig:kartezsky_soucin_intervaly}.
 \begin{figure}[h]
     \centering
     \includegraphics{ch02_relace_mezi_mnozinami_intervaly.pdf}
     \caption{Grafické znázornění kartézského součinu intervalů $(2, 6\rangle$ a $\langle 1,3 \rangle$.}
     \label{fig:kartezsky_soucin_intervaly}
 \end{figure}
-Podobně jako v případě součinu čísel, i zde můžeme kartézské součiny stejných množin značit pomocí horního indexu (tzv. \emph{kartézské mocniny}), např. $X\times X=X^2$, $X\times X\times X=X^3$, atd. Obecně lze definovat
+Podobně jako v případě součinu čísel, i zde můžeme kartézské součiny stejných množin značit pomocí horního indexu (tzv. \emph{kartézské mocniny}), např. $a\times a=a^2$, $a\times a\times a=a^3$, atd. Obecně lze definovat
 \begin{align*}
-    A^1=A,
-    A^n=A^{n-1}\times A.
+    a^1=a,
+    a^n=a^{n-1}\times a.
 \end{align*}
-I pro kartézský součin lze zavést velký operátor $\prod$ (stejně jako pro číselný součin), tj.
-\begin{equation*}
-    A_1\times A_2 \times\cdots\times A_n=\prod\limits_{i=1}^{n}{A_i}.
-\end{equation*}
 Neplatí zde však asociativní ani komutativní zákon:
 \begin{align*}
-    (X\times Y)\times Z&\neq X\times (Y\times Z),\\
-    X\times Y&\neq Y\times X,
+    (a\times b)\times c&\neq a\times (b\times c),\\
+    a\times b&\neq b\times a,
 \end{align*}
-protože jak jsme si již uvedli, tak $(x,y)\neq (y,x)$. (Zkuste si rozmyslet.)
+protože jak jsme si již dříve uvedli, tak obecně $(x,y)\neq (y,x)$. (Zkuste si rozmyslet.)
 \begin{example}
-    Nechť je dána množina $A=\set{a,b}$. Vypočítejte $A^3$.
+    Nechť je dána množina $x=\set{a,b}$. Vypočítejte $x^3$.
 \end{example}
 \begin{solution}
-    Kartézský součin $A^3$ můžeme vypočítat jako $A^2\times A$.
+    Kartézský součin $A^3$ můžeme vypočítat jako $x^2\times x$.
     \begin{equation*}
-        A^2=\set{(a,a),\,(a,b),\,(b,a),\,(b,b)}
+        x^2=\set{(a,a),\,(a,b),\,(b,a),\,(b,b)}
     \end{equation*}
-    Nyní stačí dopočítat $A^2\times A=A^3=\set{(a,a),\,(a,b),\,(b,a),\,(b,b)}\times\set{a,b}$, čímž obdržíme
+    Nyní stačí dopočítat $x^2\times x=x^3=\set{(a,a),\,(a,b),\,(b,a),\,(b,b)}\times\set{a,b}$, čímž obdržíme
     \begin{align*}
-        A^3=&\{(a,(a,a)),\,(a,(a,b)),\,(a,(b,a)),\,(a,(b,b)),\,(b,(a,a)),\,(b,(a,b)),\,(b,(b,a)),\\
+        x^3=&\{(a,(a,a)),\,(a,(a,b)),\,(a,(b,a)),\,(a,(b,b)),\,(b,(a,a)),\,(b,(a,b)),\,(b,(b,a)),\\
         &(b,(b,b))\}.
     \end{align*}
-    Ovšem jak jsme již zmiňovali, tak $(x,(y,z))=(x,y,z)$, tedy množina $A^3$ jednoduše obsahuje všechny uspořádané trojice prvků z $A$.
+    Ovšem jak jsme již zmiňovali, tak $(x^\prime,(y^\prime,z^\prime))=(x^\prime,y^\prime,z^\prime)$, tedy množina $x^3$ jednoduše obsahuje všechny uspořádané trojice prvků z $x$.
     \begin{equation*}
-        A^3=\set{(a,a,a),\,(a,a,b),\,(a,b,a),\,(a,b,b),\,(b,a,a),\,(b,a,b),\,(b,b,a),\,(b,b,b)}.
+        x^3=\set{(a,a,a),\,(a,a,b),\,(a,b,a),\,(a,b,b),\,(b,a,a),\,(b,a,b),\,(b,b,a),\,(b,b,b)}.
     \end{equation*}
 \end{solution}
 
