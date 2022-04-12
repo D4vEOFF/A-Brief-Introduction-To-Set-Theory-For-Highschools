@@ -1,5 +1,8 @@
 # Záznam změn
 
+## 12. 4. 2022
+- Doplněna sekce **"Axiom fundovanosti"**.
+
 ## 11. 4. 2022
 - Doplněny a upraveny příklady v sekci **"Axiomy 4 až 6"**.
 - Přidány sekce **"Relace"** a **"Zobrazení"**.
