@@ -1,5 +1,8 @@
 # Záznam změn
 
+## 14. 4. 2022
+- Doplněna sekce **"Peanovy axiomy"**.
+
 ## 13. 4. 2022
 - Doplněn shrnující odstavec do sekce **"Axiom fundovanosti"**.
 - Doplněna stručná zmínka o variantě ZF s axiomem výběru do úvodu kapitoly **"Axiomy teorie množin"**.
