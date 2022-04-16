@@ -21,7 +21,7 @@ S problémem nekonečna se však pojily i další problémy. Při zrodu samotné
 \end{align*}
 tzn. přirozená čísla a jejich druhé mocniny. Avšak při pohledu na tyto dvě posloupnosti si Galileo uvědomil, že každý prvek množiny přirozených čísel lze "spárovat" s jeho druhou mocninou (v dnešní terminologii bychom řekli, že existuje \emph{bijekce}; na tu se blíže podíváme v kapitole \todo{doplnit odkaz na kapitolu s bijekcí}).
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=\normalipe]{ch01_parovani.pdf}
 \end{figure}
@@ -110,7 +110,7 @@ Všimněme si, že rovnosti uvedené výše jsme obdrželi pouhou aplikací zák
 \subsection{Nekonečno v matematické analýze}
 
 Velká část matematické analýzy je založená na úvahách s \emph{nekonečně malými veličinami}; často se mluví o tzv. \emph{infinitezimálním počtu}. Čtenář se s těmito pojmy již možná setkal, ačkoliv nemusí mít nutně představu o jeho přesném významu. Asi nejznámějším příkladem je integrální počet, specificky výpočet "plochy pod křivkou".
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=\normalipe]{ch01_urcity_integral_ukazka.pdf}
 	\caption{Příklad určitého integrálu funkce $f$ na uzavřeném intervalu $\langle a,b \rangle$.}
@@ -123,7 +123,7 @@ S=\int_{a}^{b}{f(x)\,\dx{}}.
 \end{align*}
 Pro upřesnění, pokud platí, že funkce $f$ je na intervalu $\langle a,b \rangle$ kladná, pak integrál $\int_a^b{f(x)\,\dx{}}$ je obsah plochy pod grafem funkce $f$ na intervalu $\langle a,b \rangle$. Výpočet obsahu takové složitě vypadající plochy, jako na obrázku \ref{fig:urcity_integral_ukazka}, se může zdát bez znalosti integrálního počtu takřka nemožným úkolem. Pokusme se ale na danou problematiku podívat právě optikou infinitezimálního počtu. (Znalý čtenář snad promine, že se zatím zdržím formalismů a pouze jednoduše naznačím myšlenku.)\par
 Pro začátek zkusíme plochu pouze aproximovat. K tomu využijeme tvar, jehož obsah jsme schopni triviálně vypočítat -- obdélníka. Pro začátek zkusíme plochu aproximovat pomocí 4 obdélníků (viz obrázek \ref{fig:urcity_integral_aproximace1}).
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=\normalipe]{ch01_urcity_integral_aproximace1.pdf}
 	\caption{Aproximace plochy pod grafem funkce $f$ na intervalu $\langle a,b \rangle$ pomocí 4 obdélníků.}
@@ -135,7 +135,7 @@ S_i= (x_i-x_{i-1}) \cdot \min\limits_{x_{i-1} \leq x \leq x_i}{f(x)},
 \end{align*}
 kde $\min_{x_{i-1} \leq x \leq x_i}{f(x)}$ je minimální hodnota funkce $f$ na intervalu $\langle x_{i-1},x_i \rangle$ (předpokládáme pro jednoduchost, že $f$ je spojitá, takže nabývá svého minima na každém z daných intervalů). Rozdíl $x_i-x_{i-1}$ odpovídá šířce obdélníku a $\min\limits_{x_{i-1} \leq x \leq x_i}{f(x)}$ jeho výšce.\par
 Pokud bychom si však interval $\langle a,b \rangle$ rozdělili ještě "jemněji", není těžké vidět, že se náš odhad zpřesní (viz obrázek \ref{fig:urcity_integral_aproximace2}).
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering	\includegraphics[scale=\normalipe]{ch01_urcity_integral_aproximace2.pdf}
 	\caption{Aproximace plochy pod grafem funkce $f$ na intervalu $\langle a,b \rangle$ pomocí 8 obdélníků.}
 	\label{fig:urcity_integral_aproximace2}
