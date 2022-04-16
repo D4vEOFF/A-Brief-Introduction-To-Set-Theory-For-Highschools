@@ -61,7 +61,7 @@ Pomocí schématu axiomů vydělení můžeme definovat některé základní ope
         \item $\set{a,b,c}\cap\set{a,c,d}=\set{a,c}$,
         \item $\set{a,b,c}\cap\emptyset=\emptyset$,
         \item $\set{x,y,z}\setminus\set{y}=\set{x,z}$,
-        \item $\set{y,z}\setminus\emptyset=\emptyset$.
+        \item $\set{y,z}\setminus\emptyset=\set{y,z}$.
     \end{enumerate}
 \end{example}
 \begin{remark}
@@ -205,7 +205,7 @@ Tento poznatek můžeme zobecnit užitím velkých operátorů $\bigcup,\;\bigca
     A \cap \left(\bigcup\limits_{i=1}^{n}{X_i}\right)&=\bigcup\limits_{i=1}^{n}{(A \cap X_i)}.
 \end{align*}
 
-Ještě jedny známé vztahy pro množiny jsou tzv. \emph{de Morganovy vzorce}, které si zde zformulujeme jako větu.
+Ještě jedny známé vztahy pro množiny jsou tzv. \emph{de Morganovy vzorce} (viz obrázek \ref{fig:de_morgan}), které si zde zformulujeme jako větu.
 \begin{theorem}[de Morganovy vzorce]
     Nechť $A,X_1,\dots,X_n$ jsou libovolné množiny. Pak platí
     \begin{enumerate}[label=(\roman*)]
@@ -237,3 +237,9 @@ Ještě jedny známé vztahy pro množiny jsou tzv. \emph{de Morganovy vzorce}, 
     \end{equation*} 
     což jsme chtěli dokázat.
 \end{proof}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.7]{ch03_de_Morganovy_vzorce.pdf}
+    \caption{De Morganovy vzorce pro $n=2$.}
+    \label{fig:de_morgan}
+\end{figure}

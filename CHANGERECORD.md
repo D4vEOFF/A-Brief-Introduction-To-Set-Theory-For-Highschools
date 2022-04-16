@@ -1,5 +1,11 @@
 # Záznam změn
 
+## 16. 4, 2022
+- Přidána sekce **Přirozená čísla**.
+
+## 15. 4. 2022
+- Přidán obrázek ilustrující De Morganovy zákony v sekci **"Axiomy 4 až 6"**.
+
 ## 14. 4. 2022
 - Doplněna sekce **"Peanovy axiomy"**.
 
