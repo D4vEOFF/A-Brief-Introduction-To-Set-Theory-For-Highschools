@@ -2,6 +2,8 @@
 
 ## 16. 4, 2022
 - Přidána sekce **Přirozená čísla**.
+- Zmenšeny obrázky (scale 0.8)
+- Float specifier *H* u obrázků nahrazen *h*
 
 ## 15. 4. 2022
 - Přidán obrázek ilustrující De Morganovy zákony v sekci **"Axiomy 4 až 6"**.

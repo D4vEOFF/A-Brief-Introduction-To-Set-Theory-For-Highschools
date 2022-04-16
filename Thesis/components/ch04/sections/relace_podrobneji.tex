@@ -13,19 +13,19 @@ Ačkoliv jsme si zaváděli relaci obecně mezi dvěma množinami $X$ a $Y$, v d
         \item \emph{antisymetrická}, jestliže $\forall x,y\in X: xRy \land yRx \implies x=y$.
     \end{enumerate}
 \end{definition}
-Reflexivní relace je jednoduše taková relace, kdy jsou všechny prvky v relaci samy se sebou.
-\begin{figure}[H]
+Reflexivní relace je jednoduše taková relace, kdy jsou všechny prvky v relaci samy se sebou (viz \ref{fig:priklady_reflexivnich_relaci}).
+\begin{figure}[h]
     \centering
     \begin{subfigure}{6cm}
         \centering
-        \includegraphics{ch02_reflexivni_relace.pdf}
+        \includegraphics[scale=\normalipe]{ch02_reflexivni_relace.pdf}
         \caption{Reflexivní relace na čtyřech prvcích.}
         \label{subfig:reflexivni_relace}
     \end{subfigure}
     \quad
     \begin{subfigure}{6cm}
         \centering
-        \includegraphics{ch02_nejmensi_reflexivni_relace.pdf}
+        \includegraphics[scale=\normalipe]{ch02_nejmensi_reflexivni_relace.pdf}
         \caption{Reflexivní relace na třech prvcích.}
         \label{subfig:nejmensi_reflexivni_relace}
     \end{subfigure}
@@ -33,25 +33,25 @@ Reflexivní relace je jednoduše taková relace, kdy jsou všechny prvky v relac
     \label{fig:priklady_reflexivnich_relaci}
 \end{figure}
 Speciálně obrázek \ref{subfig:nejmensi_reflexivni_relace} je příkladem nejmenší možné reflexivní relace. Z definice \ref{def:identita} můžeme vidět, že se jedná o \emph{identitu}.\par
-Podobně si můžeme znázornit i symetrii.
-\begin{figure}[H]
+Podobně si můžeme znázornit i symetrii na obrázku \ref{fig:priklad_symetricke_relace}.
+\begin{figure}[h]
     \centering
-    \includegraphics{ch02_symetricka_relace.pdf}
+    \includegraphics[scale=\normalipe]{ch02_symetricka_relace.pdf}
     \caption{Symetrická relace na čtyřech prvcích.}
     \label{fig:priklad_symetricke_relace}
 \end{figure}
 Z obrázku \ref{fig:priklad_symetricke_relace} můžeme vidět, že mezi dvojicí prvků, které jsou v relaci, vedou šipky oběma směry.\par
-U tranzitivity musí platit, že pokud máme šipku mezi $x$ a $y$ a zároveň mezi $y$ a $z$, pak musí být i šipka mezi $x$ a $z$.
-\begin{figure}[H]
+U tranzitivity musí platit, že pokud máme šipku mezi $x$ a $y$ a zároveň mezi $y$ a $z$, pak musí být i šipka mezi $x$ a $z$ (viz \ref{fig:prilad_tranzitivni_relace}).
+\begin{figure}[h]
     \centering
-    \includegraphics{ch02_tranzitivni_relace.pdf}
+    \includegraphics[scale=\normalipe]{ch02_tranzitivni_relace.pdf}
     \caption{Tranzitivní relace na čtyřech prvních.}
     \label{fig:priklad_tranzitivni_relace}
 \end{figure}
-Antisymetrie je pravděpodobně nejtěžší z těchto druhů relací, co se týče definice. Zatímco u symetrie platí, že relace musí být "vzájemná", u antisymetrie naopak říkáme, že pokud jsou prvky ve "vzájemné" relaci, pak se jedná o tentýž prvek. Z toho si však můžeme uvědomit, že u antisymetrické relace nemůže tedy nastat, že by mezi dvěma prvky vedly šipky oběma směry.
-\begin{figure}[H]
+Antisymetrie je pravděpodobně nejtěžší z těchto druhů relací, co se týče definice. Zatímco u symetrie platí, že relace musí být "vzájemná", u antisymetrie naopak říkáme, že pokud jsou prvky ve "vzájemné" relaci, pak se jedná o tentýž prvek. Z toho si však můžeme uvědomit, že u antisymetrické relace nemůže tedy nastat, že by mezi dvěma prvky vedly šipky oběma směry, jak lze vidět na obrázku \ref{fig:priklad_antisymetricke_relace}.
+\begin{figure}[h]
     \centering
-    \includegraphics{ch02_antisymetricka_relace.pdf}
+    \includegraphics[scale=\normalipe]{ch02_antisymetricka_relace.pdf}
     \caption{Antisymetrická relace na třech prvcích.}
     \label{fig:priklad_antisymetricke_relace}
 \end{figure} 
@@ -85,23 +85,23 @@ Zmíněné druhy relací nám dovolují definovat dva jejich nejdůležitější
     Nechť $R$ je relace na množině $X$. Řekneme, že $R$ je \emph{relací ekvivalence na $X$} (nebo jen \emph{ekvivalencí na $X$}), pokud je \emph{reflexivní}, \emph{symetrická} a \emph{tranzitivní}.
 \end{definition}
 Ač se to nemusí zdát, tento typ relace má velmi příjemné vlastnosti. Jak si ji představit? Příkladem může být třeba relace $R$ na množině $X=\set{x_1,\dots,x_7}$ znázorněná na obrázku \ref{fig:priklad_relace_ekvivalence} níže.
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
-    \includegraphics{ch02_relace_ekvivalence.pdf}
+    \includegraphics[scale=\normalipe]{ch02_relace_ekvivalence.pdf}
     \caption{Relace ekvivalence $R$ na $X$.}
     \label{fig:priklad_relace_ekvivalence}
 \end{figure}
-Pokud by však byl např. prvek $x_3$ v relaci prvkem $x_4$, pak by již $R$ nebyla ekvivalencí.
-\begin{figure}[H]
+Pokud by však byl např. prvek $x_3$ v relaci prvkem $x_4$, pak by již $R$ nebyla ekvivalencí, jak lze naopak vidět z obrázku \ref{fig:priklad_relace_neekvivalence}.
+\begin{figure}[h]
     \centering
-    \includegraphics{ch02_relace_neekvivalence.pdf}
+    \includegraphics[scale=\normalipe]{ch02_relace_neekvivalence.pdf}
     \caption{Relace $R \cup (x_3,x_4)$ na $X$.}
     \label{fig:priklad_relace_neekvivalence}
 \end{figure}
 Všimněte si, že na obrázku \ref{fig:priklad_relace_ekvivalence} jsou prvky rozděleny na "ostrůvky", kde v rámci každého z nich jsou spolu všechny prvky v relaci\footnote{U relace ekvivalence též říkáme, že prvky jsou spolu \emph{ekvivalentní}.}. (Zkuste si z definice rozmyslet, že to tak vždy musí být.) Zakreslovat relaci ekvivalence dosavadním se tak stává již celkem nevýhodným, neboť pro větší množství ekvivalentních prvků již zakreslovat všechny vztahy šipkami je v tomto případě poměrně zdlouhavý proces (např. pro 5 ekvivalentních prvků bychom museli kreslit 25 šipek). Úspornější a taktéž názornější pro nás bude si pouze schématicky rozdělit prvky do skupinek (relace mezi nimi z definice ekvivalence považujeme za samozřejmé), např. jako na obrázku \ref{fig:relace_ekvivalence_tridy}.
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
-    \includegraphics{ch02_relace_ekvivalence_tridy.pdf}
+    \includegraphics[scale=\normalipe]{ch02_relace_ekvivalence_tridy.pdf}
     \caption{Schématické znázornění ekvivalence $R$ na $X$.}
     \label{fig:relace_ekvivalence_tridy}
 \end{figure}
@@ -152,47 +152,6 @@ Třída ekvivalence $[x]_R$ jistého prvku $x$ tak obsahuje všechny prvky, kter
         \end{align*}
     \end{enumerate}
 \end{example}
-O třídách ekvivalence můžeme dokázat následující větu \ref{thm:vlastnosti_trid_ekvivalence}.
-\needspace{5mm}
-\begin{theorem}[Vlastnosti tříd ekvivalence]\label{thm:vlastnosti_trid_ekvivalence}
-    Mějme ekvivalenci $R$ na $X$. Pak
-    \begin{enumerate}[label=(\roman*)]
-        \item $\forall x\in X: [x]_R\neq\emptyset$.
-        \item $\forall x,y\in X: [x]_R=[y]_R \lor [x]_R\cap [y]_R=\emptyset$.
-        \item pokud pro ekvivalenci $S$ na $X$ platí $\forall x\in X: [x]_S=[x]_R$, pak $S=R$.
-    \end{enumerate}
-\end{theorem}
-První dva body této věty jsou víceméně jednoduchá pozorování (jak uvidíme za chvíli), avšak bod třetí již může svou formulací působit trochu zvláštně. Co nám to vlastně říká? Tvrdíme, že pokud má nějaká jiná ekvivalence stejné třídy jako $R$, pak jsou tyto relace nutně stejné. To znamená, že třídy ekvivalence \textbf{jednoznačně určují danou relaci $R$}.
-\begin{proof}
-    \textit{(i)}. Tvrzení je takové, že každá třída ekvivalence je neprázdná. To triviálně plyne z faktu, že relace ekvivalence je reflexivní a tedy každá třída má alespoň jeden prvek.\\
-    \textit{(ii)}. Říkáme, že každé dvě třídy ekvivalence jsou buď stejné nebo nemají žádný společný prvek. To můžeme rozdělit na dva případy, přičemž každý dokážeme zvlášť. Uvažujme prvky $x,y\in X$.
-    \begin{enumerate}[label=(\alph*)]
-        \item Nechť platí $xRy$. Chceme ukázat, že $[x]_R=[y]_R$, tj. prvky $x,y$ jsou ve stejné třídě. Volme libovolné $z\in [x]_R$, tzn. $xRz$. Protože $xRy$, pak ze symetrie rovněž platí $yRx$. Dále platí
-        \begin{equation*}
-            yRx \land xRz \implies yRz,
-        \end{equation*}
-        protože $R$ je tranzitivní, a tedy $z\in [y]_R$. Analogicky bychom zdůvodnili i opačnou implikaci, tj.
-        \begin{equation*}
-            z\in [y]_R \implies z\in [x]_R.
-        \end{equation*}
-        Tedy $[x]_R=[y]_R$.
-        \item Nyní naopak předpokládejme, že $x\cancel{R}y$ (tj. že $x$ a $y$ nejsou v relaci). Ukážeme, že $[x]_R\cap [y]_R=\emptyset$. Na to lze jít třeba sporem, tj. nechť $[x]_R\cap [y]_R\neq\emptyset$. Pak
-        \begin{equation*}
-            \exists z: z\in [x]_R\cap [y]_R \implies z\in [x]_R \land z\in [y]_R \implies xRz \land yRz
-        \end{equation*}
-        Protože $R$ je symetrická, pak $zRy$ a z tranzitivity máme
-        \begin{equation*}
-            xRz \land zRy \implies xRy.
-        \end{equation*}
-        To je však spor.
-    \end{enumerate}
-    \textit{(iii)}. Předpokládejme, že $\forall x\in X: [x]_S=[x]_R$. Mějme uspořádanou dvojici $(x,y)\in S$. Pak
-    \begin{align*}
-        (x,y)\in S &\iff xSy \iff x\in [x]_S \land y\in [x]_S \iff x\in [x]_R \land y\in [x]_R \iff xRy\\
-        &\iff (x,y)\in R.
-    \end{align*}
-    Tedy $S=R$.
-\end{proof}
 
 \subsection{Relace uspořádání}\label{subsec:relace_usporadani}
 Druhým a též asi nejpodstatnějším termínem pro nás bude tzv. \emph{uspořádání}. Oproti ekvivalenci zde bude pouze jedna změna v definici, avšak má velké důsledky.
@@ -200,28 +159,28 @@ Druhým a též asi nejpodstatnějším termínem pro nás bude tzv. \emph{uspo�
     Nechť $R$ je relace na množině $X$. Řekneme, že $R$ je relací \emph{uspořádání} (též jen \emph{uspořádání}), pokud je \emph{reflexivní}, \emph{antisymetrická} a \emph{tranzitivní}.
 \end{definition}
 Začněme opět příklady, ať víme, jak si takový typ relace vlastně představit. Mějme relace $R_1$ a $R_2$ na obrázcích \ref{fig:relace_usporadani_1} a \ref{fig:relace_usporadani_2}. (Zkuste si sami rozmyslet, zda $R_1,R_2$ splňují podmínky uspořádání.)
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
-    \includegraphics{ch02_relace_usporadani_1.pdf}
+    \includegraphics[scale=\normalipe]{ch02_relace_usporadani_1.pdf}
     \caption{Relace uspořádání $R_1$ na šesti prvcích.}
     \label{fig:relace_usporadani_1}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
-    \includegraphics{ch02_relace_usporadani_2.pdf}
+    \includegraphics[scale=\normalipe]{ch02_relace_usporadani_2.pdf}
     \caption{Relace uspořádání $R_2$ na devíti prvcích.}
     \label{fig:relace_usporadani_2}
 \end{figure}
-Naopak ukázky modifikací relací $R_1,R_2$ níže \textbf{nejsou} uspořádáními.
-\begin{figure}[H]
+Naopak ukázky modifikací relací $R_1,R_2$ na obrázcích \ref{fig:relace_neekvivalence_1} a \ref{fig:relace_neekvivalence_2} \textbf{nejsou} uspořádáními.
+\begin{figure}[h]
     \centering
-    \includegraphics{ch02_relace_neusporadani_1.pdf}
+    \includegraphics[scale=\normalipe]{ch02_relace_neusporadani_1.pdf}
     \caption{Relace $R_1\cup (x_4,x_6)$, která není uspořádáním.}
     \label{fig:relace_neusporadani_1}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
-    \includegraphics{ch02_relace_neusporadani_2.pdf}
+    \includegraphics[scale=\normalipe]{ch02_relace_neusporadani_2.pdf}
     \caption{Relace $R_2\setminus (x_6,x_9)$, která není uspořádáním.}
     \label{fig:relace_neusporadani_2}
 \end{figure}
@@ -235,35 +194,35 @@ Naopak ukázky modifikací relací $R_1,R_2$ níže \textbf{nejsou} uspořádán
     \end{enumerate}
 \end{example}
 Stejně jako u ekvivalence, i zde si můžeme všimnout jisté redundance při zakreslování. Konkrétně dvojice vyplývající z tranzitivity a reflexivity bychom v těchto případech mohli klidně vynechat a považovat za samozřejmé. Zároveň jsme cíleně zakreslili relace $R_1$ a $R_2$ tak, aby šipky vedly pouze nahoru, neboť to činí obrázek přehlednějším. (Toto funguje díky tomu, že v relaci uspořádání se nemohou vyskytnout cykly kvůli podmínce antisymetrie a tranzitivity, nepočítáme-li cykly z reflexivity.) Zkuste se schválně podívat na znázornění relace $R_1$ na obrázku \ref{fig:relace_usporadani_1_jinak} pro srovnání.
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
-    \includegraphics{ch02_relace_usporadani_1_jinak.pdf}
+    \includegraphics[scale=\normalipe]{ch02_relace_usporadani_1_jinak.pdf}
     \caption{Relace $R_1$ zakreslená podle pořadí indexů prvků.}
     \label{fig:relace_usporadani_1_jinak}
 \end{figure}
-Tím se dostáváme k tzv. \emph{Hasseovým diagramům}, které se nám poskytují velmi komfortní reprezentaci uspořádání. Dosavadní způsoby reprezentace relací v sobě obsahovaly jistou míru libovůle, co do umístění prvků v diagramech, neboť důležité byly pouze šipky mezi nimi. Zde toto již neplatí, neboť umístěním prvků budeme určovat, které jsou společně v relaci. Přijmeme konvenci, že šipky mezi prvky povedou pouze směrem nahoru. Tzn. pokud $xRy$, pak $x$ bude nakresleno níž oproti $y$. Níže na obrázku \ref{fig:relace_usporadani_zakresleni} máme zakreslené uspořádání na množině $\set{y_1,y_2,y_3,y_4}$.
-\begin{figure}[H]
+Tím se dostáváme k tzv. \emph{Hasseovým diagramům}, které se nám poskytují velmi komfortní reprezentaci uspořádání. Dosavadní způsoby reprezentace relací v sobě obsahovaly jistou míru libovůle, co do umístění prvků v diagramech, neboť důležité byly pouze šipky mezi nimi. Zde toto již neplatí, neboť umístěním prvků budeme určovat, které jsou společně v relaci. Přijmeme konvenci, že šipky mezi prvky povedou pouze směrem nahoru. Tzn. pokud $xRy$, pak $x$ bude nakresleno níž oproti $y$. Na obrázku \ref{fig:relace_usporadani_zakresleni} máme zakreslené uspořádání na množině $\set{y_1,y_2,y_3,y_4}$.
+\begin{figure}[h]
     \centering
     \begin{subfigure}{6cm}
         \centering
-        \includegraphics{ch02_relace_usporadani_standard.pdf}
+        \includegraphics[scale=\normalipe]{ch02_relace_usporadani_standard.pdf}
         \caption{Standardní zakreslení $S$}
         \label{subfig:relace_usporadani_standard}
     \end{subfigure}
     \qquad
     \begin{subfigure}{6cm}
         \centering
-        \includegraphics{ch02_relace_usporadani_hasseuv_diagram.pdf}
+        \includegraphics[scale=\normalipe]{ch02_relace_usporadani_hasseuv_diagram.pdf}
         \caption{Hasseův diagram $S$}
         \label{subfig:relace_usporadani_hasseuv_diagram}
     \end{subfigure}
     \caption{Relace $S$ zakreslená standardně a pomocí Hasseova diagramu.}
     \label{fig:relace_usporadani_zakresleni}
 \end{figure}
-Podobně bychom můžeme zakreslit i relaci $R_1$ z obrázku \ref{fig:relace_usporadani_1}.
-\begin{figure}[H]
+Podobně bychom můžeme zakreslit i relaci $R_1$ z obrázku \ref{fig:relace_usporadani_1} (viz obrázek \ref{fig:relace_usporadani_1_hasseuv_diagram}).
+\begin{figure}[h]
     \centering
-    \includegraphics{ch02_relace_usporadani_1_hasseuv_diagram.pdf}
+    \includegraphics[scale=\normalipe]{ch02_relace_usporadani_1_hasseuv_diagram.pdf}
     \caption{Hasseův diagram relace $R_1$.}
     \label{fig:relace_usporadani_1_hasseuv_diagram}
 \end{figure}
