@@ -8,3 +8,4 @@ Otázky:
 - Definovat izomorfismus? (Peanovy axiomy)
 - Co ještě zmínit v sekci o Peanových axiomech?
 - Přišel s definicí přirozených čísel skutenčě John von Neumann?
+- Jak správně uvádět věci do přílohy?

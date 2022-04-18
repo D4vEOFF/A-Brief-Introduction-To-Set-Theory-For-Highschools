@@ -4,7 +4,7 @@ U relací ještě chvíli zůstaneme, neboť ty budou pro nás v dalším textu 
 \subsection{Druhy relací}\label{subsec:druhy_relaci}
 Zatím jsme si uvedli pouze jeden zvláštní typ relace, který nám (nejspíše) byl již trochu povědomý, a to sice zobrazení. Lze se však setkat i s relacemi, které jsou svojí povahou zcela odlišné. V této sekci si zavedeme dva takové typy. Nejdříve se však podíváme na nejdůležitější 4 druhy relací.\par
 Ačkoliv jsme si zaváděli relaci obecně mezi dvěma množinami $X$ a $Y$, v dalším textu se omezíme již pouze na relace na množině.
-\begin{definition}[Důležité druhy relací]
+\begin{definition}[Důležité druhy relací]\label{def:dulezite_druhy_relaci}
     Nechť $R$ je relace na množině $X$. Pak $R$ je
     \begin{enumerate}[label=(\roman*)]
         \item \emph{reflexivní}, jestliže $\forall x\in X: xRx$.
@@ -79,82 +79,82 @@ Stejně je tomu i u zobrazení. Čtenář pravděpodobně již slyšel termín \
 \end{enumerate}
 Je vidět, že složením libovolné $f_i$ s $f_i^{-1}$ dostaneme identitu $\big(f_i\circ f_i^{-1}\big)(x)=x$.\par
 
-\subsection{Relace ekvivalence}\label{subsec:relace_ekvivalence}
-Zmíněné druhy relací nám dovolují definovat dva jejich nejdůležitější typy, jednomu z nichž se budeme dále přednostně věnovat. Začneme prvním z nich.
-\begin{definition}[Relace ekvivalence]\label{def:relace_ekvivalence}
-    Nechť $R$ je relace na množině $X$. Řekneme, že $R$ je \emph{relací ekvivalence na $X$} (nebo jen \emph{ekvivalencí na $X$}), pokud je \emph{reflexivní}, \emph{symetrická} a \emph{tranzitivní}.
-\end{definition}
-Ač se to nemusí zdát, tento typ relace má velmi příjemné vlastnosti. Jak si ji představit? Příkladem může být třeba relace $R$ na množině $X=\set{x_1,\dots,x_7}$ znázorněná na obrázku \ref{fig:priklad_relace_ekvivalence} níže.
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=\normalipe]{ch02_relace_ekvivalence.pdf}
-    \caption{Relace ekvivalence $R$ na $X$.}
-    \label{fig:priklad_relace_ekvivalence}
-\end{figure}
-Pokud by však byl např. prvek $x_3$ v relaci prvkem $x_4$, pak by již $R$ nebyla ekvivalencí, jak lze naopak vidět z obrázku \ref{fig:priklad_relace_neekvivalence}.
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=\normalipe]{ch02_relace_neekvivalence.pdf}
-    \caption{Relace $R \cup (x_3,x_4)$ na $X$.}
-    \label{fig:priklad_relace_neekvivalence}
-\end{figure}
-Všimněte si, že na obrázku \ref{fig:priklad_relace_ekvivalence} jsou prvky rozděleny na "ostrůvky", kde v rámci každého z nich jsou spolu všechny prvky v relaci\footnote{U relace ekvivalence též říkáme, že prvky jsou spolu \emph{ekvivalentní}.}. (Zkuste si z definice rozmyslet, že to tak vždy musí být.) Zakreslovat relaci ekvivalence dosavadním se tak stává již celkem nevýhodným, neboť pro větší množství ekvivalentních prvků již zakreslovat všechny vztahy šipkami je v tomto případě poměrně zdlouhavý proces (např. pro 5 ekvivalentních prvků bychom museli kreslit 25 šipek). Úspornější a taktéž názornější pro nás bude si pouze schématicky rozdělit prvky do skupinek (relace mezi nimi z definice ekvivalence považujeme za samozřejmé), např. jako na obrázku \ref{fig:relace_ekvivalence_tridy}.
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=\normalipe]{ch02_relace_ekvivalence_tridy.pdf}
-    \caption{Schématické znázornění ekvivalence $R$ na $X$.}
-    \label{fig:relace_ekvivalence_tridy}
-\end{figure}
-Definujme si nyní tyto "ostrůvky" trochu formálněji.
-\begin{definition}[Třída ekvivalence]
-    Nechť $R$ je relace ekvivalence na množině $X$ a nechť $x\in X$. Pak definujeme množinu
-    \begin{equation*}
-        [x]_R=\set{y \admid xRy},
-    \end{equation*}
-    kterou nazýváme \emph{třída ekvivalence $R$ určená prvkem $x$}.
-\end{definition}
-Třída ekvivalence $[x]_R$ jistého prvku $x$ tak obsahuje všechny prvky, které jsou s $x$ ekvivalentní. Z příkladu výše je vidět že platí:
-\begin{itemize}
-    \item $[x_1]_R=[x_2]_R=[x_3]_R=\set{x_1,x_2,x_3}$,
-    \item $[x_4]_R=[x_5]_R=\set{x_4,x_5}$,
-    \item $[x_6]_R=[x_7]_R=[x_8]_R=\set{x_6,x_7,x_8}$.
-\end{itemize}
-\begin{example}
-    Další příklady relací ekvivalence a jejich tříd.
-    \begin{enumerate}[label=(\roman*)]
-        \item $(\N,=)$ (rovnost přirozených čísel) je relace ekvivalence, kde každý prvek tvoří samostatnou třídu ekvivalence.
-        \begin{align*}
-            [1]_R&=\set{1}\\
-            [2]_R&=\set{2}\\
-            &\vdots
-        \end{align*}
-        \item Relace \emph{"mít stejnou paritu"}\footnote{Tzn. obě čísla jsou sudá nebo lichá.} na množině $\Z$ je relace ekvivalence o dvou třídách (sudá a lichá čísla).
-        \begin{align*}
-            [1]_R&=\set{-1,1,-3,3,-5,5,\dots}\\
-            [2]_R&=\set{0,-2,2,-4,4\dots}\\
-            &\vdots
-        \end{align*}
-        \item Relace "mít stejný zbytek po celočíselném dělení 5" na množině $\Z$ je relace ekvivalence o deseti třídách (čísla 0--9 jako zbytek po celočíselném dělení).
-        \begin{align*}
-            [0]_R&=\set{0,5,10,\dots}\\
-            [1]_R&=\set{1,6,11,\dots}\\
-            [2]_R&=\set{2,7,12,\dots}\\
-            [3]_R&=\set{3,8,13,\dots}\\
-            [4]_R&=\set{4,9,14,\dots}
-        \end{align*}
-        \item Relace "mít stejnou absolutní hodnotu" na množině $\R$ je relace ekvivalence, kde každá třída obsahuje prvek $x$ a $-x$ pro všechna $x\in\R$.
-        \begin{align*}
-            [0]_R&=\set{0}\\
-            [1]_R&=\set{-1,1}\\
-            [\sqrt{2}]_R&=\set{\sqrt{2},-\sqrt{2}}\\
-            [\sqrt[4]{30}]_R&=\set{\sqrt[4]{30},-\sqrt[4]{30}}\\
-            &\vdots
-        \end{align*}
-    \end{enumerate}
-\end{example}
+% \subsection{Relace ekvivalence}\label{subsec:relace_ekvivalence}
+% Zmíněné druhy relací nám dovolují definovat dva jejich nejdůležitější typy, jednomu z nichž se budeme dále přednostně věnovat. Začneme prvním z nich.
+% \begin{definition}[Relace ekvivalence]\label{def:relace_ekvivalence}
+%     Nechť $R$ je relace na množině $X$. Řekneme, že $R$ je \emph{relací ekvivalence na $X$} (nebo jen \emph{ekvivalencí na $X$}), pokud je \emph{reflexivní}, \emph{symetrická} a \emph{tranzitivní}.
+% \end{definition}
+% Ač se to nemusí zdát, tento typ relace má velmi příjemné vlastnosti. Jak si ji představit? Příkladem může být třeba relace $R$ na množině $X=\set{x_1,\dots,x_7}$ znázorněná na obrázku \ref{fig:priklad_relace_ekvivalence} níže.
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[scale=\normalipe]{ch02_relace_ekvivalence.pdf}
+%     \caption{Relace ekvivalence $R$ na $X$.}
+%     \label{fig:priklad_relace_ekvivalence}
+% \end{figure}
+% Pokud by však byl např. prvek $x_3$ v relaci prvkem $x_4$, pak by již $R$ nebyla ekvivalencí, jak lze naopak vidět z obrázku \ref{fig:priklad_relace_neekvivalence}.
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[scale=\normalipe]{ch02_relace_neekvivalence.pdf}
+%     \caption{Relace $R \cup (x_3,x_4)$ na $X$.}
+%     \label{fig:priklad_relace_neekvivalence}
+% \end{figure}
+% Všimněte si, že na obrázku \ref{fig:priklad_relace_ekvivalence} jsou prvky rozděleny na "ostrůvky", kde v rámci každého z nich jsou spolu všechny prvky v relaci\footnote{U relace ekvivalence též říkáme, že prvky jsou spolu \emph{ekvivalentní}.}. (Zkuste si z definice rozmyslet, že to tak vždy musí být.) Zakreslovat relaci ekvivalence dosavadním se tak stává již celkem nevýhodným, neboť pro větší množství ekvivalentních prvků již zakreslovat všechny vztahy šipkami je v tomto případě poměrně zdlouhavý proces (např. pro 5 ekvivalentních prvků bychom museli kreslit 25 šipek). Úspornější a taktéž názornější pro nás bude si pouze schématicky rozdělit prvky do skupinek (relace mezi nimi z definice ekvivalence považujeme za samozřejmé), např. jako na obrázku \ref{fig:relace_ekvivalence_tridy}.
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[scale=\normalipe]{ch02_relace_ekvivalence_tridy.pdf}
+%     \caption{Schématické znázornění ekvivalence $R$ na $X$.}
+%     \label{fig:relace_ekvivalence_tridy}
+% \end{figure}
+% Definujme si nyní tyto "ostrůvky" trochu formálněji.
+% \begin{definition}[Třída ekvivalence]
+%     Nechť $R$ je relace ekvivalence na množině $X$ a nechť $x\in X$. Pak definujeme množinu
+%     \begin{equation*}
+%         [x]_R=\set{y \admid xRy},
+%     \end{equation*}
+%     kterou nazýváme \emph{třída ekvivalence $R$ určená prvkem $x$}.
+% \end{definition}
+% Třída ekvivalence $[x]_R$ jistého prvku $x$ tak obsahuje všechny prvky, které jsou s $x$ ekvivalentní. Z příkladu výše je vidět že platí:
+% \begin{itemize}
+%     \item $[x_1]_R=[x_2]_R=[x_3]_R=\set{x_1,x_2,x_3}$,
+%     \item $[x_4]_R=[x_5]_R=\set{x_4,x_5}$,
+%     \item $[x_6]_R=[x_7]_R=[x_8]_R=\set{x_6,x_7,x_8}$.
+% \end{itemize}
+% \begin{example}
+%     Další příklady relací ekvivalence a jejich tříd.
+%     \begin{enumerate}[label=(\roman*)]
+%         \item $(\N,=)$ (rovnost přirozených čísel) je relace ekvivalence, kde každý prvek tvoří samostatnou třídu ekvivalence.
+%         \begin{align*}
+%             [1]_R&=\set{1}\\
+%             [2]_R&=\set{2}\\
+%             &\vdots
+%         \end{align*}
+%         \item Relace \emph{"mít stejnou paritu"}\footnote{Tzn. obě čísla jsou sudá nebo lichá.} na množině $\Z$ je relace ekvivalence o dvou třídách (sudá a lichá čísla).
+%         \begin{align*}
+%             [1]_R&=\set{-1,1,-3,3,-5,5,\dots}\\
+%             [2]_R&=\set{0,-2,2,-4,4\dots}\\
+%             &\vdots
+%         \end{align*}
+%         \item Relace "mít stejný zbytek po celočíselném dělení 5" na množině $\Z$ je relace ekvivalence o deseti třídách (čísla 0--9 jako zbytek po celočíselném dělení).
+%         \begin{align*}
+%             [0]_R&=\set{0,5,10,\dots}\\
+%             [1]_R&=\set{1,6,11,\dots}\\
+%             [2]_R&=\set{2,7,12,\dots}\\
+%             [3]_R&=\set{3,8,13,\dots}\\
+%             [4]_R&=\set{4,9,14,\dots}
+%         \end{align*}
+%         \item Relace "mít stejnou absolutní hodnotu" na množině $\R$ je relace ekvivalence, kde každá třída obsahuje prvek $x$ a $-x$ pro všechna $x\in\R$.
+%         \begin{align*}
+%             [0]_R&=\set{0}\\
+%             [1]_R&=\set{-1,1}\\
+%             [\sqrt{2}]_R&=\set{\sqrt{2},-\sqrt{2}}\\
+%             [\sqrt[4]{30}]_R&=\set{\sqrt[4]{30},-\sqrt[4]{30}}\\
+%             &\vdots
+%         \end{align*}
+%     \end{enumerate}
+% \end{example}
 
 \subsection{Relace uspořádání}\label{subsec:relace_usporadani}
-Druhým a též asi nejpodstatnějším termínem pro nás bude tzv. \emph{uspořádání}. Oproti ekvivalenci zde bude pouze jedna změna v definici, avšak má velké důsledky.
+Relace lze dále klasifikovat podle jejich typů. Každý z nich se vyznačuje právě podle definovaných druhů v \ref{def:dulezite_druhy_relaci}, do nichž spadají. Pro nás bude velmi podstatné tzv. \emph{uspořádání}. (Vedle tohoto typu ještě existuje tzv. \emph{relace ekvivalence}, o které si lze přečíst v příloze \todo{doplnit odkaz}.)
 \begin{definition}[Uspořádání]
     Nechť $R$ je relace na množině $X$. Řekneme, že $R$ je relací \emph{uspořádání} (též jen \emph{uspořádání}), pokud je \emph{reflexivní}, \emph{antisymetrická} a \emph{tranzitivní}.
 \end{definition}
@@ -193,7 +193,7 @@ Naopak ukázky modifikací relací $R_1,R_2$ na obrázcích \ref{fig:relace_neus
         \item Relace "$\subseteq$" na množině $\powset{X}$ je uspořádání, kde $X$ je konečná množina.
     \end{enumerate}
 \end{example}
-Stejně jako u ekvivalence, i zde si můžeme všimnout jisté redundance při zakreslování. Konkrétně dvojice vyplývající z tranzitivity a reflexivity bychom v těchto případech mohli klidně vynechat a považovat za samozřejmé. Zároveň jsme cíleně zakreslili relace $R_1$ a $R_2$ tak, aby šipky vedly pouze nahoru, neboť to činí obrázek přehlednějším. (Toto funguje díky tomu, že v relaci uspořádání se nemohou vyskytnout cykly kvůli podmínce antisymetrie a tranzitivity, nepočítáme-li cykly z reflexivity.) Zkuste se schválně podívat na znázornění relace $R_1$ na obrázku \ref{fig:relace_usporadani_1_jinak} pro srovnání.
+Zde si můžeme všimnout jisté redundance při zakreslování. Konkrétně dvojice vyplývající z tranzitivity a reflexivity bychom v těchto případech mohli klidně vynechat a považovat za samozřejmé. Zároveň jsme cíleně zakreslili relace $R_1$ a $R_2$ tak, aby šipky vedly pouze nahoru, neboť to činí obrázek přehlednějším. (Toto funguje díky tomu, že v relaci uspořádání se nemohou vyskytnout cykly kvůli podmínce antisymetrie a tranzitivity, nepočítáme-li cykly z reflexivity.) Zkuste se schválně podívat na znázornění relace $R_1$ na obrázku \ref{fig:relace_usporadani_1_jinak} pro srovnání.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=\normalipe]{ch02_relace_usporadani_1_jinak.pdf}
