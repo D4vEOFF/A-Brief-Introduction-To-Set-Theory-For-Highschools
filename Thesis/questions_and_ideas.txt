@@ -9,3 +9,4 @@ Otázky:
 - Co ještě zmínit v sekci o Peanových axiomech?
 - Přišel s definicí přirozených čísel skutenčě John von Neumann?
 - Jak správně uvádět věci do přílohy?
+- Formulace důkazu o usp. množině (N_0, <=).

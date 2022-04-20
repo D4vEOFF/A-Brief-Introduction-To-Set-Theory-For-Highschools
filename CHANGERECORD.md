@@ -1,8 +1,12 @@
 # Záznam změn
 
-## 16. 4, 2022
+## 20. 4. 2022
+- Přidána definice *předchůdce* do sekce **"Přirozená čísla"**.
+- Přidána (zatím neúplná) sekce **"Vlastnosti přirozených čísel"**.
+
+## 16. 4. 2022
 - Přidána sekce **Přirozená čísla**.
-- Zmenšeny obrázky (scale 0.8)
+- Zmenšeny obrázky (scale 0.8).
 
 ## 15. 4. 2022
 - Přidán obrázek ilustrující De Morganovy zákony v sekci **"Axiomy 4 až 6"**.
