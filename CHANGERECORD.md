@@ -1,14 +1,14 @@
 # Záznam změn
 
 ## 21. 4. 2022
-- Definice *výrokové formule* přesunuta do přílohy.
+- Definice *výrokové formule* v sekci **"Výroková logika"** přesunuta do přílohy.
 
 ## 20. 4. 2022
 - Přidána definice *předchůdce* do sekce **"Přirozená čísla"**.
 - Přidána (zatím neúplná) sekce **"Vlastnosti přirozených čísel"**.
 
 ## 16. 4. 2022
-- Přidána sekce **Přirozená čísla**.
+- Přidána sekce **"Přirozená čísla"**.
 - Zmenšeny obrázky (scale 0.8).
 
 ## 15. 4. 2022
