@@ -6,6 +6,7 @@
 - Přidáno bližší vysvětlení, proč platí kvantifikované výroky, kde vázané proměnné jsou brány z prázdné množiny.
 - Odebrána definice identity a lemma na konci sekce **"Zobrazení"**.
 - Sekce **"Schéma axiomů nahrazení"** a **"Axiom fundovanosti"** přesunuty do přílohy.
+- Přidána úmluva o značení množin do úvodu kapitoly **"Axiomy teorie množin"**.
 
 ## 20. 4. 2022
 - Přidána definice *předchůdce* do sekce **"Přirozená čísla"**.
