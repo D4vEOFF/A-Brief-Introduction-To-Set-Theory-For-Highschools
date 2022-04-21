@@ -1,5 +1,8 @@
 # Záznam změn
 
+## 21. 4. 2022
+- Definice *výrokové formule* přesunuta do přílohy.
+
 ## 20. 4. 2022
 - Přidána definice *předchůdce* do sekce **"Přirozená čísla"**.
 - Přidána (zatím neúplná) sekce **"Vlastnosti přirozených čísel"**.

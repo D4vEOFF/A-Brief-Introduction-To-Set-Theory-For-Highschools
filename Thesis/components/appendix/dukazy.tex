@@ -1,15 +1,15 @@
-\section{Důkazy}\label{sec:dukazy}
+\chapter{Důkazy}\label{chap:dukazy}
 V matematice se lze setkat s celou řadou různých tvrzení. Od primitivních, jejichž platnost je zřejmá až po složitější, nad jejich platností je třeba se více zamyslet. Čtenář se nejspíše zatím spíše setkával s matematikou, která zahrnovala užívání jistých postupů. Např. zjednodušování algebraických výrazů, řešení soustav rovnic, ověřování trigonometrických identit, aj. Avšak hodně postupů v matematice je založeno na již známých výsledcích, o nichž bylo dokázáno, že jsou pravdivé. Pokud ovšem máme dokázat určité tvrzení, je třeba, aby bylo naše zdůvodnění jednoznačné a logicky správné. V této sekci se proto podíváme na důkazové techniky používané v matematice, které budeme dále v textu využívat.\par
 Matematická tvrzení jsou často různě klasifikována v závislosti na jejich povaze. Základními typy jsou tyto. 
 \begin{itemize}
-    \item \emph{Axióm}. Tvrzení, které implicitně považujeme za pravdivé a nedokazujeme jej. S axiomatikou jsme se již částečně seznámili v historické předmluvě (viz \ref{subsec:tm_soucasnost}).
+    \item \emph{Axiom}. Tvrzení, které implicitně považujeme za pravdivé a nedokazujeme jej. S axiomatikou jsme se již částečně seznámili v historické předmluvě (viz \ref{subsec:tm_soucasnost}).
     \item \emph{Věta}. Matematické tvrzení, jehož pravdivost můžeme ověřit důkazem.
     \item \emph{Lemma}. Pomocné tvrzení, které běžně využíváme pro důkaz jiného (typicky složitějšího) tvrzení.
     \item \emph{Důsledek}. Tvrzení, které je přímým důsledkem jiného tvrzení.
 \end{itemize}
 Čistě formálně však mezi \textbf{větou}, \textbf{lemmatem} a \textbf{důsledkem} není žádný rozdíl.
 
-\subsection{Důkaz přímý}\label{subsec:dukaz_primy}
+\section{Důkaz přímý}\label{sec:dukaz_primy}
 Jedná se o asi nejjednodušší typ důkazu. Často jsou matematická tvrzení formulována jako implikace, tzn. "Jestliže platí $A$, pak platí $B$.". Konkrétně, např. "Je-li $x<0$, pak $x^2>0$.".\par
 Myšlenka důkazu je taková, že začínáme od předpokladu $A$, z něhož dále odvozujeme dílčí tvrzení tak dlouho, až dojdeme k požadovanému závěru $B$. Symbolicky, pokud si označíme dílčí tvrzení v důkazu $X_1, X_2, \dots, X_n$, pak vlastně dokazujeme výrokovou formuli
 \begin{equation}\label{eq:primy_dukaz_formule}
@@ -131,7 +131,7 @@ Z toho je již vidět, jak u takových tvrzení při důkazu postupovat. Zkrátk
     Tedy dokázali jsme obě implikace a tím i původní tvrzení.
 \end{proof}
 
-\subsection{Důkaz nepřímý}\label{subsec:dukaz_neprimy}
+\section{Důkaz nepřímý}\label{sec:dukaz_neprimy}
 Řada tvrzení v matematice však není až tak jednoduchá na dokázání přímo. Důkazy, které jsme si ukazovali, vždy začínaly od předpokladu a postupně jsme došli k požadovanému závěru. Lze ale postupovat i jinak. Opět se odkážeme na dříve zmíněné tautologie věty \ref{thm:vyznamne_tautologie}, konkrétně na \ref{item:tautologie_5}:
 \begin{equation}\label{eq:dukaz_neprimy_tautologie}
     (A \implies B) \iff (\neg B \implies \neg A).
@@ -196,7 +196,7 @@ V tomto případě máme dvě možnosti. Buď začneme s předpokladem $3 \nmid 
     \end{equation*}
 \end{proof}
 (Převzato z \cite{ChartrandPolimeniZhang2014}, str. 111.)
-\subsection{Důkaz sporem}\label{subsec:dukaz_sporem}
+\section{Důkaz sporem}\label{sec:dukaz_sporem}
 Už jsme si představili dvě základní důkazové techniky. Nyní k nim přidáme metodu třetí -- \emph{důkaz sporem}.\par
 Uvažme, že máme tvrzení ve tvaru implikace $A \implies B$, které chceme dokázat. Podle \ref{item:reductio_ad_absurdum} ve větě \ref{thm:vyznamne_tautologie} víme, že vždy platí
 \begin{equation}\label{eq:dukaz_sporem_logika}
@@ -270,7 +270,7 @@ V případě důkazu sporem je asi nejznámější (a též i nejstarší dochov
     Číslo $p_2\cdots p_n$ je jistě přirozené, avšak $1/p_1$ již přirozené není (nejmenší prvočíslo je 2). Je vidět, že nově vzniklé přirozené číslo $m+1$ není dělitelné žádným z prvočísel $p_1, p_2, \dots, p_n$. To však znamená, že $m+1$ je buď samo prvočíslo, nebo je dělitelné prvočíslem, které není součástí posloupnosti $p_1, p_2, \dots, p_n$. V obou případech však dostáváme spor, neboť jsme předpokládali, že posloupnost $p_1, p_2, \dots, p_n$ obsahuje všechna prvočísla.
 \end{proof}
 
-\subsection{Důkaz matematickou indukcí}\label{subsec:dukaz_indukci}
+\section{Důkaz matematickou indukcí}\label{sec:dukaz_indukci}
 K této důkazové technice si na úvod ukažme příklad. Čtenáři je jistě znám vzorec pro součet prvních $n$ členů geometrické posloupnosti. Jistě tak pro nás neměl být problém určit součet
 \begin{equation*}
     \sum_{k=0}^{n}{2^k}.

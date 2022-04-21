@@ -48,31 +48,23 @@ Výroky uvedené výše obsahující dané logické spojky lze přehledně zapsa
 Vraťme se nyní ještě ke zmíněné implikaci. Ve skutečnosti tato logická spojka je pravděpodobně tou nejsložitější na pochopení ze všech čtyř zmíněných, neboť při neobezřetnosti je často (a to i v běžné mluvě) zaměňována za ekvivalenci. Uvažme tvrzení "Jestliže nebudeš jíst, nedostaneš zmrzlinu.". Synáček by v takovou chvíli očekával, že když naopak oběd sní, tak zmrzlinu dostane, avšak ze striktně matematického hlediska mu ji tatínek i tak dát nemusí a přesto by nelhal. Je důležité si uvědomit, že v případě nesplnění předpokladu nám implikace o závěru nic neříká.\par
 
 \subsection{Výrokové formule}
-Pokud se ohlédneme za výroky, které jsme zatím uvažovali, vždy se jednalo o výroky \emph{složené}. Vezmeme-li např. výrok "Číslo 2 je sudé nebo liché.", tak jej lze rozdělit na dva "jednodušší" výroky, tj. "Číslo 2 je sudé." a "Číslo 2 je liché.", přičemž dané výroky jsou spojeny disjunkcí $\lor$. Tyto výroky však již žádné logické spojky neobsahuje a tedy je nelze dále "rozložit". S tímto souvisí terminologie zavedená v definici \ref{def:vyrokova_a_atomicka_formule}.
-
+Pokud se ohlédneme za výroky, které jsme zatím uvažovali, vždy se jednalo o výroky \emph{složené}. Vezmeme-li např. výrok "Číslo 2 je sudé nebo liché.", tak jej lze rozdělit na dva "jednodušší" výroky, tj. "Číslo 2 je sudé." a "Číslo 2 je liché.", přičemž dané výroky jsou spojeny disjunkcí $\lor$. Tyto výroky však již žádné logické spojky neobsahuje a tedy je nelze dále "rozložit".
 \begin{convention}[Abeceda pro výrokové formule]
     Pro označení výrokových formulí budeme používat malá písmena řecké abecedy, tj. $\alpha,\beta,\gamma,\dots$, případně opatřenými indexy.
 \end{convention}
-
-\begin{definition}[Výroková a atomická formule]\label{def:vyrokova_a_atomicka_formule}
-    $ $\par
-    \begin{enumerate}[label=(\roman*)]
-        \item\label{item:formule_1} Každá výroková proměnná je \emph{výroková formule} (tzv. \emph{atomická formule}).
-        \item\label{item:formule_2} Jsou-li $\varphi$ a $\psi$ výrokové formule, pak $\neg (\varphi)$, $(\varphi) \land (\psi)$, $(\varphi) \lor (\psi)$, $(\varphi) \implies (\psi)$ a $(\varphi) \iff (\psi)$ jsou také výrokové formule.
-        \item\label{item:formule_3} Výraz, který nelze získat pomocí pravidel \ref{item:formule_1} a \ref{item:formule_2} není výrokovou formulí.
-    \end{enumerate}
-\end{definition}
-(Převzato z \cite{Fuchs2003}, str. 14 a \cite{BalcarStepanek1986}, str. 30).
-
+Obecně, pro výroky zavádíme následující terminologii.
+\begin{itemize}
+    \item \emph{Výrokovou formulí} nebo též \emph{logickou formulí} nazveme výrok obsahující libovolný počet výrokových proměnných a logických spojek.
+    \item Speciálně, pokud výrok neobsahuje žádnou logickou spojku, pak jej nazýváme \emph{atomickým}, resp. \emph{atomickou formulí}.
+\end{itemize}
+Tento popis však nelze považovat za definici, neboť je zde pochopitelně řada nepřesností. Např. $A\neg$ nebo $AB\implies\land C$ neurčitě nejsou korektní výrokové formule. Podrobnější informace k tomuto se čtenář může dočíst v příloze \ref{chap:dodatky_k_logice}.
 \begin{remark}
-    Občas budeme v této sekci zkráceně psát pouze \emph{formule}.\linebreak Nicméně vždy tím bude míněna výroková formule ve smyslu definice \ref{def:vyrokova_a_atomicka_formule}.
+    Občas budeme v této sekci zkráceně psát pouze \emph{formule}. Později se zmíníme i o tzv. \emph{predikátových formulích}, nicméně z kontextu vždy bude zřejmé, v jakém smyslu daný termín používáme.
 \end{remark}
-
 \begin{convention}["Rovnost" výrokových formulí]
     \label{conv:rovnost_logickych_formuli}
     Uvažujme, že máme libovolné výrokové formule $\varphi$ a $\psi$. Pokud $\varphi$ a $\psi$ vyjadřují stejnou výrokovou formuli, pak budeme psát $\varphi\sim\psi$.
 \end{convention}
-
 Řekneme-li, že výrokové formule "jsou stejné", pak se formule shodují ve svém zápisu. Máme-li např. výrokové formule
 \begin{align*}
     \varphi_1&\sim (A) \land \big((B) \lor (C)\big),\\
@@ -80,46 +72,7 @@ Pokud se ohlédneme za výroky, které jsme zatím uvažovali, vždy se jednalo 
     \varphi_3&\sim \big((A) \land (B)\big) \lor \big((A) \land (C)\big),
 \end{align*}
 pak můžeme psát, že $\varphi_2\sim\varphi_3$, ale nikoliv $\varphi_1\sim\varphi_2$, byť $\varphi_1$ a $\varphi_2$ mají shodnou tabulku pravdivostních hodnot.\par
-
-Definice výrokové formule \ref{def:vyrokova_a_atomicka_formule} nám v podstatě říká, jakým způsobem můžeme sestrojit potenciálně všechny možné formule. Mějme výrokové proměnné $A$, $B$ a $C$. Ty jsou podle \ref{item:formule_1} v definici \ref{def:vyrokova_a_atomicka_formule} výrokovými formulemi. Podle \ref{item:formule_2} jsou pak formulemi i výrazy
-\begin{equation}\label{eq:vyrokove_formule_z_definice}
-    (A) \land (B)\;,\;(A) \lor (C)\;\text{a}\;\neg(B).
-\end{equation}
-
-Nyní můžeme opakovaně použít \ref{item:formule_2} k sestrojení dalších složitějších formulí. Tedy užitím formulí \eqref{eq:vyrokove_formule_z_definice} můžeme dále postupně sestrojit např. výrazy
-\begin{equation*}
-    \big((A) \land (B)\big) \implies \big((A) \lor (C)\big)\quad\text{a}\quad\Big((A) \land \big(\neg(B)\big)\Big) \iff \Big(\neg\big((A) \lor (B)\big)\Big),
-\end{equation*}
-které jsou opět podle \ref{item:formule_2} výrokovými formulemi. Opětovným užitím \ref{item:formule_2} pak je dále výrokovou formulí např.
-\begin{equation*}
-    \Big(\big((A) \land (B)\big) \implies \big((A) \lor (C)\big)\Big) \implies \bigg(\Big((A) \land \big(\neg(B)\big)\Big) \iff \Big(\neg\big((A) \lor (B)\big)\Big)\bigg).
-\end{equation*}
-Takto můžeme postupovat dál a opakovanou aplikací pravidla \ref{item:formule_2} vytvořit ještě složitější výrokové formule.\par
-Naopak pokud bychom uvážili nějaký výraz, můžeme obdobně zjistit, jestli se jedná o výrokovou formuli či nikoliv.
-\begin{example}\label{ex:overeni_formule}
-    Mějme výraz
-    \begin{equation*}
-        \varphi\sim\big((A) \land (C)\big) \iff \Big(\big((A) \lor (B)\big) \implies \neg(C)\Big).
-    \end{equation*}
-    Ověřte, zda $\varphi$ je výroková formule.\par
-    \begin{solution}
-        Aby $\varphi$ byla formule, musí být
-        \begin{equation*}
-            \varphi_1\sim(A) \land (C)\quad\text{a}\quad\varphi_2\sim\big((A) \lor (B)\big) \implies \neg(C)
-        \end{equation*}
-        též formulemi. Výraz $\varphi_1$ zřejmě je formulí, neboť $A$ a $C$ jsou atomické formule. Ovšem u $\varphi_2$ lze již vidět, že výraz nesplňuje definici výrokové formule, neboť u $\neg(C)$ chybí vnější závorky. Z bodu \ref{item:formule_3} definice \ref{def:vyrokova_a_atomicka_formule} tedy plyne, že výraz $\varphi$ \textbf{není výrokovou formulí}, neboť jej nelze získat pomocí pravidel \ref{item:formule_1} a \ref{item:formule_2}.
-    \end{solution}
-\end{example}
-
-Čtenáře možná již napadlo, že formule, které jsme sestrojili z definice \ref{def:vyrokova_a_atomicka_formule}, jsou zapsány poměrně komplikovaně, především co do nadměrného používání závorek. Např. výraz
-\begin{equation}\label{eq:poradi_operaci}
-    A \land \neg C,
-\end{equation}
-není podle \ref{def:vyrokova_a_atomicka_formule} výrokovou formulí. I přesto je však nejspíše zřejmé, že tímto zápisem vyjadřujeme výrok "Platí $A$ a zároveň neplatí $C$.". Nebo vrátíme-li se k příkladu \ref{ex:overeni_formule}, i při vypuštění uzávorkování u výrazu $\varphi_2$ by dávalo smysl interpretovat výraz
-\begin{equation*}\label{eq:vypusteni_uzavorkovani}
-    A \lor B \implies \neg C
-\end{equation*}
-jako výrok "Jestliže platí $A$ a zároveň $B$, pak neplatí $C$.". Pro zjednodušení zápisu dalších výrokových formulí se proto budeme držet následující úmluvy \ref{conv:poradi_operaci}.
+Z příkladu výše lze však vidět poměrně nadměrné používání závorek. Ačkoliv bychom tak jednoznačně určili pořadí jednotlivých logických operací, existuje o něco příjemnější přístup. Pro zjednodušení zápisu dalších výrokových formulí se proto budeme držet následující úmluvy \ref{conv:poradi_operaci}.
 \begin{convention}[Pořadí logických operací]
     \label{conv:poradi_operaci}
     $ $\par
@@ -128,7 +81,6 @@ jako výrok "Jestliže platí $A$ a zároveň $B$, pak neplatí $C$.". Pro zjedn
         \item Konjunkce a disjunkce $\land,\lor$ jsou rovnocenné a mají přednost před implikací a ekvivalencí $\implies,\iff$, které jsou sobě rovnocenné.
     \end{enumerate}
 \end{convention}
-
 \begin{example}
     Zjednodušení některých formulí při aplikaci zavedeného pořadí logických operací v úmluvě \ref{conv:poradi_operaci}.
     \begin{enumerate}[label=(\roman*)]
