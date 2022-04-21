@@ -1,12 +1,2 @@
 Otázky:
-- "Axiom" nebo "axióm"?
-- Je správný překlad "empty set axiom" název "axiom prázdné množiny" nebo v češtině se mu nazývá jinak?
-- Používat velká nebo malá písmena pro množiny.
-- Jak vhodně vysvětlit pravdivost formule s obecným kvantifikátorem, když množina, z níž uvažujeme "kvantifikační" proměnnou je prázdná?
-- Vhodný příklad na vysvětlení významu schématu axiomu nahrazení.
-- Uvádět důkaz neexistence "nekonečného zanořeného řetězce množin"? (Axiom fundovanosti)
-- Definovat izomorfismus? (Peanovy axiomy)
-- Co ještě zmínit v sekci o Peanových axiomech?
-- Přišel s definicí přirozených čísel skutečně John von Neumann?
-- Jak správně uvádět věci do přílohy?
-- Formulace důkazu o usp. množině (N_0, <=).
+- Jak formulovat Peanovy axiomy? (diskuze z poslední konzultace)

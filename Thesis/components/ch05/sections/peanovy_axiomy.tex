@@ -1,5 +1,12 @@
 \section{Peanovy axiomy}\label{sec:peanovy_axiomy}
-Jedním ze způsobů, jak popsat přirozená čísla, je zavedením určitých axiomů pro ně. Tímto se zabýval matematik, logik a filozof \name{Giuseppe~Peano} (1858--1932), který zavedl soustavu axiomů, dnes nazývanou \emph{Peanovy axiomy}, která vystihuje jejich vlastnosti. Později uvidíme, tak tyto vlastnosti splňují \textbf{právě} přirozená čísla s nulou $\N_0$\footnote{Ve skutečnosti takových množin existuje více. Lze však ukázat, že pro všechny existuje bijekce na $\N_0$, která zachovává všechny vztahy mezi jejich odpovídajícími prvky (přesněji tzv. \emph{izomorfismus}). Všechny množiny splňující Peanovy axiomy mají tak "shodnou strukturu". Důkaz tohoto faktu zde však vynecháme.}.
+Jedním ze způsobů, jak popsat přirozená čísla, je zavedením určitých axiomů pro ně. Tímto se zabýval matematik, logik a filozof \name{Giuseppe~Peano} (1858--1932), který zavedl soustavu axiomů, dnes nazývanou \emph{Peanovy axiomy}, která vystihuje jejich vlastnosti. Později uvidíme, tak tyto vlastnosti splňují \textbf{právě} přirozená čísla s nulou $\N_0$\footnote{Ve skutečnosti takových množin existuje více. Lze však ukázat, že pro všechny existuje bijekce na $\N_0$, která zachovává všechny vztahy mezi jejich odpovídajícími prvky (přesněji tzv. \emph{izomorfismus}). Všechny množiny splňující Peanovy axiomy mají tak "shodnou strukturu". Důkaz tohoto faktu zde však vynecháme.}.\par
+Zde si dovolím čtenáře upozornit, že v dalším výkladu této sekce se budeme pohybovat (chvíli) mimo teorii množin. Peanovy axiomy jsou ve skutečnosti základem pro samostatnou teorii, tzv. Peanovu aritmetiku (\PA). Později si ukážeme, jak vybudovat přirozená čísla v rámci \ZF a uvidíme, že Peanovy axiomy jsou i v jejím rámci splněny (i když zde již technicky nepůjde o axiomy). Trochu obecněji lze ukázat, že axiomatizovaná Peanova aritmetika existuje v jisté izomorfní formě právě i v \ZF (viz znázornění na obrázku \ref{fig:pa_v_ramci_zf}0).
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=\normalipe]{ch05_pa_v_ramci_zf.pdf}
+    \caption{Model \textsf{M} v rámci \ZF, který je izomorfní s \PA.}
+    \label{fig:pa_v_ramci_zf}
+\end{figure}
 \medskip
 
 \noindent\textbf{Peanovy axiomy pro přirozená čísla}:\\
@@ -19,14 +26,14 @@ Z kontextu lze vidět, že prvek $0_X$ zde zastává roli čísla nula. Skutečn
 Nutnost prvních dvou axiomů si můžeme poměrně lehce představit. První požadavek na prostost zobrazení $s$ je celkem přirozený. Např. číslo $7$ je následníkem čísla pouze čísla $6$. Nikdy tak nemůže vzniknout situace jako na obrázku \ref{fig:peanovy_axiomy_1}.
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=\normalipe]{ch04_peanovy_axiomy_1.pdf}
+	\includegraphics[scale=\normalipe]{ch05_peanovy_axiomy_1.pdf}
     \caption{Každý prvek je následníkem právě jednoho prvku.}
     \label{fig:peanovy_axiomy_1}
 \end{figure}
 Podobně prvek $0$ není následníkem žádného prvku (viz obrázek \ref{fig:peanovy_axiomy_2}).
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=\normalipe]{ch04_peanovy_axiomy_2.pdf}
+	\includegraphics[scale=\normalipe]{ch05_peanovy_axiomy_2.pdf}
     \caption{Žádný prvek není následníkem 0.}
     \label{fig:peanovy_axiomy_2}
 \end{figure}
