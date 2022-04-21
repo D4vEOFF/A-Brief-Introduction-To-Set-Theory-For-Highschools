@@ -67,9 +67,9 @@ Tento popis však nelze považovat za definici, neboť je zde pochopitelně řad
 \end{convention}
 Řekneme-li, že výrokové formule "jsou stejné", pak se formule shodují ve svém zápisu. Máme-li např. výrokové formule
 \begin{align*}
-    \varphi_1&\sim (A) \land \big((B) \lor (C)\big),\\
-    \varphi_2&\sim \big((A) \land (B)\big) \lor \big((A) \land (C)\big )\;\text{a}\\
-    \varphi_3&\sim \big((A) \land (B)\big) \lor \big((A) \land (C)\big),
+    \varphi_1&\sim (A) \land \bigl((B) \lor (C)\bigr),\\
+    \varphi_2&\sim \bigl((A) \land (B)\bigr) \lor \bigl((A) \land (C)\big )\;\text{a}\\
+    \varphi_3&\sim \bigl((A) \land (B)\bigr) \lor \bigl((A) \land (C)\bigr),
 \end{align*}
 pak můžeme psát, že $\varphi_2\sim\varphi_3$, ale nikoliv $\varphi_1\sim\varphi_2$, byť $\varphi_1$ a $\varphi_2$ mají shodnou tabulku pravdivostních hodnot.\par
 Z příkladu výše lze však vidět poměrně nadměrné používání závorek. Ačkoliv bychom tak jednoznačně určili pořadí jednotlivých logických operací, existuje o něco příjemnější přístup. Pro zjednodušení zápisu dalších výrokových formulí se proto budeme držet následující úmluvy \ref{conv:poradi_operaci}.
@@ -86,8 +86,8 @@ Z příkladu výše lze však vidět poměrně nadměrné používání závorek
     \begin{enumerate}[label=(\roman*)]
         \item $(A) \land (B)\quad\rightsquigarrow\quad A \land B$,
         \item $\neg(\neg A)\quad\rightsquigarrow\quad \neg\neg A$,
-        \item $\neg \big((A) \lor (B)\big)\quad \rightsquigarrow\quad \neg(A \lor B)$,
-        \item $\Big(\big((A) \land (B)\big) \lor \big(\neg (C)\big)\Big) \implies \big(\neg (A)\big) \land \big(\neg (C)\big)\\ \rightsquigarrow\quad(A \land B) \lor \neg C \implies \neg A \land \neg C$.
+        \item $\neg \bigl((A) \lor (B)\bigr)\quad \rightsquigarrow\quad \neg(A \lor B)$,
+        \item $\Bigl(\bigl((A) \land (B)\bigr) \lor \bigl(\neg (C)\bigr)\Bigr) \implies \bigl(\neg (A)\bigr) \land \bigl(\neg (C)\bigr)\\ \rightsquigarrow\quad(A \land B) \lor \neg C \implies \neg A \land \neg C$.
     \end{enumerate}
 \end{example}
 
@@ -148,7 +148,7 @@ Tento středoškolský postup je zcela jistě vždy funkční. Avšak ne vždy j
 \begin{example}\label{ex:vyrokova_formule_2}
     Mějme logickou formuli
     \begin{equation*}
-        \psi\sim (A \land \neg A \implies B) \lor \big((A \iff B) \land (C \lor \neg C)\big).
+        \psi\sim (A \land \neg A \implies B) \lor \bigl((A \iff B) \land (C \lor \neg C)\bigr).
     \end{equation*}
     Pro jaké pravdivostní hodnoty výroků $A,B,C$ je formule $\psi$ pravdivá?
     \begin{solution}
@@ -168,7 +168,7 @@ Tento středoškolský postup je zcela jistě vždy funkční. Avšak ne vždy j
         neboť opět platí buď $C$, nebo jeho negace $\neg C$.\par
         Vyšetřovanou formuli $\psi$ tedy můžeme zjednodušit
         \begin{align*}
-            \psi&\sim \big((\overbrace{A \land \neg A}^{\equiv 0}) \implies B\big) \lor \big((A \iff B) \land (\overbrace{C \lor \neg C}^{\equiv 1})\big)\equiv  \\ &\equiv (0 \implies B) \lor \big((A \iff B) \land 1\big).
+            \psi&\sim \bigl((\overbrace{A \land \neg A}^{\equiv 0}) \implies B\bigr) \lor \bigl((A \iff B) \land (\overbrace{C \lor \neg C}^{\equiv 1})\bigr)\equiv  \\ &\equiv (0 \implies B) \lor \bigl((A \iff B) \land 1\bigr).
         \end{align*}
         Tento krok nám však umožňuje provést další úpravy. Podívejme se blíže na formuli
         \begin{equation*}
@@ -184,7 +184,7 @@ Tento středoškolský postup je zcela jistě vždy funkční. Avšak ne vždy j
         \end{equation*}
         je také vždy pravdivý (viz tabulka \ref{tab:logicke_spojky}). Celkově se tedy výroková formule $\psi$ zjednoduší takto
         \begin{align*}
-            \psi&\sim (\overbrace{0 \implies B}^{\equiv 1}) \lor \big(\overbrace{(A \iff B) \land 1}^{\equiv A \iff B}\big)\equiv  \\ &\equiv 1 \lor (A \iff B).
+            \psi&\sim (\overbrace{0 \implies B}^{\equiv 1}) \lor \bigl(\overbrace{(A \iff B) \land 1}^{\equiv A \iff B}\bigr)\equiv  \\ &\equiv 1 \lor (A \iff B).
         \end{align*}
         Disjunkce je však pravdivá právě tehdy, když je alespoň jeden z výroků pravdivý, což zde platí. Z tohoto dostáváme výsledek, že
         \begin{equation*}
@@ -242,8 +242,8 @@ Některé tautologie jsme využili již pri řešení příkladu \ref{ex:vyrokov
         \item\label{item:zakon_dvoji_negace} $\neg\neg A \iff A$ \rightnote{zákon dvojí negace}
         \item\label{item:de_morgan_1} $\neg (A \land B) \iff \neg A \lor \neg B$ \rightnote{de Morganovo pravidlo}
         \item\label{item:de_morgan_2} $\neg (A \lor B) \iff \neg A \land \neg B$ \rightnote{de Morganovo pravidlo}
-        \item\label{item:modus_ponens} $\big(A \land (A \implies B)\big) \implies B)$ \rightnote{pravidlo Modus ponens\footnote{Česky \emph{pravidlo vynětí}.}}
-        \item\label{item:modus_tollens_1} $\big((A \implies B) \land \neg B\big) \implies \neg A$ \rightnote{pravidlo Modus tollens\footnote{Česky \emph{popírání důsledku}.}}
+        \item\label{item:modus_ponens} $\bigl(A \land (A \implies B)\bigr) \implies B)$ \rightnote{pravidlo Modus ponens\footnote{Česky \emph{pravidlo vynětí}.}}
+        \item\label{item:modus_tollens_1} $\bigl((A \implies B) \land \neg B\bigr) \implies \neg A$ \rightnote{pravidlo Modus tollens\footnote{Česky \emph{popírání důsledku}.}}
         \item\label{item:reductio_ad_absurdum} $(A \implies \neg A) \implies \neg A$\rightnote{reductio ad absurdum}
         \item\label{item:tautologie_5} $(A \implies B) \iff (\neg B \implies \neg A)$
         \item\label{item:tautologie_2} $(A \iff B) \iff (A \implies B) \land (B \implies A)$

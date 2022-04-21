@@ -2,6 +2,10 @@
 
 ## 21. 4. 2022
 - Definice *výrokové formule* v sekci **"Výroková logika"** přesunuta do přílohy.
+- Do úvodu kapitoly **"Axiomy teorie množin"** připsána poznámka, že v ZF uvažujeme pouze množiny jako objekty.
+- Přidáno bližší vysvětlení, proč platí kvantifikované výroky, kde vázané proměnné jsou brány z prázdné množiny.
+- Odebrána definice identity a lemma na konci sekce **"Zobrazení"**.
+- Sekce **"Schéma axiomů nahrazení"** a **"Axiom fundovanosti"** přesunuty do přílohy.
 
 ## 20. 4. 2022
 - Přidána definice *předchůdce* do sekce **"Přirozená čísla"**.

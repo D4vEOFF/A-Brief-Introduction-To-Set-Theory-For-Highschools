@@ -58,7 +58,7 @@ Skládání zobrazení je zcela stejné, jako v případě relací (ostatně zob
 \end{definition}
 Podle právě zformulované definice \ref{def:skladani_zobrazeni} tedy platí:
 \begin{equation*}
-    \forall x\in X: \big(g\circ f\big)(x)=g(f(x)).
+    \forall x\in X: \bigl(g\circ f\bigr)(x)=g(f(x)).
 \end{equation*}
 \needspace{1cm}
 \begin{definition}[Důležité druhy zobrazení]\label{def:druhy_zobrazeni}
@@ -78,42 +78,41 @@ Podle právě zformulované definice \ref{def:skladani_zobrazeni} tedy platí:
         \item Zobrazení $\map{f_{\printnstepcnt{funccnt}}}{\R}{\R_0^+}$, kde $f_{\printcnt{funccnt}}(x)=x^2$, je \emph{na}, ale není \emph{prosté}.
         \item Zobrazení $\map{f_{\printnstepcnt{funccnt}}}{\R}{\R_0^+}$, kde $f_{\printcnt{funccnt}}(x)=x^2+1$, není \emph{prosté}, ani \emph{na}.
         \item Zobrazení $\map{f_{\printnstepcnt{funccnt}}}{\R}{\R^+}$, kde $f_{\printcnt{funccnt}}(x)=e^x$, je \emph{bijekce}.
-        \item\label{item:inverzni_zobrazeni} Zobrazení $\map{f_{\printnstepcnt{funccnt}}}{A^2}{A^2}$, kde $f_{\printcnt{funccnt}}\big((x,y)\big)=(y,x)$, je \emph{bijekce}.
+        \item\label{item:inverzni_zobrazeni} Zobrazení $\map{f_{\printnstepcnt{funccnt}}}{A^2}{A^2}$, kde $f_{\printcnt{funccnt}}\bigl((x,y)\bigr)=(y,x)$, je \emph{bijekce}.
         \item\label{item:identita} Zobrazení $\map{f_{\printnstepcnt{funccnt}}}{A}{A}$, kde $f_{\printcnt{funccnt}}(x)=x$, je \emph{bijekce}.
         \item \sloppy Zobrazení $\map{f_{\printnstepcnt{funccnt}}}{A}{\powset{A}}$, kde $A$ je libovolná množina a $f_{\printcnt{funccnt}}(a)=\set{X\in\powset{A}\admid a\in X}$, je \emph{bijekce}.
     \end{enumerate}
 \end{example}
-Psát v matematice $f\big((x_1,x_2,\dots,x_n)\big)$ je nezvyklé (jak jsme provedli v \ref{item:inverzni_zobrazeni}). Nejspíše by dávalo větší smysl v takovém případě nepsat vnořené závorky. Proto si zaveďme následující úmluvu.
+(Inspirováno \cite{Becvar2019}, str. 10.)\par
+Psát v matematice $f\bigl((x_1,x_2,\dots,x_n)\bigr)$ je nezvyklé (jak jsme provedli v \ref{item:inverzni_zobrazeni}). Nejspíše by dávalo větší smysl v takovém případě nepsat vnořené závorky. Proto si zaveďme následující úmluvu.
 \begin{convention}
-    \sloppy Zápis $f\big((x_1,x_2,\dots,x_n)\big)$ budeme nahrazovat symbolem $f(x_1,x_2,\dots,x_n)$ stejného významu (tj. obraz uspořádané $n$-tice).
+    Zápis $f\bigl((x_1,x_2,\dots,x_n)\bigr)$ budeme nahrazovat symbolem $f(x_1,x_2,\dots,x_n)$ stejného významu (tj. obraz uspořádané $n$-tice).
 \end{convention}
-Poslední bod \ref{item:identita} je dosti významným příkladem zobrazení, které si zaslouží vlastní definici (viz \ref{def:identita}).
-\begin{definition}[Identita]\label{def:identita}
-    Nechť $\map{f}{X}{X}$ je zobrazení takové, že $f(x)=x$. Pak $f$ nazýváme \emph{identitou} nebo též \emph{identické zobrazení}a značíme jej $1_X$.
-\end{definition}
-(Inspirováno \cite{Becvar2019}, str. 10.)\\
-U zobrazení a jejich skládání můžeme pozorovat jisté závislosti. Jejich důkazy jsou triviální a plynou přímo z definice, ale přesto si je zde uvedeme.
-\begin{lemma}[Vlastnosti skládání zobrazení]
-    Nechť $\map{f}{X}{Y}$ a $\map{g}{Y}{Z}$ jsou zobrazení. Pak
-    \begin{enumerate}[label=(\roman*)]
-        \item\label{item:skladani_injekce} jsou-li $f,g$ prostá zobrazení, je i $g\circ f$ prosté zobrazení.
-        \item\label{item:skladani_surjekce} jsou-li $f,g$ zobrazení na, je i $g\circ f$ zobrazení na.
-        \item\label{item:skladani_bijekce} jsou-li $f,g$ bijekce, je i $g\circ f$ bijekce.
-    \end{enumerate}
-\end{lemma}
-\begin{proof}
-    \textit{(i)}. Budiž dány prvky $x,y\in X$ takové, že $x\neq y$. Protože $f$ je prosté, pak $f(x)\neq f(y)$. Protože prvky $f(x),f(y)\in Y$ jsou různé a $g$ je prosté, pak $g(f(x))\neq g(f(y))$.\par
-    \textit{(ii)}. Zde budeme postupovat opačně. Mějme prvek $z\in Z$. Z předpokladu, že $g$ je na, plyne, že existuje $y\in Y$ takové, že $g(y)=z$. Analogicky pro $y$ musí existovat $x\in X$ takové, že $f(x)=y$, neboť $f$ je na. Tzn. $g(f(x))=z$.\par
-    \textit{(iii)}. Přímý důsledek \textit{(i)} a \textit{(ii)}.
-\end{proof}
-Princip bodu \ref{item:skladani_bijekce} je znázorněn na obrázku \ref{fig:skladani_bijekci}.
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=\normalipe]{ch02_skladani_bijekci.pdf}
-    \caption{Příklad složení bijekcí $f$ a $g$.}
-    \label{fig:skladani_bijekci}
-\end{figure}
-
+% Poslední bod \ref{item:identita} je dosti významným příkladem zobrazení, které si zaslouží vlastní definici (viz \ref{def:identita}).
+% \begin{definition}[Identita]\label{def:identita}
+%     Nechť $\map{f}{X}{X}$ je zobrazení takové, že $f(x)=x$. Pak $f$ nazýváme \emph{identitou} nebo též \emph{identické zobrazení}a značíme jej $1_X$.
+% \end{definition}
+% U zobrazení a jejich skládání můžeme pozorovat jisté závislosti. Jejich důkazy jsou triviální a plynou přímo z definice, ale přesto si je zde uvedeme.
+% \begin{lemma}[Vlastnosti skládání zobrazení]
+%     Nechť $\map{f}{X}{Y}$ a $\map{g}{Y}{Z}$ jsou zobrazení. Pak
+%     \begin{enumerate}[label=(\roman*)]
+%         \item\label{item:skladani_injekce} jsou-li $f,g$ prostá zobrazení, je i $g\circ f$ prosté zobrazení.
+%         \item\label{item:skladani_surjekce} jsou-li $f,g$ zobrazení na, je i $g\circ f$ zobrazení na.
+%         \item\label{item:skladani_bijekce} jsou-li $f,g$ bijekce, je i $g\circ f$ bijekce.
+%     \end{enumerate}
+% \end{lemma}
+% \begin{proof}
+%     \textit{(i)}. Budiž dány prvky $x,y\in X$ takové, že $x\neq y$. Protože $f$ je prosté, pak $f(x)\neq f(y)$. Protože prvky $f(x),f(y)\in Y$ jsou různé a $g$ je prosté, pak $g(f(x))\neq g(f(y))$.\par
+%     \textit{(ii)}. Zde budeme postupovat opačně. Mějme prvek $z\in Z$. Z předpokladu, že $g$ je na, plyne, že existuje $y\in Y$ takové, že $g(y)=z$. Analogicky pro $y$ musí existovat $x\in X$ takové, že $f(x)=y$, neboť $f$ je na. Tzn. $g(f(x))=z$.\par
+%     \textit{(iii)}. Přímý důsledek \textit{(i)} a \textit{(ii)}.
+% \end{proof}
+% Princip bodu \ref{item:skladani_bijekce} je znázorněn na obrázku \ref{fig:skladani_bijekci}.
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[scale=\normalipe]{ch02_skladani_bijekci.pdf}
+%     \caption{Příklad složení bijekcí $f$ a $g$.}
+%     \label{fig:skladani_bijekci}
+% \end{figure}
 (Sekce inspirována \cite{MatousekNesetril2009}, str. 39--43.)
 
 \todo{Doplnit cvičení.}

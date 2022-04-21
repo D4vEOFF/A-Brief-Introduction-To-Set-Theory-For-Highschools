@@ -40,7 +40,7 @@ kde formule $\varphi(x)$ je $x\notin b$. Toto schéma axiomů má následující
     \end{equation*}
     je také množina.
 \end{proof}
-Takovou množinu pak nazýváme \emph{prázdná množina} a typicky ji označujeme znakem $\emptyset$ nebo též někdy prázdnými složenými závorkami $\set{}$. Toto tvrzení se v jiných variantách \textsf{ZF} považuje za axiom a nahrazuje axiom existence. Všimněte si, že důkaz výše (a prakticky důkazy všech zatím zformulovaných tvrzení) závisely (mimo jiné) právě na axiomu existence. Jinak bychom množinu $a$ vůbec nemohli uvažovat. Naopak pokud bychom přijali existenci prázdné množiny jako axiom, pak to automaticky implikuje existenci množiny obecně, kterou nám zaručuje axiom existence.\par
+Takovou množinu pak nazýváme \emph{prázdná množina} a typicky ji označujeme znakem $\emptyset$ nebo též někdy prázdnými složenými závorkami $\set{}$. Toto tvrzení se v jiných variantách \ZF považuje za axiom a nahrazuje axiom existence. Všimněte si, že důkaz výše (a prakticky důkazy všech zatím zformulovaných tvrzení) závisely (mimo jiné) právě na axiomu existence. Jinak bychom množinu $a$ vůbec nemohli uvažovat. Naopak pokud bychom přijali existenci prázdné množiny jako axiom, pak to automaticky implikuje existenci množiny obecně, kterou nám zaručuje axiom existence.\par
 Pomocí schématu axiomů vydělení můžeme definovat některé základní operace s množinami.
 \begin{definition}[Průnik a rozdíl množin]\label{def:prunik_rozdil}
     Nechť jsou dány libovolné množiny $a$ a $b$, pak
@@ -67,7 +67,7 @@ Pomocí schématu axiomů vydělení můžeme definovat některé základní ope
 \begin{remark}
     Speciálně, pokud pro množiny $a,b$ platí, že $a\cap b=\emptyset$ (tzn. $a$ a $b$ nemají žádný společný prvek), pak říkáme, že jsou \emph{disjunktní}.
 \end{remark}
-Proč rovnou nedefinovat i \emph{sjednocení} množin? Protože schéma axiomů vydělení \ref{item:schema_axiomu_vydeleni} garantuje existenci pouze takové množiny $y$, že všechny její prvky náleží množině $a$. To však při sjednocení množin neplatí, neboť některé prvky množiny $b$ nemusí být prvky množiny $a$. S touto vlastností všech množin, jejichž existenci máme díky schématu axiomů vydělení se pojí ještě jeden termín.
+Proč rovnou nedefinovat i \emph{sjednocení} množin? Protože schéma axiomů vydělení \ref{item:schema_axiomu_vydeleni} garantuje existenci pouze takové množiny $y$, že všechny její prvky náleží množině $a$. To však při sjednocení množin neplatí, neboť některé prvky množiny $b$ nemusí být prvky množiny $a$. S touto vlastností všech množin, jejichž existenci máme díky schématu axiomů vydělení, se pojí ještě jeden termín.
 \begin{definition}[Podmnožina a vlastní podmnožina]\label{def:podmnozina}
     Nechť $a$ je libovolná množina. Pak $b$ nazveme \emph{podmnožinou} množiny $a$, pokud
     \begin{equation*}
@@ -91,17 +91,20 @@ Poslední ze zmíněných příkladů je celkem pozoruhodný, neboť s ním souv
         \item $\forall x: x\subseteq\emptyset\iff x=\emptyset$.
     \end{enumerate}
 \end{lemma}
-Zde se dostáváme k poměrně zajímavé části logiky. Pokud bychom si rozepsali definici podmnožiny (viz \ref{def:podmnozina}), formule by vypadala takto:
-\begin{equation}\label{eq:podmnozina_prazdna_mnozina}
-    \forall x\,(x\in\emptyset \implies x\in a)\;\text{nebo ekvivalentně}\;\forall x\in\emptyset:\implies x\in a.
-\end{equation}
-Problém je však, že prázdná množina žádné prvky nemá. Jak tedy rozhodnout o pravdivosti \eqref{eq:podmnozina_prazdna_mnozina}? Ve skutečnosti,jakékoliv tvrzení obsahující obecný kvantifikátor, kde množina, z níž $x$ uvažujeme, je prázdná, implicitně považujeme za pravdivé. Tzn. výrok
-\begin{equation*}
-    \forall x\in\emptyset: \varphi,
-\end{equation*}
-kde $\varphi$ je libovolná formule, považujeme vždy za pravdivý\footnote{Analogicky výroky s existenčním kvantifikátorem, kde $x$ uvažujeme z prázdné množiny, pokládáme vždy za nepravdivé.}.
 \begin{proof}
-    \textit{(i)}. Z výše uvedeného je tato část tvrzení implicitně pravdivá.\\
+    \textit{(i)}. Zde se dostáváme k poměrně zajímavé části logiky. Pokud bychom si rozepsali definici podmnožiny (viz \ref{def:podmnozina}), formule by vypadala takto:
+    \begin{equation}\label{eq:podmnozina_prazdna_mnozina}
+        \forall x\,(x\in\emptyset \implies x\in a)\;\text{nebo ekvivalentně}\;\forall x\in\emptyset:\implies x\in a.
+    \end{equation}
+    Problém je však, že prázdná množina žádné prvky nemá. Jak tedy rozhodnout o pravdivosti \eqref{eq:podmnozina_prazdna_mnozina}? Ve skutečnosti, jakékoliv tvrzení obsahující obecný kvantifikátor, kde množina, z níž $x$ uvažujeme, je prázdná, je vždy pravdivé. Tzn. výrok
+    \begin{equation*}
+        \alpha\sim\forall x\in\emptyset: \varphi,
+    \end{equation*}
+    kde $\varphi$ je libovolná formule, je vždy pravdivý\footnote{Analogicky výroky s existenčním kvantifikátorem, kde $x$ uvažujeme z prázdné množiny, jsou vždy nepravdivé.}. Pokud není čtenáři, že $\alpha$ platí, pak snad bude jasnější se přesvědčit, že opačné tvrzení $\neg\alpha$ neplatí, tj.
+    \begin{equation*}
+        \exists x\in\emptyset: \neg\varphi.
+    \end{equation*}
+    (Tzn. nutně platí $\alpha$.)
     \textit{(ii)}. \textit{$(\implies)$}. Pokud pro libovolné $x$ platí $x\subseteq\emptyset$, pak z definice
     \begin{equation*}
         \forall y\,(y\in x \implies y\in\emptyset)
@@ -112,7 +115,7 @@ kde $\varphi$ je libovolná formule, považujeme vždy za pravdivý\footnote{Ana
 
 \subsection{Axiom potence}
 \begin{equation*}
-    \forall a\,\exists y\,\forall x\,\big(x\in y \iff x\subseteq a\big)
+    \forall a\,\exists y\,\forall x\,\bigl(x\in y \iff x\subseteq a\bigr)
 \end{equation*}
 Pro každou množinu $a$ existuje množina $y$ taková, že obsahuje \textbf{právě} všechny její podmnožiny. Z axiomu extenzionality navíc opět platí, že taková množina je vždy jediná. Na základě tohoto axiomu můžeme definovat:
 \begin{definition}[Potenční množina]
@@ -132,7 +135,7 @@ Pro každou množinu $a$ existuje množina $y$ taková, že obsahuje \textbf{pr�
 
 \subsection{Axiom sumy}
 \begin{equation*}
-    \forall a\,\exists z\,\forall x\,\big(x\in z\iff \exists y\,(x\in y \land y\in a)\big)
+    \forall a\,\exists z\,\forall x\,\bigl(x\in z\iff \exists y\,(x\in y \land y\in a)\bigr)
 \end{equation*}
 Ke každé množině $a$ existuje (podle axiomu extenzionality jediná) množina $y$ obsahující \textbf{právě} takové prvky, které jsou prvkem některého z prvků (tj. množin) množiny $a$. Obdobně jako potenční množinu můžeme i tento typ množiny definovat.
 \begin{definition}[Suma množiny]
