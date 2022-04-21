@@ -7,6 +7,7 @@
 - Odebrána definice identity a lemma na konci sekce **"Zobrazení"**.
 - Sekce **"Schéma axiomů nahrazení"** a **"Axiom fundovanosti"** přesunuty do přílohy.
 - Přidána úmluva o značení množin do úvodu kapitoly **"Axiomy teorie množin"**.
+- Přidán dodatek o PA, jakožto separátní teorii a jejím izomorfním modelu z ZF.
 
 ## 20. 4. 2022
 - Přidána definice *předchůdce* do sekce **"Přirozená čísla"**.
