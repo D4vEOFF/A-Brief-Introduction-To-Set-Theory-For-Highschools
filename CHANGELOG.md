@@ -1,5 +1,8 @@
 # Záznam změn
 
+## 23. 4. 2022
+- Dokončena sekce **"Vlastnosti přirozených čísel"**.
+
 ## 21. 4. 2022
 - Definice *výrokové formule* v sekci **"Výroková logika"** přesunuta do přílohy.
 - Do úvodu kapitoly **"Axiomy teorie množin"** připsána poznámka, že v ZF uvažujeme pouze množiny jako objekty.
