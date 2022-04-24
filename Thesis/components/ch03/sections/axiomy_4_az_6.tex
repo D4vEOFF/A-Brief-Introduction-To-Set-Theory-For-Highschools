@@ -190,7 +190,7 @@ a průnik jako
     \bigcap\limits_{i=1}^{n}{X_i}=X_1 \cap X_2 \cap \cdots \cap X_n.
 \end{equation*}
 Ačkoliv jsme si společně ukázali, že sjednocení $\bigcup_{i=1}^{n}$ lze ekvivalentně zapsat pomocí sumy $\bigcup$, přesto se nejedná o stejné operace a je důležité vnímat rozdíl v jejich značení.\par
-Celkově o sjednocení, průniku a rozdílu dvou množin můžeme dokázat řadu tvrzení. Pro operace sjednocení a průniku platí jak \emph{komutativní}, tak i \emph{asociativní zákon}:
+Celkově o sjednocení, průniku a rozdílu dvou množin lze ukázat řadu vlastností. Pro operace sjednocení a průniku platí jak \emph{komutativní}, tak i \emph{asociativní zákon}:
 \begin{align*}
     X \cup Y&=Y \cup X,\\
     X \cap Y&=Y \cap X,\\
@@ -207,42 +207,3 @@ Tento poznatek můžeme zobecnit užitím velkých operátorů $\bigcup,\;\bigca
     A \cup \left(\bigcap\limits_{i=1}^{n}{X_i}\right)&=\bigcap\limits_{i=1}^{n}{(A \cup X_i)},\\
     A \cap \left(\bigcup\limits_{i=1}^{n}{X_i}\right)&=\bigcup\limits_{i=1}^{n}{(A \cap X_i)}.
 \end{align*}
-
-Ještě jedny známé vztahy pro množiny jsou tzv. \emph{de Morganovy vzorce} (viz obrázek \ref{fig:de_morgan}), které si zde zformulujeme jako větu.
-\begin{theorem}[de Morganovy vzorce]
-    Nechť $A,X_1,\dots,X_n$ jsou libovolné množiny. Pak platí
-    \begin{enumerate}[label=(\roman*)]
-        \item\label{item:de_morgan_1} $\displaystyle A \setminus \left(\bigcup\limits_{i=1}^{n}{X_i}\right)=\bigcap\limits_{i=1}^{n}{(A \setminus X_i)}$,
-        \item\label{item:de_morgan_2} $\displaystyle A \setminus \left(\bigcap\limits_{i=1}^{n}{X_i}\right)=\bigcup\limits_{i=1}^{n}{(A \setminus X_i)}$.
-    \end{enumerate}
-\end{theorem}
-\begin{proof}
-    Nejdříve se zamysleme, co vlastně říkají dané rovnosti. Vyjadřují, že množiny a pravé a levé straně jsou si rovny. Z axiomu extenzionality \ref{item:axiom_extenzionality} víme, že to platí právě tehdy, když mají dané množiny stejné prvky.\par
-    Ukážeme pouze platnost \ref{item:de_morgan_1}, avšak důkaz \ref{item:de_morgan_2} je zcela analogický. Budiž dán libovolný prvek $x\in A \setminus \left(\bigcup_{i=1}^{n}{X_i}\right)$. Ukážeme, že $x\in\bigcap_{i=1}^{n}{(A \setminus X_i)}$. Z definice rozdílu množin (viz \ref{def:prunik_rozdil}) tedy musí platit
-    \begin{equation*}
-        x\in A \setminus \left(\bigcup\limits_{i=1}^{n}{X_i}\right)\iff x\in A \land x\notin \bigcup\limits_{i=1}^{n}{X_i}.
-    \end{equation*}
-    Protože však $x$ nenáleží sjednocení množin $X_1,\dots,X_n$, pak nenáleží (podle definice \ref{def:sjednoceni}) žádné z nich:
-    \begin{equation*}
-        x\in\bigcup\limits_{i=1}^{n}{X_i}\iff\forall i\in\set{1,\dots,n}: x\notin X_i.
-    \end{equation*}
-    Tedy víme, že platí:
-    \begin{equation*}
-        x\in A \land \forall i\in\set{1,\dots,n}: x\notin X_i.
-    \end{equation*}
-    Pokud prvek $x$ náleží množině $A$ a zároveň nenáleží žádné z množin $X_1,\dots,X_n$, pak nenáleží ani množině $A\setminus X_i$ pro libovolné $i$, kde $1\leq i\leq n$. Tj.
-    \begin{equation*}
-        x\in A \land (\forall i\in\set{1,\dots,n}: x\notin X_i)\iff \forall i\in\set{1,\dots,n}: x\in A\setminus X_i.
-    \end{equation*}
-    Z tohoto faktu již lze vidět, že $x$ nutně leží v průniku těchto množin, tzn.
-    \begin{equation*}
-        x\in\bigcap\limits_{i=1}^{n}{(A \setminus X_i)},
-    \end{equation*} 
-    což jsme chtěli dokázat.
-\end{proof}
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.7]{ch03_de_Morganovy_vzorce.pdf}
-    \caption{De Morganovy vzorce pro $n=2$.}
-    \label{fig:de_morgan}
-\end{figure}

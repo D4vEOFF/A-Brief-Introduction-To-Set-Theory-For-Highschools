@@ -1,5 +1,9 @@
 # Záznam změn
 
+## 24. 4. 2022
+- Přidána sekce **"Aritmetika přirozených čísel"**.
+- de Morganovy vzorce vč. důkazu přesunuty do přílohy. 
+
 ## 23. 4. 2022
 - Dokončena sekce **"Vlastnosti přirozených čísel"**.
 
