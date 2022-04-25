@@ -1,5 +1,9 @@
 # Záznam změn
 
+## 25. 4. 2022
+- Přidána kapitola **"Porovnávání nekonečných množin"**.
+- Přádána sekce **"Hilbertův hotel"**.
+
 ## 24. 4. 2022
 - Přidána sekce **"Aritmetika přirozených čísel"**.
 - de Morganovy vzorce vč. důkazu přesunuty do přílohy. 
