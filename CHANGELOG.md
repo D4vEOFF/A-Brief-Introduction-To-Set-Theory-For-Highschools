@@ -1,5 +1,8 @@
 # Záznam změn
 
+## 26. 4. 2022
+- Dokončena sekce **"Hilbertův hotel"**.
+
 ## 25. 4. 2022
 - Přidána kapitola **"Porovnávání nekonečných množin"**.
 - Přádána sekce **"Hilbertův hotel"**.
