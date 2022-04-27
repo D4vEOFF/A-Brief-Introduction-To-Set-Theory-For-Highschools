@@ -1,5 +1,8 @@
 # Záznam změn
 
+## 27. 4. 2022
+- Do sekce **"Hilbertův hotel"** doplněna zmínka o nekonečně mnoha autobusech.
+
 ## 26. 4. 2022
 - Dokončena sekce **"Hilbertův hotel"**.
 
