@@ -3,7 +3,41 @@ Nekonečné množiny mají tedy dost pozoruhodné vlastnosti. V souvislosti s p�
 Náš náhled se pochopitelně odráží od porovnávání velikostí konečných množin. U těch toto nečinní žádný problém, stačí spočítat jejich prvky. U nekonečných množin již prvky "spočítat" nemůžeme. Existuje však ještě jeden způsob, který ve skutečnosti vůbec nevyžaduje schopnost počítání.
 \medskip
 
-\noindent\textbf{O domorodém kmenu a slepicích}. \textit{Představme si, že domorodý kmen hledá nového náčelníka. Po několika vyřazovacích kolech zbyli poslední dva kandidáti. Ostatní členové kmenu rozhodli, že náčelníkem se stane ten z kandidátů, který vlastní více slepic. Tento kmen je však matematicky velmi primitivní a jeho příslušníci umí počítat pouze do pěti. Oba dva kandidáti však mají ostře více jak pět slepic. Kmen se tedy rozhodl postupovat takto: každý z kandidátů přinese vždy jednu svojí slepici a tímto způsobem pokračují, dokud jednomu z nich slepice nedojdou. Ten, kterému dříve dojdou slepice prohraje a druhý je tak náčelníkem.}
+\noindent\textbf{O domorodém kmenu a slepicích}. \textit{Představme si, že domorodý kmen hledá nového náčelníka. Po několika vyřazovacích kolech zbyli poslední dva kandidáti. Ostatní členové kmenu rozhodli, že náčelníkem se stane ten z kandidátů, který vlastní více slepic. Tento kmen je však matematicky velmi primitivní a jeho příslušníci umí počítat pouze do pěti. Oba dva kandidáti však mají ostře více jak pět slepic. Kmen se tedy rozhodl postupovat takto: každý z kandidátů přinese vždy jednu svojí slepici a tímto způsobem pokračují, dokud jednomu z nich slepice nedojdou. Ten, kterému dříve dojdou slepice, prohraje a druhý se tak stane náčelníkem.}
 \medskip
 
-Z tohoto (možná lehce humorného) příkladu je již nejspíše jasné, jak lze množiny porovnávat. Pokud mají dvě množiny stejný počet prvků, pak lze jednotlivé prvky "spárovat". V matematické řeči náčelníci pouze sestrojují zobrazení z jedné množiny slepic do druhé. Toto dává jistě smysl v kontextu konečných množin. Pokud mají množiny stejně prvků, pak mezi nimi existuje bijekce (viz obrázek \todo{doplnit obrázek}).
+Z tohoto (možná lehce humorného) příkladu je již nejspíše jasné, jak lze množiny porovnávat. Pokud mají dvě množiny stejný počet prvků, pak lze jednotlivé prvky "spárovat". V matematické řeči náčelníci pouze sestrojují zobrazení z jedné množiny slepic do druhé. Toto dává jistě smysl v kontextu konečných množin. Pokud mají množiny stejně prvků, pak mezi nimi existuje bijekce (viz obrázek \ref{fig:bijekce_konecne_mnoziny}).
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=\normalipe]{ch06_bijekce_konecne_mnoziny.pdf}
+    \caption{Bijekce mezi konečnými množinami $A,B$ se stejným počtem prvků.}
+    \label{fig:bijekce_konecne_mnoziny}
+\end{figure}
+Stejným způsobem však můžeme porovnávat i nekonečné množiny! Zkusme si vzít např. množinu všech kladných sudých čísel $S=\set{2k\admid k\in\N}$ a přirozená čísla $\N$. Selský rozum by nám řekl, že sudých čísel musí být "méně" než přirozených, neboť $S$ nenáleží všechna lichá přirozená čísla, zatímco množině $\N$ náleží. Z jistého pohledu tomu tak může být, ale z "perspektivy" bijekce nikoliv. Pokud uvážíme zobrazení $\map{f}{\N}{S}$, kde pro $n\in\N$ je $f(n)=2n$, můžeme se snadno přesvědčit, že $f$ je bijekcí\footnote{Skutečně, inverzní zobrazení je $\map{f^{-1}}{S}{\N}$, kde $f^{-1}(n)=n/2$.}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=\normalipe]{ch06_bijekce_suda_a_prirozena_cisla.pdf}
+    \caption{Bijekce mezi množinami $S$ a $\N$.}
+    \label{fig:bijekce_suda_a_prirozena_cisla}
+\end{figure}
+\begin{example}
+    Další příklady bijekcí mezi $\N$ a jinými množinami.
+    \begin{enumerate}[label=(\roman*)]
+        \item Bijekce mezi $\N$ a kladnými lichými čísly: $\map{f_1}{\N}{\set{2k-1\admid k\in\N}}$, kde $f_1(n)=2n-1$.
+        \item Bijekce mezi $\N$ a druhými mocninami: $\map{f_2}{\N}{\set{n^2\admid n\in\N}}$, kde $f_2(n)=n^2$.
+        \item Bijekce mezi $\N$ a prvočísly.
+    \end{enumerate}
+\end{example}
+Všimněme si, že všechny (zatím) uvažované množiny byly všechny vlastní podmnožiny $\N$. Toto však u konečných množin provést nelze, neboť libovolná vlastní podmnožina je vždy "menší" než původní množina (velikosti těchto množin se pak liší v počtu "chybějících" prvků). V případě nekonečných množin toto však není žádnou překážkou. Archimédův logický axiom, že \emph{celek je větší než část} tak skutečně patří pouze do oblasti konečných množin. Toto se zdá být jako pěkná charakteristika odlišující konečné a nekonečné množiny.\par
+Do této chvíle jsme termín "konečná" a "nekonečná" množina chápali intuitivně bez formální definice. Vzhledem k jasnosti těchto termínů v použitých kontextech nejspíše nebyl problém s jejich chápáním. Avšak díky výše zmíněnému máme již dostupný nástroj, jak definovat nekonečnou množinu.
+\begin{definition}[Nekonečnost množiny]
+    Množinu libovolnou množinu $X$ nazveme \emph{nekonečnou}, pokud existuje množina $N\subset X$ taková, že existuje bijektivní zobrazení $\map{f}{X}{N}$. 
+\end{definition}
+Jednoduše, množina je nekonečná, pokud existuje bijekce množiny na některou její vlastní podmnožinu. \todo{možná doplnit zmínku o definici konečné množiny.}
+Pokud se nebudeme omezovat pouze na přirozená čísla, příklady najdeme i u reálných čísel $\R$.
+% \begin{example}
+%     Ukázky bijekcí mezi množinou $\R$ některými jejími vlastními podmnožinami.
+%     \begin{enumerate}[label=(\roman*)]
+%         \item 
+%     \end{enumerate}
+% \end{example}

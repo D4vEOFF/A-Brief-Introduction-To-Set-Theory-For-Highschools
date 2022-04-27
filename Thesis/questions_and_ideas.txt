@@ -1,3 +1,4 @@
 Otázky:
 - Jak formulovat Peanovy axiomy? (diskuze z poslední konzultace)
 - Uvádět i případ s nekonečně mnoha autobusy? (Hilbertův hotel)
+- Uvádět definici konečné množiny? (Porovnávání podle počtu prvků) 

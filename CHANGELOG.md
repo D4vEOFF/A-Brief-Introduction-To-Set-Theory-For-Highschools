@@ -2,6 +2,7 @@
 
 ## 27. 4. 2022
 - Do sekce **"Hilbertův hotel"** doplněna zmínka o nekonečně mnoha autobusech.
+- Rozepsána sekce **"Porovnávání podle počtu prvků"**.
 
 ## 26. 4. 2022
 - Dokončena sekce **"Hilbertův hotel"**.
