@@ -1,0 +1,16 @@
+\section{Spočetné a nespočetné množiny}\label{sec:spocetne_a_nespocetne_mnoziny}
+V této sekci si položíme jednu důležitou otázku, kterou později rozdělíme nekonečné množiny na dva základní typy. Než tak však učiníme, zůstaneme ještě na chvíli u bijekcí mezi množinami, kterými jsme se zabývali v minulé sekci. Zde jsme se snažili ukázat souvislost mezi "velikostmi" množin a existencí bijekce mezi nimi. V případě konečných množin však zcela běžně může nastat situace, kdy množiny mají různý počet prvků, tj. pokud $\sizeof{A}=n$ a $\sizeof{B}=m$, kde $n<m$. Je zřejmé, že bijekci mezi takovými množinami sestrojit nelze. Nicméně, stále můžeme sestrojit prosté zobrazení z $A$ do $B$ (viz obrázek \ref{fig:proste_zobrazeni_A_do_B}).
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=\normalipe]{ch06_proste_zobrazeni.pdf}
+    \caption{Prosté zobrazení z množiny $A$ do množiny $B$.}
+    \label{fig:proste_zobrazeni_A_do_B}
+\end{figure}
+Takové zobrazení však nikdy nemůže být surjektivní, naopak zobrazení z $B$ do $A$ může být surjektivní, ale nikdy ne prosté. Stejný princip platí i pro nekonečné množiny (více později). V souvislosti s tímto si zavedeme následující termíny a značení.
+\begin{definition}[Subvalence a ekvipontence]
+    Nechť $X$ a $Y$ jsou libovolné množiny. Pak pokud
+    \begin{enumerate}[label=(\roman*)]
+        \item existuje prosté zobrazení z $X$ do $Y$, píšeme $X\preceq Y$ (čteme "$X$ je \emph{subvalentní} $Y$" nebo "$X$ má \emph{menší nebo stejnou mohutnost} jako $Y$").
+        \item existuje bijekce mezi $X$ a $Y$, píšeme $X\approx Y$ (čteme "$X$ je \emph{ekvipotentní} $Y$" nebo "$X$ a $Y$ mají \emph{stejnou mohutnost}").
+    \end{enumerate}
+\end{definition}
