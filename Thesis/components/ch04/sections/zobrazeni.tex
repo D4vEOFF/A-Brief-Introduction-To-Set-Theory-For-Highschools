@@ -92,25 +92,25 @@ Poslední bod \ref{item:identita} je dosti významným příkladem zobrazení, k
 \begin{definition}[Identita]\label{def:identita}
     Nechť $\map{f}{X}{X}$ je zobrazení takové, že $f(x)=x$. Pak $f$ nazýváme \emph{identitou} nebo též \emph{identické zobrazení}a značíme jej $1_X$.
 \end{definition}
-% U zobrazení a jejich skládání můžeme pozorovat jisté závislosti. Jejich důkazy jsou triviální a plynou přímo z definice, ale přesto si je zde uvedeme.
-% \begin{lemma}[Vlastnosti skládání zobrazení]
-%     Nechť $\map{f}{X}{Y}$ a $\map{g}{Y}{Z}$ jsou zobrazení. Pak
-%     \begin{enumerate}[label=(\roman*)]
-%         \item\label{item:skladani_injekce} jsou-li $f,g$ prostá zobrazení, je i $g\circ f$ prosté zobrazení.
-%         \item\label{item:skladani_surjekce} jsou-li $f,g$ zobrazení na, je i $g\circ f$ zobrazení na.
-%         \item\label{item:skladani_bijekce} jsou-li $f,g$ bijekce, je i $g\circ f$ bijekce.
-%     \end{enumerate}
-% \end{lemma}
-% \begin{proof}
-%     \textit{(i)}. Budiž dány prvky $x,y\in X$ takové, že $x\neq y$. Protože $f$ je prosté, pak $f(x)\neq f(y)$. Protože prvky $f(x),f(y)\in Y$ jsou různé a $g$ je prosté, pak $g(f(x))\neq g(f(y))$.\par
-%     \textit{(ii)}. Zde budeme postupovat opačně. Mějme prvek $z\in Z$. Z předpokladu, že $g$ je na, plyne, že existuje $y\in Y$ takové, že $g(y)=z$. Analogicky pro $y$ musí existovat $x\in X$ takové, že $f(x)=y$, neboť $f$ je na. Tzn. $g(f(x))=z$.\par
-%     \textit{(iii)}. Přímý důsledek \textit{(i)} a \textit{(ii)}.
-% \end{proof}
-% Princip bodu \ref{item:skladani_bijekce} je znázorněn na obrázku \ref{fig:skladani_bijekci}.
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[scale=\normalipe]{ch02_skladani_bijekci.pdf}
-%     \caption{Příklad složení bijekcí $f$ a $g$.}
-%     \label{fig:skladani_bijekci}
-% \end{figure}
+U zobrazení a jejich skládání můžeme pozorovat jisté závislosti. Jejich důkazy jsou triviální a plynou přímo z definice, ale přesto si je zde uvedeme.
+\begin{lemma}[Vlastnosti skládání zobrazení]\label{lam:vlastnosti_skládání_funkcí}
+    Nechť $\map{f}{X}{Y}$ a $\map{g}{Y}{Z}$ jsou zobrazení. Pak
+    \begin{enumerate}[label=(\roman*)]
+        \item\label{item:skladani_injekce} jsou-li $f,g$ prostá zobrazení, je i $g\circ f$ prosté zobrazení.
+        \item\label{item:skladani_surjekce} jsou-li $f,g$ zobrazení na, je i $g\circ f$ zobrazení na.
+        \item\label{item:skladani_bijekce} jsou-li $f,g$ bijekce, je i $g\circ f$ bijekce.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    \textit{(i)}. Budiž dány prvky $x,y\in X$ takové, že $x\neq y$. Protože $f$ je prosté, pak $f(x)\neq f(y)$. Protože prvky $f(x),f(y)\in Y$ jsou různé a $g$ je prosté, pak $g(f(x))\neq g(f(y))$.\par
+    \textit{(ii)}. Zde budeme postupovat opačně. Mějme prvek $z\in Z$. Z předpokladu, že $g$ je na, plyne, že existuje $y\in Y$ takové, že $g(y)=z$. Analogicky pro $y$ musí existovat $x\in X$ takové, že $f(x)=y$, neboť $f$ je na. Tzn. $g(f(x))=z$.\par
+    \textit{(iii)}. Přímý důsledek \textit{(i)} a \textit{(ii)}.
+\end{proof}
+Princip bodu \ref{item:skladani_bijekce} je znázorněn na obrázku \ref{fig:skladani_bijekci}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=\normalipe]{ch02_skladani_bijekci.pdf}
+    \caption{Příklad složení bijekcí $f$ a $g$.}
+    \label{fig:skladani_bijekci}
+\end{figure}
 (Sekce inspirována \cite{MatousekNesetril2009}, str. 39--43.)

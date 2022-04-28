@@ -30,14 +30,45 @@ Stejným způsobem však můžeme porovnávat i nekonečné množiny! Zkusme si 
 \end{example}
 Všimněme si, že všechny (zatím) uvažované množiny byly všechny vlastní podmnožiny $\N$. Toto však u konečných množin provést nelze, neboť libovolná vlastní podmnožina je vždy "menší" než původní množina (velikosti těchto množin se pak liší v počtu "chybějících" prvků). V případě nekonečných množin toto však není žádnou překážkou. Archimédův logický axiom, že \emph{celek je větší než část} tak skutečně patří pouze do oblasti konečných množin. Toto se zdá být jako pěkná charakteristika odlišující konečné a nekonečné množiny.\par
 Do této chvíle jsme termín "konečná" a "nekonečná" množina chápali intuitivně bez formální definice. Vzhledem k jasnosti těchto termínů v použitých kontextech nejspíše nebyl problém s jejich chápáním. Avšak díky výše zmíněnému máme již dostupný nástroj, jak definovat nekonečnou množinu.
-\begin{definition}[Nekonečnost množiny]
-    Množinu libovolnou množinu $X$ nazveme \emph{nekonečnou}, pokud existuje množina $N\subset X$ taková, že existuje bijektivní zobrazení $\map{f}{X}{N}$. 
+\begin{definition}[Nekonečnost množiny]\label{def:nekonecnost_mnoziny}
+    Množinu libovolnou množinu $X$ nazveme \emph{nekonečnou}, pokud existuje množina $X^\prime\subset X$ taková, že existuje bijektivní zobrazení $\map{f}{X}{X^\prime}$. 
 \end{definition}
-Jednoduše, množina je nekonečná, pokud existuje bijekce množiny na některou její vlastní podmnožinu. \todo{možná doplnit zmínku o definici konečné množiny.}
+Jednoduše, množina je nekonečná, pokud existuje bijekce množiny na některou její vlastní podmnožinu. Nabízí se otázka, jak bychom mohli definovat konečnou množinu. Vzhledem k formalizaci "nekonečná množina" v definici \ref{def:nekonecnost_mnoziny} bychom za konečnou množinu mohli jednoduše prohlásit množinu, která není nekonečná. Avšak tento termín můžeme zavést i více přirozeně. Pokud o množině řekneme, že je "konečná", pak tím intuitivně rozumíme, že její počet prvků odpovídá nějakému přirozenému číslu, tj. $\sizeof{A}=n$, kde $n\in\N_0$. Pokud si však vzpomeneme, přirozená čísla jsme si zaváděli pomocí množin, což znamená že se opět jedná o množiny. Za konečnou množinu tak můžeme prohlásit množinu, u níž \textbf{existuje bijekce na nějaké přirozené číslo}.\par
 Pokud se nebudeme omezovat pouze na přirozená čísla, příklady najdeme i u reálných čísel $\R$.
-% \begin{example}
-%     Ukázky bijekcí mezi množinou $\R$ některými jejími vlastními podmnožinami.
-%     \begin{enumerate}[label=(\roman*)]
-%         \item 
-%     \end{enumerate}
-% \end{example}
+\begin{example}
+    Ukázky bijekcí mezi množinou $\R$ některými jejími vlastními podmnožinami.
+    \begin{enumerate}[label=(\roman*)]
+        \item\label{item:funkce_arctg} Bijekce mezi $\R$ a intervalem $\displaystyle(-\frac{\pi}{2},\frac{\pi}{2})$: $\displaystyle\map{g_1}{\R}{\left(-\frac{\pi}{2},\frac{\pi}{2}\right)}$, kde $g_1(x)=\arctg{x}$.
+        \begin{figure}[H]
+            \centering
+            \input{./components/images/ch06_funkce_arctg.tex}
+            \caption{Graf funkce $g_1$.}
+            \label{fig:graf_g1}
+        \end{figure}
+        \item\label{item:bijekce_0_a_1} Bijekce mezi $\R$ a intervalem $(0,1)$: $\map{g_2}{\R}{(0,1)}$, kde
+        \begin{equation*}
+            g_2(x)=\frac{1}{\pi}\left(\arctg{x}+\frac{\pi}{2}\right)
+        \end{equation*}
+        \begin{figure}[H]
+            \centering
+            \input{./components/images/ch06_bijekce_0_a_1.tex}
+            \caption{Graf funkce $g_2$ ("přeškálovaný" a posunutý graf $\arctg$).}
+            \label{fig:graf_g2}
+        \end{figure}
+        \item\label{item:funkce_tg} Stejně tak lze sestrojit bijekci z intervalu $\displaystyle\left(-\frac{\pi}{2},\frac{\pi}{2}\right)$ do $\R$. Stačí vzít inverzní funkci ke $g_2$, tj. $\displaystyle\map{g_3}{\left(-\frac{\pi}{2},\frac{\pi}{2}\right)}{\R}$, kde $g_3(x)=g_1^{-1}(x)=\tg{x}$.
+        \item\label{item:bijekce_slozena} Bijekci můžeme sestrojit i mezi samotnými intervaly $\displaystyle\left(-\frac{\pi}{2},\frac{\pi}{2}\right)$ a $(0,1)$. Tu můžeme nalézt složením funkcí $g_3$ a $g_2$, tj. $g_4=g_3\circ g_2$, protože
+        \begin{equation*}
+            \map{g_3}{\left(-\frac{\pi}{2},\frac{\pi}{2}\right)}{\R}\;\text{a}\;\map{g_2}{\R}{(0,1)}
+        \end{equation*}
+        Tedy celkově $\displaystyle\map{g_4}{\left(-\frac{\pi}{2},\frac{\pi}{2}\right)}{(0,1)}$, kde
+        \begin{equation*}
+            g_4(x)=g_2(g_3(x))=\frac{1}{\pi}\left(\underbrace{\arctg{(\tg{x})}}_{\text{identita}}+\frac{\pi}{2}\right)=\frac{1}{\pi}\left(x+\frac{\pi}{2}\right)=\frac{1}{\pi}x+\frac{1}{2}.
+        \end{equation*}
+        \begin{figure}[H]
+            \centering
+            \input{./components/images/ch06_bijekce_slozena.tex}
+            \caption{Graf funkce $g_4$ (složení funkcí $g_3$ a $g_2$).}
+            \label{fig:graf_g4}
+        \end{figure}
+    \end{enumerate}
+\end{example}
