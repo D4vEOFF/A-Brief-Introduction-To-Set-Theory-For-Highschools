@@ -20,7 +20,7 @@ Stejným způsobem však můžeme porovnávat i nekonečné množiny! Zkusme si 
     \caption{Bijekce mezi množinami $S$ a $\N$.}
     \label{fig:bijekce_suda_a_prirozena_cisla}
 \end{figure}
-\begin{example}
+\begin{example}\label{ex:bijekce_prirozena_cisla}
     Další příklady bijekcí mezi $\N$ a jinými množinami.
     \begin{enumerate}[label=(\roman*)]
         \item Bijekce mezi $\N$ a kladnými lichými čísly: $\map{f_1}{\N}{\set{2k-1\admid k\in\N}}$, kde $f_1(n)=2n-1$.
@@ -35,7 +35,7 @@ Do této chvíle jsme termín "konečná" a "nekonečná" množina chápali intu
 \end{definition}
 Jednoduše, množina je nekonečná, pokud existuje bijekce množiny na některou její vlastní podmnožinu. Nabízí se otázka, jak bychom mohli definovat konečnou množinu. Vzhledem k formalizaci "nekonečná množina" v definici \ref{def:nekonecnost_mnoziny} bychom za konečnou množinu mohli jednoduše prohlásit množinu, která není nekonečná. Avšak tento termín můžeme zavést i více přirozeně. Pokud o množině řekneme, že je "konečná", pak tím intuitivně rozumíme, že její počet prvků odpovídá nějakému přirozenému číslu, tj. $\sizeof{A}=n$, kde $n\in\N_0$. Pokud si však vzpomeneme, přirozená čísla jsme si zaváděli pomocí množin, což znamená že se opět jedná o množiny. Za konečnou množinu tak můžeme prohlásit množinu, u níž \textbf{existuje bijekce na nějaké přirozené číslo}.\par
 Pokud se nebudeme omezovat pouze na přirozená čísla, příklady bijekcí najdeme i u reálných čísel $\R$.
-\begin{example}
+\begin{example}\label{ex:bijekce_realna_cisla}
     Ukázky bijekcí mezi množinou $\R$ některými jejími vlastními podmnožinami.
     \begin{enumerate}[label=(\roman*)]
         \item\label{item:funkce_arctg} Bijekce mezi $\R$ a intervalem $\displaystyle\left(-\frac{\pi}{2},\frac{\pi}{2}\right)$: $\displaystyle\map{g_1}{\R}{\left(-\frac{\pi}{2},\frac{\pi}{2}\right)}$, kde $g_1(x)=\arctg{x}$.
@@ -70,5 +70,6 @@ Pokud se nebudeme omezovat pouze na přirozená čísla, příklady bijekcí naj
             \caption{Graf funkce $g_4$ (složení funkcí $g_3$ a $g_2$).}
             \label{fig:graf_g4}
         \end{figure}
+        Lze vidět, že $g_4$ je skutečně bijekce, což ostatně plyne z bodu \ref{item:skladani_bijekce} tvrzení \ref{prop:vlastnosti_skládání_funkcí} o vlastnostech skládání zobrazení.
     \end{enumerate}
 \end{example}

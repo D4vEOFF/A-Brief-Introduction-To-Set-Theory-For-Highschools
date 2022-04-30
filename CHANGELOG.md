@@ -1,5 +1,8 @@
 # Záznam změn
 
+## 30. 4. 2022
+- Dokončena sekce **"Spočerné a nespočetné množiny"**.
+
 ## 28. 4. 2022
 - Dokončena sekce **"Porovnávání podle počtu prvků"**.
 - Rozepsána sekce **"Spočerné a nespočetné množiny"**.

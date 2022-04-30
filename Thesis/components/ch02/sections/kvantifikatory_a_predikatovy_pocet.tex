@@ -6,7 +6,7 @@ Logické spojky nám jistě poskytují nástroj pro vyjádření celé řady rů
 \end{equation*}
 Co kdybychom toto chtěli prohlásit místo o jednom člověku např. o všech obyvatelích Prahy? Užitím čistě logických spojek, jak jsme prováděli doposud, bychom museli napsat např.
 \begin{equation*}
-    (Z({\text{Anička}}) \land M({\text{Anička}})) \land (Z({\text{Eva}}) \land M({\text{Eva}})) \land (Z({\text{Tomáš}}) \land M({\text{Tomáš}})) \land \cdots \land (Z({\text{Jiří}}) \land M({\text{Jiří}})).
+    (Z({\text{Anička}}) \land M({\text{Anička}})) \land (Z({\text{Eva}}) \land M({\text{Eva}})) \land \cdots \land (Z({\text{Jiří}}) \land M({\text{Jiří}})).
 \end{equation*}
 To je sice správné, ale poměrně těžkopádné vyjádření tak jednoduchého výroku. Jistě bychom neřekli "Anička má zelené vlasy a modré oči a zároveň Eva má zelené vlasy a modré oči a zároveň \dots". Čtenář nejspíše tuší, že existuje jednodušší způsob vyjádření takového výroku, resp. výrokové formule. K tomu v logice slouží právě takzvané \emph{kvantifikátory}.\par
 V praxi bychom zkrátka řekli: "Všichni obyvatelé Prahy mají zelené vlasy a modré oči." (takové tvrzení je jistě výrok). Tímto způsobem formulujeme podobné výroky i v logice. Zkrátka prohlásíme, že pro každého obyvatele Prahy $x$ platí
@@ -30,7 +30,7 @@ neboť bychom vzali např. obyvatele Brna, pak by byl již výrok nepravdivý (k
 
 Druhým typem kvantifikátoru je tzv. \emph{existenční kvantifikátor}. Uvažme, že bychom chtěli naopak říci, že ze všech obyvatel Prahy má alespoň jeden zelené vlasy a modré oči. S využitím čistě logických spojek by pak znamenalo, že jedna z dílčích formulí je pravdivá
 \begin{equation*}
-    (Z({\text{Anička}}) \land M({\text{Anička}})) \lor (Z({\text{Eva}}) \land M({\text{Eva}})) \lor (Z({\text{Tomáš}}) \land M({\text{Tomáš}})) \lor \cdots \lor (Z({\text{Jiří}}) \land M({\text{Jiří}})).
+    (Z({\text{Anička}}) \land M({\text{Anička}})) \lor (Z({\text{Eva}}) \land M({\text{Eva}})) \lor \cdots \lor (Z({\text{Jiří}}) \land M({\text{Jiří}})).
 \end{equation*}
 I zde však máme kratší alternativu, a to s využitím symbolu $\exists$ pro existenční kvantifikátor. Opět se však nejdřív podívejme na naše tvrzení. To říká, že existuje $x$ takové, že $x$ je obyvatelem Prahy a zároveň má zelené vlasy a modré oči. Zde si tedy naopak vystačíme pouze s konjunkcí:
 \begin{equation}\label{eq:exist_kvatifikator_priklad}

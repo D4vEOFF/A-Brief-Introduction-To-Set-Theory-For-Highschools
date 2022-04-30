@@ -54,9 +54,11 @@
 
 %%% Prostředí pro důkazy
 
-\renewenvironment{proof}{
+\renewenvironment{proof}[1][]{
   \par\medskip\noindent
-  \textit{Důkaz}.
+  \textit{\ifthenelse{\equal{#1}{}}
+  {Důkaz}
+  {#1}}.
 }{
 \newline
 \rightline{$\qedsymbol$}
@@ -100,6 +102,7 @@
 \newcommand{\dint}{\int_0^\tau\!\!\int_0^\tau}
 \newcommand{\isqr}[1]{\frac{1}{\sqrt{#1}}}
 
+\newcommand{\napprox}{\not\approx}
 \newcommand{\norm}[1]{|| #1 ||}
 \newcommand{\dotprod}[2]{\left(#1|#2\right)}
 \newcommand{\compl}[1]{#1^\complement}
@@ -129,7 +132,7 @@
 \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
 
 % Full Names
-\newcommand{\name}[1]{\textsc{#1}}
+\newcommand{\name}[1]{\mbox{\textsc{#1}}}
 
 % Logical operators
 \renewcommand{\implies}{\Rightarrow}
