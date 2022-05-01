@@ -2,6 +2,7 @@
 
 ## 1. 5. 2022
 - Doplněna zmínka o mohutnosti množin do přílohy.
+- Předělán Hasseův diagram 5.17.
 
 ## 30. 4. 2022
 - Dokončena sekce **"Spočerné a nespočetné množiny"**.
