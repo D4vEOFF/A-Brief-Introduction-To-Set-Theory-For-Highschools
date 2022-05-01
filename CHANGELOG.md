@@ -1,5 +1,8 @@
 # Záznam změn
 
+## 1. 5. 2022
+- Doplněna zmínka o mohutnosti množin do přílohy.
+
 ## 30. 4. 2022
 - Dokončena sekce **"Spočerné a nespočetné množiny"**.
 
