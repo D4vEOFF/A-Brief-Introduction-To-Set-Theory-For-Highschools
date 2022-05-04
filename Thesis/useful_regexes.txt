@@ -1,0 +1,1 @@
+Všechny spojky -> (,?)(~|\s)(a|i|ani|nebo|či|ale|avšak|však|leč|nýbrž|naopak|jenomže|jenže|buď|totiž|dokonce|až)\s

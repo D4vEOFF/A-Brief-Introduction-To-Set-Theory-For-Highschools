@@ -3,16 +3,16 @@
     $(\N_0,\leq)$ je lineárně uspořádaná množina.
 \end{theorem}
 \begin{proof}
-    Je-li množina $\N_0$ lineárně uspořádaná vzhledem k relaci "$\leq$", pak tato relace musí být \textbf{reflexivní}, \textbf{antisymetrická} a \textbf{tranzitivní} (pro připomenutí viz definice \ref{def:dulezite_druhy_relaci}) a dále každá dvojice prvků $n,m\in\N_0$ musí být porovnatelná, tj. $n\leq m\lor m\leq n$.
+    Je-li množina $\N_0$ lineárně uspořádaná vzhledem k relaci "$\leq$", pak tato relace musí být \textbf{reflexivní}, \textbf{antisymetrická}~a \textbf{tranzitivní} (pro připomenutí viz definice \ref{def:dulezite_druhy_relaci})~a dále každá dvojice prvků $n,m\in\N_0$ musí být porovnatelná, tj. $n\leq m\lor m\leq n$.
     \begin{itemize}
         \item \textbf{Reflexivita}. Z definice relace "$\leq$" v \ref{def:nerovnosti} triviálně pro libovolné přirozené číslo $n$ platí $n\leq n$.
         \item \textbf{Antisymetrie}. Nechť $n,m\in\N_0$, přičemž $n\leq m \land m\leq n$. Chceme ukázat, že $n=m$. Pokud platí $n\leq m \land m\leq n$, pak musí platit
         \begin{equation*}
             (n<m\lor n=m) \land (m<n\lor n=m)\;\text{neboli}\;n=m\lor (n<m\land m<n).
         \end{equation*}
-        Případ $n<m\land m<n$ nemůže nastat. K tomu lze přistoupit sporem. Pak by muselo platit $n\in m\land m\in n$. Z bodu \ref{item:vlastnost_2_1} lemmatu \ref{lem:vlastnosti_prirozenych_cisel_2} by plynulo $n\subset m\land m\subset n$ a tedy i $n\subset n$, což opět podle \ref{item:vlastnost_2_1} implikuje $n\in n$. To je však spor s tvrzením \ref{item:vlastnost_1_3} lemmatu \ref{lem:vlastnosti_prirozenych_cisel_1}, tj. $n\notin n$.
+        Případ $n<m\land m<n$ nemůže nastat. K tomu lze přistoupit sporem. Pak by muselo platit $n\in m\land m\in n$. Z bodu \ref{item:vlastnost_2_1} lemmatu \ref{lem:vlastnosti_prirozenych_cisel_2} by plynulo $n\subset m\land m\subset n$~a tedy~i $n\subset n$, což opět podle \ref{item:vlastnost_2_1} implikuje $n\in n$. To je~však spor s tvrzením \ref{item:vlastnost_1_3} lemmatu \ref{lem:vlastnosti_prirozenych_cisel_1}, tj. $n\notin n$.
         \item \textbf{Tranzitivita}. Nechť $n,m,\ell\in\N_0$, taková, že platí $n\leq m \land m\leq\ell$. Chceme ukázat, že $n\leq\ell$.\par
-        Pokud platí $n=m$, $m=\ell$ nebo $n=\ell$, pak tvrzení jistě platí. Předpokládejme nyní, že $n\neq m\land m\neq\ell\land n\neq\ell$. Podle bodu \ref{item:vlastnost_1_3} lemmatu \ref{lem:vlastnosti_prirozenych_cisel_2} dostáváme $n\subset m\land m\subset\ell$ a tedy $n\subset\ell$. Opět podle tvrzení \ref{item:vlastnost_1_3} odvodíme $n\leq\ell$.
+        Pokud platí $n=m$, $m=\ell$~nebo $n=\ell$, pak tvrzení jistě platí. Předpokládejme nyní, že $n\neq m\land m\neq\ell\land n\neq\ell$. Podle bodu \ref{item:vlastnost_1_3} lemmatu \ref{lem:vlastnosti_prirozenych_cisel_2} dostáváme $n\subset m\land m\subset\ell$~a tedy $n\subset\ell$. Opět podle tvrzení \ref{item:vlastnost_1_3} odvodíme $n\leq\ell$.
     \end{itemize}
     Tedy relace "$\leq$" na $\N_0$ je skutečně uspořádáním. Fakt, že toto uspořádání je lineární plyne přímo z důsledku \ref{cor:porovnatelnost}.
 \end{proof}

@@ -1,9 +1,9 @@
 \section{Relace podrobněji}\label{sec:relace_podrobneji}
-U relací ještě chvíli zůstaneme, neboť ty budou pro nás v dalším textu nejpodstatnější. Mezi nimi lze najít mnoho zvláštních typů, které jsou svojí strukturou zajímavější než ty, které jsme si ukazovali doteď. Pokud se čtenář do této chvíle stihl ztratit v záplavě nových pojmů a znalostí, doporučuji se vrátit k sekcím \ref{sec:zavedeni_relace} o relacích a \ref{sec:zobrazeni} o zobrazeních.
+U relací ještě chvíli zůstaneme, neboť ty budou pro nás v dalším textu nejpodstatnější. Mezi nimi lze najít mnoho zvláštních typů, které jsou svojí strukturou zajímavější než ty, které jsme si ukazovali doteď. Pokud se čtenář do této chvíle stihl ztratit v záplavě nových pojmů~a znalostí, doporučuji se vrátit k sekcím \ref{sec:zavedeni_relace} o relacích~a \ref{sec:zobrazeni} o zobrazeních.
 
 \subsection{Druhy relací}\label{subsec:druhy_relaci}
-Zatím jsme si uvedli pouze jeden zvláštní typ relace, který nám (nejspíše) byl již trochu povědomý, a to sice zobrazení. Lze se však setkat i s relacemi, které jsou svojí povahou zcela odlišné. V této sekci si zavedeme dva takové typy. Nejdříve se však podíváme na nejdůležitější 4 druhy relací.\par
-Ačkoliv jsme si zaváděli relaci obecně mezi dvěma množinami $X$ a $Y$, v dalším textu se omezíme již pouze na relace na množině.
+Zatím jsme si uvedli pouze jeden zvláštní typ relace, který nám (nejspíše) byl již trochu povědomý,~a to sice zobrazení. Lze se~však setkat~i s relacemi, které jsou svojí povahou zcela odlišné. V této sekci si zavedeme dva takové typy. Nejdříve se~však podíváme na nejdůležitější 4 druhy relací.\par
+Ačkoliv jsme si zaváděli relaci obecně mezi dvěma množinami $X$~a $Y$, v dalším textu se omezíme již pouze na relace na množině.
 \begin{definition}[Důležité druhy relací]\label{def:dulezite_druhy_relaci}
     Nechť $R$ je relace na množině $X$. Pak $R$ je
     \begin{enumerate}[label=(\roman*)]
@@ -33,7 +33,7 @@ Reflexivní relace je jednoduše taková relace, kdy jsou všechny prvky v relac
     \label{fig:priklady_reflexivnich_relaci}
 \end{figure}
 Speciálně obrázek \ref{subfig:nejmensi_reflexivni_relace} je příkladem nejmenší možné reflexivní relace. Z definice \ref{def:identita} můžeme vidět, že se jedná o \emph{identitu}.\par
-Podobně si můžeme znázornit i symetrii na obrázku \ref{fig:priklad_symetricke_relace}.
+Podobně si můžeme znázornit~i symetrii na obrázku \ref{fig:priklad_symetricke_relace}.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=\normalipe]{ch02_symetricka_relace.pdf}
@@ -41,14 +41,14 @@ Podobně si můžeme znázornit i symetrii na obrázku \ref{fig:priklad_symetric
     \label{fig:priklad_symetricke_relace}
 \end{figure}
 Z obrázku \ref{fig:priklad_symetricke_relace} můžeme vidět, že mezi dvojicí prvků, které jsou v relaci, vedou šipky oběma směry.\par
-U tranzitivity musí platit, že pokud máme šipku mezi $x$ a $y$ a zároveň mezi $y$ a $z$, pak musí být i šipka mezi $x$ a $z$ (viz \ref{fig:priklad_tranzitivni_relace}).
+U tranzitivity musí platit, že pokud máme šipku mezi $x$~a $y$~a zároveň mezi $y$~a $z$, pak musí být~i šipka mezi $x$~a $z$ (viz \ref{fig:priklad_tranzitivni_relace}).
 \begin{figure}[H]
     \centering
     \includegraphics[scale=\normalipe]{ch02_tranzitivni_relace.pdf}
     \caption{Tranzitivní relace na čtyřech prvních.}
     \label{fig:priklad_tranzitivni_relace}
 \end{figure}
-Antisymetrie je pravděpodobně nejtěžší z těchto druhů relací, co se týče definice. Zatímco u symetrie platí, že relace musí být "vzájemná", u antisymetrie naopak říkáme, že pokud jsou prvky ve "vzájemné" relaci, pak se jedná o tentýž prvek. Z toho si však můžeme uvědomit, že u antisymetrické relace nemůže tedy nastat, že by mezi dvěma prvky vedly šipky oběma směry, jak lze vidět na obrázku \ref{fig:priklad_antisymetricke_relace}.
+Antisymetrie je pravděpodobně nejtěžší z těchto druhů relací, co se týče definice. Zatímco u symetrie platí, že relace musí být "vzájemná", u antisymetrie~naopak říkáme, že pokud jsou prvky ve "vzájemné" relaci, pak se jedná o tentýž prvek. Z toho si~však můžeme uvědomit, že u antisymetrické relace nemůže tedy nastat, že by mezi dvěma prvky vedly šipky oběma směry, jak lze vidět na obrázku \ref{fig:priklad_antisymetricke_relace}.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=\normalipe]{ch02_antisymetricka_relace.pdf}
@@ -62,7 +62,7 @@ Nyní si zadefinujeme další důležitý pojem v definici \ref{def:inverzni_rel
         R^{-1}=\set{(y,x) \admid xRy}.
     \end{equation*}
 \end{definition}
-Proč právě inverzní? Mějme libovolnou relaci $R\subseteq X\times Y$ a k ní inverzní relaci $R^{-1}$ (ta je naopak podmnožinou "obráceného" kartézského součinu $Y\times X$). Zkusme relace $R$ a $R^{-1}$ složit (pro připomenutí viz definice \ref{def:skladani_relaci}).
+Proč právě inverzní? Mějme libovolnou relaci $R\subseteq X\times Y$~a k ní inverzní relaci $R^{-1}$ (ta je~naopak podmnožinou "obráceného" kartézského součinu $Y\times X$). Zkusme relace $R$~a $R^{-1}$ složit (pro připomenutí viz definice \ref{def:skladani_relaci}).
 \begin{equation*}
     R\circ R^{-1}=\set{(x,z) \admid \exists y\in Y: xRy \land yR^{-1}z}
 \end{equation*}
@@ -70,7 +70,7 @@ Ovšem víme, že když $xRy$, pak $yR^{-1}x$, což znamená, že $x(R\circ R^{-
 \begin{equation*}
     R\circ R^{-1}=1_X.
 \end{equation*}
-Stejně je tomu i u zobrazení. Čtenář pravděpodobně již slyšel termín \emph{inverzní funkce}. Zde se nám tato znalost krásně propojuje se středoškolským učivem.
+Stejně je tomu~i u zobrazení. Čtenář pravděpodobně již slyšel termín \emph{inverzní funkce}. Zde se nám tato znalost krásně propojuje se středoškolským učivem.
 \begin{remark}\label{rem:existence_inv_zobrazeni}
     Inverzní zobrazení $f^{-1}$ k $f$ existuje právě tehdy, když $f$ je \textbf{prosté}.
 \end{remark}
@@ -86,9 +86,9 @@ Je vidět, že složením libovolné $f_i$ s $f_i^{-1}$ dostaneme identitu $\big
 \subsection{Relace uspořádání}\label{subsec:relace_usporadani}
 Relace lze dále klasifikovat podle jejich typů. Každý z nich se vyznačuje právě podle definovaných druhů v \ref{def:dulezite_druhy_relaci}, do nichž spadají. Pro nás bude velmi podstatné tzv. \emph{uspořádání}. (Vedle tohoto typu ještě existuje tzv. \emph{relace ekvivalence}, o které si lze přečíst v příloze \ref{chap:dodatky_k_porovnavani_nekonecnych_mn}.)
 \begin{definition}[Uspořádání]\label{def:usporadani}
-    Nechť $R$ je relace na množině $X$. Řekneme, že $R$ je relací \emph{uspořádání} (též jen \emph{uspořádání}), pokud je \emph{reflexivní}, \emph{antisymetrická} a \emph{tranzitivní}.
+    Nechť $R$ je relace na množině $X$. Řekneme, že $R$ je relací \emph{uspořádání} (též jen \emph{uspořádání}), pokud je \emph{reflexivní}, \emph{antisymetrická}~a \emph{tranzitivní}.
 \end{definition}
-Začněme opět příklady, ať víme, jak si takový typ relace vlastně představit. Mějme relace $R_1$ a $R_2$ na obrázcích \ref{fig:relace_usporadani_1} a \ref{fig:relace_usporadani_2}. (Zkuste si sami rozmyslet, zda $R_1,R_2$ splňují podmínky uspořádání.)
+Začněme opět příklady, ať víme, jak si takový typ relace vlastně představit. Mějme relace $R_1$~a $R_2$ na obrázcích \ref{fig:relace_usporadani_1}~a \ref{fig:relace_usporadani_2}. (Zkuste si sami rozmyslet, zda $R_1,R_2$ splňují podmínky uspořádání.)
 \begin{figure}[H]
     \centering
     \includegraphics[scale=\normalipe]{ch02_relace_usporadani_1.pdf}
@@ -101,7 +101,7 @@ Začněme opět příklady, ať víme, jak si takový typ relace vlastně předs
     \caption{Relace uspořádání $R_2$ na devíti prvcích.}
     \label{fig:relace_usporadani_2}
 \end{figure}
-Naopak ukázky modifikací relací $R_1,R_2$ na obrázcích \ref{fig:relace_neusporadani_1} a \ref{fig:relace_neusporadani_2} \textbf{nejsou} uspořádáními.
+Naopak ukázky modifikací relací $R_1,R_2$ na obrázcích \ref{fig:relace_neusporadani_1}~a \ref{fig:relace_neusporadani_2} \textbf{nejsou} uspořádáními.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=\normalipe]{ch02_relace_neusporadani_1.pdf}
@@ -123,7 +123,7 @@ Naopak ukázky modifikací relací $R_1,R_2$ na obrázcích \ref{fig:relace_neus
         \item Relace "$\subseteq$" na množině $\powset{X}$ je uspořádání, kde $X$ je konečná množina.
     \end{enumerate}
 \end{example}
-Zde si můžeme všimnout jisté redundance při zakreslování. Konkrétně dvojice vyplývající z tranzitivity a reflexivity bychom v těchto případech mohli klidně vynechat a považovat za samozřejmé. Zároveň jsme cíleně zakreslili relace $R_1$ a $R_2$ tak, aby šipky vedly pouze nahoru, neboť to činí obrázek přehlednějším. (Toto funguje díky tomu, že v relaci uspořádání se nemohou vyskytnout cykly kvůli podmínce antisymetrie a tranzitivity, nepočítáme-li cykly z reflexivity.) Zkuste se schválně podívat na znázornění relace $R_1$ na obrázku \ref{fig:relace_usporadani_1_jinak} pro srovnání.
+Zde si můžeme všimnout jisté redundance při zakreslování. Konkrétně dvojice vyplývající z tranzitivity~a reflexivity bychom v těchto případech mohli klidně vynechat~a považovat za samozřejmé. Zároveň jsme cíleně zakreslili relace $R_1$~a $R_2$ tak, aby šipky vedly pouze nahoru, neboť to činí obrázek přehlednějším. (Toto funguje díky tomu, že v relaci uspořádání se nemohou vyskytnout cykly kvůli podmínce antisymetrie~a tranzitivity, nepočítáme-li cykly z reflexivity.) Zkuste se schválně podívat na znázornění relace $R_1$ na obrázku \ref{fig:relace_usporadani_1_jinak} pro srovnání.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=\normalipe]{ch02_relace_usporadani_1_jinak.pdf}
@@ -146,14 +146,14 @@ Tím se dostáváme k tzv. \emph{Hasseovým diagramům}, které se nám poskytuj
         \caption{Hasseův diagram $S$}
         \label{subfig:relace_usporadani_hasseuv_diagram}
     \end{subfigure}
-    \caption{Relace $S$ zakreslená standardně a pomocí Hasseova diagramu.}
+    \caption{Relace $S$ zakreslená standardně~a pomocí Hasseova diagramu.}
     \label{fig:relace_usporadani_zakresleni}
 \end{figure}
-Podobně bychom můžeme zakreslit i relaci $R_1$ z obrázku \ref{fig:relace_usporadani_1} (viz obrázek \ref{fig:relace_usporadani_1_hasseuv_diagram}).
+Podobně bychom můžeme zakreslit~i relaci $R_1$ z obrázku \ref{fig:relace_usporadani_1} (viz obrázek \ref{fig:relace_usporadani_1_hasseuv_diagram}).
 \begin{figure}[H]
     \centering
     \includegraphics[scale=\normalipe]{ch02_relace_usporadani_1_hasseuv_diagram.pdf}
     \caption{Hasseův diagram relace $R_1$.}
     \label{fig:relace_usporadani_1_hasseuv_diagram}
 \end{figure}
-(Sekce inspirována \cite{MatousekNesetril2009}, str. 44--48 a str. 55)
+(Sekce inspirována \cite{MatousekNesetril2009}, str. 44--48~a str. 55)
