@@ -1,14 +1,11 @@
 \section{Vlastnosti přirozených čísel}\label{sec:vlastnosti_prirozenych_cisel}
-Podívejme se nyní blíže na vlastnosti přirozených čísel, které plynou z definice v sekci \ref{sec:prirozena_cisla}. Je celkem pozoruhodné, že čistě pomocí množin se nám podařilo vybudovat objekt, který s čísly zdánlivě na první pohled ani nesouvisí. Již jsme si také ukazovali, jak lze axiomaticky zavést přirozená čísla pomocí Peanových axiomů (viz \ref{sec:peanovy_axiomy}), které nám dávaly poměrně jednoznačnou představu, co od takové množiny požadujeme. Skutečně, množina přirozených čísel definovaná jako
-\begin{equation*}
-    \set{\emptyset,\set{\emptyset},\set{\emptyset,\set{\emptyset}},\set{\emptyset,\set{\emptyset},\set{\emptyset,\set{\emptyset}}},\dots}
-\end{equation*}
-splňuje tyto axiomy\footnote{Mějme na paměti, že v rámci teorie množin \textbf{Peanovy axiomy} již nejsou axiomy v pravém slova smyslu, nýbrž věty (tvrzení, která lze odvodit z axiomů \ZF).}. O jejich platnosti se čtenář může dočíst v knize \cite{Goldrei2017}, str. 40--41 a str. 43--44.\par
-Na konci sekce \ref{sec:prirozena_cisla} jsme poukázali na to, že zavedení přirozených čísel použitým způsobem má za důsledek, že každý z prvků obsahuje všechny své předchůdce:
+Podívejme se nyní blíže na vlastnosti přirozených čísel, které plynou z definice v sekci \ref{sec:prirozena_cisla}. Je celkem pozoruhodné, že čistě pomocí množin se nám podařilo vybudovat objekt, který s čísly zdánlivě na první pohled ani nesouvisí. Již jsme si také ukazovali, jak lze axiomaticky zavést přirozená čísla pomocí Peanových axiomů (viz \ref{sec:peanovy_axiomy}), které nám dávaly poměrně jednoznačnou představu, co od takové množiny požadujeme. Skutečně, množina přirozených čísel zavedená jako
 \begin{equation*}
     0=\emptyset,\quad 1=\set{0},\quad 2=\set{0,1},\quad 3=\set{0,1,2},\quad 4=\set{0,1,2,3},\quad\dots
 \end{equation*}
-To nám umožňuje zformulovat poznatek \ref{lem:vlastnosti_prirozenych_cisel_1}.
+splňuje tyto axiomy. Mějme na paměti, že v rámci teorie množin \textbf{Peanovy axiomy} již nejsou v \ZF{} axiomy, nýbrž věty (tvrzení, která lze odvodit z axiomů \ZF{}). Jejich platnost zde dokazovat nebudeme, avšak budeme je v dalším textu používat. Důkazy lze najít v knize \cite{Goldrei2017}, str. 40--41 a str. 43--44.\par
+Na konci sekce \ref{sec:prirozena_cisla} jsme poukázali na to, že zavedení přirozených čísel použitým způsobem má za důsledek, že každý z prvků obsahuje všechny své předchůdce.
+To nám umožňuje zformulovat poznatek \ref{lem:vlastnosti_prirozenych_cisel_1}. Zároveň nám to poslouží jako ukázka využití indukce při studiu tohoto modelu přirozených čísel v \ZF{}.
 \begin{lemma}\label{lem:vlastnosti_prirozenych_cisel_1}
     Nechť jsou dána přirozená čísla $n,m\in\N_0$. Pak platí:
     \begin{enumerate}[label=(\roman*)]
@@ -72,22 +69,8 @@ O relaci "$\leq$" jsme již v minulé sekci o uspořádáních \ref{sec:specialn
 \begin{proof}
     Přímo plyne z tvrzení \ref{item:vlastnost_2_2} lemmatu \ref{lem:vlastnosti_prirozenych_cisel_2}.
 \end{proof}
-Díky lemmatům \ref{lem:vlastnosti_prirozenych_cisel_1}, \ref{lem:vlastnosti_prirozenych_cisel_2} a důsledku \ref{cor:porovnatelnost} můžeme již zformulovat větu \ref{thm:usporadanost_N}.
+Díky lemmatům \ref{lem:vlastnosti_prirozenych_cisel_1}, \ref{lem:vlastnosti_prirozenych_cisel_2} a důsledku \ref{cor:porovnatelnost} můžeme již zformulovat větu \ref{thm:usporadanost_N}. Důkaz lze nalézt v příloze \ref{chap:dodatky_k_budovani_cis_mn}.
 \begin{theorem}\label{thm:usporadanost_N}
     $(\N_0,\leq)$ je lineárně uspořádaná množina.
 \end{theorem}
-\begin{proof}
-    Je-li množina $\N_0$ lineárně uspořádaná vzhledem k relaci "$\leq$", pak tato relace musí být \textbf{reflexivní}, \textbf{antisymetrická} a \textbf{tranzitivní} (pro připomenutí viz definice \ref{def:dulezite_druhy_relaci}) a dále každá dvojice prvků $n,m\in\N_0$ musí být porovnatelná, tj. $n\leq m\lor m\leq n$.
-    \begin{itemize}
-        \item \textbf{Reflexivita}. Z definice relace "$\leq$" v \ref{def:nerovnosti} triviálně pro libovolné přirozené číslo $n$ platí $n\leq n$.
-        \item \textbf{Antisymetrie}. Nechť $n,m\in\N_0$, přičemž $n\leq m \land m\leq n$. Chceme ukázat, že $n=m$. Pokud platí $n\leq m \land m\leq n$, pak musí platit
-        \begin{equation*}
-            (n<m\lor n=m) \land (m<n\lor n=m)\;\text{neboli}\;n=m\lor (n<m\land m<n).
-        \end{equation*}
-        Případ $n<m\land m<n$ nemůže nastat. K tomu lze přistoupit sporem. Pak by muselo platit $n\in m\land m\in n$. Z bodu \ref{item:vlastnost_2_1} lemmatu \ref{lem:vlastnosti_prirozenych_cisel_2} by plynulo $n\subset m\land m\subset n$ a tedy i $n\subset n$, což opět podle \ref{item:vlastnost_2_1} implikuje $n\in n$. To je však spor s tvrzením \ref{item:vlastnost_1_3} lemmatu \ref{lem:vlastnosti_prirozenych_cisel_1}, tj. $n\notin n$.
-        \item \textbf{Tranzitivita}. Nechť $n,m,\ell\in\N_0$, taková, že platí $n\leq m \land m\leq\ell$. Chceme ukázat, že $n\leq\ell$.\par
-        Pokud platí $n=m$, $m=\ell$ nebo $n=\ell$, pak tvrzení jistě platí. Předpokládejme nyní, že $n\neq m\land m\neq\ell\land n\neq\ell$. Podle bodu \ref{item:vlastnost_1_3} lemmatu \ref{lem:vlastnosti_prirozenych_cisel_2} dostáváme $n\subset m\land m\subset\ell$ a tedy $n\subset\ell$. Opět podle tvrzení \ref{item:vlastnost_1_3} odvodíme $n\leq\ell$.
-    \end{itemize}
-    Tedy relace "$\leq$" na $\N_0$ je skutečně uspořádáním. Fakt, že toto uspořádání je lineární plyne přímo z důsledku \ref{cor:porovnatelnost}.
-\end{proof}
-Co kdybychom uvážili relaci "$<$" na $\N_0$? Striktně podle definice \ref{def:usporadani} by $(\N_0,<)$ nebyla uspořádaná množina, neboť "$<$" není reflexivní. Nicméně zbývající vlastnosti jsou zachovány. V matematice se občas dále rozlišuje tzv. \emph{ostré} a \emph{neostré} uspořádání, kdy ostré oproti neostrému je \emph{irreflexivní}, tj. pro všechna $x$ z dané množiny platí $x\cancel{R}x$.
+Co kdybychom uvážili relaci "$<$" na $\N_0$? Striktně podle definice \ref{def:usporadani} by $(\N_0,<)$ nebyla uspořádaná množina, neboť "$<$" není reflexivní. Nicméně zbývající vlastnosti jsou zachovány. V matematice se občas dále rozlišuje tzv. \emph{ostré} a \emph{neostré} uspořádání, kdy ostré oproti neostrému je \emph{antireflexivní}, tj. pro všechna $x$ z dané množiny platí $x\cancel{R}x$.

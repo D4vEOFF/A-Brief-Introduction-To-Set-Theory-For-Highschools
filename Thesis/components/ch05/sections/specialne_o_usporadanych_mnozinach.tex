@@ -35,29 +35,29 @@ Pojem \emph{částečné uspořádání}, resp. \emph{částečně uspořádaná
         \end{figure}
     \end{enumerate}
 \end{example}
-Lze si všimnout, že díky antisymetrii tvoří prvky jistou "hierarchii". Např. v \ref{item:usporadani_i} v předešlém příkladu \ref{ex:cast_a_lin_usporadani} můžeme vidět z obrázku \ref{fig:priklad_usporadani_i}, že každému prvku "předchází" jiný prvek až na číslo 1. Podobně je tomu tak i u \ref{item:usporadani_ii} a \ref{item:usporadani_iii}. S tím se pojí následující terminologie.
-\begin{definition}[Bezprostřední předchůdce]\label{def:predchudce}
-    Nechť $(X,R)$ je uspořádaná množina. Řekneme, že $x\in X$ je \emph{bezprostředním předchůdcem} prvku $y\in X$, pokud platí podmínky:
-    \begin{enumerate}[label=(\roman*)]
-        \item $xRy$,
-        \item $\forall t\in X: \neg(xRt \land tRy)$.
-    \end{enumerate}
-\end{definition}
-Podmínka \textit{(ii)} definice \ref{def:predchudce} výše říká, že neexistuje prvek $t$ takový, že by se nacházel "mezi" $x$ a $y$ (viz obrázek \ref{fig:predchudce_upresneni}).
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}{6cm}
-        \centering
-        \includegraphics[scale=\normalipe]{ch02_predchudce_upresneni_1.pdf}
-    \end{subfigure}
-    \qquad
-    \begin{subfigure}{6cm}
-        \centering
-        \includegraphics[scale=\normalipe]{ch02_predchudce_upresneni_2.pdf}
-    \end{subfigure}
-    \caption{Hasseovy diagramy k definici \ref{def:predchudce}.}
-    \label{fig:predchudce_upresneni}
-\end{figure}
+Lze si všimnout, že díky antisymetrii tvoří prvky jistou "hierarchii". Např. v \ref{item:usporadani_i} v předešlém příkladu \ref{ex:cast_a_lin_usporadani} můžeme vidět z obrázku \ref{fig:priklad_usporadani_i}, že každému prvku "předchází" jiný prvek až na číslo 1. Podobně je tomu tak i u \ref{item:usporadani_ii} a \ref{item:usporadani_iii}. %S tím se pojí následující terminologie.
+% \begin{definition}[Bezprostřední předchůdce]\label{def:predchudce}
+%     Nechť $(X,R)$ je uspořádaná množina. Řekneme, že $x\in X$ je \emph{bezprostředním předchůdcem} prvku $y\in X$, pokud platí podmínky:
+%     \begin{enumerate}[label=(\roman*)]
+%         \item $xRy$,
+%         \item $\forall t\in X: \neg(xRt \land tRy)$.
+%     \end{enumerate}
+% \end{definition}
+% Podmínka \textit{(ii)} definice \ref{def:predchudce} výše říká, že neexistuje prvek $t$ takový, že by se nacházel "mezi" $x$ a $y$ (viz obrázek \ref{fig:predchudce_upresneni}).
+% \begin{figure}[H]
+%     \centering
+%     \begin{subfigure}{6cm}
+%         \centering
+%         \includegraphics[scale=\normalipe]{ch02_predchudce_upresneni_1.pdf}
+%     \end{subfigure}
+%     \qquad
+%     \begin{subfigure}{6cm}
+%         \centering
+%         \includegraphics[scale=\normalipe]{ch02_predchudce_upresneni_2.pdf}
+%     \end{subfigure}
+%     \caption{Hasseovy diagramy k definici \ref{def:predchudce}.}
+%     \label{fig:predchudce_upresneni}
+% \end{figure}
 \begin{definition}[Porovnatelné prvky]\label{def:porovnatelnost}
     Nechť $(X,R)$ je uspořádaná množina. Řekneme, že prvky $x,y\in X$ jsou \emph{porovnatelné}, pokud $xRy \lor yRx$.
 \end{definition}
@@ -89,7 +89,7 @@ Na první pohled nemusí být rozdíl v definici jednotlivých termínů zřejm�
             \caption{Diagram uspořádané množiny $(\N,\leq)$ s minimálním prvkem.}
             \label{fig:min_max_prvek_i}
         \end{figure}
-        \item\label{item:min_max_prvek_ii} Uspořádaná množina $(\set{1,2,\dots,10},\mid)$ má nejmenší prvek 1 a maximální prvky 8 a 10, ale nemá největší prvek.
+        \item\label{item:min_max_prvek_ii} Uspořádaná množina $(\set{1,2,\dots,10},\mid)$ má nejmenší prvek 1 a maximální prvky 7, 8, 9 a 10, ale nemá největší prvek.
         \begin{figure}[H]
             \centering
             \includegraphics[scale=\normalipe]{ch02_min_max_prvek_ii.pdf}

@@ -1,5 +1,15 @@
 # Záznam změn
 
+## 4. 5. 2022
+- Opraveny některé chyby v obrázcích.
+- Přeformulován třetí Peanův axiom.
+- Důkaz věty 5.5.5. přesunut do přílohy.
+- Přidána poznámka o vynechání vlastností operací v aritmetice N.
+- Odstraněn seznam tabulek kvůli malému počtu.
+- Doplněny citace.
+- Přeformulována poslední situace v Hilbertově hotelu.
+- Opraveny některé chyby ve formátování.
+
 ## 1. 5. 2022
 - Doplněna zmínka o mohutnosti množin do přílohy.
 - Předělán Hasseův diagram 5.17.

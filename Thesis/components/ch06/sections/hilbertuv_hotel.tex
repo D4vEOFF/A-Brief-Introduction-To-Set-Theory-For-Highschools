@@ -8,7 +8,7 @@ Jak jsme si již uvedli v historickém úvodu (konkrétně v podsekci \ref{subse
     \begin{figure}[h]
         \centering
         \includegraphics[scale=\normalipe]{ch06_hilbertuv_hotel_novy_host.pdf}
-        \caption{Situace před a po přesunutí hostů.}
+        \caption{Situace před a po přesunutí hostů. (Převzato z \cite{Rmoutil2022} a upraveno.)}
         \label{fig:hilbertuv_hotel_novy_host}
     \end{figure}
     Právě z důvodu, že hotel je nekonečný, nemůže nastat situace, kdy by některý z hostů se již nemohl přesunout do nového pokoje (což naopak, jak si můžeme rozmyslet, by nastalo u hotelu s konečně mnoha pokoji). Pro nového hosta se tak uvolní pokoj č. 1, kde může být ubytován.\par
@@ -21,7 +21,7 @@ Jak jsme si již uvedli v historickém úvodu (konkrétně v podsekci \ref{subse
     \begin{figure}[h]
         \centering
         \includegraphics[scale=\normalipe]{ch06_hilbertuv_hotel_k_novych_hostu.pdf}
-        \caption{Situace před a po přesunutí $k$ hostů.}
+        \caption{Situace před a po přesunutí $k$ hostů. (Převzato z \cite{Rmoutil2022} a upraveno.)}
         \label{fig:hilbertuv_hotel_k_novych_hostu}
     \end{figure}
     Analogicky i zde můžeme tuto akci popsat jako zobrazení $\map{g}{\N}{\N}$, kde $g(n)=n+k$ ($k$ je pevné). Zobrazení $g$ je prosté, neboť hosté z různých pokojů se nikdy nepřesunou na pokoj se stejným číslem a také není na, neboť čísla $1,2,\dots,k$ nemají žádný vzor, tj. prvních $k$ pokojů zůstane volných.\par
@@ -30,20 +30,19 @@ Jak jsme si již uvedli v historickém úvodu (konkrétně v podsekci \ref{subse
     \begin{figure}[h]
         \centering
         \includegraphics[scale=\normalipe]{ch06_hilbertuv_hotel_autobus.pdf}
-        \caption{Situace po přesunutí hostů obecně z pokoje $n$ do $2n$.}
+        \caption{Situace po přesunutí hostů obecně z pokoje $n$ do $2n$. (Převzato z \cite{Rmoutil2022} a upraveno.)}
         \label{fig:hilbertuv_hotel_autobus}
     \end{figure}
     Jak můžeme vidět, touto akcí recepční zaplnil všechny pokoje se \textbf{sudým} číslem a pokoje s lichým číslem tak jsou nyní volné. Nyní recepčnímu stačí obecně turistu sedícího na sedačce s číslem $k$, aby se nastěhoval do pokoje č. $2k-1$.
-    \item Mohlo by se zdát, že je již problémům konec. Avšak jednoho dne, kdy byl hotel zcela prázdný, se recepční podíval z okna a viděl, že před hotelem parkuje nekonečně mnoho autobusů, kde každý z nich byl nekonečně dlouhý s nekonečně mnoha turisty. Každý s turistů se chce v hotelu ubytovat. Jak si recepční má poradit nyní? Předešlý postup již fungovat nebude, neboť by bylo třeba pro každý z autobusů provést samostatné stěhování již ubytovaných hostů (iterací by tak muselo být nekonečně mnoho). Náš recepční je však matematicky zdatný a vzpomene si na fakt, že prvočísel je nekonečně mnoho (pro zvídavého čtenáře viz příloha \ref{chap:dukazy}, tvrzení \ref{prop:prvocisla}).
+    \item Mohlo by se zdát, že je již problémům konec. Avšak jednoho dne se recepční podíval z okna a viděl, že před hotelem parkuje nekonečně mnoho autobusů, kde každý z nich byl nekonečně dlouhý s nekonečně mnoha turisty. Každý s turistů se chce v hotelu ubytovat. Jak si recepční má poradit nyní? Předešlý postup již fungovat nebude, neboť by bylo třeba pro každý z autobusů provést samostatné stěhování již ubytovaných hostů (iterací by tak muselo být nekonečně mnoho). Náš recepční je však matematicky zdatný a vzpomene si na fakt, že prvočísel je nekonečně mnoho (pro zvídavého čtenáře viz příloha \ref{chap:dukazy}, tvrzení \ref{prop:prvocisla}).
     \begin{equation*}
         2,3,5,7,11,\dots
     \end{equation*}
-    Jak mu to zde pomůže? Pro první autobus vezme první prvočíslo, což je 2, a každého z turistů ubytuje následujícím způsobem. Turistovi na sedadle č. 1 přiřadí pokoj č. $2^1=2$, turistovi na sedadle č. 2 pokoj č. $2^2=4$, atd. Obecně turistovi na sedadle s číslem $k$ je přiřazen pokoj č. $2^k$. na  Pro první autobus tak vyčerpá všechny mocniny dvojky. Pro druhý autobus vezme prvočíslo 3 a nyní postup probíhá stejně. Turista na sedadle s číslem $k$ je ubytován v pokoji č. $3^k$. Nejprve si uvědomme, že pro libovolná $n,m\in\N$ je $2^n\neq 3^m$, tzn. žádnému z turistů z druhého autobusu nemůže být přiřazen pokoj, který je již obsazený turistou z prvního autobusu.\par
-    Obecně označíme-li si $\ell$-té prvočíslo jako $p_\ell$, pak pro $\ell$-tý autobus bude $k$-tému turistovi přiřazen pokoj $p_\ell^k$. I zde bychom mohli ukázat, že zobrazení $\map{h_\ell}{\N}{\N}$ pro $\ell\in\N$ je prosté a
+    Jak mu to zde pomůže? Pro všechny ubytované hosty vezme první prvočíslo, což je 2, a každého z nich ubytuje následujícím způsobem. Hostovi v pokoji č. 1 přiřadí pokoj č. $2^1=2$, hostovi v pokoji č. 2 pokoj č. $2^2=4$, atd. Obecně hostovi v pokoji s číslem $k$ je přiřazen pokoj č. $2^k$. Pro všechny ubytované hosty tak vyčerpá všechny mocniny dvojky. Následně pro první autobus vezme prvočíslo 3 a nyní postup probíhá stejně obdobně. Turista na sedadle s číslem $k$ je ubytován v pokoji č. $3^k$. Nejprve si uvědomme, že pro libovolná $n,m\in\N$ je $2^n\neq 3^m$, tzn. žádnému z turistů z prvního autobusu nemůže být přiřazen pokoj, který je již obsazený již ubytovaným hostem.\par
+    Obecně označíme-li si $\ell$-té prvočíslo jako $p_\ell$, pak pro ($\ell-1$)-tý autobus bude $k$-tému turistovi přiřazen pokoj $p_\ell^k$. I zde bychom mohli ukázat, že zobrazení $\map{h_\ell}{\N}{\N}$ pro $\ell\in\N$ je prosté a
     \begin{equation*}
         \forall\ell_1,\ell_2\in\N,\,\ell_1\neq\ell_2: h_{\ell_1}(\N)\cap h_{\ell_2}(\N)=\emptyset,
     \end{equation*}
-    tj. množiny obrazů zobrazení $h_{\ell_1}$ a $h_{\ell_2}$ pro různá $\ell_1,\ell_2$ jsou disjunktní. Tímto způsobem tak recepční je schopný ubytovat všechny turisty, aniž by na některého z nich nezbyl žádný pokoj. Dokonce si můžeme všimnout, že některé pokoje i po ubytování zůstanou neobsazené. Např. pokoj č. 6, protože toto číslo není mocninou žádného prvočísla; jeho faktory jsou $2$ a $3$. 
-
+    tj. množiny obrazů zobrazení $h_{\ell_1}$ a $h_{\ell_2}$ jsou pro různá $\ell_1,\ell_2$ disjunktní. Tímto způsobem tak recepční je schopný ubytovat všechny turisty, aniž by na některého z nich nezbyl žádný pokoj. Dokonce si můžeme všimnout, že některé pokoje i po ubytování zůstanou neobsazené. Např. pokoj č. 6, protože toto číslo není mocninou žádného prvočísla; jeho faktory jsou $2$ a $3$.
 \end{enumerate}
 Pokud pomineme potenciálně nekonečný počet stížností od hostů kvůli neustálému stěhování a jiné problémy, Hilbertův hotel nám dosti krásně ilustruje jednu myšlenku, a to sice, že práce s nekonečnem může být dosti neintuitivní a i poměrně jednoduché principy platné při konečných počtech v případě nekonečna již neplatí. Sami jsme viděli, že i přesto, že byl hotel plně obsazen, nebyl problém problém zde ubytovat další nové hosty, a to ať už v konečném nebo nekonečném počtu. Matematickou podstatu Hilbertova hotelu si blíže popíšeme v sekci \ref{sec:porovnavani_podle_poctu_prvku}.

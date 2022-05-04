@@ -111,7 +111,7 @@ Jak můžeme vidět, skutečně existují nekonečné množiny, které mají rů
     Nechť $X$ je libovolná množina. Pak říkáme, že $X$ je
     \begin{enumerate}[label=(\roman*)]
         \item \emph{spočetná}, pokud $X\preccurlyeq\N$.
-        \item \emph{nespočetná}, pokud $X\not\preccurlyeq N$.
+        \item \emph{nespočetná}, pokud $X\not\preccurlyeq\N$.
     \end{enumerate}
 \end{definition}
 Množina $X$ je tedy spočetná, pokud existuje prosté zobrazení z $X$ do $\N$ (resp. existuje bijekce na nějakou podmnožinu $\N$). Naopak pokud takové zobrazení z $X$ do $\N$ neexistuje, pak $X$ nazýváme nespočetnou\footnote{Termíny "spočetný" a "nespočetný" v tomto kontextu vychází z faktu, že prvky spočetných množin lze "spočítat", tedy lze je očíslovat přirozenými čísly. Naopak u nespočetných toto nelze.}. U konečných množin se můžeme přesvědčit, že \textbf{všechny jsou spočetné}; stačí 
@@ -160,7 +160,7 @@ K důkazu lze opět použít Cantorovu diagonální metodu.
     \begin{equation*}
         S=\set{x\in X \admid x\notin f(x)}.
     \end{equation*}
-    (Zkuste si rozmyslet). Podle předpokladu $f$ je bijekce a tedy je surjektivní. To znamená, že $\exists s\in X: f(s)=S$, tedy $S$ má vzor v $f$. Z principu konstrukce ale se množina $S$ nemůže nacházet na seznamu, neboť od každé množiny se liší právě v prvku na diagonále. To znamená, že $S$ nemá v $f$ vzor a tedy zobrazení $f$ není surjektivní. Celkově tedy $f$ není bijekce, což je spor.\par
+    (Zkuste si rozmyslet.) Podle předpokladu $f$ je bijekce a tedy je surjektivní. To znamená, že $\exists s\in X: f(s)=S$, tedy $S$ má vzor v $f$. Z principu konstrukce ale se množina $S$ nemůže nacházet na seznamu, neboť od každé množiny se liší právě v prvku na diagonále. To znamená, že $S$ nemá v $f$ vzor a tedy zobrazení $f$ není surjektivní. Celkově tedy $f$ není bijekce, což je spor.\par
     Formálně bychom ke sporu došli takto: pro prvek musí platit buď, že $s\in S$, nebo $s\notin S$.
     \begin{itemize}
         \item $s\in S$. Tzn. $s\in f(s)$. Z definice množiny $S$ musí pro $s$ platit, že $s\notin f(s)=S$, což je spor.

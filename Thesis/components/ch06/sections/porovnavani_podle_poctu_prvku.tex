@@ -6,14 +6,14 @@ Náš náhled se pochopitelně odráží od porovnávání velikostí konečnýc
 \noindent\textbf{O domorodém kmenu a slepicích}. \textit{Představme si, že jistý domorodý kmen hledá nového náčelníka. Po několika vyřazovacích kolech zbyli poslední dva kandidáti. Ostatní členové kmenu rozhodli, že náčelníkem se stane ten z kandidátů, který vlastní více slepic. Tento kmen je však matematicky velmi primitivní a jeho příslušníci umí počítat pouze do pěti. Oba dva kandidáti však mají ostře více jak pět slepic. Kmen se tedy rozhodl postupovat takto: každý z kandidátů přinese vždy jednu svojí slepici a tímto způsobem pokračují, dokud jednomu z nich slepice nedojdou. Ten, kterému dříve dojdou slepice, prohraje a druhý se tak stane náčelníkem.} \cite{Pick2019}
 \medskip
 
-Z tohoto (možná lehce humorného) příkladu je již nejspíše jasné, jak lze množiny porovnávat. Pokud mají dvě množiny stejný počet prvků, pak lze jednotlivé prvky "spárovat". V matematické řeči náčelníci pouze sestrojují zobrazení z jedné množiny slepic do druhé. Toto dává jistě smysl v kontextu konečných množin. Pokud mají množiny stejně prvků, pak mezi nimi existuje bijekce (viz obrázek \ref{fig:bijekce_konecne_mnoziny}).
+Z tohoto příkladu je již nejspíše jasné, jak lze množiny porovnávat. Pokud mají dvě množiny stejný počet prvků, pak lze jednotlivé prvky "spárovat". V matematické řeči náčelníci pouze sestrojují zobrazení z jedné množiny slepic do druhé. Toto dává jistě smysl v kontextu konečných množin. Pokud mají množiny stejně prvků, pak mezi nimi existuje bijekce (viz obrázek \ref{fig:bijekce_konecne_mnoziny}).
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch06_bijekce_konecne_mnoziny.pdf}
     \caption{Bijekce mezi konečnými množinami $A,B$ se stejným počtem prvků.}
     \label{fig:bijekce_konecne_mnoziny}
 \end{figure}
-Stejným způsobem však můžeme porovnávat i nekonečné množiny! Zkusme si vzít např. množinu všech kladných sudých čísel $S=\set{2k\admid k\in\N}$ a přirozená čísla $\N$. Selský rozum by nám řekl, že sudých čísel musí být "méně" než přirozených, neboť $S$ nenáleží všechna lichá přirozená čísla, zatímco množině $\N$ náleží. Z jistého pohledu tomu tak může být, ale z "perspektivy" bijekce nikoliv. Pokud uvážíme zobrazení $\map{f}{\N}{S}$, kde pro $n\in\N$ je $f(n)=2n$, můžeme se snadno přesvědčit, že $f$ je bijekcí\footnote{Skutečně, inverzní zobrazení je $\map{f^{-1}}{S}{\N}$, kde $f^{-1}(n)=n/2$.}.
+Stejným způsobem však můžeme porovnávat i nekonečné množiny! Zkusme si vzít např. množinu všech kladných sudých čísel $S=\set{2k\admid k\in\N}$ a přirozená čísla $\N$. Selský rozum by nám nejspíše napověděl, že sudých čísel musí být "méně" než přirozených, neboť $S$ nenáleží všechna lichá přirozená čísla, zatímco množině $\N$ náleží. Z jistého pohledu tomu tak může být, ale z "perspektivy" bijekce nikoliv. Pokud uvážíme zobrazení $\map{f}{\N}{S}$, kde pro $n\in\N$ je $f(n)=2n$, můžeme se snadno přesvědčit, že $f$ je bijekcí\footnote{Skutečně, inverzní zobrazení je $\map{f^{-1}}{S}{\N}$, kde $f^{-1}(n)=n/2$.}.
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch06_bijekce_suda_a_prirozena_cisla.pdf}
@@ -73,3 +73,4 @@ Pokud se nebudeme omezovat pouze na přirozená čísla, příklady bijekcí naj
         Lze vidět, že $g_4$ je skutečně bijekce, což ostatně plyne z bodu \ref{item:skladani_bijekce} tvrzení \ref{prop:vlastnosti_skladani_zobrazeni} o vlastnostech skládání zobrazení.
     \end{enumerate}
 \end{example}
+(Převzato z \cite{Rmoutil2022}, str. 4--5.)

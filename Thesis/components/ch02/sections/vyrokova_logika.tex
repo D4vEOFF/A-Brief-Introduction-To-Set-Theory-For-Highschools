@@ -11,16 +11,12 @@ Za výroky lze považovat např. tvrzení:
 a mnohé jiné (u každého z nich jsme schopni jednoznačně určit jeho pravdivostní hodnotu). K formálnímu zápisu tvrzení v matematice vyžíváme tzv. \emph{logické spojky} a \emph{kvantifikátory}.
 
 \subsection{Logické spojky}\label{subsec:logicke_spojky}
-
 Mezi logické spojky řadíme \emph{negaci} $\neg$, \emph{konjunkci} $\land$, \emph{disjunkci} $\lor$, \emph{implikaci} $\implies$ a \emph{ekvivalenci} $\iff$. Připomeňme si stručně jejich významy.
-
 \begin{convention}[Abeceda pro výrokové proměnné]
     \label{conv:abeceda_vyrokovych_promennych}
     Pro označení \emph{výroků} nebo též \emph{výrokových proměnných} budeme používat velká písmena latinské abecedy\linebreak $A,B,\dots,X,Y,Z$, případně opatřenými indexy.
 \end{convention}
-
 Uvažujme libovolné výroky $A$ a $B$.
-
 \begin{itemize}
     \item Negace $\neg A$ má opačnou pravdivostní hodnotu než $A$.
     \item Konjunkce $A \land B$ je pravdivá, pokud je pravdivý výrok $A$ \textbf{a současně} je pravdivý výrok $B$. Tedy má-li $A$ nebo $B$ pravdivostní hodnotu 0, pak i $A \land B$ má pravdivostní hodnotu 0. Čteme \emph{"$A$ a (zároveň) $B$"}.
@@ -28,9 +24,7 @@ Uvažujme libovolné výroky $A$ a $B$.
     \item U implikace se často mluví o výroku $A$ jako o \emph{předpokladu} a o $B$ jako o \emph{závěru}. Výrok $A \implies B$ pak říká, že pokud platí výrok $A$, \textbf{pak nutně platí} i výrok $B$. Čteme \emph{"jestliže $A$, pak $B$", "z $A$ vyplývá $B$" či "$A$ implikuje $B$"}. Zde se hodí upozornit na to, že mezi předpokladem a závěrem nemusí být nutně souvislost.
     \item Ekvivalence $A \iff B$ je pravdivá, pokud jsou výroky $A$ a $B$ \textbf{současně pravdivé} nebo \textbf{současně nepravdivé}. Čteme \emph{"$A$ právě tehdy, když $B$"}.
 \end{itemize}
-
 Výroky uvedené výše obsahující dané logické spojky lze přehledně zapsat do tabulky pravdivostních hodnot (viz tabulka \ref{tab:logicke_spojky}).
-
 \begin{table}[H]
     \centering
     \begin{tabular}{|cc|ccccc|}
@@ -44,7 +38,6 @@ Výroky uvedené výše obsahující dané logické spojky lze přehledně zapsa
     \caption{Tabulka pravdivostních hodnot pro základní logické spojky}
     \label{tab:logicke_spojky}
 \end{table}
-
 Vraťme se nyní ještě ke zmíněné implikaci. Ve skutečnosti tato logická spojka je pravděpodobně tou nejsložitější na pochopení ze všech čtyř zmíněných, neboť při neobezřetnosti je často (a to i v běžné mluvě) zaměňována za ekvivalenci. Uvažme tvrzení "Jestliže nebudeš jíst, nedostaneš zmrzlinu.". Synáček by v takovou chvíli očekával, že když naopak oběd sní, tak zmrzlinu dostane, avšak ze striktně matematického hlediska mu ji tatínek i tak dát nemusí a přesto by nelhal. Je důležité si uvědomit, že v případě nesplnění předpokladu nám implikace o závěru nic neříká.\par
 
 \subsection{Výrokové formule}
@@ -73,9 +66,8 @@ Tento popis však nelze považovat za definici, neboť je zde pochopitelně řad
 \end{align*}
 pak můžeme psát, že $\varphi_2\sim\varphi_3$, ale nikoliv $\varphi_1\sim\varphi_2$, byť $\varphi_1$ a $\varphi_2$ mají shodnou tabulku pravdivostních hodnot.\par
 Z příkladu výše lze však vidět poměrně nadměrné používání závorek. Ačkoliv bychom tak jednoznačně určili pořadí jednotlivých logických operací, existuje o něco příjemnější přístup. Pro zjednodušení zápisu dalších výrokových formulí se proto budeme držet následující úmluvy \ref{conv:poradi_operaci}.
-\begin{convention}[Pořadí logických operací]
-    \label{conv:poradi_operaci}
-    
+\begin{convention}[Pořadí logických operací]\label{conv:poradi_operaci}
+    Budeme dodržovat následující pořadí logických operací:
     \begin{enumerate}[label=(\arabic*)]
         \item Negace $\neg$ má přednost před všemi ostatními logickými spojkami.
         \item Konjunkce a disjunkce $\land,\lor$ jsou rovnocenné a mají přednost před implikací a ekvivalencí $\implies,\iff$, které jsou sobě rovnocenné.

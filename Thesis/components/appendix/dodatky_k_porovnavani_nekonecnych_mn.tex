@@ -85,16 +85,12 @@ Pro lehčí pochopení se na chvíli přesuňme ke geometrii. Uvážíme-li rela
     \item \textbf{Tranzitivita}. Je-li přímka $p$ rovnoběžná s přímkou $q$ a zároveň $q$ je rovnoběžná s přímkou $r$, pak určitě $p\parallel r$.
 \end{itemize}
 Tedy "$\parallel$" je relací ekvivalence. Na základě tohoto poznatku, máme-li libovolnou přímku $p$, jaké přímky obsahuje třída ekvivalence $[p]_\parallel$? Budou to právě takové přímky, které jsou rovnoběžné s přímkou $p$. Jak bychom definovali \emph{směr} přímky? Zkuste se zamyslet, než budete pokračovat.\par
-Ze znalostí analytické geometrie by nás mohlo napadnout definovat směr jako \emph{směrový vektor} dané přímky. Pokud tedy dvojice přímek $p,q$ sdílí směr, směrový vektor $\overrightarrow{s_p}$ přímky $p$ lze tak vyjádřit jako $k$ násobek směrového vektoru $\overrightarrow{s_q}$ přímky $q$, tj.
-\begin{equation*}
-    \overrightarrow{s_p}=k\cdot \overrightarrow{s_q}
-\end{equation*}
-Pokud se ale pohybujeme v čistě syntetické (axiomatické) geometrii\footnote{Axiomatická geometrie (viz podsekce \ref{subsec:tm_soucasnost}) je protikladem analytické geometrie, kde objekty nejsou vnímány jako množiny bodů.}, tento přístup již zvolit nelze. Zkusme se ale zpětně zaměřit na třídy ekvivalence "$\parallel$". Uvážíme-li libovolnou z nich, pak přímky jí náležící mají vždy shodný směr. To znamená, že výběrem kterékoliv třídy ekvivalence je směr jednoznačně určen podle náležících přímek. Tedy celkově: za směr přímky $p$ prohlásíme třídu ekvivalence $[p]_\parallel$.
+Zkusme se ale zpětně zaměřit na třídy ekvivalence "$\parallel$". Uvážíme-li libovolnou z nich, pak přímky jí náležící mají vždy shodný směr. To znamená, že výběrem kterékoliv třídy ekvivalence je směr jednoznačně určen podle náležících přímek. Tedy celkově: za směr přímky $p$ prohlásíme třídu ekvivalence $[p]_\parallel$.
 \medskip
 
 Tato úvaha nám zde velmi pomůže. Ačkoliv sice netušíme, co je to mohutnost množiny, přesto dokážeme určit (v principu), zda libovolné množiny $X$ a $Y$ mají stejnou mohutnost, nebo nemají.
 \begin{lemma}
-    Ekvipotence $\approx$ je relací ekvivalence\footnote{Zde se jedná o tzv. \emph{třídovou relaci} na tzv. \emph{univerzální třídě} (často označované $\mathbb{V}$), tedy "souhrnu" všech množin. Tento "souhrn" nemůže být množinou, neboť bychom tak došli ke sporu v \ZF. Třídy představují v teorii množin "nadstavbu" termínu množina. Obecně platí, že každá množina je třída, ale ne každá třída je množina. Pro hlubší pochopení doporučuji knihu \cite{BalcarStepanek1986}, str. 45--50}.
+    Ekvipotence $\approx$ je relací ekvivalence\footnote{Zde se jedná o tzv. \emph{třídovou relaci} na tzv. \emph{univerzální třídě} (často označované $\mathbb{V}$), tedy "souhrnu" všech množin. Tento "souhrn" nemůže být množinou, neboť bychom tak došli ke sporu v \ZF{}. Třídy představují v teorii množin "nadstavbu" termínu množina. Obecně platí, že každá množina je třída, ale ne každá třída je množina. Pro hlubší pochopení doporučuji knihu \cite{BalcarStepanek1986}, str. 45--50}.
 \end{lemma}
 \begin{proof}
     Z definice relace ekvivalence stačí ověřit, že $\approx$ je reflexivní, symetrická a tranzitivní. Mějme libovolné množiny $X,Y,Z$.
