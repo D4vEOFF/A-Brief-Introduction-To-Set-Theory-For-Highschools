@@ -4,35 +4,35 @@ Logické spojky nám jistě poskytují nástroj pro vyjádření celé řady rů
 \begin{equation*}
     Z({\text{Anička}}) \land M({\text{Anička}}).
 \end{equation*}
-Co kdybychom toto chtěli prohlásit místo o~jednom člověku např. o~všech obyvatelích Prahy? Užitím čistě logických spojek, jak jsme prováděli doposud, bychom museli napsat např.
+Co kdybychom toto chtěli prohlásit místo o jednom člověku např. o všech obyvatelích Prahy? Užitím čistě logických spojek, jak jsme prováděli doposud, bychom museli napsat např.
 \begin{equation*}
     (Z({\text{Anička}}) \land M({\text{Anička}})) \land (Z({\text{Eva}}) \land M({\text{Eva}})) \land \cdots \land (Z({\text{Jiří}}) \land M({\text{Jiří}})).
 \end{equation*}
-To je sice správné, ale poměrně těžkopádné vyjádření tak jednoduchého výroku. Jistě bychom neřekli "Anička má zelené vlasy a modré oči a zároveň Eva má zelené vlasy a modré oči a zároveň \dots". Čtenář nejspíše tuší, že existuje jednodušší způsob vyjádření takového výroku, resp. výrokové formule. K~tomu v~logice slouží právě takzvané \emph{kvantifikátory}.\par
-V~praxi bychom zkrátka řekli: "Všichni obyvatelé Prahy mají zelené vlasy a modré oči." (takové tvrzení je jistě výrok). Tímto způsobem formulujeme podobné výroky i v~logice. Zkrátka prohlásíme, že pro každého obyvatele Prahy $x$ platí
+To je sice správné, ale poměrně těžkopádné vyjádření tak jednoduchého výroku. Jistě bychom neřekli "Anička má zelené vlasy a modré oči a zároveň Eva má zelené vlasy a modré oči a zároveň \dots". Čtenář nejspíše tuší, že existuje jednodušší způsob vyjádření takového výroku, resp. výrokové formule. K tomu v~logice slouží právě takzvané \emph{kvantifikátory}.\par
+V praxi bychom zkrátka řekli: "Všichni obyvatelé Prahy mají zelené vlasy a modré oči." (takové tvrzení je jistě výrok). Tímto způsobem formulujeme podobné výroky i v~logice. Zkrátka prohlásíme, že pro každého obyvatele Prahy $x$ platí
 \begin{equation*}
     M(x) \land Z(x).
 \end{equation*}
-K~formálnímu zápisu podobných tvrzení využíváme tzv. \emph{univerzální kvantifikátor} (též \emph{obecným}), který zapisujeme pomocí $\forall$.\par
-Nyní se ještě zamysleme, co nám toto říká z~pohledu logiky. Tvrzení je takové, že je-li $x$ obyvatelem Prahy, pak má zelené vlasy a modré oči. V~řeči logických spojek toto není nic jiného, než implikace. Označíme-li výrok "$x$ je obyvatelem Prahy." jako $P(x)$, pak bychom mohli napsat
+K formálnímu zápisu podobných tvrzení využíváme tzv. \emph{univerzální kvantifikátor} (též \emph{obecným}), který zapisujeme pomocí $\forall$.\par
+Nyní se ještě zamysleme, co nám toto říká z pohledu logiky. Tvrzení je takové, že je-li $x$ obyvatelem Prahy, pak má zelené vlasy a modré oči. V řeči logických spojek toto není nic jiného, než implikace. Označíme-li výrok "$x$ je obyvatelem Prahy." jako $P(x)$, pak bychom mohli napsat
 \begin{equation}\label{eq:univ_kvatifikator_priklad}
     \forall x \bigl(P(x) \implies Z(x) \land M(x)\bigr),
 \end{equation}
-nebo podle \ref{item:tautologie_3} ve větě \ref{thm:vyznamne_tautologie} o~tautologiích
+nebo podle \ref{item:tautologie_3} ve větě \ref{thm:vyznamne_tautologie} o tautologiích
 \begin{equation*}
     \forall x \bigl(Z(x) \lor M(x) \lor \neg P(x)\bigr).
 \end{equation*}
-Takový výrok bychom četli: "\textbf{pro všechna $x$ platí}, že pokud platí $P(x)$, pak platí $Z(x)$ a zároveň $M(x)$". Ve výrazu \eqref{eq:univ_kvatifikator_priklad} můžeme uvažovat libovolná $x$ (nemusí se ani jednat o~lidi), avšak pouze u~$x$, která splňují předpoklad $P(x)$ tvrdíme, že splňují i závěr $Z(x) \land M(x)$. Proto jsme ve výrazu nepoužili konjunkci, tj.
+Takový výrok bychom četli: "\textbf{pro všechna $x$ platí}, že pokud platí $P(x)$, pak platí $Z(x)$ a zároveň $M(x)$". Ve výrazu \eqref{eq:univ_kvatifikator_priklad} můžeme uvažovat libovolná $x$ (nemusí se ani jednat o lidi), avšak pouze u $x$, která splňují předpoklad $P(x)$ tvrdíme, že splňují i závěr $Z(x) \land M(x)$. Proto jsme ve výrazu nepoužili konjunkci, tj.
 \begin{equation*}
     \forall x \bigl(P(x) \land Z(x) \land M(x)\bigr),
 \end{equation*}
 neboť bychom vzali např. obyvatele Brna, pak by byl již výrok nepravdivý (kvůli $P(x)$).
 
-Druhým typem kvantifikátoru je tzv. \emph{existenční kvantifikátor}. Uvažme, že bychom chtěli naopak říci, že ze všech obyvatel Prahy má alespoň jeden zelené vlasy a modré oči. S~využitím čistě logických spojek by pak znamenalo, že jedna z~dílčích formulí je pravdivá
+Druhým typem kvantifikátoru je tzv. \emph{existenční kvantifikátor}. Uvažme, že bychom chtěli naopak říci, že ze všech obyvatel Prahy má alespoň jeden zelené vlasy a modré oči. S využitím čistě logických spojek by pak znamenalo, že jedna z dílčích formulí je pravdivá
 \begin{equation*}
     (Z({\text{Anička}}) \land M({\text{Anička}})) \lor (Z({\text{Eva}}) \land M({\text{Eva}})) \lor \cdots \lor (Z({\text{Jiří}}) \land M({\text{Jiří}})).
 \end{equation*}
-I~zde však máme kratší alternativu, a to s~využitím symbolu $\exists$ pro existenční kvantifikátor. Opět se však nejdřív podívejme na naše tvrzení. To říká, že existuje $x$ takové, že $x$ je obyvatelem Prahy a zároveň má zelené vlasy a modré oči. Zde si tedy naopak vystačíme pouze s~konjunkcí:
+I zde však máme kratší alternativu, a to s využitím symbolu $\exists$ pro existenční kvantifikátor. Opět se však nejdřív podívejme na naše tvrzení. To říká, že existuje $x$ takové, že $x$ je obyvatelem Prahy a zároveň má zelené vlasy a modré oči. Zde si tedy naopak vystačíme pouze s konjunkcí:
 \begin{equation}\label{eq:exist_kvatifikator_priklad}
     \exists x \bigl(P(x) \land Z(x) \land M(x)\bigr).
 \end{equation}
@@ -40,34 +40,34 @@ Přirozeně se zde nabízí otázka, proč jen nenahradit univerzální kvantifi
 \begin{equation}\label{eq:exist_kvatifikator_priklad_implikace}
     \exists x \bigl(P(x) \implies Z(x) \land M(x)\bigr),
 \end{equation}
-pak by tvrzení již neplatilo pouze na obyvatele Prahy (v~případě nesplněného předpokladu je implikace pravdivá), ale třeba pro obyvatele Brna by toto tvrzení také byla pravda. Pokud by však v~Praze neexistoval občan se zelenými vlasy a modrýma očima, pak by výraz \eqref{eq:exist_kvatifikator_priklad} by nepravdivý, ale výraz \eqref{eq:exist_kvatifikator_priklad_implikace} by pravdivý již byl.
+pak by tvrzení již neplatilo pouze na obyvatele Prahy (v případě nesplněného předpokladu je implikace pravdivá), ale třeba pro obyvatele Brna by toto tvrzení také byla pravda. Pokud by však v~Praze neexistoval občan se zelenými vlasy a modrýma očima, pak by výraz \eqref{eq:exist_kvatifikator_priklad} by nepravdivý, ale výraz \eqref{eq:exist_kvatifikator_priklad_implikace} by pravdivý již byl.
 \medskip
 
 \subsection{Primitivní predikáty}\label{subsec:primitivni_predikaty}
-Vzpomeneme-li si na předešlou sekci \ref{sec:vyrokova_logika} věnovanou výrokové logice, tak "nejtriviálnější" výrokovou formulí (tj. atomickou formulí) pro nás byly \textbf{výrokové proměnné}. Těm jsme přiřazovali pravdivostní hodnotu 0 (nepravda) nebo 1 (pravda). V~tomto se však nachází jisté omezení. U~předešlého příkladu jsme, kromě jiných, uvažovali výrok "$x$ je obyvatelem Prahy.", který jsme značili výrokovou proměnnou $P(x)$. Tím jsme přiřadili $P(x)$ jistý význam.\par
+Vzpomeneme-li si na předešlou sekci \ref{sec:vyrokova_logika} věnovanou výrokové logice, tak "nejtriviálnější" výrokovou formulí (tj. atomickou formulí) pro nás byly \textbf{výrokové proměnné}. Těm jsme přiřazovali pravdivostní hodnotu 0 (nepravda) nebo 1 (pravda). V tomto se však nachází jisté omezení. U předešlého příkladu jsme, kromě jiných, uvažovali výrok "$x$ je obyvatelem Prahy.", který jsme značili výrokovou proměnnou $P(x)$. Tím jsme přiřadili $P(x)$ jistý význam.\par
 Zkusme takto zapsat matematické tvrzení "Pokud je $x$ větší než $y$ a zároveň $y$ je větší než $z$, pak $x$ je větší než $z$". Výrok "$x$ je větší než $y$" označme $A$, "$y$ je větší než $z$" označme $B$ a "$x$ je větší než $z$" označme $C$. Pak původní výrok bychom symbolicky zapsali jako
 \begin{equation*}
-    A~\land B \implies C.
+    A \land B \implies C.
 \end{equation*}
-Nebylo by však jednodušší a smysluplnější zapsat takový výrok zkrátka jako $x>y \land y>z \implies x>z$ ? Takový zápis by odporoval definici výrokové formule, přesto jeho význam je zřejmý. Navíc bychom si tak ušetřili ono přiřazování významu jednotlivým výrokovým proměnným, jako tomu bylo doposud, neboť bychom měli možnost jejich syntaktického popisu. To nám je umožněno v~\emph{predikátovém počtu}.\par
-Ve výrokové logice zastávaly výrokové proměnné roli těch "nejednodušších" formulí, které již nevznikaly z~formulí jiných. V~predikátovém počtu tuto roli zastávají tzv. \emph{primitivní predikáty} (nebo jen zkráceně \emph{predikáty}). Ty obsahuje každá matematická teorie. V~aritmetice jsou to právě např. $x<y$ , $x+y<z$, apod., v~teorii množin považujeme za primitivní predikát $x\in X$ (ostatně celou teorii množin lze vybudovat pouze za použití tohoto predikátu). Po dosazení konkrétních hodnot dané proměnné již obdržíme nějaký atomární výrok v~dané teorii.\par
-Výroky složené z~primitivních predikátů již nenazýváme výrokové formule, ale \emph{predikátové formule}. I~ty lze definovat obdobně jako formule výrokové pomocí jistých pravidel, avšak pro pochopení konceptu si vystačíme s~tímto vystačíme.
+Nebylo by však jednodušší a smysluplnější zapsat takový výrok zkrátka jako $x>y \land y>z \implies x>z$ ? Takový zápis by odporoval definici výrokové formule, přesto jeho význam je zřejmý. Navíc bychom si tak ušetřili ono přiřazování významu jednotlivým výrokovým proměnným, jako tomu bylo doposud, neboť bychom měli možnost jejich syntaktického popisu. To nám je umožněno v \emph{predikátovém počtu}.\par
+Ve výrokové logice zastávaly výrokové proměnné roli těch "nejednodušších" formulí, které již nevznikaly z formulí jiných. V predikátovém počtu tuto roli zastávají tzv. \emph{primitivní predikáty} (nebo jen zkráceně \emph{predikáty}). Ty obsahuje každá matematická teorie. V aritmetice jsou to právě např. $x<y$ , $x+y<z$, apod., v teorii množin považujeme za primitivní predikát $x\in X$ (ostatně celou teorii množin lze vybudovat pouze za použití tohoto predikátu). Po dosazení konkrétních hodnot dané proměnné již obdržíme nějaký atomární výrok v~dané teorii.\par
+Výroky složené z primitivních predikátů již nenazýváme výrokové formule, ale \emph{predikátové formule}. I ty lze definovat obdobně jako formule výrokové pomocí jistých pravidel, avšak pro pochopení konceptu si vystačíme s tímto vystačíme.
 \begin{example}
     Ukázky některých predikátových formulí:
     \begin{itemize}
         \item $x>y$\rightnote{Primitivní predikát (aritmetika) je predikátovou formulí}
         \item $\forall x (x = 0 \lor x < 0 \lor x > 0)$
-        \item $\forall x \bigl(2 \mid x \implies \exists k~(x=2k)\bigr)$\footnote{Zápis $a \mid b$ znamená $a$ dělí (beze zbytku) $b$}
-        \item $\exists k~\bigl(k \in \N \land \exists x (x=2k+1)\bigr)$
+        \item $\forall x \bigl(2 \mid x \implies \exists k (x=2k)\bigr)$\footnote{Zápis $a \mid b$ znamená $a$ dělí (beze zbytku) $b$}
+        \item $\exists k \bigl(k \in \N \land \exists x (x=2k+1)\bigr)$
     \end{itemize}
 \end{example}
 
-\subsection{Jiné zápisy formulí s~kvantifikátory}
-Formule s~obecným kvantifikátorem $\forall$ jsme zatím uvažovali ve tvaru
+\subsection{Jiné zápisy formulí s kvantifikátory}
+Formule s obecným kvantifikátorem $\forall$ jsme zatím uvažovali ve tvaru
 \begin{equation*}
     \forall x(\varphi \implies \psi),
 \end{equation*}
-kde $\varphi$ a $\psi$ jsou nějaké predikátové formule obsahující proměnnou $x$. (Formálně vzato, formule $\varphi$ a $\psi$ nemusí v~tomto zápisu obsahovat proměnnou $x$, nicméně pak je kvantifikátor redundantní.) Existuje však o~něco úspornější (a častěji používaný) zápis. Např. formuli
+kde $\varphi$ a $\psi$ jsou nějaké predikátové formule obsahující proměnnou $x$. (Formálně vzato, formule $\varphi$ a $\psi$ nemusí v tomto zápisu obsahovat proměnnou $x$, nicméně pak je kvantifikátor redundantní.) Existuje však o něco úspornější (a častěji používaný) zápis. Např. formuli
 \begin{equation*}
     \forall n (n \in \N \implies n > 0)
 \end{equation*}
@@ -75,22 +75,22 @@ můžeme též zapsat jako
 \begin{equation*}
     \forall n \in \N : n > 0.
 \end{equation*}
-Čteme jako "pro všechna přirozená čísla $n$ platí, že $n$ je větší než nula". Obecněji formuli ve tvaru $\forall x(\varphi \implies \psi)$ lze psát jako $\forall \varphi : \psi$ . Stejně tak můžeme zapisovat i formule s~existenčním kvantifikátorem, tj. $\exists \varphi : \psi$ místo $\exists x (\varphi \land \psi)$ .
+Čteme jako "pro všechna přirozená čísla $n$ platí, že $n$ je větší než nula". Obecněji formuli ve tvaru $\forall x(\varphi \implies \psi)$ lze psát jako $\forall \varphi : \psi$ . Stejně tak můžeme zapisovat i formule s existenčním kvantifikátorem, tj. $\exists \varphi : \psi$ místo $\exists x (\varphi \land \psi)$ .
 \medskip
 
 Často se nám může stát, že se kvantifikátory ve formuli kumulují. Zápisy prováděné dosavadním způsobem by se mohly značně zkomplikovat. Jako příklad uvažme formuli
 \begin{equation*}
-    \forall x \bigl(x \in \N \implies \exists k~(k~> n)\bigr).
+    \forall x \bigl(x \in \N \implies \exists k (k > n)\bigr).
 \end{equation*}
 Podle zmíněného již víme, že tento zápis můžeme zjednodušit na
 \begin{equation*}
-    \forall x \in \N : \exists k~: k~> n.
+    \forall x \in \N : \exists k : k > n.
 \end{equation*}
-V~takovém případě můžeme dvojtečku mezi obecným a existenčním kvantifikátorem vynechat a ponechat ji pouze před závěrem, nebo nahradit dvojtečku mezi kvantifikátory čárkou, tj. můžeme psát
+V takovém případě můžeme dvojtečku mezi obecným a existenčním kvantifikátorem vynechat a ponechat ji pouze před závěrem, nebo nahradit dvojtečku mezi kvantifikátory čárkou, tj. můžeme psát
 \begin{equation*}
-    \forall x \in \N\;\exists k~: k~> n\quad\text{nebo}\quad\forall x \in \N ,\;\exists k~: k~> n.
+    \forall x \in \N\;\exists k : k > n\quad\text{nebo}\quad\forall x \in \N ,\;\exists k : k > n.
 \end{equation*}
-Čteme: "Pro všechna přirozená čísla $n$ existuje $k$ takové, že $k$ je větší než $n$". Speciálně, může se stát, že dvě nebo více proměnných jsou součástí stejného predikátu u~stejného typu kvantifikátoru. Kupříkladu formuli
+Čteme: "Pro všechna přirozená čísla $n$ existuje $k$ takové, že $k$ je větší než $n$". Speciálně, může se stát, že dvě nebo více proměnných jsou součástí stejného predikátu u stejného typu kvantifikátoru. Kupříkladu formuli
 \begin{equation*}
     \forall n \bigl(n\in\N \implies \forall k(k\in\N \implies n^k \geq n)\bigr)
 \end{equation*}
@@ -98,14 +98,14 @@ můžeme zjednodušit jako
 \begin{equation*}
     \forall n\in\N ,\; \forall k\in\N : n^k\geq n.
 \end{equation*}
-Proměnné $n$ a $k$ však uvažujeme ze stejné množiny a jsou součástí stejného typu kvantifikátoru (obecného). V~takových případech můžeme zápis sloučit a psát
+Proměnné $n$ a $k$ však uvažujeme ze stejné množiny a jsou součástí stejného typu kvantifikátoru (obecného). V takových případech můžeme zápis sloučit a psát
 \begin{equation*}
     \forall n,k\in\N : n^k\geq n.
 \end{equation*}
 
 Je třeba však upozornit na fakt, že pořadí kvantifikátorů může mít vliv na význam daného výroku (a tudíž i jeho pravdivostní hodnotu). Např. formule
 \begin{equation*}
-    \forall n\in\N,\; \exists k\in\N : k~> n\quad\text{a}\quad\exists k\in\N,\;\forall n\in\N : k~> n.
+    \forall n\in\N,\; \exists k\in\N : k > n\quad\text{a}\quad\exists k\in\N,\;\forall n\in\N : k > n.
 \end{equation*}
 neříkají totéž (zkuste si je přečíst). První říká, že \textbf{pro každé $n$ existuje nějaké $k$ takové, že $k$ je větší než $n$}, kdežto druhá formule má význam takový, že \textbf{existuje $k$ takové, že pro všechna $n$ je $k$ větší než $n$}. Jinými slovy říkáme, že existuje jedno \textbf{univerzální} číslo $k$ tak, že je splněna daná podmínka. První formule je tak pravdivá, ale druhá již není.\par
 Tento způsob zápisu však neplatí pouze pro kvantifikátory. Mějme např. formuli
@@ -117,14 +117,14 @@ Zde též není nutné explicitně psát implikaci. Když se nám to hodí, mů�
     \forall x,y\in\R,\;x\neq y: x < y \lor x > y
 \end{equation*}
 
-\subsection{Negace formulí s~kvantifikátory}
-V~sekci o~výrokové logice \ref{sec:vyrokova_logika} jsme si zmínili některé důležité tautologie. Specificky, de Morganova pravidla \ref{item:de_morgan_1} a \ref{item:de_morgan_2} zmíněné ve větě \ref{thm:vyznamne_tautologie}.
+\subsection{Negace formulí s kvantifikátory}
+V sekci o výrokové logice \ref{sec:vyrokova_logika} jsme si zmínili některé důležité tautologie. Specificky, de Morganova pravidla \ref{item:de_morgan_1} a \ref{item:de_morgan_2} zmíněné ve větě \ref{thm:vyznamne_tautologie}.
 \begin{align*}
-    \neg (A~\land B) &\iff \neg A~\lor \neg B,\\
-    \neg (A~\lor B) &\iff \neg A~\land \neg B.
+    \neg (A \land B) &\iff \neg A \lor \neg B,\\
+    \neg (A \lor B) &\iff \neg A \land \neg B.
 \end{align*}
-Tyto tautologie nám dávaly způsob, jak negovat složené výroky obsahující konjunkci nebo disjunkci. Jak ovšem negovat formule s~kvantifikátory?\par
-Zkusme se na problematiku podívat opět skrze příklad o~obyvatelích Prahy. Měli jsme tvrzení, že každý obyvatel Prahy má zelené vlasy a modré oči, což jsme zapisovali
+Tyto tautologie nám dávaly způsob, jak negovat složené výroky obsahující konjunkci nebo disjunkci. Jak ovšem negovat formule s kvantifikátory?\par
+Zkusme se na problematiku podívat opět skrze příklad o obyvatelích Prahy. Měli jsme tvrzení, že každý obyvatel Prahy má zelené vlasy a modré oči, což jsme zapisovali
 \begin{equation*}
     \forall x : P(x)\implies Z(x) \land M(x).
 \end{equation*}
@@ -132,12 +132,12 @@ Pro začátek si vezměme jednodušší variantu bez konjunkce:
 \begin{equation*}
     \forall x : P(x)\implies M(x).
 \end{equation*}
-Tedy uvažovaný výrok je "Každý obyvatel Prahy má zelené vlasy.". Jak by zněla negace takového výroku? Zamysleme se nad tím, v~jakém případě by výrok neplatil. Pokud by v~Praze byl obyvatel, který nemá modré oči, pak naše tvrzení neplatí. Zdá se tedy, že by mohlo platit
+Tedy uvažovaný výrok je "Každý obyvatel Prahy má zelené vlasy.". Jak by zněla negace takového výroku? Zamysleme se nad tím, v jakém případě by výrok neplatil. Pokud by v~Praze byl obyvatel, který nemá modré oči, pak naše tvrzení neplatí. Zdá se tedy, že by mohlo platit
 \begin{equation*}
     \neg(\forall x : P(x)\implies M(x)) \iff \exists x: P(x) \land \neg M(x).
 \end{equation*}
 Tj. tvrdíme, že existuje $x$ takové, že $x$ je obyvatelem Prahy a $x$ nemá modré oči. Jak se tedy změnila naše formule? Obecný kvantifikátor se změnil na existenční a znegovali jsme formuli $P(x)\implies M(x)$ (viz tautologie \ref{item:tautologie_3} ve větě \ref{thm:vyznamne_tautologie}). Skutečně, toto je negace původního výroku.\par
-Podobně tomu bude i pro náš původní výrok s~konjunkcí:
+Podobně tomu bude i pro náš původní výrok s konjunkcí:
 \begin{equation*}
     \neg(\forall x : P(x)\implies Z(x) \land M(x)) \iff \exists x : \neg (P(x)\implies Z(x) \land M(x)).
 \end{equation*}
@@ -149,12 +149,12 @@ Funguje i opačná úvaha. Pokud naše tvrzení je, že existuje obyvatel Prahy 
 \begin{equation*}
     \neg(\exists x : P(x)\land Z(x) \land M(x)) \iff \forall x : P(x)\implies \neg Z(x) \lor \neg M(x).
 \end{equation*}
-Obecně řečeno, formule s~kvantifikátory se negují tak, že kvantifikátory si prohodí roli, tj. obecný kvantifikátor se změní na existenční a naopak, a znegujeme dílčí formuli $\varphi$, tzn.
+Obecně řečeno, formule s kvantifikátory se negují tak, že kvantifikátory si prohodí roli, tj. obecný kvantifikátor se změní na existenční a naopak, a znegujeme dílčí formuli $\varphi$, tzn.
 \begin{align*}
     \forall x : \varphi\quad&\rightsquigarrow\quad\exists x : \neg\varphi\quad\text{a}\\
     \exists x : \varphi\quad&\rightsquigarrow\quad\forall x : \neg\varphi\\
 \end{align*}
-Kvantifikátory se mohou pochopitelně ve formulích různě kumulovat. V~takovou chvíli postupujeme pořád stejně. Např. negace formule
+Kvantifikátory se mohou pochopitelně ve formulích různě kumulovat. V takovou chvíli postupujeme pořád stejně. Např. negace formule
 \begin{equation*}
     \forall x\in\R,\;\exists y\in\R : y > x.
 \end{equation*}

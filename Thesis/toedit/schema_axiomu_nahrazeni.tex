@@ -1,6 +1,6 @@
 \section{Schéma axiomů nahrazení}\label{sec:schema_axiomu_nahrazeni}
 \begin{align*}
-    \forall u\,\forall v\,\forall v^\prime\,(\varphi(u,v) \land \varphi(u,v^\prime) \implies v=v^\prime)\implies\\ \implies \forall a\,\exists z\,\forall x\,\bigl(x\in z~\iff \exists y\,(y\in a \land \varphi(y,x))\bigr),
+    \forall u\,\forall v\,\forall v^\prime\,(\varphi(u,v) \land \varphi(u,v^\prime) \implies v=v^\prime)\implies\\ \implies \forall a\,\exists z\,\forall x\,\bigl(x\in z \iff \exists y\,(y\in a \land \varphi(y,x))\bigr),
 \end{align*}
 kde formule $\varphi(u,v)$ neobsahuje proměnné $v^\prime$ a $z$.\par
 Tento axiom je pravděpodobně nejsložitější, co do jeho zápisu. Zaměřme se nyní pouze na předpoklad
@@ -11,17 +11,17 @@ Ten udává, jakou vlastnost musí splňovat formule $\varphi(u,v)$. Tvrzení je
 \begin{equation*}
     \forall u\,\exists! v: \varphi(u,v).
 \end{equation*}
-Toto by nám již mělo být povědomé. Podobně jsme definovali zobrazení v~definici \ref{def:zobrazeni}. V~tomto případě můžeme tak $\varphi$ chápat jako formuli udávající, zda obrazem prvku $u$ je prvek $v$.\par
+Toto by nám již mělo být povědomé. Podobně jsme definovali zobrazení v definici \ref{def:zobrazeni}. V tomto případě můžeme tak $\varphi$ chápat jako formuli udávající, zda obrazem prvku $u$ je prvek $v$.\par
 Druhá část
 \begin{equation*}
-    \forall a\,\exists z\,\forall x\,\bigl(x\in z~\iff \exists y\,(y\in a \land \varphi(y,x))\bigr)
+    \forall a\,\exists z\,\forall x\,\bigl(x\in z \iff \exists y\,(y\in a \land \varphi(y,x))\bigr)
 \end{equation*}
-nám zaručuje, že všechny prvky $v$, kterým odpovídá (v~rámci formule $\varphi(u,v)$) nějaký prvek $u\in a$, tvoří množinu $z$. Stručně řečeno, \textbf{obrazem libovolné množiny při definovatelném zobrazení je opět množina}.\par
+nám zaručuje, že všechny prvky $v$, kterým odpovídá (v rámci formule $\varphi(u,v)$) nějaký prvek $u\in a$, tvoří množinu $z$. Stručně řečeno, \textbf{obrazem libovolné množiny při definovatelném zobrazení je opět množina}.\par
 Tento axiom nebyl součástí původních Zermelových axiomů. Posléze se však ukázalo, že existují množiny, jejichž existence není zbývajícími axiomy implikovaná. Např.
 \begin{equation*}
     m=\set{x,\powset{x},\powset{\powset{x}},\powset{\powset{\powset{x}}},\dots},
 \end{equation*}
-kde $x\neq\emptyset$. Z~axiomu nekonečna zaručující existenci nekonečné množiny $z$ víme, že pokud $x$ je prvkem $z$, pak i $x\cup\set{x}$ je prvkem $z$. Není těžké si rozmyslet, že toto pro $m$ není splněno. Nicméně při vhodné volbě formule $\varphi$ lze definovat zobrazení prvků nějaké aktuálně nekonečné množiny postulované axiomem nekonečna na množiny $x,\powset{x},\powset{\powset{x}},\dots$ a podle axiomu nahrazení tak tyto obrazy
+kde $x\neq\emptyset$. Z axiomu nekonečna zaručující existenci nekonečné množiny $z$ víme, že pokud $x$ je prvkem $z$, pak i $x\cup\set{x}$ je prvkem $z$. Není těžké si rozmyslet, že toto pro $m$ není splněno. Nicméně při vhodné volbě formule $\varphi$ lze definovat zobrazení prvků nějaké aktuálně nekonečné množiny postulované axiomem nekonečna na množiny $x,\powset{x},\powset{\powset{x}},\dots$ a podle axiomu nahrazení tak tyto obrazy
 \begin{equation*}
     \set{x,\powset{x},\powset{\powset{x}},\powset{\powset{\powset{x}}},\dots}
 \end{equation*}
