@@ -1,17 +1,17 @@
 \section{Axiom fundovanosti}\label{sec:axiom_fundovanosti}
 \begin{equation*}
-    \forall a\,\Bigl(a\neq\emptyset \implies \exists x:\bigl(x\in~a \land x\cap a=\emptyset\bigr)\Bigr)
+    \forall a\,\Bigl(a\neq\emptyset \implies \exists x:\bigl(x\in a \land x\cap a=\emptyset\bigr)\Bigr)
 \end{equation*}
 Tento axiom slouží svým způsobem jako omezení množin, které lze uvažovat. Tvrzení je takové, že každá neprázdná množina musí obsahovat alespoň jeden prvek, který je s ní \emph{disjunktní} (tj. má s ní prázdný průnik). Tím zamezujeme existenci některých typů množin, jako třeba množiny obsahující samy sebe, tj. $a\in a$. Jmenovitě např.
 \begin{equation*}
     a=\set{a},\;b=\set{b,\emptyset}\;\text{a jiné.}
 \end{equation*}
-Lze se snadno přesvědčit, že při existenci takových množin by axiom fundovanosti byl porušen. Pokud bychom připustili např. existenci množiny $x^\prime$, pro kterou by platilo, že $x^\prime\in x^\prime$, pak podle axiomu dvojice \ref{item:axiom_dvojice} je též množinou~i $u=\set{x^\prime}$. Podle axiomu fundovanosti musí $u$ obsahovat prvek $x$, takový, že $x\cap x^\prime=\emptyset$. Protože~však pouze $x^\prime$ je prvkem $u$, pak musí nutně platit (protože $x^\prime\neq\emptyset$), že $x^\prime\cap u=\emptyset$. To~ale neplatí!
+Lze se snadno přesvědčit, že při existenci takových množin by axiom fundovanosti byl porušen. Pokud bychom připustili např. existenci množiny $x^\prime$, pro kterou by platilo, že $x^\prime\in x^\prime$, pak podle axiomu dvojice \ref{item:axiom_dvojice} je též množinou i $u=\set{x^\prime}$. Podle axiomu fundovanosti musí $u$ obsahovat prvek $x$, takový, že $x\cap x^\prime=\emptyset$. Protože však pouze $x^\prime$ je prvkem $u$, pak musí nutně platit (protože $x^\prime\neq\emptyset$), že $x^\prime\cap u=\emptyset$. To ale neplatí!
 \begin{equation*}
     x^\prime\cap\set{x^\prime}=x^\prime,
 \end{equation*}
-neboť $x^\prime\in x^\prime$. Tzn. $u$ tedy \textbf{nesplňuje} axiom fundovanosti~a není tak množinou v \ZF{}.\par
-Dalšími důsledky axiomu fundovanosti je vyloučení cyklů v relaci "býti prvkem", tj. např.
+neboť $x^\prime\in x^\prime$. Tzn. $u$ tedy \textbf{nesplňuje} axiom fundovanosti a není tak množinou v \ZF{}.\par
+Dalšími důsledky axiomu fundovanosti je vyloučení cykl$1 v~$2elaci "býti prvkem", tj. např.
 \begin{equation*}
     x_1\in x_2\in x_3\in x_1.
 \end{equation*}
@@ -21,4 +21,4 @@ Trochu obecněji lze nahlédnout, že nikdy tak nemůže nastat situace, kdy byc
 \end{equation*}
 \medskip
 
-Axiom fundovanosti tedy slouží jako obecná charakteristika všech myslitelných množin v \ZF{}. Oproti všem ostatním je tedy trochu jiného charakteru, neboť doposud zmíněné axiomy byly spíše "konstrukční". Jejich postupnou aplikací jsme byli schopni sestrojit z menších množin množiny větší. Lze ukázat, že axiom fundovanosti je ekvivalentní s tvrzením, že všechny množiny v \ZF{} lze generovat z prázdné množiny opakovanou aplikací axiomu potence~a sumy.
+Axiom fundovanosti tedy slouží jako obecná charakteristika všech myslitelných množin v \ZF{}. Oproti všem ostatním je tedy trochu jiného charakteru, neboť doposud zmíněné axiomy byly spíše "konstrukční". Jejich postupnou aplikací jsme byli schopni sestrojit z menších množin množiny větší. Lze ukázat, že axiom fundovanosti je ekvivalentní s tvrzením, že všechny množiny v \ZF{} lze generovat z prázdné množiny opakovanou aplikací axiomu potence a sumy.

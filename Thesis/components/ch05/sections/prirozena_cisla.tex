@@ -1,13 +1,13 @@
 \section{Přirozená čísla}\label{sec:prirozena_cisla}
-Peanovy axiomy nám dávají poměrně jasnou představu, co od přirozených čísel požadovat. Naším cílem tak pochopitelně bude, aby naše definice zachovala všechny základní vlastnosti, které přirozená čísla mají splňovat. Zároveň by naše definice neměla být takto samoúčelná,~ale měla by být dále použitelná při definici základních aritmetických operacích na přirozených číslech~a také definování vztahů mezi nimi, tj. např. $\leq$, $\geq$, aj.\par
-Čtenář nejspíše nebude nic namítat, pokud řekneme, že "nejjednodušší" množinou pro nás je \textbf{prázdná množina}. Z toho by nás tak mohlo přirozeně napadnout definovat prvek (číslo) 0 jako $\emptyset$. Jak pak~ale definovat následníka čísla $x$? Zde přichází poměrně chytrá definice, která zde zastoupí zmíněnou funkci $s$ (viz sekce \ref{sec:peanovy_axiomy}).
+Peanovy axiomy nám dávají poměrně jasnou představu, co od přirozených čísel požadovat. Naším cílem tak pochopitelně bude, aby naše definice zachovala všechny základní vlastnosti, které přirozená čísla mají splňovat. Zároveň by naše definice neměla být takto samoúčelná, ale měla by být dále použitelná při definici základních aritmetických operacích na přirozených číslech a také definování vztahů mezi nimi, tj. např. $\leq$, $\geq$, aj.\par
+Čtenář nejspíše nebude nic namítat, pokud řekneme, že "nejjednodušší" množinou pro nás je \textbf{prázdná množina}. Z toho by nás tak mohlo přirozeně napadnout definovat prvek (číslo) 0 jako $\emptyset$. Jak pak ale definovat následníka čísla $x$? Zde přichází poměrně chytrá definice, která zde zastoupí zmíněnou funkci $s$ (viz sekce \ref{sec:peanovy_axiomy}).
 \begin{definition}[Následník]\label{def:naslednik}
     Nechť $x$ je libovolná množina. Pak \emph{následníkem} $x$ rozumíme množinu
     \begin{equation*}
         x^+=x\cup\set{x}.
     \end{equation*}
 \end{definition}
-Zápis $x^+$ je v tomto případě zkratkou pro $s(x)$. Z této definice tedy máme např.:
+Zápis $x^+$ je v~tomto případě zkratkou pro $s(x)$. Z této definice tedy máme např.:
 \begin{align*}
     \emptyset&=\emptyset,\\
     \emptyset^+&=\emptyset\cup\set{\emptyset}=\set{\emptyset},\\
@@ -32,8 +32,8 @@ je dosti nepraktické. Lepší pro nás bude, když si každého z nich nějak o
     4&=(0^{+++})^+=3^+=\set{0,1,2}\cup\set{3}=\set{0,1,2,3},\\
     &\vdots
 \end{align*}
-Zde se ukazuje jedna technická výhoda von~Neumannovy definice,~a to sice, že každý prvek $x$ obsahuje všechny své předchůdce. Formálně bychom takový termín mohli definovat takto:
+Zde se ukazuje jedna technická výhoda von~Neumannovy definice, a to sice, že každý prvek $x$ obsahuje všechny své předchůdce. Formálně bychom takový termín mohli definovat takto:
 \begin{definition}[Předchůdce]\label{def:predchudce}
     Nechť $n\in\N_0$. Pak \emph{předchůdcem} prvku $n$ nazveme každý prvek $m\in n$.
 \end{definition}
-Čtenář si již nyní může zkusit rozmyslet, jaký "vztah" mezi přirozenými čísly můžeme takto relativně snadno definovat. Předtím se~však ještě trochu detailněji podíváme na \textbf{relace}, kterým jsme se věnovali v kapitole \ref{chap:axiomy_tm} v sekci \ref{sec:relace}.
+Čtenář si již nyní může zkusit rozmyslet, jaký "vztah" mezi přirozenými čísly můžeme takto relativně snadno definovat. Předtím se však ještě trochu detailněji podíváme na \textbf{relace}, kterým jsme se věnovali v~kapitole \ref{chap:axiomy_tm} v sekci \ref{sec:relace}.

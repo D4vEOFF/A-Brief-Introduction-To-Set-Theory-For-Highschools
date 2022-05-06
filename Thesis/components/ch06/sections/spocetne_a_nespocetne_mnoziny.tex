@@ -1,33 +1,33 @@
-\section{Spočetné~a nespočetné množiny}\label{sec:spocetne_a_nespocetne_mnoziny}
-V této sekci si položíme jednu důležitou otázku, kterou později rozdělíme nekonečné množiny na dva základní typy. Než tak~však učiníme, zůstaneme ještě na chvíli u bijekcí mezi množinami, kterými jsme se zabývali v minulé sekci. Zde jsme se snažili ukázat souvislost mezi "velikostmi" množin~a existencí bijekce mezi nimi. V případě konečných množin~však zcela běžně může nastat situace, kdy množiny mají různý počet prvků, tj. pokud $\sizeof{A}=n$~a $\sizeof{B}=m$, kde $n<m$. Je zřejmé, že bijekci mezi takovými množinami sestrojit nelze. Nicméně, stále můžeme sestrojit prosté zobrazení z $A$ do $B$ (viz obrázek \ref{fig:proste_zobrazeni_A_do_B}).
+\section{Spočetné a nespočetné množiny}\label{sec:spocetne_a_nespocetne_mnoziny}
+V této sekci si položíme jednu důležitou otázku, kterou později rozdělíme nekonečné množiny na dva základní typy. Než tak však učiníme, zůstaneme ještě na chvíli u bijekcí mezi množinami, kterými jsme se zabývali v~minulé sekci. Zde jsme se snažili ukázat souvislost mezi "velikostmi" množin a existencí bijekce mezi nimi. V případě konečných množin však zcela běžně může nastat situace, kdy množiny mají různý počet prvků, tj. pokud $\sizeof{A}=n$ a $\sizeof{B}=m$, kde $n<m$. Je zřejmé, že bijekci mezi takovými množinami sestrojit nelze. Nicméně, stále můžeme sestrojit prosté zobrazení z $A$ do $B$ (viz obrázek \ref{fig:proste_zobrazeni_A_do_B}).
 \begin{figure}[H]
     \centering
     \includegraphics[scale=\normalipe]{ch06_proste_zobrazeni.pdf}
     \caption{Prosté zobrazení z množiny $A$ do množiny $B$.}
     \label{fig:proste_zobrazeni_A_do_B}
 \end{figure}
-Je vhodné podotknout, že pokud platí $X\approx Y$, pak $X\preccurlyeq Y$~i $Y\preccurlyeq X$, neboť bijekce je (z definice) prostá.\footnote{Opačná implikace, tj. $X\preccurlyeq Y \land Y\preccurlyeq X\implies X\approx Y$ platí též. Tomuto tvrzení se nazývá \emph{Cantorova-Bernsteinova věta}. Její důkaz je~však zcela nad rámec tohoto textu.}
-Takové zobrazení~však nikdy nemůže být surjektivní,~naopak zobrazení z $B$ do $A$ může být surjektivní,~ale nikdy ne prosté. Stejný princip platí~i pro nekonečné množiny (více později). V souvislosti s tímto si zavedeme následující termíny~a značení.
-\begin{definition}[Subvalence~a ekvipontence]\label{def:subvalence_a_ekvipotence}
-    Nechť $X$~a $Y$ jsou libovolné množiny. Pak pokud
+Je vhodné podotknout, že pokud platí $X\approx Y$, pak $X\preccurlyeq Y$ i $Y\preccurlyeq X$, neboť bijekce je (z definice) prostá.\footnote{Opačná implikace, tj. $X\preccurlyeq Y \land Y\preccurlyeq X\implies X\approx Y$ platí též. Tomuto tvrzení se nazývá \emph{Cantorova-Bernsteinova věta}. Její důkaz je však zcela nad rámec tohoto textu.}
+Takové zobrazení však nikdy nemůže být surjektivní, naopak zobrazení z $B$ do $A$ může být surjektivní, ale nikdy ne prosté. Stejný princip platí i pro nekonečné množiny (více později). V souvislosti s tímto si zavedeme následující termíny a značení.
+\begin{definition}[Subvalence a ekvipontence]\label{def:subvalence_a_ekvipotence}
+    Nechť $X$ a $Y$ jsou libovolné množiny. Pak pokud
     \begin{enumerate}[label=(\roman*)]
-        \item existuje prosté zobrazení z $X$ do $Y$, píšeme $X\preccurlyeq Y$ (čteme "$X$ je \emph{subvalentní} $Y$"~nebo "$X$ má \emph{menší~nebo stejnou mohutnost} jako $Y$").
-        \item existuje bijekce mezi $X$~a $Y$, píšeme $X\approx Y$ (čteme "$X$ je \emph{ekvipotentní} $Y$"~nebo "$X$~a $Y$ mají \emph{stejnou mohutnost}"\footnote{Pomocí ekvipotence bychom mohli ještě definovat relaci "$\prec$", kde $X\prec Y$, pokud $X\preccurlyeq Y \land X\approx Y$.}).
+        \item existuje prosté zobrazení z $X$ do $Y$, píšeme $X\preccurlyeq Y$ (čteme "$X$ je \emph{subvalentní} $Y$" nebo "$X$ má \emph{menší nebo stejnou mohutnost} jako $Y$").
+        \item existuje bijekce mezi $X$ a $Y$, píšeme $X\approx Y$ (čteme "$X$ je \emph{ekvipotentní} $Y$" nebo "$X$ a $Y$ mají \emph{stejnou mohutnost}"\footnote{Pomocí ekvipotence bychom mohli ještě definovat relaci "$\prec$", kde $X\prec Y$, pokud $X\preccurlyeq Y \land X\approx Y$.}).
     \end{enumerate}
 \end{definition}
-Z předchozích příkladů \ref{ex:bijekce_prirozena_cisla}~a \ref{ex:bijekce_realna_cisla} bychom tak mohli zápis některých našich poznatků zkrátit jednoduše takto:
+Z předchozích příkladů \ref{ex:bijekce_prirozena_cisla} a \ref{ex:bijekce_realna_cisla} bychom tak mohli zápis některých našich poznatků zkrátit jednoduše takto:
 \begin{itemize}
     \item $\N\approx\set{2k-1\admid k\in\N}$,
     \item $\N\approx\set{n^2\admid n\in\N}$,
     \item $\R\approx(0,1)$, apod.
 \end{itemize}
-V definici \ref{def:subvalence_a_ekvipotence} jsme zmínili pojem "mohutnost". V případě konečných množin bychom tento termín nejspíše chápali ve smyslu \textbf{velikosti} množiny. U nekonečných množin zatím pouze víme, co znamená, že dvě množiny mají stejnou mohutnost,~ale samotný termín nejsme schopni vysvětlit. Definice mohutnosti je~však trochu složitější~a zabývat se jí zde nebudeme. Zvídavý čtenář si~však může nahlédnout do přílohy \ref{chap:dodatky_k_porovnavani_nekonecnych_mn} pro přiblížení. Podrobněji se této problematice věnuje např. kniha \cite{Potter2009}, str. 167.\par
-Podívejme se na trochu zajímavější korespondenci mezi celými~a přirozenými čísly s nulou.
+V definici \ref{def:subvalence_a_ekvipotence} jsme zmínili pojem "mohutnost". V případě konečných množin bychom tento termín nejspíše chápali ve smyslu \textbf{velikosti} množiny. U nekonečných množin zatím pouze víme, co znamená, že dvě množiny mají stejnou mohutnost, ale samotný termín nejsme schopni vysvětlit. Definice mohutnosti je však trochu složitější a zabývat se jí zde nebudeme. Zvídavý čtenář si však může nahlédnout do přílohy \ref{chap:dodatky_k_porovnavani_nekonecnych_mn} pro přiblížení. Podrobněji se této problematice věnuje např. kniha \cite{Potter2009}, str. 167.\par
+Podívejme se na trochu zajímavější korespondenci mezi celými a přirozenými čísly s nulou.
 \begin{theorem}\label{thm:N_a_Z}
     Platí $\N_0\approx\Z$.
 \end{theorem}
 \begin{proof}
-    Pro důkaz sestrojíme bijekci mezi $\N_0$~a $\Z$. Zobrazení $\map{f}{\N_0}{\Z}$ definujeme předpisem
+    Pro důkaz sestrojíme bijekci mezi $\N_0$ a $\Z$. Zobrazení $\map{f}{\N_0}{\Z}$ definujeme předpisem
     \begin{equation*}
         f(n)=\left\{
         \begin{array}{ll}
@@ -36,7 +36,7 @@ Podívejme se na trochu zajímavější korespondenci mezi celými~a přirozený
         \end{array}
         \right.
     \end{equation*}
-    Na obrázku \ref{fig:bijekce_cela_a_prirozena_cisla} můžeme vidět, jakým způsobem spolu korespondují v $f$ prvky $\N_0$~a $\Z$.
+    Na obrázku \ref{fig:bijekce_cela_a_prirozena_cisla} můžeme vidět, jakým způsobem spolu korespondují v $f$ prvky $\N_0$ a $\Z$.
     \begin{figure}[H]
         \centering
         \includegraphics[scale=\normalipe]{ch06_bijekce_cela_a_prirozena_cisla.pdf}
@@ -45,7 +45,7 @@ Podívejme se na trochu zajímavější korespondenci mezi celými~a přirozený
     \end{figure}
     Snadno se lze přesvědčit, že $f$ je bijekce.
 \end{proof}
-Překvapivější výsledek, ke kterému došel \name{Georg~Cantor}, je ekvipotence množiny přirozených čísel $\N$~a racionálních čísel $\Q$. To může působit jako zarážející, neboť při pohledu na reálnou osu se zde racionální čísla vyskytují "četněji" oproti přirozeným číslům, přesto~však mezi nimi existuje bijekce.
+Překvapivější výsledek, ke kterému došel \name{Georg~Cantor}, je ekvipotence množiny přirozených čísel $\N$ a racionálních čísel $\Q$. To může působit jako zarážející, neboť při pohledu na reálnou osu se zde racionální čísla vyskytují "četněji" oproti přirozeným číslům, přesto však mezi nimi existuje bijekce.
 \begin{theorem}\label{thm:N_a_Q}
     Platí $\N\approx\Q$.
 \end{theorem}
@@ -57,16 +57,16 @@ Překvapivější výsledek, ke kterému došel \name{Georg~Cantor}, je ekvipote
         \caption{Znázornění zobrazovacího "algoritmu" racionálních čísel na přirozená.}
         \label{fig:bijekce_prirozena_cisla_a_racionalni_cisla}
     \end{figure}
-    Tedy je možné sestrojit bijekci mezi $\N$\footnote{Stejně tak lze sestrojit bijekci mezi $\N_0$~a $\Q$, protože $\N\approx\N_0$.}~a $\Q$.
+    Tedy je možné sestrojit bijekci mezi $\N$\footnote{Stejně tak lze sestrojit bijekci mezi $\N_0$ a $\Q$, protože $\N\approx\N_0$.} a $\Q$.
 \end{proof}
 \medskip
 
-Definovaná subvalence "$\preccurlyeq$" v \ref{def:subvalence_a_ekvipotence} nám může trochu naznačovat, že existují dvojice množin, které nemají stejnou mohutnost. S takovými jsme se zatím nesetkali v případě nekonečných množin. Jsou skutečně všechny nekonečné množiny stejně velké? Odpověď na tuto otázku jsme si již předložili v podsekci \ref{subsec:cantor}, kde jsme si zmínili, že \name{Georg~Cantor} ukázal, že množina všech reálných čísel $\R$ má větší mohutnost než množina přirozených čísel $\N$. Způsob, kterým k tomuto závěru dospěl, je dnes nazýván \emph{Cantorova diagonální metoda}.
+Definovaná subvalence "$\preccurlyeq$" v \ref{def:subvalence_a_ekvipotence} nám může trochu naznačovat, že existují dvojice množin, které nemají stejnou mohutnost. S takovými jsme se zatím nesetkali v~případě nekonečných množin. Jsou skutečně všechny nekonečné množiny stejně velké? Odpověď na tuto otázku jsme si již předložili v~podsekci \ref{subsec:cantor}, kde jsme si zmínili, že \name{Georg~Cantor} ukázal, že množina všech reálných čísel $\R$ má větší mohutnost než množina přirozených čísel $\N$. Způsob, kterým k~tomuto závěru dospěl, je dnes nazýván \emph{Cantorova diagonální metoda}.
 \begin{theorem}\label{thm:N_a_R}
     Platí $\N\preccurlyeq\R$.
 \end{theorem}
 \begin{proof}
-    Ve skutečnosti dokážeme silnější tvrzení,~a to sice, že $\N\preccurlyeq(0,1)$. Z příkladu \ref{ex:bijekce_realna_cisla} (konkrétně \ref{item:bijekce_0_a_1}) již víme, že $\R\approx(0,1)$. Pokud by platilo, že $\N\approx\R$, pak z tranzitivity relace "$\approx$" by platilo
+    Ve skutečnosti dokážeme silnější tvrzení, a to sice, že $\N\preccurlyeq(0,1)$. Z příkladu \ref{ex:bijekce_realna_cisla} (konkrétně \ref{item:bijekce_0_a_1}) již víme, že $\R\approx(0,1)$. Pokud by platilo, že $\N\approx\R$, pak z tranzitivity relace "$\approx$" by platilo
     \begin{equation*}
         \N\approx\R \land \R\approx(0,1) \implies \N\approx(0,1).
     \end{equation*}
@@ -85,7 +85,7 @@ Definovaná subvalence "$\preccurlyeq$" v \ref{def:subvalence_a_ekvipotence} ná
         \caption{Diagonála tvořená obrazy v $f$.}
         \label{fig:diagonala_realna_a_prirozena_cisla}
     \end{figure}
-    Pokud bychom si číslice na diagonále uspořádali, přidáním "$0,$" bychom opět dostali nějaký desetinný rozvoj čísla, jež si označíme $x$, tj. v tomto případě $x=0,4902\dots$. Je takové číslo na našem seznamu? To nemůžeme vědět. Mohlo by se stát (při nešťastné volbě obrazů $f(1),f(2),\dots$), že číslice na diagonále budou tvořit periodu $\overline{9}$, kterou jsme vyloučili. My~však z toho čísla můžeme vytvořit nový desetinný rozvoj. Definujme zobrazení $\map{d}{\set{0,1,2,\dots,9}}{\set{0,1}}$ předpisem:
+    Pokud bychom si číslice na diagonále uspořádali, přidáním "$0,$" bychom opět dostali nějaký desetinný rozvoj čísla, jež si označíme $x$, tj. v tomto případě $x=0,4902\dots$. Je takové číslo na našem seznamu? To nemůžeme vědět. Mohlo by se stát (při nešťastné volbě obrazů $f(1),f(2),\dots$), že číslice na diagonále budou tvořit periodu $\overline{9}$, kterou jsme vyloučili. My však z toho čísla můžeme vytvořit nový desetinný rozvoj. Definujme zobrazení $\map{d}{\set{0,1,2,\dots,9}}{\set{0,1}}$ předpisem:
     \begin{equation*}
         d(i)=\left\{
         \begin{array}{ll}
@@ -99,32 +99,32 @@ Definovaná subvalence "$\preccurlyeq$" v \ref{def:subvalence_a_ekvipotence} ná
         0,d(i_1)d(i_2)d(i_3)\dots
     \end{equation*}
     Pokud má tedy číslo $n$ ve svém obrazu $f(n)$ na $n$-tém místě (tedy na diagonále) svého desetinného rozvoje číslo různé od nuly, pak číslo $x^\prime$ bude mít na dané pozici nulu. Naopak pokud bude číslo na dané pozici číslo 0, pak $x^\prime$ zde bude mít číslo 1. Např. pro diagonálu na obrázku \ref{fig:diagonala_realna_a_prirozena_cisla} výše bude $x^\prime=0,1101\dots$.\par
-    Číslo $x^\prime$ jistě nemůže obsahovat periodu $\overline{9}$. Přitom stále platí, že $x^\prime\in(0,1)$~a podle předpokladu se musí nacházet v "seznamu", resp. $\exists n\in\N: f(n)=x^\prime$. Může toto nastat? Nemůže,~a to z principu konstrukce! Číslo $x^\prime$ se~totiž liší od každého čísla v seznamu (minimálně) v cifře na diagonále. Tzn. že $x^\prime$ nemá v zobrazení $f$ svůj vzor, což je spor s předpokladem, že $f$ je bijekce, protože není surjektivní.\par
-    Z toho celkově plyne, že $\N\napprox(0,1)$~a tedy $\N\napprox\R$.
+    Číslo $x^\prime$ jistě nemůže obsahovat periodu $\overline{9}$. Přitom stále platí, že $x^\prime\in(0,1)$ a podle předpokladu se musí nacházet v "seznamu", resp. $\exists n\in\N: f(n)=x^\prime$. Může toto nastat? Nemůže, a to z principu konstrukce! Číslo $x^\prime$ se totiž liší od každého čísla v~seznamu (minimálně) v cifře na diagonále. Tzn. že $x^\prime$ nema v~sobrazení $f$ svůj vzor, což je spor s předpokladem, že $f$ je bijekce, protože není surjektivní.\par
+    Z toho celkově plyne, že $\N\napprox(0,1)$ a tedy $\N\napprox\R$.
     \medskip
 
-    Mezi množinami $\N$~a $\R$ tedy neexistuje bijekce. Aby platilo $\N\preccurlyeq\R$, stačí nalézt prosté zobrazení z $\N$ do $\R$. Protože $\N\subset\R$, stačí zvolit identitu, tedy $\map{g}{\N}{\R}$, kde $g(n)=n$.
+    Mezi množinami $\N$ a $\R$ tedy neexistuje bijekce. Aby platilo $\N\preccurlyeq\R$, stačí nalézt prosté zobrazení z $\N$ do $\R$. Protože $\N\subset\R$, stačí zvolit identitu, tedy $\map{g}{\N}{\R}$, kde $g(n)=n$.
 \end{proof}
 \needspace{1cm}
 Jak můžeme vidět, skutečně existují nekonečné množiny, které mají různé mohutnosti.  Tento poznatek nám dává základ pro následující klasifikaci množin.
-\begin{definition}[Spočetná~a nespočetná množina]\label{def:spocetna_a_nespocetna_mnozina}
+\begin{definition}[Spočetná a nespočetná množina]\label{def:spocetna_a_nespocetna_mnozina}
     Nechť $X$ je libovolná množina. Pak říkáme, že $X$ je
     \begin{enumerate}[label=(\roman*)]
         \item \emph{spočetná}, pokud $X\preccurlyeq\N$.
         \item \emph{nespočetná}, pokud $X\not\preccurlyeq\N$.
     \end{enumerate}
 \end{definition}
-Množina $X$ je tedy spočetná, pokud existuje prosté zobrazení z $X$ do $\N$ (resp. existuje bijekce na nějakou podmnožinu $\N$). Naopak pokud takové zobrazení z $X$ do $\N$ neexistuje, pak $X$ nazýváme nespočetnou\footnote{Termíny "spočetný"~a "nespočetný" v tomto kontextu vychází z faktu, že prvky spočetných množin lze "spočítat", tedy lze je očíslovat přirozenými čísly. Naopak u nespočetných toto nelze.}. U konečných množin se můžeme přesvědčit, že \textbf{všechny jsou spočetné}; stačí 
+Množina $X$ je tedy spočetná, pokud existuje prosté zobrazení z $X$ do $\N$ (resp. existuje bijekce na nějakou podmnožinu $\N$). Naopak pokud takové zobrazení z $X$ do $\N$ neexistuje, pak $X$ nazýváme nespočetnou\footnote{Termíny "spočetný" a "nespočetný" v tomto kontextu vychází z faktu, že prvky spočetných množin lze "spočítat", tedy lze je očíslovat přirozenými čísly. Naopak u nespočetných toto nelze.}. U konečných množin se můžeme přesvědčit, že \textbf{všechny jsou spočetné}; stačí 
 \begin{theorem}\label{thm:spocetnost_ciselnych_oboru}
     \begin{enumerate}[label=(\roman*)]
-        \item Množiny přirozených čísel $\N$, celých čísel $\Z$~a racionálních čísel $\Q$ jsou spočetné.
-        \item Množiny reálných čísel $\R$~a komplexních čísel $\C$ jsou nespočetné.
+        \item Množiny přirozených čísel $\N$, celých čísel $\Z$ a racionálních čísel $\Q$ jsou spočetné.
+        \item Množiny reálných čísel $\R$ a komplexních čísel $\C$ jsou nespočetné.
     \end{enumerate}
 \end{theorem}
 \begin{proof}
-    Triviálně platí $\N\preccurlyeq\N$. Zbývající části plynou z \ref{thm:N_a_Z}, \ref{thm:N_a_Q}~a \ref{thm:N_a_R}.
+    Triviálně platí $\N\preccurlyeq\N$. Zbývající části plynou z \ref{thm:N_a_Z}, \ref{thm:N_a_Q} a \ref{thm:N_a_R}.
 \end{proof}
-Podobně ostatní množiny zmíněné v příkladech \ref{ex:bijekce_prirozena_cisla}~a \ref{ex:bijekce_realna_cisla} můžeme takto klasifikovat:
+Podobně ostatní množiny zmíněn$1 v~$2říkladech \ref{ex:bijekce_prirozena_cisla} a \ref{ex:bijekce_realna_cisla} můžeme takto klasifikovat:
 \begin{itemize}
     \item množina $\set{2k-1 \admid k\in\N}$ je spočetná,
     \item množina $\set{p \admid p\;\text{je prvočíslo}}$ je spočetná,
@@ -133,7 +133,7 @@ Podobně ostatní množiny zmíněné v příkladech \ref{ex:bijekce_prirozena_c
 \end{itemize}
 \medskip
 
-Takto se nám zdánlivě rozpadají množiny do dvou velkých skupin. Mohlo by se tak zdát, že pokud libovolná množina $X$ není spočetná, tj. je nespočetná, pak nutně $X\approx\R$. Ve skutečnosti existují množiny, které jsou nespočetné,~ale nemají stejnou mohutnost jako $\R$. S tímto nám pomůže tzv. \emph{Cantorova věta}.
+Takto se nám zdánlivě rozpadají množiny do dvou velkých skupin. Mohlo by se tak zdát, že pokud libovolná množina $X$ není spočetná, tj. je nespočetná, pak nutně $X\approx\R$. Ve skutečnosti existují množiny, které jsou nespočetné, ale nemají stejnou mohutnost jako $\R$. S tímto nám pomůže tzv. \emph{Cantorova věta}.
 \begin{theorem}[Cantorova]
     Pro libovolnou množinu $X$ platí
     \begin{equation*}
@@ -142,7 +142,7 @@ Takto se nám zdánlivě rozpadají množiny do dvou velkých skupin. Mohlo by s
 \end{theorem}
 K důkazu lze opět použít Cantorovu diagonální metodu.
 \begin{proof}
-    Nejdříve ukážeme, že $X\napprox\powset{X}$. K tomu lze přistoupit sporem. Pro spor nechť $X\approx\powset{X}$, tzn. existuje bijektivní zobrazení $\map{f}{X}{\powset{X}}$. Obdobně jako v důkazu věty \ref{thm:N_a_R},~i zde ukážeme, že $f$ není surjektivní. Obrazy prvků $x_i\in X$ tak můžeme "uspořádat" do "seznamu" $f(x_1),f(x_2),f(x_3),\dots$. Podmnožinu $A$ můžeme z množiny sestrojit $X$ tak, že pro každý z prvků množiny $X$ určíme, zda náleží $A$~či nikoliv. Označíme-li si případ $x\in A$ písmenem A~a případ $x\notin A$ jako N, pak zmíněný "seznam" bychom mohli znázornit podobně jako na obrázku \ref{fig:seznam_podmnoziny}.
+    Nejdříve ukážeme, že $X\napprox\powset{X}$. K tomu lze přistoupit sporem. Pro spor nechť $X\approx\powset{X}$, tzn. existuje bijektivní zobrazení $\map{f}{X}{\powset{X}}$. Obdobně jako v~důkazu věty \ref{thm:N_a_R}, i zde ukážeme, že $f$ není surjektivní. Obrazy prvků $x_i\in X$ tak můžeme "uspořádat" do "seznamu" $f(x_1),f(x_2),f(x_3),\dots$. Podmnožinu $A$ můžeme z množiny sestrojit $X$ tak, že pro každý z prvků množiny $X$ určíme, zda náleží $A$ či nikoliv. Označíme-li si případ $x\in A$ písmenem A a případ $x\notin A$ jako N, pak zmíněný "seznam" bychom mohli znázornit podobně jako na obrázku \ref{fig:seznam_podmnoziny}.
     \begin{figure}[H]
         \centering
         \includegraphics[scale=\normalipe]{ch06_seznam_podmnoziny.pdf}
@@ -160,11 +160,11 @@ K důkazu lze opět použít Cantorovu diagonální metodu.
     \begin{equation*}
         S=\set{x\in X \admid x\notin f(x)}.
     \end{equation*}
-    (Zkuste si rozmyslet.) Podle předpokladu $f$ je bijekce~a tedy je surjektivní. To znamená, že $\exists s\in X: f(s)=S$, tedy $S$ má vzor v $f$. Z principu konstrukce~ale se množina $S$ nemůže nacházet na seznamu, neboť od každé množiny se liší právě v prvku na diagonále. To znamená, že $S$ nemá v $f$ vzor~a tedy zobrazení $f$ není surjektivní. Celkově tedy $f$ není bijekce, což je spor.\par
-    Formálně bychom ke sporu došli takto: pro prvek musí platit buď, že $s\in S$,~nebo $s\notin S$.
+    (Zkuste si rozmyslet.) Podle předpokladu $f$ je bijekce a tedy je surjektivní. To znamená, že $\exists s\in X: f(s)=S$, tedy $S$ má vzor v $f$. Z principu konstrukce ale se množina $S$ nemůže nacházet na seznamu, neboť od každé množiny se liší práv$1 v~$2rvku na diagonále. To znamená, že $S$ nemá v $f$ vzor a tedy zobrazení $f$ není surjektivní. Celkově tedy $f$ není bijekce, což je spor.\par
+    Formálně bychom ke sporu došli takto: pro prvek musí platit buď, že $s\in S$, nebo $s\notin S$.
     \begin{itemize}
         \item $s\in S$. Tzn. $s\in f(s)$. Z definice množiny $S$ musí pro $s$ platit, že $s\notin f(s)=S$, což je spor.
-        \item $s\notin S$. Pak prvek $s$ splňuje, že $s\in f(s)$~a podle definice množiny $S$ platí $s\in S=f(s)$, čímž jsme též došli ke sporu\footnote{Jedná se o podobný spor, jako v Russellově paradoxu (viz podsekce \ref{subsec:cantor}).}.
+        \item $s\notin S$. Pak prvek $s$ splňuje, že $s\in f(s)$ a podle definice množiny $S$ platí $s\in S=f(s)$, čímž jsme též došli ke sporu\footnote{Jedná se o podobný spor, jako v~Russellově paradoxu (viz podsekce \ref{subsec:cantor}).}.
     \end{itemize}
     V obou případech jsme dostali spor, tedy platí $X\napprox\powset{X}$.\par
     Pro důkaz $X\preccurlyeq\powset{X}$ můžeme definovat prosté zobrazení $\map{g}{X}{\powset{X}}$ předpisem $g(x)=\set{x}$.
@@ -177,4 +177,4 @@ Tedy skutečně existuje nekonečně mnoho množin vzájemně různých mohutnos
 \begin{equation*}
     \N\preccurlyeq\powset{\N}\preccurlyeq\powset{\powset{\N}}\preccurlyeq\powset{\powset{\powset{\N}}}\preccurlyeq\dots
 \end{equation*}
-Lze~dokonce ukázat, že $\powset{\N}\approx\R$. Důkaz tohoto tvrzení je~však netriviální.
+Lze dokonce ukázat, že $\powset{\N}\approx\R$. Důkaz tohoto tvrzení je však netriviální.

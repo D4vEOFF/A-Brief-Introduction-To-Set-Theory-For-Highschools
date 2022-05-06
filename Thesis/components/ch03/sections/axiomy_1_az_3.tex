@@ -1,15 +1,15 @@
 \section{Axiomy 1 až 3}\label{sec:axiomy_1_az_3}
 \subsection{Axiom existence}
 \begin{equation*}
-    \exists x: x=x
+    \exists x\,(x=x)
 \end{equation*}
-Formulace axiomu \ref{item:axiom_existence} se může jevit na první pohled zvláštní,~ale jednoduše nám zaručuje, že nějaká \textbf{množina existuje}. Tento axiom se též někdy nahrazuje \emph{axiomem prázdné množiny}. Později si~však ukážeme, že axiom existence~a axiom prázdné množiny jsou spolu ekvivalentní (tedy z platnosti jednoho plyne druhý~a naopak).
+Formulace axiomu \ref{item:axiom_existence} se může jevit na první pohled zvláštní, ale jednoduše nám zaručuje, že nějaká \textbf{množina existuje}. Tento axiom se též někdy nahrazuje \emph{axiomem prázdné množiny}. Později si však ukážeme, že axiom existence a axiom prázdné množiny jsou spolu ekvivalentní (tedy z platnosti jednoho plyne druhý a naopak).
 
 \subsection{Axiom extenzionality}
 \begin{equation*}
     \forall x\,\forall y\,\bigl(x=y \iff \forall z\,(z\in x \iff z\in y)\bigr)
 \end{equation*}
-\ref{item:axiom_extenzionality} dává do souvislosti predikáty rovnosti~a náležení: množiny jsou si rovny, když obsahují stejné prvky. Z tohoto axiomu vyplývá, že opakované výskyty prvku v množině jsou pro nás irelevantní, tj. např.
+\ref{item:axiom_extenzionality} dává do souvislosti predikáty rovnosti a náležení: množiny jsou si rovny, když obsahují stejné prvky. Z tohoto axiomu vyplývá, že opakované výskyty prvku v~množině jsou pro nás irelevantní, tj. např.
 \begin{equation*}
     \set{a,b,c,c}=\set{a,b,c}\;\text{apod.}
 \end{equation*}
@@ -18,19 +18,19 @@ Formulace axiomu \ref{item:axiom_existence} se může jevit na první pohled zvl
 \begin{equation*}
     \forall a\,\forall b\,\exists y\,\forall x\,(x \in y \iff x=a \land x=b)
 \end{equation*}
-Existence množiny garantovaná axiomem existence \ref{item:axiom_existence} nám bohužel nezaručuje existenci žádné konkrétní množiny. Axiom dvojice nám zaručuje, že pokud máme dvě (ne nutně různé) množiny $x$~a $y$, pak~i $\set{x,y}$ je množina (resp. že existuje množina obsahující prvky $a$~a $b$). Např. když máme množiny
+Existence množiny garantovaná axiomem existence \ref{item:axiom_existence} nám bohužel nezaručuje existenci žádné konkrétní množiny. Axiom dvojice nám zaručuje, že pokud máme dvě (ne nutně různé) množiny $x$ a $y$, pak i $\set{x,y}$ je množina (resp. že existuje množina obsahující prvky $a$ a $b$). Např. když máme množiny
 \begin{equation*}
     \set{a,b}\;\text{a}\;\set{c}\;\text{pak existuje množina}\;\set{\set{a,b},\set{c}}.
 \end{equation*}
 Není těžké se přesvědčit, že taková množina je vždy unikátní. V následujícím tvrzení si představíme variantu existenčního kvantifikátoru se symbolem "$!$", tj. $\exists!$. Jeho význam je "\textbf{existuje právě jeden/jedno}".
 \begin{lemma}\label{lem:univerzalnost_neusp_dvojic}
-    Pro každou množin $a$~a pro každou množinu $b$ existuje jediná množina $y$, jejíž prvky jsou právě $a$~a $b$. Symbolicky
+    Pro každou množin $a$ a pro každou množinu $b$ existuje jediná množina $y$, jejíž prvky jsou právě $a$ a $b$. Symbolicky
     \begin{equation*}
         \forall a\,\forall b\,\exists!y\,\forall x\,(x \in y \iff x=a \land x=b).
     \end{equation*}
 \end{lemma}
 \begin{proof}
-    K důkazu lze přistoupit např. sporem. Pro spor nechť jsou dány dvě různé množiny $y$~a $y^\prime$, pro které platí
+    K důkazu lze přistoupit např. sporem. Pro spor nechť jsou dány dvě různé množiny $y$ a $y^\prime$, pro které platí
     \begin{equation*}
         \forall x\,(x\in y \iff x=a \lor x=b)\qquad \text{a}\qquad\forall x\, (x\in y^\prime \iff x=a \lor x=b).
     \end{equation*}
@@ -38,36 +38,36 @@ Není těžké se přesvědčit, že taková množina je vždy unikátní. V ná
     \begin{equation*}
         \forall x\,(x\in y \iff x\in y^\prime)
     \end{equation*}
-   ~a z axiomu extenzionality \ref{item:axiom_extenzionality} vyplývá $y=y^\prime$, což je spor s předpokladem, že $y$~a $y^\prime$ jsou různé množiny.
+    a z axiomu extenzionality \ref{item:axiom_extenzionality} vyplývá $y=y^\prime$, což je spor s předpokladem, že $y$ a $y^\prime$ jsou různé množiny.
 \end{proof}
-Množiny $a,b$ nemusí být~však nutně různé. Pokud budeme mít množinu $x$, pak z axiomu dvojice existuje množina $\set{x,x}$. Ta je~však podle axiomu extenzionality rovna množině $\set{x}$, která podle výše dokázaného je jediná (stačí uvážit $a=x$~a $b=x$).
+Množiny $a,b$ nemusí být však nutně různé. Pokud budeme mít množinu $x$, pak z axiomu dvojice existuje množina $\set{x,x}$. Ta je však podle axiomu extenzionality rovna množině $\set{x}$, která podle výše dokázaného je jediná (stačí uvážit $a=x$ a $b=x$).
 \begin{definition}[Neuspořádaná dvojice]
-    Nechť $x$~a $y$ jsou množiny. Pak množinu $\set{x,y}$ nazýváme \emph{(neuspořádanou) dvojicí}.
+    Nechť $x$ a $y$ jsou množiny. Pak množinu $\set{x,y}$ nazýváme \emph{(neuspořádanou) dvojicí}.
 \end{definition}
-Tato definice nejspíše není moc zajímavá, neboť zavedený termín je již v názvu axiomu. Avšak ono přídavné jméno "\textbf{neuspořádaná}" nás může přivádět k otázce, jak reprezentovat \emph{uspořádanou dvojici}. Čtenáři je tento termín nejspíše již známý v jiných podobách; typicky např. \textbf{vektory} využívané v analytické geometrii. Ty jsme běžně značili $(x,y)$. Nejdůležitější vlastností tohoto objektu pro nás byl fakt, že $(x,y)\neq (y,x)$~a tedy záleželo na pořadí prvků. Jak toto vyjádřit pomocí množin? Je nejspíše jasné, že reprezentace pomocí množiny $\set{x,y}$ již nebude dostačující, protože podle axiomu extenzionality \ref{item:axiom_extenzionality} je $\set{x,y}=\set{y,x}$ (proto název \emph{neuspořádaná dvojice}). Naše požadavky pro objekt uspořádané dvojice tedy jsou:
+Tato definice nejspíše není moc zajímavá, neboť zavedený termín je ji$1 v~$2ázvu axiomu. Avšak ono přídavné jméno "\textbf{neuspořádaná}" nás může přivádět k~otázce, jak reprezentovat \emph{uspořádanou dvojici}. Čtenáři je tento termín nejspíše již znám$1 v~$2iných podobách; typicky např. \textbf{vektory} využívan$1 v~$2nalytické geometrii. Ty jsme běžně značili $(x,y)$. Nejdůležitější vlastností tohoto objektu pro nás byl fakt, že $(x,y)\neq (y,x)$ a tedy záleželo na pořadí prvků. Jak toto vyjádřit pomocí množin? Je nejspíše jasné, že reprezentace pomocí množiny $\set{x,y}$ již nebude dostačující, protože podle axiomu extenzionality \ref{item:axiom_extenzionality} je $\set{x,y}=\set{y,x}$ (proto název \emph{neuspořádaná dvojice}). Naše požadavky pro objekt uspořádané dvojice tedy jsou:
 \begin{enumerate}
-    \item pro každou množinu $x$~a pro každou množinu $y$ existuje jediná uspořádaná dvojice $(x,y)$,
-    \item uspořádané dvojice $(x,y)$~a $(a,b)$ se rovnají právě tehdy, když $x=a$~a $y=b$.
+    \item pro každou množinu $x$ a pro každou množinu $y$ existuje jediná uspořádaná dvojice $(x,y)$,
+    \item uspořádané dvojice $(x,y)$ a $(a,b)$ se rovnají právě tehdy, když $x=a$ a $y=b$.
 \end{enumerate}
-Již víme, že neuspořádané dvojice nám v tomto směru nepostačí. Potřebovali bychom umět nějak rozlišit, která souřadnice je "první"~a která "druhá". Tento problém poměrně elegantně řeší definice, se kterou přišel polský matematik~a logik \name{Kazimierz~Kuratowski} (1896--1980).
+Již víme, že neuspořádané dvojice nám v~tomto směru nepostačí. Potřebovali bychom umět nějak rozlišit, která souřadnice je "první" a která "druhá". Tento problém poměrně elegantně řeší definice, se kterou přišel polský matematik a logik \name{Kazimierz~Kuratowski} (1896--1980).
 \begin{definition}[Uspořádaná dvojice]\label{def:usporadana_dvojice}
-    Nechť $x$~a $y$ jsou množiny. Pak definujeme \emph{uspořádanou dvojici} $(x,y)$ jako
+    Nechť $x$ a $y$ jsou množiny. Pak definujeme \emph{uspořádanou dvojici} $(x,y)$ jako
     \begin{equation*}
         \set{\set{x},\set{x,y}}.
     \end{equation*}
 \end{definition}
-Po chvilce zamyšlení nad touto definicí si můžeme uvědomit, že název "uspořádaná dvojice" je zcela oprávněný. Množina $\set{x}$ nám v podstatě  říká, která z množin $x,y$ je na "prvním místě". Přesvědčme se, že takto definovaná uspořádaná dvojice má skutečně požadované vlastnosti.\par
-Začneme jednodušším požadavkem~a to sice, aby pro libovolné množiny $x,y$ existovala právě jedna uspořádaná dvojice $(x,y)$.
+Po chvilce zamyšlení nad touto definicí si můžeme uvědomit, že název "uspořádaná dvojice" je zcela oprávněný. Množina $\set{x}$ nám v~podstatě  říká, která z množin $x,y$ je na "prvním místě". Přesvědčme se, že takto definovaná uspořádaná dvojice má skutečně požadované vlastnosti.\par
+Začneme jednodušším požadavkem a to sice, aby pro libovolné množiny $x,y$ existovala právě jedna uspořádaná dvojice $(x,y)$.
 \begin{lemma}
     Jsou-li $x,y$ libovolné množiny, pak existuje právě jediná uspořádaná dvojice $(x,y)$.
 \end{lemma}
 \begin{proof}
-    V důkazu tohoto tvrzení se můžeme přímo odvolat na fakt, který jsme dokázali dříve v lemmatu \ref{lem:univerzalnost_neusp_dvojic}. Podle něj pro libovolné množiny $x,y$ existuje právě jediná neuspořádaná dvojice $\set{x,y}$. K důkazu můžeme opět přistoupit sporem.\par
-    Pro spor nechť existují dvě různé uspořádané dvojice $t$~a $t^\prime$. Z výše uvedené definice \ref{def:usporadana_dvojice} musí platit
+    V důkazu tohoto tvrzení se můžeme přímo odvolat na fakt, který jsme dokázali dříve v~lemmatu \ref{lem:univerzalnost_neusp_dvojic}. Podle něj pro libovolné množiny $x,y$ existuje právě jediná neuspořádaná dvojice $\set{x,y}$. K důkazu můžeme opět přistoupit sporem.\par
+    Pro spor nechť existují dvě různé uspořádané dvojice $t$ a $t^\prime$. Z výše uvedené definice \ref{def:usporadana_dvojice} musí platit
     \begin{equation*}
         \forall x^\prime\,(x^\prime\in t \iff x^\prime=\set{x} \lor x^\prime=\set{x,y})\quad\text{a}\quad \forall x^\prime\,(x^\prime\in t^\prime \iff x^\prime=\set{x} \lor x^\prime=\set{x,y}).
     \end{equation*}
-    Podle lemmatu \ref{lem:univerzalnost_neusp_dvojic} existují právě jedny neuspořádané dvojice $\set{x,y}$~a $\set{x}$\footnote{Množina obsahující pouze jeden prvek je také neuspořádanou dvojicí. Podle axiomu extenzionality je rovna množině $\set{x,x}$.}. Z toho dostáváme, že $t$~a $t^\prime$ mají stejné prvky~a podle axiomu extenzionality \ref{item:axiom_extenzionality} platí $t=t^\prime$, což je spor s předpokladem, že $t$~a $t^\prime$ jsou různé množiny.
+    Podle lemmatu \ref{lem:univerzalnost_neusp_dvojic} existují právě jedny neuspořádané dvojice $\set{x,y}$ a $\set{x}$\footnote{Množina obsahující pouze jeden prvek je také neuspořádanou dvojicí. Podle axiomu extenzionality je rovna množině $\set{x,x}$.}. Z toho dostáváme, že $t$ a $t^\prime$ mají stejné prvky a podle axiomu extenzionality \ref{item:axiom_extenzionality} platí $t=t^\prime$, což je spor s předpokladem, že $t$ a $t^\prime$ jsou různé množiny.
 \end{proof}
 \begin{lemma}\label{lem:vlastnost_usp_dvojic}
     Pro libovolné množiny $x,y$ platí:
@@ -80,27 +80,27 @@ Před uvedením důkazu si ještě zavedeme úmluvu pro zjednodušení zápisu.
     Zápisem $x_1=x_2=\cdots=x_n$ budeme rozumět formuli tvaru $x_1=x_2 \land x_2=x_3 \land \dots \land x_{n-1}=x_n$.
 \end{convention}
 \begin{proof}
-    Tvrzení dokážeme opakovanou aplikací axiomu extenzionality \ref{item:axiom_extenzionality}. Mějme uspořádané dvojice $(a,b)$~a $(x,y)$ takové, že $(a,b)=(x,y)$, tj. podle definice \ref{def:usporadana_dvojice}
+    Tvrzení dokážeme opakovanou aplikací axiomu extenzionality \ref{item:axiom_extenzionality}. Mějme uspořádané dvojice $(a,b)$ a $(x,y)$ takové, že $(a,b)=(x,y)$, tj. podle definice \ref{def:usporadana_dvojice}
     \begin{equation*}
         \set{\set{a},\set{a,b}}=\set{\set{x},\set{x,y}}.
     \end{equation*}
-    Podle \ref{item:axiom_extenzionality} musí mít množin na pravé~a levé straně stejné prvky. Rozdělme si tento důkaz na dva případy.
+    Podle \ref{item:axiom_extenzionality} musí mít množin na pravé a levé straně stejné prvky. Rozdělme si tento důkaz na dva případy.
     \begin{enumerate}[label=(\alph*)]
-        \item $\set{a}=\set{x}$. Pak opět podle \ref{item:axiom_extenzionality} platí $a=x$. Rozlišme dále případy, když $a=b$~a když $a\neq b$.
+        \item $\set{a}=\set{x}$. Pak opět podle \ref{item:axiom_extenzionality} platí $a=x$. Rozlišme dále případy, když $a=b$ a když $a\neq b$.
         \begin{itemize}
             \item $a=b$. Pak
             \begin{equation*}
                 \set{\set{a},\set{a,b}}=\set{\set{a},\set{a,a}}\stackrel{\text{\ref{item:axiom_extenzionality}}}{=}\set{\set{a},\set{a}}\stackrel{\text{\ref{item:axiom_extenzionality}}}{=}\set{\set{a}}.
             \end{equation*}
-            Musí tedy platit $\set{\set{a}}=\set{\set{x},\set{x,y}}$. Opět z \ref{item:axiom_extenzionality} vyplývá $\set{x,y}=\set{a}$, tj. $x=a$~a $y=a$. Celkově dostáváme $a=b=x=y$~a tedy~i $a=x$~a $b=y$, jak jsme chtěli.
-            \item $a\neq b$. V takovém případě nemůže platit, že $\set{a,b}=\set{a}$ (zkuste si rozmyslet podle \ref{item:axiom_extenzionality}), tj. nutně musí $\set{a,b}=\set{x,y}$. Protože~však $a=x$, pak $b=y$.
+            Musí tedy platit $\set{\set{a}}=\set{\set{x},\set{x,y}}$. Opět z \ref{item:axiom_extenzionality} vyplývá $\set{x,y}=\set{a}$, tj. $x=a$ a $y=a$. Celkově dostáváme $a=b=x=y$ a tedy i $a=x$ a $b=y$, jak jsme chtěli.
+            \item $a\neq b$. V takovém případě nemůže platit, že $\set{a,b}=\set{a}$ (zkuste si rozmyslet podle \ref{item:axiom_extenzionality}), tj. nutně musí $\set{a,b}=\set{x,y}$. Protože však $a=x$, pak $b=y$.
         \end{itemize}
-        Celkově tak v obou případech dostáváme, že pokud $\set{a}=\set{x}$, pak $x=a$~a $y=b$.
-        \item $\set{a}=\set{x,y}$. Podle \ref{item:axiom_extenzionality} pak platí $x=a$~a $y=a$, tedy $x=y$. Stejným postupem tak dostáváme
+        Celkově tak v~obou případech dostáváme, že pokud $\set{a}=\set{x}$, pak $x=a$ a $y=b$.
+        \item $\set{a}=\set{x,y}$. Podle \ref{item:axiom_extenzionality} pak platí $x=a$ a $y=a$, tedy $x=y$. Stejným postupem tak dostáváme
         \begin{equation*}
             \set{\set{x},\set{x,y}}=\set{\set{x},\set{x,x}}\stackrel{\text{\ref{item:axiom_extenzionality}}}{=}\set{\set{x},\set{x}}\stackrel{\text{\ref{item:axiom_extenzionality}}}{=}\set{\set{x}}.
         \end{equation*}
-        Tedy $\set{\set{a},\set{a,b}}=\set{\set{x}}$. Protože prvky množiny na levé straně musí být prvky množiny na pravé straně, pak $\set{a}=\set{a,b}=\set{x}$. Z toho opět dostáváme, že $a=b=x=y$, tj. $a=x$~a $b=y$.
+        Tedy $\set{\set{a},\set{a,b}}=\set{\set{x}}$. Protože prvky množiny na levé straně musí být prvky množiny na pravé straně, pak $\set{a}=\set{a,b}=\set{x}$. Z toho opět dostáváme, že $a=b=x=y$, tj. $a=x$ a $b=y$.
     \end{enumerate}
-    V obou dílčích případech jsme dostali, že $a=x$~a $b=y$, což jsme chtěli dokázat.
+    V obou dílčích případech jsme dostali, že $a=x$ a $b=y$, což jsme chtěli dokázat.
 \end{proof}

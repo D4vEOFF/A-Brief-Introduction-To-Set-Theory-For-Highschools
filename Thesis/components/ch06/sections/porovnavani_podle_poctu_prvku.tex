@@ -1,62 +1,62 @@
 \section{Porovnávání podle počtu prvků}\label{sec:porovnavani_podle_poctu_prvku}
-Nekonečné množiny mají tedy dost pozoruhodné vlastnosti. V souvislosti s předešlou úvahou by nás tak mohlo napadnout, že při plně obsazeném hotelu je hostů "stejně mnoho" jako pokojů. Ovšem z případu \ref{item:novy_host} jsme mohli vidět, že po přesunutí hostů do vedlejšího pokoje byly pak již obsazeny "pouze" pokoje $2,3,\dots$~a první tak zůstal volný. Pokud by toto byla výchozí situace, mohlo by se nám tak zdát, že hostů je méně, neboť v prvním pokoji žádný není. Avšak jediné, co se stalo je, že hosté změnili svůj, čímž se celkem přirozeně nemohl porušit jejich počet. Změnil se tedy počet hostů~a pokojů,~nebo jich je stejně mnoho?\par
-Náš náhled se pochopitelně odráží od porovnávání velikostí konečných množin. U těch toto nečinní žádný problém, stačí spočítat jejich prvky. U nekonečných množin již prvky "spočítat" nemůžeme. Existuje~však ještě jeden způsob, který ve skutečnosti vůbec nevyžaduje schopnost počítání.
+Nekonečné množiny mají tedy dost pozoruhodné vlastnosti. V souvislosti s předešlou úvahou by nás tak mohlo napadnout, že při plně obsazeném hotelu je hostů "stejně mnoho" jako pokojů. Ovšem z případu \ref{item:novy_host} jsme mohli vidět, že po přesunutí hostů do vedlejšího pokoje byly pak již obsazeny "pouze" pokoje $2,3,\dots$ a první tak zůstal volný. Pokud by toto byla výchozí situace, mohlo by se nám tak zdát, že hostů je méně, nebo$1 v~$2rvním pokoji žádný není. Avšak jediné, co se stalo je, že hosté změnili svůj, čímž se celkem přirozeně nemohl porušit jejich počet. Změnil se tedy počet hostů a pokojů, nebo jich je stejně mnoho?\par
+Náš náhled se pochopitelně odráží od porovnávání velikostí konečných množin. U těch toto nečinní žádný problém, stačí spočítat jejich prvky. U nekonečných množin již prvky "spočítat" nemůžeme. Existuje však ještě jeden způsob, který ve skutečnosti vůbec nevyžaduje schopnost počítání.
 \medskip
 
-\noindent\textbf{O domorodém kmenu~a slepicích}. \textit{Představme si, že jistý domorodý kmen hledá nového náčelníka. Po několika vyřazovacích kolech zbyli poslední dva kandidáti. Ostatní členové kmenu rozhodli, že náčelníkem se stane ten z kandidátů, který vlastní více slepic. Tento kmen je~však matematicky velmi primitivní~a jeho příslušníci umí počítat pouze do pěti. Oba dva kandidáti~však mají ostře více jak pět slepic. Kmen se tedy rozhodl postupovat takto: každý z kandidátů přinese vždy jednu svojí slepici~a tímto způsobem pokračují, dokud jednomu z nich slepice nedojdou. Ten, kterému dříve dojdou slepice, prohraje~a druhý se tak stane náčelníkem.} \cite{Pick2019}
+\noindent\textbf{O domorodém kmenu a slepicích}. \textit{Představme si, že jistý domorodý kmen hledá nového náčelníka. Po několika vyřazovacích kolech zbyli poslední dva kandidáti. Ostatní členové kmenu rozhodli, že náčelníkem se stane ten z kandidátů, který vlastní více slepic. Tento kmen je však matematicky velmi primitivní a jeho příslušníci umí počítat pouze do pěti. Oba dva kandidáti však mají ostře více jak pět slepic. Kmen se tedy rozhodl postupovat takto: každý z kandidátů přinese vždy jednu svojí slepici a tímto způsobem pokračují, dokud jednomu z nich slepice nedojdou. Ten, kterému dříve dojdou slepice, prohraje a druhý se tak stane náčelníkem.} \cite{Pick2019}
 \medskip
 
-Z tohoto příkladu je již nejspíše jasné, jak lze množiny porovnávat. Pokud mají dvě množiny stejný počet prvků, pak lze jednotlivé prvky "spárovat". V matematické řeči náčelníci pouze sestrojují zobrazení z jedné množiny slepic do druhé. Toto dává jistě smysl v kontextu konečných množin. Pokud mají množiny stejně prvků, pak mezi nimi existuje bijekce (viz obrázek \ref{fig:bijekce_konecne_mnoziny}).
+Z tohoto příkladu je již nejspíše jasné, jak lze množiny porovnávat. Pokud mají dvě množiny stejný počet prvků, pak lze jednotlivé prvky "spárovat". V matematické řeči náčelníci pouze sestrojují zobrazení z jedné množiny slepic do druhé. Toto dává jistě smysl v~kontextu konečných množin. Pokud mají množiny stejně prvků, pak mezi nimi existuje bijekce (viz obrázek \ref{fig:bijekce_konecne_mnoziny}).
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch06_bijekce_konecne_mnoziny.pdf}
     \caption{Bijekce mezi konečnými množinami $A,B$ se stejným počtem prvků.}
     \label{fig:bijekce_konecne_mnoziny}
 \end{figure}
-Stejným způsobem~však můžeme porovnávat~i nekonečné množiny! Zkusme si vzít např. množinu všech kladných sudých čísel $S=\set{2k\admid k\in\N}$~a přirozená čísla $\N$. Selský rozum by nám nejspíše napověděl, že sudých čísel musí být "méně" než přirozených, neboť $S$ nenáleží všechna lichá přirozená čísla, zatímco množině $\N$ náleží. Z jistého pohledu tomu tak může být,~ale z "perspektivy" bijekce nikoliv. Pokud uvážíme zobrazení $\map{f}{\N}{S}$, kde pro $n\in\N$ je $f(n)=2n$, můžeme se snadno přesvědčit, že $f$ je bijekcí\footnote{Skutečně, inverzní zobrazení je $\map{f^{-1}}{S}{\N}$, kde $f^{-1}(n)=n/2$.}.
+Stejným způsobem však můžeme porovnávat i nekonečné množiny! Zkusme si vzít např. množinu všech kladných sudých čísel $S=\set{2k\admid k\in\N}$ a přirozená čísla $\N$. Selský rozum by nám nejspíše napověděl, že sudých čísel musí být "méně" než přirozených, neboť $S$ nenáleží všechna lichá přirozená čísla, zatímco množině $\N$ náleží. Z jistého pohledu tomu tak může být, ale z "perspektivy" bijekce nikoliv. Pokud uvážíme zobrazení $\map{f}{\N}{S}$, kde pro $n\in\N$ je $f(n)=2n$, můžeme se snadno přesvědčit, že $f$ je bijekcí\footnote{Skutečně, inverzní zobrazení je $\map{f^{-1}}{S}{\N}$, kde $f^{-1}(n)=n/2$.}.
 \begin{figure}[h]
     \centering
     \includegraphics[scale=\normalipe]{ch06_bijekce_suda_a_prirozena_cisla.pdf}
-    \caption{Bijekce mezi množinami $S$~a $\N$.}
+    \caption{Bijekce mezi množinami $S$ a $\N$.}
     \label{fig:bijekce_suda_a_prirozena_cisla}
 \end{figure}
 \begin{example}\label{ex:bijekce_prirozena_cisla}
-    Další příklady bijekcí mezi $\N$~a jinými množinami.
+    Další příklady bijekcí mezi $\N$ a jinými množinami.
     \begin{enumerate}[label=(\roman*)]
-        \item Bijekce mezi $\N$~a kladnými lichými čísly: $\map{f_1}{\N}{\set{2k-1\admid k\in\N}}$, kde $f_1(n)=2n-1$.
-        \item Bijekce mezi $\N$~a druhými mocninami: $\map{f_2}{\N}{\set{n^2\admid n\in\N}}$, kde $f_2(n)=n^2$.
-        \item Bijekce mezi $\N$~a prvočísly.
+        \item Bijekce mezi $\N$ a kladnými lichými čísly: $\map{f_1}{\N}{\set{2k-1\admid k\in\N}}$, kde $f_1(n)=2n-1$.
+        \item Bijekce mezi $\N$ a druhými mocninami: $\map{f_2}{\N}{\set{n^2\admid n\in\N}}$, kde $f_2(n)=n^2$.
+        \item Bijekce mezi $\N$ a prvočísly.
     \end{enumerate}
 \end{example}
-Všimněme si, že všechny (zatím) uvažované množiny byly všechny vlastní podmnožiny $\N$. Toto~však u konečných množin provést nelze, neboť libovolná vlastní podmnožina je vždy "menší" než původní množina (velikosti těchto množin se pak liší v počtu "chybějících" prvků). V případě nekonečných množin toto~však není žádnou překážkou. Archimédův logický axiom, že \emph{celek je větší než část} tak skutečně patří pouze do oblasti konečných množin. Toto se zdá být jako pěkná charakteristika odlišující konečné~a nekonečné množiny.\par
-Do této chvíle jsme termín "konečná"~a "nekonečná" množina chápali intuitivně bez formální definice. Vzhledem k jasnosti těchto termínů v použitých kontextech nejspíše nebyl problém s jejich chápáním. Avšak díky výše zmíněnému máme již dostupný nástroj, jak definovat nekonečnou množinu.
+Všimněme si, že všechny (zatím) uvažované množiny byly všechny vlastní podmnožiny $\N$. Toto však u konečných množin provést nelze, neboť libovolná vlastní podmnožina je vždy "menší" než původní množina (velikosti těchto množin se pak liš$1 v~$2očtu "chybějících" prvků). V případě nekonečných množin toto však není žádnou překážkou. Archimédův logický axiom, že \emph{celek je větší než část} tak skutečně patří pouze do oblasti konečných množin. Toto se zdá být jako pěkná charakteristika odlišující konečné a nekonečné množiny.\par
+Do této chvíle jsme termín "konečná" a "nekonečná" množina chápali intuitivně bez formální definice. Vzhledem k~jasnosti těchto termín$1 v~$2oužitých kontextech nejspíše nebyl problém s jejich chápáním. Avšak díky výše zmíněnému máme již dostupný nástroj, jak definovat nekonečnou množinu.
 \begin{definition}[Nekonečnost množiny]\label{def:nekonecnost_mnoziny}
     Množinu libovolnou množinu $X$ nazveme \emph{nekonečnou}, pokud existuje množina $X^\prime\subset X$ taková, že existuje bijektivní zobrazení $\map{f}{X}{X^\prime}$. 
 \end{definition}
-Jednoduše, množina je nekonečná, pokud existuje bijekce množiny na některou její vlastní podmnožinu. Nabízí se otázka, jak bychom mohli definovat konečnou množinu. Vzhledem k formalizaci "nekonečná množina" v definici \ref{def:nekonecnost_mnoziny} bychom za konečnou množinu mohli jednoduše prohlásit množinu, která není nekonečná. Avšak tento termín můžeme zavést~i více přirozeně. Pokud o množině řekneme, že je "konečná", pak tím intuitivně rozumíme, že její počet prvků odpovídá nějakému přirozenému číslu, tj. $\sizeof{A}=n$, kde $n\in\N_0$. Pokud si~však vzpomeneme, přirozená čísla jsme si zaváděli pomocí množin, což znamená že se opět jedná o množiny. Za konečnou množinu tak můžeme prohlásit množinu, u níž \textbf{existuje bijekce na nějaké přirozené číslo}.\par
-Pokud se nebudeme omezovat pouze na přirozená čísla, příklady bijekcí najdeme~i u reálných čísel $\R$.
+Jednoduše, množina je nekonečná, pokud existuje bijekce množiny na některou její vlastní podmnožinu. Nabízí se otázka, jak bychom mohli definovat konečnou množinu. Vzhledem k~formalizaci "nekonečná množina" v definici \ref{def:nekonecnost_mnoziny} bychom za konečnou množinu mohli jednoduše prohlásit množinu, která není nekonečná. Avšak tento termín můžeme zavést i více přirozeně. Pokud o množině řekneme, že je "konečná", pak tím intuitivně rozumíme, že její počet prvků odpovídá nějakému přirozenému číslu, tj. $\sizeof{A}=n$, kde $n\in\N_0$. Pokud si však vzpomeneme, přirozená čísla jsme si zaváděli pomocí množin, což znamená že se opět jedná o množiny. Za konečnou množinu tak můžeme prohlásit množinu, u níž \textbf{existuje bijekce na nějaké přirozené číslo}.\par
+Pokud se nebudeme omezovat pouze na přirozená čísla, příklady bijekcí najdeme i u reálných čísel $\R$.
 \begin{example}\label{ex:bijekce_realna_cisla}
     Ukázky bijekcí mezi množinou $\R$ některými jejími vlastními podmnožinami.
     \begin{enumerate}[label=(\roman*)]
-        \item\label{item:funkce_arctg} Bijekce mezi $\R$~a intervalem $\displaystyle\left(-\frac{\pi}{2},\frac{\pi}{2}\right)$: $\displaystyle\map{g_1}{\R}{\left(-\frac{\pi}{2},\frac{\pi}{2}\right)}$, kde $g_1(x)=\arctg{x}$.
+        \item\label{item:funkce_arctg} Bijekce mezi $\R$ a intervalem $\displaystyle\left(-\frac{\pi}{2},\frac{\pi}{2}\right)$: $\displaystyle\map{g_1}{\R}{\left(-\frac{\pi}{2},\frac{\pi}{2}\right)}$, kde $g_1(x)=\arctg{x}$.
         \begin{figure}[H]
             \centering
             \input{./components/images/ch06_funkce_arctg.tex}
             \caption{Graf funkce $g_1$.}
             \label{fig:graf_g1}
         \end{figure}
-        \item\label{item:bijekce_0_a_1} Bijekce mezi $\R$~a intervalem $(0,1)$: $\map{g_2}{\R}{(0,1)}$, kde
+        \item\label{item:bijekce_0_a_1} Bijekce mezi $\R$ a intervalem $(0,1)$: $\map{g_2}{\R}{(0,1)}$, kde
         \begin{equation*}
             g_2(x)=\frac{1}{\pi}\left(\arctg{x}+\frac{\pi}{2}\right)
         \end{equation*}
         \begin{figure}[H]
             \centering
             \input{./components/images/ch06_bijekce_0_a_1.tex}
-            \caption{Graf funkce $g_2$ ("přeškálovaný"~a posunutý graf $\arctg$).}
+            \caption{Graf funkce $g_2$ ("přeškálovaný" a posunutý graf $\arctg$).}
             \label{fig:graf_g2}
         \end{figure}
         \item\label{item:funkce_tg} Stejně tak lze sestrojit bijekci z intervalu $\displaystyle\left(-\frac{\pi}{2},\frac{\pi}{2}\right)$ do $\R$. Stačí vzít inverzní funkci ke $g_2$, tj. $\displaystyle\map{g_3}{\left(-\frac{\pi}{2},\frac{\pi}{2}\right)}{\R}$, kde $g_3(x)=g_1^{-1}(x)=\tg{x}$.
-        \item\label{item:bijekce_slozena} Bijekci můžeme sestrojit~i mezi samotnými intervaly $\displaystyle\left(-\frac{\pi}{2},\frac{\pi}{2}\right)$~a $(0,1)$. Tu můžeme nalézt složením funkcí $g_3$~a $g_2$, tj. $g_4=g_3\circ g_2$, protože
+        \item\label{item:bijekce_slozena} Bijekci můžeme sestrojit i mezi samotnými intervaly $\displaystyle\left(-\frac{\pi}{2},\frac{\pi}{2}\right)$ a $(0,1)$. Tu můžeme nalézt složením funkcí $g_3$ a $g_2$, tj. $g_4=g_3\circ g_2$, protože
         \begin{equation*}
             \map{g_3}{\left(-\frac{\pi}{2},\frac{\pi}{2}\right)}{\R}\;\text{a}\;\map{g_2}{\R}{(0,1)}
         \end{equation*}
@@ -67,7 +67,7 @@ Pokud se nebudeme omezovat pouze na přirozená čísla, příklady bijekcí naj
         \begin{figure}[H]
             \centering
             \input{./components/images/ch06_bijekce_slozena.tex}
-            \caption{Graf funkce $g_4$ (složení funkcí $g_3$~a $g_2$).}
+            \caption{Graf funkce $g_4$ (složení funkcí $g_3$ a $g_2$).}
             \label{fig:graf_g4}
         \end{figure}
         Lze vidět, že $g_4$ je skutečně bijekce, což ostatně plyne z bodu \ref{item:skladani_bijekce} tvrzení \ref{prop:vlastnosti_skladani_zobrazeni} o vlastnostech skládání zobrazení.

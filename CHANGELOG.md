@@ -15,11 +15,11 @@
 - Předělán Hasseův diagram 5.17.
 
 ## 30. 4. 2022
-- Dokončena sekce **"Spočerné a nespočetné množiny"**.
+- Dokončena sekce **"Spočetné a nespočetné množiny"**.
 
 ## 28. 4. 2022
 - Dokončena sekce **"Porovnávání podle počtu prvků"**.
-- Rozepsána sekce **"Spočerné a nespočetné množiny"**.
+- Rozepsána sekce **"Spočetné a nespočetné množiny"**.
 
 ## 27. 4. 2022
 - Do sekce **"Hilbertův hotel"** doplněna zmínka o nekonečně mnoha autobusech.

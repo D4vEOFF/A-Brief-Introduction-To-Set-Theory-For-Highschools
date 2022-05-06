@@ -1,10 +1,10 @@
-%%% Tento soubor obsahuje definice různých užitečných maker~a prostředí %%%
+%%% Tento soubor obsahuje definice různých užitečných maker a prostředí %%%
 %%% Další makra připisujte sem, ať nepřekáží v ostatních souborech.     %%%
 
 %%% Drobné úpravy stylu
 
 % Tato makra přesvědčují mírně ošklivým trikem LaTeX, aby hlavičky kapitol
-% sázel příčetněji~a nevynechával nad nimi spoustu místa. Směle ignorujte.
+% sázel příčetněji a nevynechával nad nimi spoustu místa. Směle ignorujte.
 %\makeatletter
 %\def\@makechapterhead#1{
 %  {\parindent \z@ \raggedright \normalfont
@@ -22,7 +22,7 @@
 
 \setlength{\parskip}{0.3em}
 
-% Toto makro definuje kapitolu, která není očíslovaná,~ale je uvedena v obsahu.
+% Toto makro definuje kapitolu, která není očíslovaná, ale je uvedena v obsahu.
 \def\chapwithtoc#1{
 \chapter*{#1}
 \addcontentsline{toc}{chapter}{#1}
@@ -60,14 +60,14 @@
   {Důkaz}
   {#1}}.
 }{
-\newline
+%\newline
 \rightline{$\qedsymbol$}
 }
 \newenvironment{solution}{
   \par\medskip\noindent
   \textit{Řešení}.
 }{
-\newline
+%\newline
 \rightline{$\qedsymbol$}
 }
 
@@ -83,7 +83,7 @@
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\Z}{\mathbb{Z}}
 
-%%% Užitečné operátory pro statistiku~a pravděpodobnost
+%%% Užitečné operátory pro statistiku a pravděpodobnost
 \DeclareMathOperator{\pr}{\textsf{P}}
 \DeclareMathOperator{\E}{\textsf{E}\,}
 \DeclareMathOperator{\var}{\textrm{var}}
