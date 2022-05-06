@@ -1,4 +1,28 @@
 \chapter{Dodatky k~porovnávání nekonečných množin}\label{chap:dodatky_k_porovnavani_nekonecnych_mn}
+Dodatečná ukázka Cantorova diagonálního argumentu při důkazu Cantorovy věty pro spočetné množiny.
+\begin{theorem}\label{thm:cantorova_veta_spocetne}
+    Pro libovolnou spočetnou množinu $X$ platí
+    \begin{equation*}
+        X\prec\powset{X}.
+    \end{equation*}
+\end{theorem}
+\begin{proof}
+    Ukážeme, že $X\napprox\powset{X}$ (případ $X\preccurlyeq\powset{X}$ již známe). K tomu lze přistoupit sporem. Pro spor nechť $X\approx\powset{X}$, tzn. existuje bijektivní zobrazení $\map{f}{X}{\powset{X}}$. Obdobně jako v~důkazu věty \ref{thm:N_a_R}, i zde ukážeme, že $f$ není surjektivní. Obrazy prvků $x_i\in X$ tak můžeme "uspořádat" do "seznamu" $f(x_1),f(x_2),f(x_3),\dots$. Podmnožinu $A$ můžeme z množiny sestrojit $X$ tak, že pro každý z prvků množiny $X$ určíme, zda náleží $A$ či nikoliv. Označíme-li si případ $x\in A$ písmenem A a případ $x\notin A$ jako N, pak zmíněný "seznam" bychom mohli znázornit podobně jako na obrázku \ref{fig:seznam_podmnoziny}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=\normalipe]{ch06_seznam_podmnoziny.pdf}
+        \caption{Podmnožiny (obrazy) množiny $X$ určené náležením každého z prvků.}
+        \label{fig:seznam_podmnoziny}
+    \end{figure}
+    Opět se zaměříme na diagonálu tohoto seznamu.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=\normalipe]{ch06_diagonala_podmnoziny.pdf}
+        \caption{Diagonála seznamu podmnožin množiny $X$.}
+        \label{fig:diagonala_podmnoziny}
+    \end{figure}
+    Zkonstruujeme množinu $S$ tak, že každý prvek $x$ na diagonále jí náleží právě tehdy, když nenáleží podmnožině (tedy obrazu $f(x)$) v příslušném řádku. Evidentně množina $S$ je podmnožinou $X$. Zároveň se však od každé podmnožiny na seznamu liší minimálně v prvku na diagonále. To znamená, že $S$ nemůže být na seznamu, čímž dostáváme spor.
+\end{proof}
 \section{Relace ekvivalence}\label{sec:relace_ekvivalence}
 Zmíněné druhy relací nám dovolují definovat dva jejich nejdůležitější typy, jednomu z nichž se budeme dále přednostně věnovat. Začneme prvním z nich.
 \begin{definition}[Relace ekvivalence]\label{def:relace_ekvivalence}
