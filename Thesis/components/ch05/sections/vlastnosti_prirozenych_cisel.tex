@@ -23,7 +23,7 @@ To nám umožňuje zformulovat poznatek \ref{lem:vlastnosti_prirozenych_cisel_1}
         X=\set{n\in\N_0\admid \forall m\,(m\in n\implies m\subseteq n)}.
     \end{equation*} 
     Naším cílem je indukcí ukázat, že $X=\N_0$.\par
-    Určitě platí, že $0\in X$. (Ačkoliv $\emptyset$ neobsahuje žádné prvky, tvrzení přesto platí. Vysvětlen$1 v~$2ekci \ref{sec:axiomy_4_az_6} v důkazu lemmatu \ref{lem:o_prazdne_mnozine}.)\par
+    Určitě platí, že $0\in X$. (Ačkoliv $\emptyset$ neobsahuje žádné prvky, tvrzení přesto platí. Vysvětlení v sekci \ref{sec:axiomy_4_az_6} v důkazu lemmatu \ref{lem:o_prazdne_mnozine}.)\par
     Předpokládejme, že $n\in X$. Ukážeme, že $n^+\in X$. Vezměme si libovolný prvek $m\in n^+=n\cup\set{n}$. Z toho vyplývá, že buď $m\in n$, nebo $m=n$. V prvním případě $m\in n$ z indukčního předpokladu platí $m\subseteq n$. V druhém případě $m=n$ platí totéž. Tím jsme ukázali, že $n^+\in X$ a podle principu indukce tedy platí $X=\N_0$.\par
     \textit{\ref{item:vlastnost_1_3}}. Pro nulu tvrzení platí. Opět předpokládejme, že tvrzení platí pro $n\in\N_0$, tj. $n\notin n$. Indukční krok dokážeme sporem. Pro spor nechť platí $n^+\in n^+$. Pak z definice $n^+$ musí platit buď $n^+\in n$, nebo $n^+=n$. Použitím tvrzení \ref{item:vlastnost_1_2} v obou případech dostáváme, že $n^+=n\cup\set{n}\subseteq n$. To znamená, že $\set{n}\subseteq n$, z čehož již odvodíme $n\in n$. To je však spor s indukčním předpokladem, že $n\notin n$. Tím dostáváme, že $n^+\notin n^+$.
 \end{proof}
@@ -31,7 +31,7 @@ To nám umožňuje zformulovat poznatek \ref{lem:vlastnosti_prirozenych_cisel_1}
 Všimněte si, že bod \ref{item:vlastnost_1_2} jsme dokázali definováním množiny prvků, které splňují dokazované tvrzení a ukázali jsme, že taková množina jsou všechna přirozená čísla. Ostatní body \ref{item:vlastnost_1_1} a \ref{item:vlastnost_1_3} jsme dokázali "běžnou" indukcí. Jedná se však o zcela ekvivalentní přístupy.
 \medskip
 
-Je tak docela pěkně vidět, c$1 v~$2eči množin znamená, když je nějaké přirozené číslo větší/menší než jiné.
+Je tak docela pěkně vidět, co v řeči množin znamená, když je nějaké přirozené číslo větší/menší než jiné.
 \begin{definition}\label{def:nerovnosti}
     Nechť $n,m\in\N_0$. Pak definujeme
     \begin{enumerate}[label=(\roman*)]
@@ -41,7 +41,7 @@ Je tak docela pěkně vidět, c$1 v~$2eči množin znamená, když je nějaké p
         \item $m\geq n\stackrel{\text{def.}}{\iff}n\leq m$.
     \end{enumerate}
 \end{definition}
-O relaci "$\leq$" jsme ji$1 v~$2inulé sekci o uspořádáních \ref{sec:specialne_o_usporadanych_mozinach} ukázali, že na $\N$ se jedná o lineární uspořádání (konkrétn$1 v~$2říkladu \ref{ex:cast_a_lin_usporadani}). Zde jsme s ní však nepracovali ve smyslu definice \ref{def:nerovnosti}. Zkusme se tedy přesvědčit, zdali je takto definovaná relaci skutečně lineárním uspořádáním na $\N_0$ (pro připomenutí definice viz \ref{def:usporadani}). Nejdříve si však zformulujme následující lemma, které později využijeme.
+O relaci "$\leq$" jsme již v minulé sekci o uspořádáních \ref{sec:specialne_o_usporadanych_mozinach} ukázali, že na $\N$ se jedná o lineární uspořádání (konkrétně v příkladu \ref{ex:cast_a_lin_usporadani}). Zde jsme s ní však nepracovali ve smyslu definice \ref{def:nerovnosti}. Zkusme se tedy přesvědčit, zdali je takto definovaná relaci skutečně lineárním uspořádáním na $\N_0$ (pro připomenutí definice viz \ref{def:usporadani}). Nejdříve si však zformulujme následující lemma, které později využijeme.
 \begin{lemma}\label{lem:vlastnosti_prirozenych_cisel_2}
     Nechť jsou dána přirozená čísla $n,m\in\N_0$. Pak platí:
     \begin{enumerate}[label=(\roman*)]
