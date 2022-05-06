@@ -1,0 +1,249 @@
+\section{Výroková logika}\label{sec:vyrokova_logika}
+
+Tato část je čtenáři pravděpodobně již z části známa ze střední školy. Řadu vět (matematických i nematematických) lze matematicky chápat jako \emph{výrok}, tj. tvrzení, o kterém lze jednoznačně prohlásit, zdali je či není pravdivé. Výrokům přiřazujeme tzv. \emph{pravdivostní hodnotu}, která je buď 1 pro \emph{pravdivý} výrok nebo 0 pro \emph{nepravdivý} výrok.\par
+Za výroky lze považovat např. tvrzení:
+\begin{itemize}
+    \item "Prší.",
+    \item "Prší a svítí slunce.",
+    \item "Nebude-li pršet, nezmoknem.",
+    \item "Když bude pršet, zmokneme.",
+\end{itemize}
+a mnohé jiné (u každého z nich jsme schopni jednoznačně určit jeho pravdivostní hodnotu). K formálnímu zápisu tvrzení v matematice vyžíváme tzv. \emph{logické spojky} a \emph{kvantifikátory}.
+
+\subsection{Logické spojky}\label{subsec:logicke_spojky}
+Mezi logické spojky řadíme \emph{negaci} $\neg$, \emph{konjunkci} $\land$, \emph{disjunkci} $\lor$, \emph{implikaci} $\implies$ a \emph{ekvivalenci} $\iff$. Připomeňme si stručně jejich významy.
+\begin{convention}[Abeceda pro výrokové proměnné]
+    \label{conv:abeceda_vyrokovych_promennych}
+    Pro označení \emph{výroků} nebo též \emph{výrokových proměnných} budeme používat velká písmena latinské abecedy\linebreak $A,B,\dots,X,Y,Z$, případně opatřenými indexy.
+\end{convention}
+Uvažujme libovolné výroky $A$ a $B$.
+\begin{itemize}
+    \item Negace $\neg A$ má opačnou pravdivostní hodnotu než $A$.
+    \item Konjunkce $A \land B$ je pravdivá, pokud je pravdivý výrok $A$ \textbf{a současně} je pravdivý výrok $B$. Tedy má-li $A$ nebo $B$ pravdivostní hodnotu 0, pak i $A \land B$ má pravdivostní hodnotu 0. Čteme \emph{"$A$ a (zároveň) $B$"}.
+    \item Disjunkce $A \lor B$ je pravdivá, pokud alespoň jeden z výroků $A$ a $B$ je pravdivý. Výrok $A \lor B$ je tedy nepravdivý pouze když jsou současně nepravdivé výroky $A$ i $B$. Čteme \emph{"$A$ nebo $B$"}
+    \item U implikace se často mluví o výroku $A$ jako o \emph{předpokladu} a o $B$ jako o \emph{závěru}. Výrok $A \implies B$ pak říká, že pokud platí výrok $A$, \textbf{pak nutně platí} i výrok $B$. Čteme \emph{"jestliže $A$, pak $B$", "z $A$ vyplývá $B$" či "$A$ implikuje $B$"}. Zde se hodí upozornit na to, že mezi předpokladem a závěrem nemusí být nutně souvislost.
+    \item Ekvivalence $A \iff B$ je pravdivá, pokud jsou výroky $A$ a $B$ \textbf{současně pravdivé} nebo \textbf{současně nepravdivé}. Čteme \emph{"$A$ právě tehdy, když $B$"}.
+\end{itemize}
+Výroky uvedené výše obsahující dané logické spojky lze přehledně zapsat do tabulky pravdivostních hodnot (viz tabulka \ref{tab:logicke_spojky}).
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|cc|ccccc|}
+    \hline
+    $A$ & $B$ & $\neg A$ & $A \land B$ & $A \lor B$ & $A \implies B$ & $A \iff B$ \\ \hline
+    1   & 1   & 0        & 1           & 1          & 1              & 1          \\
+    1   & 0   & 0        & 0           & 1          & 0              & 0          \\
+    0   & 1   & 1        & 0           & 1          & 1              & 0          \\
+    0   & 0   & 1        & 0           & 0          & 1              & 1          \\ \hline
+    \end{tabular}
+    \caption{Tabulka pravdivostních hodnot pro základní logické spojky}
+    \label{tab:logicke_spojky}
+\end{table}
+Vraťme se nyní ještě ke zmíněné implikaci. Ve skutečnosti tato logická spojka je pravděpodobně tou nejsložitější na pochopení ze všech čtyř zmíněných, neboť při neobezřetnosti je často (a to i v~běžné mluvě) zaměňována za ekvivalenci. Uvažme tvrzení "Jestliže nebudeš jíst, nedostaneš zmrzlinu.". Synáček by v~takovou chvíli očekával, že když naopak oběd sní, tak zmrzlinu dostane, avšak ze striktně matematického hlediska mu ji tatínek i tak dát nemusí a přesto by nelhal. Je důležité si uvědomit, že v~případě nesplnění předpokladu nám implikace o závěru nic neříká.\par
+
+\subsection{Výrokové formule}
+Pokud se ohlédneme za výroky, které jsme zatím uvažovali, vždy se jednalo o výroky \emph{složené}. Vezmeme-li např. výrok "Číslo 2 je sudé nebo liché.", tak jej lze rozdělit na dva "jednodušší" výroky, tj. "Číslo 2 je sudé." a "Číslo 2 je liché.", přičemž dané výroky jsou spojeny disjunkcí $\lor$. Tyto výroky však již žádné logické spojky neobsahuje a tedy je nelze dále "rozložit".
+\begin{convention}[Abeceda pro výrokové formule]
+    Pro označení výrokových formulí budeme používat malá písmena řecké abecedy, tj. $\alpha,\beta,\gamma,\dots$, případně opatřenými indexy.
+\end{convention}
+Obecně, pro výroky zavádíme následující terminologii.
+\begin{itemize}
+    \item \emph{Výrokovou formulí} nebo též \emph{logickou formulí} nazveme výrok obsahující libovolný počet výrokových proměnných a logických spojek.
+    \item Speciálně, pokud výrok neobsahuje žádnou logickou spojku, pak jej nazýváme \emph{atomickým}, resp. \emph{atomickou formulí}.
+\end{itemize}
+Tento popis však nelze považovat za definici, neboť je zde pochopitelně řada nepřesností. Např. $A\neg$ nebo $AB\implies\land C$ neurčitě nejsou korektní výrokové formule. Podrobnější informace k~tomuto se čtenář může dočíst v~příloze \ref{chap:dodatky_k_logice}.
+\begin{remark}
+    Občas budeme v~této sekci zkráceně psát pouze \emph{formule}. Později se zmíníme i o tzv. \emph{predikátových formulích}, nicméně z kontextu vždy bude zřejmé, v jakém smyslu daný termín používáme.
+\end{remark}
+\begin{convention}["Rovnost" výrokových formulí]
+    \label{conv:rovnost_logickych_formuli}
+    Uvažujme, že máme libovolné výrokové formule $\varphi$ a $\psi$. Pokud $\varphi$ a $\psi$ vyjadřují stejnou výrokovou formuli, pak budeme psát $\varphi\sim\psi$.
+\end{convention}
+Řekneme-li, že výrokové formule "jsou stejné", pak se formule shodují ve svém zápisu. Máme-li např. výrokové formule
+\begin{align*}
+    \varphi_1&\sim (A) \land \bigl((B) \lor (C)\bigr),\\
+    \varphi_2&\sim \bigl((A) \land (B)\bigr) \lor \bigl((A) \land (C)\big )\;\text{a}\\
+    \varphi_3&\sim \bigl((A) \land (B)\bigr) \lor \bigl((A) \land (C)\bigr),
+\end{align*}
+pak můžeme psát, že $\varphi_2\sim\varphi_3$, ale nikoliv $\varphi_1\sim\varphi_2$, byť $\varphi_1$ a $\varphi_2$ mají shodnou tabulku pravdivostních hodnot.\par
+Z příkladu výše lze však vidět poměrně nadměrné používání závorek. Ačkoliv bychom tak jednoznačně určili pořadí jednotlivých logických operací, existuje o něco příjemnější přístup. Pro zjednodušení zápisu dalších výrokových formulí se proto budeme držet následující úmluvy \ref{conv:poradi_operaci}.
+\begin{convention}[Pořadí logických operací]\label{conv:poradi_operaci}
+    Budeme dodržovat následující pořadí logických operací:
+    \begin{enumerate}[label=(\arabic*)]
+        \item Negace $\neg$ má přednost před všemi ostatními logickými spojkami.
+        \item Konjunkce a disjunkce $\land,\lor$ jsou rovnocenné a mají přednost před implikací a ekvivalencí $\implies,\iff$, které jsou sobě rovnocenné.
+    \end{enumerate}
+\end{convention}
+\begin{example}
+    Zjednodušení některých formulí při aplikaci zavedeného pořadí logických operací v úmluvě \ref{conv:poradi_operaci}.
+    \begin{enumerate}[label=(\roman*)]
+        \item $(A) \land (B)\quad\rightsquigarrow\quad A \land B$,
+        \item $\neg(\neg A)\quad\rightsquigarrow\quad \neg\neg A$,
+        \item $\neg \bigl((A) \lor (B)\bigr)\quad \rightsquigarrow\quad \neg(A \lor B)$,
+        \item $\Bigl(\bigl((A) \land (B)\bigr) \lor \bigl(\neg (C)\bigr)\Bigr) \implies \bigl(\neg (A)\bigr) \land \bigl(\neg (C)\bigr)\\ \rightsquigarrow\quad(A \land B) \lor \neg C \implies \neg A \land \neg C$.
+    \end{enumerate}
+\end{example}
+
+Nyní se vraťme k~původní definici výrokové formule \ref{def:vyrokova_a_atomicka_formule}, kterou jsme zavedli. S ní souvisí čtenářovi pravděpodobně známý postup pro vyhodnocování logických formulí, a to sice \emph{tabulková metoda}. Její myšlenkou bylo rozdělit danou výrokovou formuli postupně na dílčí formule a takto postupovat u i daných dílčích formulí. Tímto způsobem nakonec dojdeme ae k~pamotným atomickým formulím, kde zkoumáme všechny možné kombinace jejich pravdivostních hodnot (resp. kombinace pravdivostních hodnot jejich výrokových proměnných).\par
+
+Před ukázkou na příkladech si ještě zavedeme jedno značení, které budeme potřebovat.
+\begin{definition}[Logická ekvivalence výrokových formulí]
+    Mějme výrokové formule $\varphi$ a $\psi$. Řekneme, že $\varphi$ a $\psi$ jsou \emph{logicky ekvivalentní}, což zapisujeme jako $\varphi\equiv\psi$, pokud je formule $\varphi \iff \psi$ pro všechny pravdivostní hodnoty výrokových proměnných obsažených ve $\varphi$ a $\psi$ pravdivá.
+\end{definition}
+
+Pokud tedy budeme mít např. formule
+\begin{align*}
+    \varphi_1 &\sim \neg (A \land B),\\
+    \varphi_2 &\sim \neg A \lor \neg B,
+\end{align*}
+pak můžeme psát $\varphi\equiv\psi$, neboť jak se lze přesvědčit, formule $\neg (A \land B) \iff \neg A \lor \neg B$ je vždy pravdivá.\par
+Nabízí se otázka: jaký je rozdíl mezi $\equiv$ a $\iff$? Formálně vzato bychom mohli mezi formule jednoduše vkládat ekvivalenci, avšak pak se nám tato logická spojka mohla plést s ekvivalencemi, které jsou součástí $\varphi$ a $\psi$.
+
+\begin{example}\label{ex:vyrokova_formule_1}
+    Mějme formuli
+    \begin{equation*}
+        \varphi\sim A \land \neg B \iff A \lor B.
+    \end{equation*}
+    Pro jaké pravdivostní hodnoty výroků $A$ a $B$ je formule $\varphi$ pravdivá?
+    \begin{solution}
+        Postupujme způsobem popsaným výše, tj. rozdělme nejdříve danou formuli na dílčí formule. V tomto případě dílčími formulemi $\varphi$ jsou
+        \begin{equation*}
+            \varphi_1\sim A \land \neg B \quad \text{a} \quad \varphi_2\sim A \lor B,
+        \end{equation*}
+        které jsou spojeny ekvivalencí $\iff$, tj.
+        \begin{equation*}
+            \varphi\sim \varphi_1 \iff \varphi_2.
+        \end{equation*}
+        Formule $\varphi_1$ obsahuje atomický výrok $A$ a formuli $\neg B$ spojené konjunkcí $\land$.\linebreak Označme tedy ještě
+        \begin{equation*}
+            \varphi_3\sim \neg B
+        \end{equation*}
+        $\varphi_3$ již obsahuje pouze atomický výrok $B$ v negaci $\neg$.\par
+        Podívejme se nyní na dílčí formuli $\varphi_2$. Ta obsahuje atomické výroky $A$ a $B$ spojené disjunkcí $\lor$. Zapišme nyní vše zmíněné po řadě do tabulky pravdivostních hodnot (viz tabulka \ref{tab:ex_vyrokova_formule_1}).\par
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{|cc|cccc|}
+            \hline
+            $A$ & $B$ & $\varphi_3\sim \neg B$ & $\varphi_1\sim A \land \neg B$ & $\varphi_2\sim A \lor B$ & $\varphi\sim A \land \neg B \iff A \lor B$ \\ \hline
+            1   & 1   & 0               & 0                          & 1                    & 0                                          \\
+            1   & 0   & 1               & 1                          & 1                    & 1                                          \\
+            0   & 1   & 0               & 0                          & 1                    & 0                                          \\
+            0   & 0   & 1               & 0                          & 0                    & 1                                          \\ \hline
+            \end{tabular}
+            \caption{Tabulka pravdivostních hodnot pro $\varphi_1$, $\varphi_2$, $\varphi_3$ a $\varphi$}
+            \label{tab:ex_vyrokova_formule_1}
+        \end{table}
+        Z tabulky \ref{tab:ex_vyrokova_formule_1} můžeme již vidět, že formule $\varphi$ je pravdivá pro $A\equiv 1$ a $B\equiv 0$, nebo pro $A\equiv 0$ a $B\equiv 0$.
+    \end{solution}
+\end{example}
+
+Tento středoškolský postup je zcela jistě vždy funkční. Avšak ne vždy je moudré jej ihned aplikovat. Zkusme se podívat ještě na jeden příklad výrokové formule.
+\begin{example}\label{ex:vyrokova_formule_2}
+    Mějme logickou formuli
+    \begin{equation*}
+        \psi\sim (A \land \neg A \implies B) \lor \bigl((A \iff B) \land (C \lor \neg C)\bigr).
+    \end{equation*}
+    Pro jaké pravdivostní hodnoty výroků $A,B,C$ je formule $\psi$ pravdivá?
+    \begin{solution}
+        V tuto chvíli bychom aplikací metody použití v příkladu \ref{ex:vyrokova_formule_1} museli vyšetřit pravdivostní hodnotu formule $\psi$ pro celkem $2^3=8$ různých kombinací pravdivostních hodnot $A,B,C$. Jistě bychom takto též došli k řešení, nicméně práci si můžeme značně ulehčit. (Prosím čtenáře, aby se zde pozorněji zaměřil na formuli $\psi$ v zadání.)\par
+        Ve skutečnosti jsou některé dílčí formule zjednodušitelné. Zaměřme se pro začátek na formuli
+        \begin{equation*}
+            A \land \neg A.
+        \end{equation*}
+        Může tato formule být někdy pravdivá? Jistě, že nemůže. Libovolný výrok buď \textbf{platí a nebo platí jeho negace}, což nikdy nemůže nastat současně. Taková formule má pak vždy pravdivostní hodnotu 0 bez ohledu na pravdivostní hodnotu $A$. Tedy
+        \begin{equation*}
+            A \land \neg A\equiv 0.
+        \end{equation*}
+        Z výše uvedeného také ovšem plyne, že formule
+        \begin{equation*}
+            C \lor \neg C\equiv 1,
+        \end{equation*}
+        neboť opět platí buď $C$, nebo jeho negace $\neg C$.\par
+        Vyšetřovanou formuli $\psi$ tedy můžeme zjednodušit
+        \begin{align*}
+            \psi&\sim \bigl((\overbrace{A \land \neg A}^{\equiv 0}) \implies B\bigr) \lor \bigl((A \iff B) \land (\overbrace{C \lor \neg C}^{\equiv 1})\bigr)\equiv  \\ &\equiv (0 \implies B) \lor \bigl((A \iff B) \land 1\bigr).
+        \end{align*}
+        Tento krok nám však umožňuje provést další úpravy. Podívejme se blíže na formuli
+        \begin{equation*}
+            (A \iff B) \land 1.
+        \end{equation*}
+        Výsledek této konjunkce vždy bude záviset na pouze na pravdivostní hodnotě $A \iff B$, tzn. konjunkce je zde nadbytečná a můžeme psát
+        \begin{equation*}
+            (A \iff B) \land 1 \equiv  A \iff B.
+        \end{equation*}
+        Čeho si lze dále všimnout je, že výrok
+        \begin{equation*}
+            0 \implies B
+        \end{equation*}
+        je také vždy pravdivý (viz tabulka \ref{tab:logicke_spojky}). Celkově se tedy výroková formule $\psi$ zjednoduší takto
+        \begin{align*}
+            \psi&\sim (\overbrace{0 \implies B}^{\equiv 1}) \lor \bigl(\overbrace{(A \iff B) \land 1}^{\equiv A \iff B}\bigr)\equiv  \\ &\equiv 1 \lor (A \iff B).
+        \end{align*}
+        Disjunkce je však pravdivá právě tehdy, když je alespoň jeden z výroků pravdivý, což zde platí. Z tohoto dostáváme výsledek, že
+        \begin{equation*}
+            \psi\equiv 1.
+        \end{equation*}
+        Tedy bez ohledu na to, jaké pravdivostní hodnoty budou mít výroky $A,B,C$, bude formule $\psi$ vždy pravdivá. Pokud bychom přeci jen přistoupili na použití tabulkové metody, které jsme se zpočátku vyhnuli, můžeme se skutečně přesvědčit, že náš závěr je správný (viz tabulky \ref{tab:ex_vyrokova_formule_2_cast_1} a \ref{tab:ex_vyrokova_formule_2_cast_2}).
+        \begin{table}[h]
+            \centering
+            \begin{tabular}{|ccc|cccccc|}
+            \hline
+            $A$ & $B$ & $C$ & $\neg A$ & $\neg C$ & $A \land \neg A$ & $C \lor \neg C$ & $A \iff B$ & $(A \land \neg A) \implies B$ \\ \hline
+            1   & 1   & 1   & 0        & 0        & 0                & 1                 & 1          & 1                             \\
+            1   & 1   & 0   & 0        & 1        & 0                & 1                 & 1          & 1                             \\
+            1   & 0   & 1   & 0        & 0        & 0                & 1                 & 0          & 1                             \\
+            1   & 0   & 0   & 0        & 1        & 0                & 1                 & 0          & 1                             \\
+            0   & 1   & 1   & 1        & 0        & 0                & 1                 & 0          & 1                             \\
+            0   & 1   & 0   & 1        & 1        & 0                & 1                 & 0          & 1                             \\
+            0   & 0   & 1   & 1        & 0        & 0                & 1                 & 1          & 1                             \\
+            0   & 0   & 0   & 1        & 1        & 0                & 1                 & 1          & 1                             \\ \hline
+            \end{tabular}
+            \caption{Tabulka pravdivostních hodnot podformulí formule $\psi$ (1. část).}
+            \label{tab:ex_vyrokova_formule_2_cast_1}
+        \end{table}
+        \begin{table}[h]
+            \centering
+            \begin{tabular}{|ccc|cc|}
+            \hline
+            $A$ & $B$ & $C$ & $(A \iff B) \land (C \lor \neg C)$ & $\psi$ \\ \hline
+            1   & 1   & 1   & 1                                  & 1                                                                                       \\
+            1   & 1   & 0   & 1                                  & 1                                                                                       \\
+            1   & 0   & 1   & 0                                  & 1                                                                                       \\
+            1   & 0   & 0   & 0                                  & 1                                                                                       \\
+            0   & 1   & 1   & 0                                  & 1                                                                                       \\
+            0   & 1   & 0   & 0                                  & 1                                                                                       \\
+            0   & 0   & 1   & 1                                  & 1                                                                                       \\
+            0   & 0   & 0   & 1                                  & 1                                                                                       \\ \hline
+            \end{tabular}
+            \caption{Tabulka pravdivostních hodnot podformulí formule $\psi$ (2. část).}
+            \label{tab:ex_vyrokova_formule_2_cast_2}
+        \end{table}
+    \end{solution}
+\end{example}
+Tento typ formulí je poměrně významný a proto pro ně zavádíme speciální pojmenování v definici \ref{def:tautologie}.
+\begin{definition}[Tautologie]\label{def:tautologie}
+    Výrokovou formuli $\varphi$ nazveme \emph{tautologií}, pokud $\varphi\equiv 1$.
+\end{definition}
+
+Některé tautologie jsme využili již pri řešení příkladu \ref{ex:vyrokova_formule_2}. Uveďme si zde ještě několik dalších významných příkladů.
+\begin{theorem}[Významné tautologie]\label{thm:vyznamne_tautologie}
+    Následující výrokové formule jsou tautologie:
+    \begin{enumerate}[label=(\roman*)]
+        \item\label{item:tautologie_1} $\neg (A \iff \neg A)$
+        \item\label{item:zakon_vylouceneho_tretiho} $A \lor \neg A$ \rightnote{zákon vyloučeného třetího}
+        \item\label{item:zakon_identity} $A \iff A$ \rightnote{zákon identity}
+        \item\label{item:zakon_dvoji_negace} $\neg\neg A \iff A$ \rightnote{zákon dvojí negace}
+        \item\label{item:de_morgan_1} $\neg (A \land B) \iff \neg A \lor \neg B$ \rightnote{de Morganovo pravidlo}
+        \item\label{item:de_morgan_2} $\neg (A \lor B) \iff \neg A \land \neg B$ \rightnote{de Morganovo pravidlo}
+        \item\label{item:modus_ponens} $\bigl(A \land (A \implies B)\bigr) \implies B)$ \rightnote{pravidlo Modus ponens\footnote{Česky \emph{pravidlo vynětí}.}}
+        \item\label{item:modus_tollens_1} $\bigl((A \implies B) \land \neg B\bigr) \implies \neg A$ \rightnote{pravidlo Modus tollens\footnote{Česky \emph{popírání důsledku}.}}
+        \item\label{item:reductio_ad_absurdum} $(A \implies \neg A) \implies \neg A$\rightnote{reductio ad absurdum}
+        \item\label{item:tautologie_5} $(A \implies B) \iff (\neg B \implies \neg A)$
+        \item\label{item:tautologie_2} $(A \iff B) \iff (A \implies B) \land (B \implies A)$
+        \item\label{item:tautologie_3} $(A \implies B) \iff B \lor \neg A$
+        \item\label{item:tautologie_4} $(A \implies B) \land (B \implies C) \iff (A \implies C)$
+        \item\label{item:tautologie_6} $A \land (B \lor C) \iff (A \land B) \lor (A \land C)$
+        \item\label{item:tautologie_7} $A \lor (B \land C) \iff (A \lor B) \land (A \lor C)$
+    \end{enumerate}
+\end{theorem}
+
+Čtenář si pravdivosti těchto výroků může ověřit prostým sestavením tabulek pravdivostních hodnot daných logických formulí. Tautologie \ref{item:modus_ponens}, \ref{item:tautologie_5} a \ref{item:tautologie_2} se hodně využívají při dokazování tvrzení (viz příloha \ref{chap:dukazy}).
