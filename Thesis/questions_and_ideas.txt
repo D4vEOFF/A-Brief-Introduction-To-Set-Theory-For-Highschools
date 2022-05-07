@@ -1,5 +1,3 @@
 Otázky:
-- Uvádět definici konečné množiny? (Porovnávání podle počtu prvků)
-- Vhodné zakončení poslední kapitoly?
-- Vhodné zakončení zmínky o kardinálech v příloze?
 - Uvést seznam obrázků před hlavním obsahem nebo za?
+- Smazat "ordinál" z klíčových slov? (V práci se termín nevyskytuje)

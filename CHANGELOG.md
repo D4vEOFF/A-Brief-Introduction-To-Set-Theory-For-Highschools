@@ -1,5 +1,13 @@
 # Záznam změn
 
+## 7. 5. 2022
+- Dokončen poslední odstavec v příloze **"Dodatky k porovnávání nekonečných množin"**.
+
+## 6. 5. 2022
+- Přidány nedělitelné mezery před jednopísmenné předložky.
+- Přidána zmínka a hypotéze kontinua na závěr poslední kapitoly.
+- Důkaz Cantorovy věty pro spočetné množiny přesunut do přílohy.
+
 ## 4. 5. 2022
 - Opraveny některé chyby v obrázcích.
 - Přeformulován třetí Peanův axiom.
