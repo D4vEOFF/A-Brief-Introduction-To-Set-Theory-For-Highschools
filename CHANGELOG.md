@@ -2,6 +2,8 @@
 
 ## 7. 5. 2022
 - Dokončen poslední odstavec v příloze **"Dodatky k porovnávání nekonečných množin"**.
+- Dopsán abstrakt (vč. anglické verze).
+- Část s informacemi o práci (EN) přesunuta na separátní stránku.
 
 ## 6. 5. 2022
 - Přidány nedělitelné mezery před jednopísmenné předložky.
