@@ -242,7 +242,7 @@ FUNCTION {format.names}
                 'skip$
               if$
               t "others" =
-                { " a kol." * }                               %% et~al. changed to a kol. by AK
+                { " a~kol." * }                               %% et~al. changed to a~kol. by AK
                 { " {\rm a} " * t * }                         %% and changed to {\rm a} by AK
               if$
             }
@@ -335,8 +335,8 @@ FUNCTION {format.full.names}
                 'skip$
               if$
               t "others" =
-                { " a kol." * }                               %% et~al. changed to a kol. by AK
-                { " a " * t * }                               %% and changed to a by AK
+                { " a~kol." * }                               %% et~al. changed to a~kol. by AK
+                { " a~" * t * }                               %% and changed to a~by AK
               if$
             }
           if$
@@ -513,7 +513,7 @@ FUNCTION {format.number.series}
           if$
           number tie.or.space.connect
           series empty$
-            { "there's a number but no series in " cite$ * warning$ }
+            { "there's a~number but no series in " cite$ * warning$ }
             { " in " * series * }
           if$
         }
@@ -580,7 +580,7 @@ FUNCTION {format.vol.num.pages}
     'skip$
     { "\penalty0 (" number * ")" * *
       volume empty$
-        { "there's a number but no volume in " cite$ * warning$ }
+        { "there's a~number but no volume in " cite$ * warning$ }
         'skip$
       if$
     }
@@ -601,7 +601,7 @@ FUNCTION {format.vol.num.eid}
     'skip$
     { "\penalty0 (" number * ")" * *
       volume empty$
-        { "there's a number but no volume in " cite$ * warning$ }
+        { "there's a~number but no volume in " cite$ * warning$ }
         'skip$
       if$
     }
@@ -1185,12 +1185,12 @@ FUNCTION {format.lab.names}
   s #1 "{vv~}{ll}" format.name$
   s num.names$ duplicate$
   #2 >
-    { pop$ " a kol." * }            %% originally et~al.
+    { pop$ " a~kol." * }            %% originally et~al.
     { #2 <
         'skip$
         { s #2 "{ff }{vv }{ll}{ jj}" format.name$ "others" =
-            { " a kol." * }                                            %% AK change
-            { " a " * s #2 "{vv~}{ll}" format.name$ * }                %% AK change
+            { " a~kol." * }                                            %% AK change
+            { " a~" * s #2 "{vv~}{ll}" format.name$ * }                %% AK change
           if$
         }
       if$

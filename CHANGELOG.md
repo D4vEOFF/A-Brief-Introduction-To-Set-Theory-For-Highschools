@@ -1,5 +1,8 @@
 # Záznam změn
 
+## 8. 5. 2022
+- Upraveno formátování.
+
 ## 7. 5. 2022
 - Dokončen poslední odstavec v příloze **"Dodatky k porovnávání nekonečných množin"**.
 - Dopsán abstrakt (vč. anglické verze).

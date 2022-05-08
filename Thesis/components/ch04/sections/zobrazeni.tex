@@ -1,7 +1,7 @@
 \section{Zobrazení}\label{sec:zobrazeni}
-Jedním z nejdůležitějších typů relací je tzv. \emph{zobrazení}. Zde se zároveň dostáváme trochu zpět k~tématu, kterým se čtenář na střední škole jistě zabýval, akorát se o něm nemluvilo v~souvislosti s relacemi, a to sice k \emph{funkcím}. Termíny jako definiční obor, obor hodnot, aj. nejspíše tak pro nás nebudou velkou neznámou, ale přesto nezanedbáme jejich formální zavedení.
+Jedním z nejdůležitějších typů relací je tzv. \emph{zobrazení}. Zde se zároveň dostáváme trochu zpět k~tématu, kterým se čtenář na střední škole jistě zabýval, akorát se o~něm nemluvilo v~souvislosti s relacemi, a~to sice k \emph{funkcím}. Termíny jako definiční obor, obor hodnot, aj. nejspíše tak pro nás nebudou velkou neznámou, ale přesto nezanedbáme jejich formální zavedení.
 
-\subsection{Zavedení a související pojmy}
+\subsection{Zavedení a~související pojmy}
 \begin{definition}[Zobrazení]\label{def:zobrazeni}
     \emph{Zobrazením z množiny $X$ do množiny $Y$} nazýváme relaci $f\subseteq X\times Y$, když platí
     \begin{equation*}
@@ -20,7 +20,7 @@ a to, že zobrazení $f$ přiřazuje prvku $x$ prvek $y$ vyjádříme zápisem
 \begin{equation*}
     \mapto{f}{x}{y}.
 \end{equation*}
-Tato definice by nám měla být povědomá, neboť takto jsme si nejspíše na střední škole definovali funkci. Jaký je tedy rozdíl mezi \textbf{funkcí} a \textbf{zobrazením}? Ve skutečnosti toto nene v~datematice jednotné. V určitých odvětvích se tyto termíny považují za synonyma a jinde se zase naopak funkcí nazývá speciální typ zobrazení, kdy množina $Y$ je číselná, tj. $\R$, $\C$, $\Q$, \dots (tedy funkce je zobrazení, avšak ne naopak). My tyto pojmy budeme v~dalším textu rozlišovat, aby byl výklad jasnější.\par
+Tato definice by nám měla být povědomá, neboť takto jsme si nejspíše na střední škole definovali funkci. Jaký je tedy rozdíl mezi \textbf{funkcí} a~\textbf{zobrazením}? Ve skutečnosti toto nene v~datematice jednotné. V určitých odvětvích se tyto termíny považují za synonyma a~jinde se zase naopak funkcí nazývá speciální typ zobrazení, kdy množina $Y$ je číselná, tj. $\R$, $\C$, $\Q$, \dots (tedy funkce je zobrazení, avšak ne naopak). My tyto pojmy budeme v~dalším textu rozlišovat, aby byl výklad jasnější.\par
 Např. zobrazení $\map{f}{\set{1,2,3,4}}{\set{a,b,c}}$, kde $f=\set{(1,b),\,(2,b),\,(3,a),\,(4,c)}$ je znázorněno na obrázku \ref{fig:zobrazeni}.
 \begin{figure}[H]
     \centering
@@ -31,9 +31,9 @@ Např. zobrazení $\map{f}{\set{1,2,3,4}}{\set{a,b,c}}$, kde $f=\set{(1,b),\,(2,
 U zobrazení $\map{f}{X}{Y}$, kde $\mapto{f}{x}{y}$, se
 \begin{itemize}
     \item $x$ nazývá \emph{vzor} prvku $y$ a
-    \item $y$ se nazývá \emph{obraz} prvku $x$ nebo také \emph{hodnota zobrazení $f$ v bodě $x$}.
+    \item $y$ se nazývá \emph{obraz} prvku $x$ nebo také \emph{hodnota zobrazení $f$ v~bodě $x$}.
 \end{itemize}
-Množiny $X$ a $Y$ pak po řadě nazýváme \emph{množina vzorů} a \emph{množina obrazů}. U funkcí je zvykem tyto množiny nazývat \emph{definiční obor} a \emph{obor hodnot}.\par
+Množiny $X$ a~$Y$ pak po řadě nazýváme \emph{množina vzorů} a~\emph{množina obrazů}. U funkcí je zvykem tyto množiny nazývat \emph{definiční obor} a~\emph{obor hodnot}.\par
 Též se zavádí \emph{obraz množiny}, tj. je-li $A\subseteq X$, pak
 \begin{equation*}
     f(A)=\set{f(a) \admid a\in X}.
@@ -45,16 +45,16 @@ V případě funkce, co by podmnožiny kartézského součinu, byl čtenář nej
     \caption{Graf funkce $\map{f}{\R}{\R}$, kde $f(x)=x^3-x^2+1$.}
     \label{fig:funkce_graf}
 \end{figure}
-Tento způsob proto budeme používat i u zobrazení (tedy nejen u funkcí).
+Tento způsob proto budeme používat i~u zobrazení (tedy nejen u funkcí).
 
 \subsection{Druhy zobrazení}
 Skládání zobrazení je zcela stejné, jako v~případě relací (ostatně zobrazení je relace). Avšak pro ujasnění si jej zformulujme jako samostatnou definici.
 \begin{definition}[Skládání zobrazení]\label{def:skladani_zobrazeni}
-    Nechť $\map{f}{X}{Y}$ a $\map{g}{Y}{Z}$ jsou zobrazení. \emph{Složením zobrazení $f$ a $g$} nazveme zobrazení $\map{h}{X}{Z}$, pro které platí
+    Nechť $\map{f}{X}{Y}$ a~$\map{g}{Y}{Z}$ jsou zobrazení. \emph{Složením zobrazení $f$ a~$g$} nazveme zobrazení $\map{h}{X}{Z}$, pro které platí
     \begin{equation*}
         \forall x\in X: h(x)=g(f(x)).
     \end{equation*}
-    Složení zobrazení $g$ a $f$ se značí (stejně jako u relací) $g\circ f$, tzn. $h=g \circ f$.
+    Složení zobrazení $g$ a~$f$ se značí (stejně jako u relací) $g\circ f$, tzn. $h=g \circ f$.
 \end{definition}
 Podle právě zformulované definice \ref{def:skladani_zobrazeni} tedy platí:
 \begin{equation*}
@@ -66,51 +66,51 @@ Podle právě zformulované definice \ref{def:skladani_zobrazeni} tedy platí:
     \begin{enumerate}[label=(\roman*)]
         \item \emph{prosté} (též \emph{injektivní} či \emph{injekce}), jestliže $\forall x,y\in X,\;x\neq y: f(x)\neq f(y)$.
         \item \emph{na} (též \emph{surjektivní}\footnote{Z francouzštiny, čteme "syrjektivní"/"syrjekce".} či \emph{surjekce}), jestliže $\forall y\in Y, \exists x\in X: f(x)=y$.
-        \item \emph{vzájemně jednoznačné} (též \emph{bijektivní} či \emph{bijekce}), když $f$ je prosté a na.
+        \item \emph{vzájemně jednoznačné} (též \emph{bijektivní} či \emph{bijekce}), když $f$ je prosté a~na.
     \end{enumerate}
 \end{definition}
 \begin{example}
-    Ukázky některých zobrazení a jejich klasifikace podle \ref{def:druhy_zobrazeni}. ($A$ je libovolná množina.)
+    Ukázky některých zobrazení a~jejich klasifikace podle \ref{def:druhy_zobrazeni}. ($A$ je libovolná množina.)
     \createcnt{funccnt}
     \begin{enumerate}[label=(\roman*)]
         \item Zobrazení $\map{f_{\printnstepcnt{funccnt}}}{\Z}{\Z}$, kde $f_{\printcnt{funccnt}}(n)=-n$, je \emph{bijekce}.
-        \item Zobrazení $\map{f_{\printnstepcnt{funccnt}}}{\Z}{\N}$, kde $f_{\printcnt{funccnt}}(n)=\abs{n}+1$, je \emph{na}, avšak není \emph{prosté} a tedy ani \emph{bijekce}.
+        \item Zobrazení $\map{f_{\printnstepcnt{funccnt}}}{\Z}{\N}$, kde $f_{\printcnt{funccnt}}(n)=\abs{n}+1$, je \emph{na}, avšak není \emph{prosté} a~tedy ani \emph{bijekce}.
         \item Zobrazení $\map{f_{\printnstepcnt{funccnt}}}{\R}{\R_0^+}$, kde $f_{\printcnt{funccnt}}(x)=x^2$, je \emph{na}, ale není \emph{prosté}.
         \item Zobrazení $\map{f_{\printnstepcnt{funccnt}}}{\R}{\R_0^+}$, kde $f_{\printcnt{funccnt}}(x)=x^2+1$, není \emph{prosté}, ani \emph{na}.
         \item Zobrazení $\map{f_{\printnstepcnt{funccnt}}}{\R}{\R^+}$, kde $f_{\printcnt{funccnt}}(x)=e^x$, je \emph{bijekce}.
         \item\label{item:inverzni_zobrazeni} Zobrazení $\map{f_{\printnstepcnt{funccnt}}}{A^2}{A^2}$, kde $f_{\printcnt{funccnt}}\bigl((x,y)\bigr)=(y,x)$, je \emph{bijekce}.
         \item\label{item:identita} Zobrazení $\map{f_{\printnstepcnt{funccnt}}}{A}{A}$, kde $f_{\printcnt{funccnt}}(x)=x$, je \emph{bijekce}.
-        \item \sloppy Zobrazení $\map{f_{\printnstepcnt{funccnt}}}{A}{\powset{A}}$, kde $A$ je libovolná množina a $f_{\printcnt{funccnt}}(a)=\set{X\in\powset{A}\admid a\in X}$, je \emph{bijekce}.
+        \item \sloppy Zobrazení $\map{f_{\printnstepcnt{funccnt}}}{A}{\powset{A}}$, kde $A$ je libovolná množina a~$f_{\printcnt{funccnt}}(a)=\set{X\in\powset{A}\admid a\in X}$, je \emph{bijekce}.
     \end{enumerate}
 \end{example}
 (Inspirováno \cite{Becvar2019}, str. 10.)\par
-Psát v~matematice $f\bigl((x_1,x_2,\dots,x_n)\bigr)$ je nezvyklé (jak jsme provedli v \ref{item:inverzni_zobrazeni}). Nejspíše by dávalo větší smysl v~takovém případě nepsat vnořené závorky. Proto si zaveďme následující úmluvu.
+Psát v~matematice $f\bigl((x_1,x_2,\dots,x_n)\bigr)$ je nezvyklé (jak jsme provedli v~\ref{item:inverzni_zobrazeni}). Nejspíše by dávalo větší smysl v~takovém případě nepsat vnořené závorky. Proto si zaveďme následující úmluvu.
 \begin{convention}
-    Zápis $f\bigl((x_1,x_2,\dots,x_n)\bigr)$ budeme nahrazovat symbolem $f(x_1,x_2,\dots,x_n)$ stejného významu (tj. obraz uspořádané $n$-tice).
+    Zápis $f\bigl((x_1,x_2,\dots,x_n)\bigr)$ budeme jednoduše nahrazovat symbolem $f(x_1,x_2,\dots,x_n)$ stejného významu (tj. obraz uspořádané $n$-tice).
 \end{convention}
 Poslední bod \ref{item:identita} je dosti významným příkladem zobrazení, které si zaslouží vlastní definici (viz \ref{def:identita}).
 \begin{definition}[Identita]\label{def:identita}
     Nechť $\map{f}{X}{X}$ je zobrazení takové, že $f(x)=x$. Pak $f$ nazýváme \emph{identitou} nebo též \emph{identické zobrazení}a značíme jej $1_X$.
 \end{definition}
-U zobrazení a jejich skládání můžeme pozorovat jisté závislosti. Jejich důkazy jsou triviální a plynou přímo z definice, ale přesto si je zde uvedeme.
+U zobrazení a~jejich skládání můžeme pozorovat jisté závislosti. Jejich důkazy jsou triviální a~plynou přímo z definice, ale přesto si je zde uvedeme.
 \begin{proposition}[Vlastnosti skládání zobrazení]\label{prop:vlastnosti_skladani_zobrazeni}
-    Nechť $\map{f}{X}{Y}$ a $\map{g}{Y}{Z}$ jsou zobrazení. Pak
+    Nechť $\map{f}{X}{Y}$ a~$\map{g}{Y}{Z}$ jsou zobrazení. Pak
     \begin{enumerate}[label=(\roman*)]
-        \item\label{item:skladani_injekce} jsou-li $f,g$ prostá zobrazení, je i $g\circ f$ prosté zobrazení.
-        \item\label{item:skladani_surjekce} jsou-li $f,g$ zobrazení na, je i $g\circ f$ zobrazení na.
-        \item\label{item:skladani_bijekce} jsou-li $f,g$ bijekce, je i $g\circ f$ bijekce.
+        \item\label{item:skladani_injekce} jsou-li $f,g$ prostá zobrazení, je i~$g\circ f$ prosté zobrazení.
+        \item\label{item:skladani_surjekce} jsou-li $f,g$ zobrazení na, je i~$g\circ f$ zobrazení na.
+        \item\label{item:skladani_bijekce} jsou-li $f,g$ bijekce, je i~$g\circ f$ bijekce.
     \end{enumerate}
 \end{proposition}
 \begin{proof}
-    \textit{(i)}. Budiž dány prvky $x,y\in X$ takové, že $x\neq y$. Protože $f$ je prosté, pak $f(x)\neq f(y)$. Protože prvky $f(x),f(y)\in Y$ jsou různé a $g$ je prosté, pak $g(f(x))\neq g(f(y))$.\par
-    \textit{(ii)}. Zde budeme postupovat opačně. Mějme prvek $z\in Z$. Z předpokladu, že $g$ je na, plyne, že existuje $y\in Y$ takové, že $g(y)=z$. Analogicky pro $y$ musí existovat $x\in X$ takové, že $f(x)=y$, neboť $f$ je na. Tzn. $g(f(x))=z$.\par
-    \textit{(iii)}. Přímý důsledek \textit{(i)} a \textit{(ii)}.
+    \textit{(i)}. Budiž dány prvky $x,y\in X$ takové, že $x\neq y$. Protože $f$ je prosté, pak $f(x)\neq f(y)$. Protože prvky $f(x),f(y)\in Y$ jsou různé a~$g$ je prosté, pak $g(f(x))\neq g(f(y))$.\par
+    \textit{(ii)}. Zde budeme postupovat opačně. Mějme prvek $z\in Z$. Z předpokladu, že $g$ je surjektivní, plyne, že existuje $y\in Y$ takové, že $g(y)=z$. Analogicky pro $y$ musí existovat $x\in X$ takové, že $f(x)=y$, neboť $f$ je surjektivní. Tzn. $g(f(x))=z$.\par
+    \textit{(iii)}. Přímý důsledek \textit{(i)} a~\textit{(ii)}.
 \end{proof}
 Princip bodu \ref{item:skladani_bijekce} je znázorněn na obrázku \ref{fig:skladani_bijekci}.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=\normalipe]{ch02_skladani_bijekci.pdf}
-    \caption{Příklad složení bijekcí $f$ a $g$.}
+    \caption{Příklad složení bijekcí $f$ a~$g$.}
     \label{fig:skladani_bijekci}
 \end{figure}
 (Sekce inspirována \cite{MatousekNesetril2009}, str. 39--43.)

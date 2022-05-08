@@ -1,16 +1,16 @@
-\section{Speciálně o uspořádaných množinách}\label{sec:specialne_o_usporadanych_mozinach}
-Uspořádání v matematice lze dále klasifikovat. Už jsme měli možnost vidět různé příklady tohoto typu relace, kdy naším primárním cílem bylo si ilustrovat jeho vlastnosti, jimiž je definována a ukázat si pro nás jejich výhodný jejich způsob zakreslování -- \emph{Hasseovými diagramy}. V této části se více zaměříme na vlastnosti uspořádání, zavedeme si další typy a především se podíváme na tzv. \emph{dobře uspořádané množiny}.\par
-V ohledu, v jakém se budeme dále uspořádáním věnovat, se nám bude lépe pracovat s následujícím termínem.
+\section{Speciálně o~uspořádaných množinách}\label{sec:specialne_o_usporadanych_mozinach}
+Uspořádání v~matematice lze dále klasifikovat. Už jsme měli možnost vidět různé příklady tohoto typu relace, kdy naším primárním cílem bylo si ilustrovat jeho vlastnosti, jimiž je definována a~ukázat si pro nás jejich výhodný jejich způsob zakreslování -- \emph{Hasseovými diagramy}. V této části se více zaměříme na vlastnosti uspořádání, zavedeme si další typy a~především se podíváme na tzv. \emph{dobře uspořádané množiny}.\par
+V ohledu, v~jakém se budeme dále uspořádáním věnovat, se nám bude lépe pracovat s následujícím termínem.
 \begin{definition}[Uspořádaná množina]
     Nechť $R$ je uspořádání na množině $X$. Pak uspořádanou dvojici $(X,R)$ nazýváme \emph{uspořádaná množina}.
 \end{definition}
-Uveďme si nejdříve definici těchto pojmů a poté si vysvětleme jejich význam.
+Uveďme si nejdříve definici těchto pojmů a~poté si vysvětleme jejich význam.
 \begin{definition}[Lineární uspořádání]
     Nechť $(X,R)$ je uspořádaná množina. Pak $R$, resp. $(X,R)$ nazýváme \emph{lineárním uspořádáním}, resp. \emph{lineárně uspořádanou množinou}, jestliže $\forall x,y\in X: xRy \lor yRx$.
 \end{definition}
-Pojem \emph{částečné uspořádání}, resp. \emph{částečně uspořádaná množina} jsou používány naopak pro uspořádání, která nemusí být nutně lineární. Jedná se tedy pouze o obšírnější termín. Obecně platí, že každá lineárně uspořádaná množina je částečně uspořádanou, avšak ne každá částečně uspořádaná množina je lineárně uspořádanou.
+Pojem \emph{částečné uspořádání}, resp. \emph{částečně uspořádaná množina} jsou používány naopak pro uspořádání, která nemusí být nutně lineární. Jedná se tedy pouze o~obšírnější termín. Obecně platí, že každá lineárně uspořádaná množina je částečně uspořádanou, avšak ne každá částečně uspořádaná množina je lineárně uspořádanou.
 \begin{example}\label{ex:cast_a_lin_usporadani}
-    Klasifikace některých známých uspořádání a jejich Hasseovy diagramy.
+    Klasifikace některých známých uspořádání a~jejich Hasseovy diagramy.
     \begin{enumerate}[label=(\roman*)]
         \item\label{item:usporadani_i} $(\N,\leq)$ je lineárně uspořádaná množina.
         \begin{figure}[H]
@@ -35,7 +35,7 @@ Pojem \emph{částečné uspořádání}, resp. \emph{částečně uspořádaná
         \end{figure}
     \end{enumerate}
 \end{example}
-Lze si všimnout, že díky antisymetrii tvoří prvky jistou "hierarchii". Např. v \ref{item:usporadani_i} v předešlém příkladu \ref{ex:cast_a_lin_usporadani} můžeme vidět z obrázku \ref{fig:priklad_usporadani_i}, že každému prvku "předchází" jiný prvek až na číslo 1. Podobně je tomu tak i u \ref{item:usporadani_ii} a \ref{item:usporadani_iii}. %S tím se pojí následující terminologie.
+Lze si všimnout, že díky antisymetrii tvoří prvky jistou "hierarchii". Např. v~\ref{item:usporadani_i} v~předešlém příkladu \ref{ex:cast_a_lin_usporadani} můžeme vidět z obrázku \ref{fig:priklad_usporadani_i}, že každému prvku "předchází" jiný prvek až na číslo 1. Podobně je tomu tak i~u \ref{item:usporadani_ii} a~\ref{item:usporadani_iii}. %S tím se pojí následující terminologie.
 % \begin{definition}[Bezprostřední předchůdce]\label{def:predchudce}
 %     Nechť $(X,R)$ je uspořádaná množina. Řekneme, že $x\in X$ je \emph{bezprostředním předchůdcem} prvku $y\in X$, pokud platí podmínky:
 %     \begin{enumerate}[label=(\roman*)]
@@ -43,7 +43,7 @@ Lze si všimnout, že díky antisymetrii tvoří prvky jistou "hierarchii". Nap�
 %         \item $\forall t\in X: \neg(xRt \land tRy)$.
 %     \end{enumerate}
 % \end{definition}
-% Podmínka \textit{(ii)} definice \ref{def:predchudce} výše říká, že neexistuje prvek $t$ takový, že by se nacházel "mezi" $x$ a $y$ (viz obrázek \ref{fig:predchudce_upresneni}).
+% Podmínka \textit{(ii)} definice \ref{def:predchudce} výše říká, že neexistuje prvek $t$ takový, že by se nacházel "mezi" $x$ a~$y$ (viz obrázek \ref{fig:predchudce_upresneni}).
 % \begin{figure}[H]
 %     \centering
 %     \begin{subfigure}{6cm}
@@ -61,11 +61,11 @@ Lze si všimnout, že díky antisymetrii tvoří prvky jistou "hierarchii". Nap�
 \begin{definition}[Porovnatelné prvky]\label{def:porovnatelnost}
     Nechť $(X,R)$ je uspořádaná množina. Řekneme, že prvky $x,y\in X$ jsou \emph{porovnatelné}, pokud $xRy \lor yRx$.
 \end{definition}
-Pro příklad nemusíme chodit daleko. Vezměme si všechny třeba všechny dělitele čísla 20, tj. $(\set{1,2,4,5,10,20},\mid)$, na obrázku \ref{fig:porovnatelnost_prvku} níže, kde je zeleně zvýrazněn příklad porovnatelných prvků a červeně příklad prvků, které nejsou porovnatelné.
+Pro příklad nemusíme chodit daleko. Vezměme si všechny třeba všechny dělitele čísla 20, tj. $(\set{1,2,4,5,10,20},\mid)$, na obrázku \ref{fig:porovnatelnost_prvku} níže, kde je zeleně zvýrazněn příklad porovnatelných prvků a~červeně příklad prvků, které nejsou porovnatelné.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=\normalipe]{ch02_porovnatelnost_prvku.pdf}
-    \caption{Diagram uspořádané množiny $(\set{1,2,4,5,10,20},\mid)$ se zvýrazněním porovnatelných a neporovnatelných prvků.}
+    \caption{Diagram uspořádané množiny $(\set{1,2,4,5,10,20},\mid)$ se zvýrazněním porovnatelných a~neporovnatelných prvků.}
     \label{fig:porovnatelnost_prvku}
 \end{figure}
 Naopak u lineárního uspořádání si můžeme snad uvědomit, že každá dvojice prvků je porovnatelná (z definice). S tím se pojí již trochu významově "užší" termíny, které pro nás budou stěžejní.
@@ -78,9 +78,9 @@ Naopak u lineárního uspořádání si můžeme snad uvědomit, že každá dvo
         \item \emph{největším}, pokud $\forall x\in X: xRa$.
     \end{enumerate}
 \end{definition}
-Na první pohled nemusí být rozdíl v~definici jednotlivých termínů zřejmý. Zkuste se však nad nimi zamyslet z pohledu porovnatelnosti prvků. Ve skutečnosti termíny \emph{nejmenší a největší prvek} jsou "silnější". Je-li např. prvek maximální, pak tvrdíme, že není s žádným z ostatních prvků množiny v~relaci. To ale však neznamená, že je se všemi prvky porovnatelný. (Opět vyzývám čtenáře, aby si zkusil rozmyslet.) Podobně je tomu i pro minimální prvek. Naopak největší a nejmenší prvek jsou vždy s každým prvkem porovnatelné. Lépe bude rozdíl v~těchto termínech vidět opět na příkladech.
+Na první pohled nemusí být rozdíl v~definici jednotlivých termínů zřejmý. Zkuste se však nad nimi zamyslet z pohledu porovnatelnosti prvků. Ve skutečnosti termíny \emph{nejmenší a~největší prvek} jsou "silnější". Je-li např. prvek maximální, pak tvrdíme, že není s žádným z ostatních prvků množiny v~relaci. To ale však neznamená, že je se všemi prvky porovnatelný. (Opět vyzývám čtenáře, aby si zkusil rozmyslet.) Podobně je tomu i~pro minimální prvek. Naopak největší a~nejmenší prvek jsou vždy s každým prvkem porovnatelné. Lépe bude rozdíl v~těchto termínech vidět opět na příkladech.
 \begin{example}\label{ex:min_max_prvek}
-    \sloppy Ukázky některých uspořádaných množin a jejich nejmenších/největších, resp. minimálních/maximálních prvků. Maximální/největší prvky jsou označeny oranžovou barvou a minimální/nejmenší prvky fialovou. 
+    \sloppy Ukázky některých uspořádaných množin a~jejich nejmenších/největších, resp. minimálních/maximálních prvků. Maximální/největší prvky jsou označeny oranžovou barvou a~minimální/nejmenší prvky fialovou. 
     \begin{enumerate}[label=(\roman*)]
         \item\label{item:min_max_prvek_i} Uspořádaná množina $(\N,\leq)$ má minimální prvek 1, ale nemá největší, ani maximální prvek.
         \begin{figure}[H]
@@ -89,11 +89,11 @@ Na první pohled nemusí být rozdíl v~definici jednotlivých termínů zřejm�
             \caption{Diagram uspořádané množiny $(\N,\leq)$ s minimálním prvkem.}
             \label{fig:min_max_prvek_i}
         \end{figure}
-        \item\label{item:min_max_prvek_ii} Uspořádaná množina $(\set{1,2,\dots,10},\mid)$ má nejmenší prvek 1 a maximální prvky 7, 8, 9 a 10, ale nemá největší prvek.
+        \item\label{item:min_max_prvek_ii} Uspořádaná množina $(\set{1,2,\dots,10},\mid)$ má nejmenší prvek 1 a~maximální prvky 7, 8, 9 a~10, ale nemá největší prvek.
         \begin{figure}[H]
             \centering
             \includegraphics[scale=\normalipe]{ch02_min_max_prvek_ii.pdf}
-            \caption{Diagram uspořádané množiny $(\set{1,2,\dots,10},\mid)$ s minimálním prvkem a dvěma maximálními prvky.}
+            \caption{Diagram uspořádané množiny $(\set{1,2,\dots,10},\mid)$ s minimálním prvkem a~dvěma maximálními prvky.}
             \label{fig:min_max_prvek_ii}
         \end{figure}
         \item\label{item:min_max_prvek_iii} Uspořádaná množina $(A^2,\preceq)$, kde $A=\set{a,b,c}$, definovaná předpisem
@@ -104,9 +104,9 @@ Na první pohled nemusí být rozdíl v~definici jednotlivých termínů zřejm�
         \begin{figure}[H]
             \centering
             \includegraphics[scale=\normalipe]{ch02_min_max_prvek_iii.pdf}
-            \caption{Diagram uspořádané množiny $(A^2,\preceq)$ s nejmenším prvkem a největším prvkem.}
+            \caption{Diagram uspořádané množiny $(A^2,\preceq)$ s nejmenším prvkem a~největším prvkem.}
             \label{fig:min_max_prvek_iii}
         \end{figure}
     \end{enumerate}
 \end{example}
-Ve skutečnosti si lze všimnout, že největší, resp. nejmenší prvek je vždy zároveň i maximální, resp. minimální. Opačné tvrzení však již neplatí.
+Ve skutečnosti si lze všimnout, že největší, resp. nejmenší prvek je vždy zároveň i~maximální, resp. minimální. Opačné tvrzení však již neplatí.

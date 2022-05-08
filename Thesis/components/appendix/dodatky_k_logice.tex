@@ -1,15 +1,15 @@
 \chapter{Dodatky k~logice}\label{chap:dodatky_k_logice}
-V kapitole o výrokovém a predikátovém počtu jsme pracovali s výrokovými a později predikátovými formulemi, kde jsme si pouze neformálně vysvětlili, co pod těmito termíny rozumíme. Formálněji můžeme k~těmto záležitostem přistoupit pomocí následující metadefinice.
-\begin{definition}[Výroková a atomická formule]\label{def:vyrokova_a_atomicka_formule}
-    
+V kapitole o~výrokovém a~predikátovém počtu jsme pracovali s výrokovými a~později predikátovými formulemi, kde jsme si pouze neformálně vysvětlili, co pod těmito termíny rozumíme. Formálněji můžeme k~těmto záležitostem přistoupit pomocí následující metadefinice.
+\begin{definition}[Výroková a~atomická formule]\label{def:vyrokova_a_atomicka_formule}
+    Termíny definujeme rekurzivně:
     \begin{enumerate}[label=(\roman*)]
         \item\label{item:formule_1} Každá výroková proměnná je \emph{výroková formule} (tzv. \emph{atomická formule}).
-        \item\label{item:formule_2} Jsou-li $\varphi$ a $\psi$ výrokové formule, pak $\neg (\varphi)$, $(\varphi) \land (\psi)$, $(\varphi) \lor (\psi)$, $(\varphi) \implies (\psi)$ a $(\varphi) \iff (\psi)$ jsou také výrokové formule.
-        \item\label{item:formule_3} Výraz, který nelze získat pomocí pravidel \ref{item:formule_1} a \ref{item:formule_2} není výrokovou formulí.
+        \item\label{item:formule_2} Jsou-li $\varphi$ a~$\psi$ výrokové formule, pak $\neg (\varphi)$, $(\varphi) \land (\psi)$, $(\varphi) \lor (\psi)$, $(\varphi) \implies (\psi)$ a~$(\varphi) \iff (\psi)$ jsou také výrokové formule.
+        \item\label{item:formule_3} Výraz, který nelze získat pomocí pravidel \ref{item:formule_1} a~\ref{item:formule_2} není výrokovou formulí.
     \end{enumerate}
 \end{definition}
-(Převzato z \cite{Fuchs2003}, str. 14 a \cite{BalcarStepanek1986}, str. 30).\par
-Definice výrokové formule \ref{def:vyrokova_a_atomicka_formule} nám v~podstatě říká, jakým způsobem můžeme sestrojit potenciálně všechny možné formule. Mějme výrokové proměnné $A$, $B$ a $C$. Ty jsou podle \ref{item:formule_1} v definici \ref{def:vyrokova_a_atomicka_formule} výrokovými formulemi. Podle \ref{item:formule_2} jsou pak formulemi i výrazy
+(Převzato z \cite{Fuchs2003}, str. 14 a~\cite{BalcarStepanek1986}, str. 30).\par
+Definice výrokové formule \ref{def:vyrokova_a_atomicka_formule} nám v~podstatě říká, jakým způsobem můžeme sestrojit potenciálně všechny možné formule. Mějme výrokové proměnné $A$, $B$ a~$C$. Ty jsou podle \ref{item:formule_1} v~definici \ref{def:vyrokova_a_atomicka_formule} výrokovými formulemi. Podle \ref{item:formule_2} jsou pak formulemi i~výrazy
 \begin{equation}\label{eq:vyrokove_formule_z_definice}
     (A) \land (B)\;,\;(A) \lor (C)\;\text{a}\;\neg(B).
 \end{equation}
@@ -21,8 +21,8 @@ které jsou opět podle \ref{item:formule_2} výrokovými formulemi. Opětovným
 \begin{equation*}
     \Bigl(\bigl((A) \land (B)\bigr) \implies \bigl((A) \lor (C)\bigr)\Bigr) \implies \bigg(\Bigl((A) \land \bigl(\neg(B)\bigr)\Bigr) \iff \Bigl(\neg\bigl((A) \lor (B)\bigr)\Bigr)\bigg).
 \end{equation*}
-Takto můžeme postupovat dál a opakovanou aplikací pravidla \ref{item:formule_2} vytvořit ještě složitější výrokové formule.\par
-Naopak pokud bychom uvážili nějaký výraz, můžeme obdobně zjistit, jestli se jedná o výrokovou formuli či nikoliv.
+Takto můžeme postupovat dál a~opakovanou aplikací pravidla \ref{item:formule_2} vytvořit ještě složitější výrokové formule.\par
+Naopak pokud bychom uvážili nějaký výraz, můžeme obdobně zjistit, jestli se jedná o~výrokovou formuli či nikoliv.
 \begin{example}\label{ex:overeni_formule}
     Mějme výraz
     \begin{equation*}
@@ -34,7 +34,7 @@ Naopak pokud bychom uvážili nějaký výraz, můžeme obdobně zjistit, jestli
         \begin{equation*}
             \varphi_1\sim(A) \land (C)\quad\text{a}\quad\varphi_2\sim\bigl((A) \lor (B)\bigr) \implies \neg(C)
         \end{equation*}
-        též formulemi. Výraz $\varphi_1$ zřejmě je formulí, neboť $A$ a $C$ jsou atomické formule. Ovšem u $\varphi_2$ lze již vidět, že výraz nesplňuje definici výrokové formule, neboť u $\neg(C)$ chybí vnější závorky. Z bodu \ref{item:formule_3} definice \ref{def:vyrokova_a_atomicka_formule} tedy plyne, že výraz $\varphi$ \textbf{není výrokovou formulí}, neboť jej nelze získat pomocí pravidel \ref{item:formule_1} a \ref{item:formule_2}.
+        též formulemi. Výraz $\varphi_1$ zřejmě je formulí, neboť $A$ a~$C$ jsou atomické formule. Ovšem u $\varphi_2$ lze již vidět, že výraz nesplňuje definici výrokové formule, neboť u $\neg(C)$ chybí vnější závorky. Z bodu \ref{item:formule_3} definice \ref{def:vyrokova_a_atomicka_formule} tedy plyne, že výraz $\varphi$ \textbf{není výrokovou formulí}, neboť jej nelze získat pomocí pravidel \ref{item:formule_1} a~\ref{item:formule_2}.
     \end{solution}
 \end{example}
 
@@ -42,8 +42,8 @@ Naopak pokud bychom uvážili nějaký výraz, můžeme obdobně zjistit, jestli
 \begin{equation}\label{eq:poradi_operaci}
     A \land \neg C,
 \end{equation}
-není podle \ref{def:vyrokova_a_atomicka_formule} výrokovou formulí. I přesto je však nejspíše zřejmé, že tímto zápisem vyjadřujeme výrok "Platí $A$ a zároveň neplatí $C$.". Nebo vrátíme-li se k~příkladu \ref{ex:overeni_formule}, i při vypuštění uzávorkování u výrazu $\varphi_2$ by dávalo smysl interpretovat výraz
+není podle \ref{def:vyrokova_a_atomicka_formule} výrokovou formulí. I přesto je však nejspíše zřejmé, že tímto zápisem vyjadřujeme výrok "Platí $A$ a~zároveň neplatí $C$.". Nebo vrátíme-li se k~příkladu \ref{ex:overeni_formule}, i~při vypuštění uzávorkování u výrazu $\varphi_2$ by dávalo smysl interpretovat výraz
 \begin{equation*}\label{eq:vypusteni_uzavorkovani}
     A \lor B \implies \neg C
 \end{equation*}
-jako výrok "Jestliže platí $A$ a zároveň $B$, pak neplatí $C$.".
+jako výrok "Jestliže platí $A$ a~zároveň $B$, pak neplatí $C$.".
