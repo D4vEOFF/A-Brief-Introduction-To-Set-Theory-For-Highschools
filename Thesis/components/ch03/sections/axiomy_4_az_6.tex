@@ -1,26 +1,26 @@
 \section{Axiomy 4 až 6}\label{sec:axiomy_4_az_6}
-První trojice axiomů se zdá být dobrým základem, avšak stále je stále hodně typů množin, jejichž existence z nich neplyne. Trochu "podvodným" způsobem jeden takový typ použili (a pokud čtenář odpustí, budeme i~nadále používat pro lepší názornost) v~diskuzi axiomu extenzionality, konkrétně množinu $\set{a,b,c}$. Při zamyšlení zjistíme, že čistě z axiomů \ref{item:axiom_extenzionality}, \ref{item:axiom_existence} a~\ref{item:axiom_dvojice} nelze takovou množinu "sestrojit". Pomocí axiomu dvojice plyne pro množiny $a,b,c$ existence množin
+První trojice axiomů se zdá být dobrým základem, avšak stále je stále hodně typů množin, jejichž existence z nich neplyne. Trochu "podvodným" způsobem jsme jeden takový typ použili (a pokud čtenář odpustí, budeme i~nadále používat pro lepší názornost) v~diskuzi axiomu extenzionality, konkrétně množinu $\set{a,b,c}$. Při zamyšlení totiž zjistíme, že čistě z axiomů \ref{item:axiom_extenzionality}, \ref{item:axiom_existence} a~\ref{item:axiom_dvojice} nelze takovou množinu "sestrojit". Pomocí axiomu dvojice plyne pro množiny $a,b,c$ existence množin
 \begin{equation*}
     \set{a,b}\;\text{a tudíž i}\;\set{\set{a,b},c},
 \end{equation*}
-což jak víme, není to samé co $\set{a,b,c}$. Její existenci a~existenci mnoha dalších množin nám zaručí (společně se \ref{item:axiom_extenzionality}, \ref{item:axiom_existence} a~\ref{item:axiom_dvojice}) axiomy \ref{item:schema_axiomu_vydeleni}, \ref{item:axiom_potence} a~\ref{item:axiom_sumy}.
+což jak víme, není to samé jako $\set{a,b,c}$. Její existenci a~existenci mnoha dalších množin nám zaručí (společně se \ref{item:axiom_existence}, \ref{item:axiom_extenzionality} a~\ref{item:axiom_dvojice}) axiomy \ref{item:schema_axiomu_vydeleni}, \ref{item:axiom_potence} a~\ref{item:axiom_sumy}.
 
 \subsection{Schéma axiomů vydělení}
 \begin{equation}\label{eq:schema_axiomu_vydeleni}
     \forall a\,\exists y\,\forall x\,(x\in y \iff x\in a~\land \varphi(x)),
 \end{equation}
-kde $\varphi(x)$ je formule neobsahující proměnnou $y$.\\
+kde $\varphi(x)$ je formule neobsahující proměnnou $y$.\par
 Často potřebujeme z určité množiny prvků vybrat množinu prvků takových, že všechny sdílejí jistou vlastnost. Např.
 \begin{itemize}
     \item všechna sudá čísla z množiny $\Z$,
     \item všechna nezáporná čísla z množiny $\R$,
     \item všechna prvočísla z množiny $\N$, apod.
 \end{itemize}
-Schéma axiomů vydělení\footnote{Slovo "schéma" přidáváme z důvodu, že pro každou volbu formule $\varphi$ dostáváme jeden konkrétní axiom teorie -- axiom vydělení. Tedy schéma axiomů vydělení představuje nekonečně mnoho různých axiomů, které vzniknou tím, že $\varphi$ proběhne všechny možné formule s proměnnou $x$.} nám obecně říká, že pro každou množinu $a$ existuje množina $y$ taková, že každý její prvek $x$ je zároveň prvek $a$ splňuje určitou formuli $\varphi(x)$ (ta reprezentuje danou vlastnost). Podle axiomu extenzionality \ref{item:axiom_extenzionality} je množina v~\eqref{eq:schema_axiomu_vydeleni} jednoznačně určena. Čtenář je nejspíše zvyklý množiny, jejichž prvky sdílejí určitou vlastnost, zapisovat např. jako
+Schéma axiomů vydělení\footnote{Slovo "schéma" přidáváme z důvodu, že pro každou volbu formule $\varphi$ dostáváme jeden konkrétní axiom teorie -- axiom vydělení. Tedy schéma axiomů vydělení představuje nekonečně mnoho různých axiomů, které vzniknou tím, že $\varphi$ proběhne všechny možné formule s proměnnou $x$.} nám obecně říká, že pro každou množinu $a$ existuje množina $y$ taková, že každý její prvek $x$, který je zároveň prvek $a$, splňuje určitou formuli $\varphi(x)$ (ta reprezentuje danou vlastnost). Podle axiomu extenzionality \ref{item:axiom_extenzionality} je množina v~\eqref{eq:schema_axiomu_vydeleni} jednoznačně určena. Čtenář je nejspíše zvyklý množiny, jejichž prvky sdílejí určitou vlastnost, zapisovat např. jako
 \begin{equation*}
     \set{x\in\R \admid x\geq 0}.
 \end{equation*}
-Obecněji množinu z \eqref{eq:schema_axiomu_vydeleni} zapisujeme výrazem
+Obecněji množinu z \eqref{eq:schema_axiomu_vydeleni} zapíšeme výrazem
 \begin{equation*}
     \set{x \admid x\in a~\land \varphi(x)}\;\text{nebo též}\;\set{x\in a\admid \varphi(x)}.
 \end{equation*}
@@ -34,13 +34,13 @@ kde formule $\varphi(x)$ je $x\notin b$. Toto schéma axiomů má následující
     Existuje množina, která nemá žádné prvky.
 \end{corollary}
 \begin{proof}
-    Důkaz je jednoduchý. Máme-li libovolnou množinu $a$, pak podle schématu axiomů vydělení lze sestrojit množinu, která nemá žádné prvky. Toho docílíme volbou formule $\varphi(x)$ jako $x\neq x$, tzn.
+    Důkaz je jednoduchý. Máme-li libovolnou množinu $a$, pak podle schématu axiomů vydělení lze sestrojit množinu, která nemá žádné prvky. Toho docílíme, zvolíme-li za $\varphi(x)$ formuli $x\neq x$. Tzn.
     \begin{equation*}
         \set{x\in a~\admid x\neq x}
     \end{equation*}
     je také množina.
 \end{proof}
-Takovou množinu pak nazýváme \emph{prázdná množina} a~typicky ji označujeme znakem $\emptyset$ nebo též někdy prázdnými složenými závorkami $\set{}$. Toto tvrzení se v~jiných variantách \ZF{} považuje za axiom a~nahrazuje axiom existence. Všimněte si, že důkaz výše (a prakticky důkazy všech zatím zformulovaných tvrzení) závisely (mimo jiné) právě na axiomu existence. Jinak bychom množinu $a$ vůbec nemohli uvažovat. Naopak pokud bychom přijali existenci prázdné množiny jako axiom, pak to automaticky implikuje existenci množiny obecně, kterou nám zaručuje axiom existence.\par
+Takovou množinu pak nazýváme \emph{prázdná množina} a~typicky ji označujeme znakem $\emptyset$ nebo též někdy prázdnými složenými závorkami $\set{}$. Toto tvrzení se v~jiných variantách \ZF{} považuje za axiom a~nahrazuje axiom existence. Všimněte si, že důkaz výše (a prakticky důkazy všech zatím zformulovaných tvrzení) závisely (mimo jiné) právě na axiomu existence. Jinak bychom množinu $a$ vůbec nemohli uvažovat. Naopak pokud bychom přijali existenci prázdné množiny jako axiom, pak to automaticky implikuje existenci množiny obecně.\par
 Pomocí schématu axiomů vydělení můžeme definovat některé základní operace s množinami.
 \begin{definition}[Průnik a~rozdíl množin]\label{def:prunik_rozdil}
     Nechť jsou dány libovolné množiny $a$ a~$b$, pak
@@ -67,7 +67,7 @@ Pomocí schématu axiomů vydělení můžeme definovat některé základní ope
 \begin{remark}
     Speciálně, pokud pro množiny $a,b$ platí, že $a\cap b=\emptyset$ (tzn. $a$ a~$b$ nemají žádný společný prvek), pak říkáme, že jsou \emph{disjunktní}.
 \end{remark}
-Proč rovnou nedefinovat i~\emph{sjednocení} množin? Protože schéma axiomů vydělení \ref{item:schema_axiomu_vydeleni} garantuje existenci pouze takové množiny $y$, že všechny její prvky náleží množině $a$. To však při sjednocení množin neplatí, neboť některé prvky množiny $b$ nemusí být prvky množiny $a$. S touto vlastností všech množin, jejichž existenci máme díky schématu axiomů vydělení, se pojí ještě jeden termín.
+Proč rovnou nedefinovat i~\emph{sjednocení} množin? Protože schéma axiomů vydělení \ref{item:schema_axiomu_vydeleni} garantuje existenci pouze takové množiny $y$, že \textbf{všechny} její prvky náleží množině $a$. To však při sjednocení množin neplatí, neboť některé prvky množiny $b$ nemusí být prvky množiny $a$. S touto vlastností všech množin, jejichž existenci máme díky schématu axiomů vydělení, se pojí ještě jeden termín.
 \begin{definition}[Podmnožina a~vlastní podmnožina]\label{def:podmnozina}
     Nechť $a$ je libovolná množina. Pak $b$ nazveme \emph{podmnožinou} množiny $a$, pokud
     \begin{equation*}
@@ -94,17 +94,17 @@ Poslední ze zmíněných příkladů je celkem pozoruhodný, neboť s ním souv
 \begin{proof}
     \textit{(i)}. Zde se dostáváme k~poměrně zajímavé části logiky. Pokud bychom si rozepsali definici podmnožiny (viz \ref{def:podmnozina}), formule by vypadala takto:
     \begin{equation}\label{eq:podmnozina_prazdna_mnozina}
-        \forall x\,(x\in\emptyset \implies x\in a)\;\text{nebo ekvivalentně}\;\forall x\in\emptyset:\implies x\in a.
+        \forall x\,(x\in\emptyset \implies x\in a)\;\text{nebo ekvivalentně}\;\forall x\in\emptyset: x\in a.
     \end{equation}
-    Problém je však, že prázdná množina žádné prvky nemá. Jak tedy rozhodnout o~pravdivosti \eqref{eq:podmnozina_prazdna_mnozina}? Ve skutečnosti, jakékoliv tvrzení obsahující obecný kvantifikátor, kde množina, z níž $x$ uvažujeme, je prázdná, je vždy pravdivé. Tzn. výrok
+    Problém je však, že prázdná množina žádné prvky nemá. Jak tedy rozhodnout o~pravdivosti formule v \eqref{eq:podmnozina_prazdna_mnozina}? Ve skutečnosti, jakékoliv tvrzení obsahující obecný kvantifikátor, kde množina, z níž $x$ uvažujeme, je prázdná, je vždy pravdivé. Tzn. výrok
     \begin{equation*}
         \alpha\sim\forall x\in\emptyset: \varphi,
     \end{equation*}
     kde $\varphi$ je libovolná formule, je vždy pravdivý\footnote{Analogicky výroky s existenčním kvantifikátorem, kde $x$ uvažujeme z prázdné množiny, jsou vždy nepravdivé.}. Pokud není čtenáři, že $\alpha$ platí, pak snad bude jasnější se přesvědčit, že opačné tvrzení $\neg\alpha$ neplatí, tj.
     \begin{equation*}
-        \exists x\in\emptyset: \neg\varphi.
+        \exists x\in\emptyset: \neg\varphi
     \end{equation*}
-    (Tzn. nutně platí $\alpha$.)\par
+    (tzn. nutně platí $\alpha$).\par
     \textit{(ii)}. \textit{$(\implies)$}. Pokud pro libovolné $x$ platí $x\subseteq\emptyset$, pak z definice
     \begin{equation*}
         \forall y\,(y\in x \implies y\in\emptyset)
@@ -151,7 +151,7 @@ Ke každé množině $a$ existuje (podle axiomu extenzionality jediná) množina
         \item\label{item:suma_mnoziny_2} $\displaystyle\bigcup\set{\set{x}}=\set{x}$.
     \end{enumerate}
 \end{example}
-Jak lze vidět vidět z příkladu \ref{item:suma_mnoziny_1}, který jsme si ukázali v~bodu této sekce, axiom sumy nám dovoluje opět pracovat s větším spektrem množin, kde můžeme uvažovat množiny libovolné (konečné) velikosti. Trochu precizněji, společně s axiomem dvojice \ref{item:axiom_dvojice} a~axiomem extenzionality \ref{item:axiom_extenzionality} víme, že pro množiny $a$ a~$b$ existuje jediná dvojice $\set{a,b}$ a~pro množinu $c$ existuje dvojice $\set{c,c}\stackrel{\text{\ref{item:axiom_extenzionality}}}{=}\set{c}$. Opět podle axiomu dvojice pak je i~množinou
+Jak lze vidět vidět z příkladu \ref{item:suma_mnoziny_1}, axiom sumy nám dovoluje opět pracovat s větším spektrem množin, kde můžeme uvažovat množiny libovolné (konečné) velikosti. Trochu precizněji, společně s axiomem dvojice \ref{item:axiom_dvojice} a~axiomem extenzionality \ref{item:axiom_extenzionality}, víme, že pro množiny $a$ a~$b$ existuje jediná dvojice $\set{a,b}$ a~pro množinu $c$ existuje dvojice $\set{c,c}\stackrel{\text{\ref{item:axiom_extenzionality}}}{=}\set{c}$. Opět podle axiomu dvojice pak je i~množinou
 \begin{equation*}
     \set{\set{a,b},\set{c}}
 \end{equation*}
@@ -165,7 +165,7 @@ Díky axiomu sumy můžeme repertoár základních množinových operací rozš�
 \begin{definition}[Sjednocení množin]\label{def:sjednoceni}
     Nechť $a,b$ jsou libovolné množiny. \emph{Sjednocením množin} $a$ a~$b$ rozumíme množinu $a\cup b$ definovanou
     \begin{equation*}
-        a\cup b=\set{x \admid x\in a~\lor x\in b}.
+        a\cup b=\set{x \admid x\in a \lor x\in b}.
     \end{equation*}
 \end{definition}
 Zde si můžeme všimnout souvislosti se sumou množiny, neboť sjednocení množin $a,b$ lze zapsat i~takto:
