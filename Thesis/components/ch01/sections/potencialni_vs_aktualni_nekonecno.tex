@@ -10,7 +10,7 @@ Pokud začneme postupně vypisovat všechna přirozená čísla, jistě je nikdy
 Druhou možností ale je, že se na množinu přirozených čísel budeme dívat již jako na "hotovou". To znamená, že se nebudeme zabývat tím, jak všechna přirozená čísla vypíšeme, ale budeme na tuto množinu nahlížet již jako na \textbf{celek}, tedy nekonečno budeme chápat v~uzavřené formě. V takovém případě mluvíme o~tzv. \emph{aktuálním nekonečnu}.
 \medskip
 
-Starým Řekům se však jak z důvodů matematických, tak filozofických, zdálo, že lidskému myšlení je přístupné pouze nekonečno \textbf{potenciální}. (\cite{Fuchs2003}, str. 104.) O tom se lze přesvědčit už ze samotných \emph{Eukleidových axiomů}. K axiomatice čtenář bude mít možnost blíže nahlédnout v~\ref{subsec:tm_soucasnost} a~později také v~kapitole \ref{chap:axiomy_tm}. \name{Eukleidés} právě z důvodu nemyslitelnosti aktuálního nekonečna mluvil o~\emph{přímce} jako o~úsečce, kterou může libovolně prodlužovat, netvrdil, že je "nekonečná" nebo "nekonečně dlouhá", jak říkáme dnes.
+Starým Řekům se však jak z důvodů matematických, tak filozofických, zdálo, že lidskému myšlení je přístupné pouze nekonečno \textbf{potenciální}. (\cite{Fuchs2003}, str. 104.) O tom se lze přesvědčit už ze samotných \emph{Eukleidových axiomů}. K axiomatice čtenář bude mít možnost blíže nahlédnout v~podsekci \ref{subsec:tm_soucasnost} a~později je jí též věnována kapitola \ref{chap:axiomy_tm}. \name{Eukleidés} právě z důvodu nemyslitelnosti aktuálního nekonečna mluvil o~\emph{přímce} jako o~úsečce, kterou může libovolně prodlužovat, netvrdil, že je "nekonečná" nebo "nekonečně dlouhá", jak říkáme dnes.
 
 \subsection{Galileova úvaha o~velikosti}\label{subsec:galileo}
 S problémem nekonečna se však pojily i~další problémy. Při zrodu samotné teorie množin v~70. letech 19. století se totiž nabízela otázka, zdali \emph{má vůbec smysl porovnávat nekonečné množiny}. Nad tím se pozastavil už jeden z géniů 16. a~17.~století \name{Galileo Galilei} \mbox{(1564-1642)}. Ten si vypsal dvě posloupnosti čísel:
@@ -29,7 +29,7 @@ Dalším typickým problémem týkajícím se nekonečna je tzv. \emph{Grandiho 
 \begin{align*}
 a_1+a_2+a_3+\cdots+a_n,
 \end{align*}
-kde pro všechna přirozená $i$ je $a_i$ člen nějaké (stejné) posloupnosti. U řad nás celkem pochopitelně zajímal jejich součet. To nebyl většinou problém, neboť jsme se převážně zajímali o~řady konečné (a speciálně pro aritmetickou a~geometrickou posloupnost jsme měli i~elegantní vzorce), ale uvážíme-li řady nekonečné, mohou nastat potíže.\par
+kde pro všechna přirozená $i$ je $a_i$ člen nějaké (stejné) posloupnosti. U řad nás celkem pochopitelně zajímal jejich součet. To nebyl většinou problém, neboť jsme se převážně zajímali o~řady konečné (a speciálně pro aritmetickou a~geometrickou řadu jsme měli i~elegantní vzorce), ale uvážíme-li řady nekonečné, mohou nastat potíže.\par
 Co se vůbec rozumí pod pojmem "součet nekonečné řady"? Jako příklad si vezměme řadu
 \begin{equation*}
 	\dfrac{1}{2}+\dfrac{1}{4}+\dfrac{1}{8}+\dfrac{1}{16}+\cdots,
@@ -43,13 +43,13 @@ tedy sčítáme členy posloupnosti $\set{1/2^n}_{n=1}^{\infty}$. Podívejme se,
 \end{align*}
 Těmto součtům se říká tzv. \emph{částečné součty}. Po součtu prvních dvaceti členů bude výsledek následující:
 \begin{equation*}
-	\dfrac{1}{2}+\dfrac{1}{4}+\dfrac{1}{8}+\dfrac{1}{16}+\cdots+\dfrac{1}{2^{20}}=0{,}999999046.
+	\dfrac{1}{2}+\dfrac{1}{4}+\dfrac{1}{8}+\dfrac{1}{16}+\cdots+\dfrac{1}{2^{20}}=0{,}9999990463256836.
 \end{equation*}
-Jak je vidět, částečné součty se postupně "blíží" nejspíše číslu 1. Dávalo by tedy smysl prohlásit číslo 1 za výsledek této nekonečné řady, tj.
+Jak je vidět, částečné součty se postupně "blíží" nejspíše číslu 1. Dávalo by tedy smysl prohlásit číslo 1 za součet této nekonečné řady, tj.
 \begin{equation*}
 	\dfrac{1}{2}+\dfrac{1}{4}+\dfrac{1}{8}+\dfrac{1}{16}+\cdots=1.
 \end{equation*}
-Tímto způsobem obecně vnímáme součet nekonečné řady: \textbf{hodnota, ke které se blíží částečné součty}. (Formální definici součtu nekonečné řady si zde odpustíme.)
+Tímto způsobem obecně vnímáme \textbf{součet} nekonečné řady: \textbf{hodnota, ke které se blíží částečné součty}. (Formální definici součtu nekonečné řady si zde odpustíme.)
 \medskip
 
 Problému s nekonečnými řadami si všiml italský matematik \name{Gildo Grandi} \mbox{(1671-1742)}. Uvažme následující rovnost:
@@ -104,7 +104,7 @@ Všimněme si, že rovnosti uvedené výše jsme obdrželi pouhou aplikací zák
 
 \subsection{Nekonečno v~matematické analýze}
 
-Velká část matematické analýzy je založená na úvahách s \emph{nekonečně malými veličinami}; často se mluvu o~jzv. \emph{infinitezimálním počtu}. Čtenář se s těmito pojmy již možná setkal, ačkoliv nemusí mít nutně představu o~jejich přesném významu. Asi nejznámějším příkladem je integrální počet, specificky výpočet "plochy pod křivkou".
+Velká část matematické analýzy je založená na úvahách s \emph{nekonečně malými veličinami}; často se mluvu o~jzv. \emph{infinitezimálním počtu}. Čtenář se s těmito pojmy již možná setkal, ačkoliv nemusí mít nutně představu o~jejich přesném významu. Asi nejznámějším příkladem je integrální počet, specificky výpočet "obsahu plochy pod křivkou".
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=\normalipe]{ch01_urcity_integral_ukazka.pdf}
@@ -128,7 +128,7 @@ Všechny čtyři obdélníky jsme zvolili tak, aby měly stejnou šířku a~jeji
 \begin{align*}
 S_i= (x_i-x_{i-1}) \cdot \min\limits_{x_{i-1} \leq x \leq x_i}{f(x)},
 \end{align*}
-kde $\min_{x_{i-1} \leq x \leq x_i}{f(x)}$ je minimální hodnota funkce $f$ na intervalu $\langle x_{i-1},x_i \rangle$ (předpokládáme pro jednoduchost, že $f$ je spojitá, takže nabývá svého minima na každém z daných intervalů). Rozdíl $x_i-x_{i-1}$ odpovídá šířce obdélníku a~jeho výšce hodnota $\min_{x_{i-1} \leq x \leq x_i}{f(x)}$.\par
+kde $\min_{x_{i-1} \leq x \leq x_i}{f(x)}$ je minimální hodnota\footnote{Předpokládáme pro jednoduchost, že $f$ je spojitá, takže nabývá svého minima na každém z daných intervalů.} funkce $f$ na intervalu $\langle x_{i-1},x_i \rangle$. Rozdíl $x_i-x_{i-1}$ odpovídá šířce obdélníku a~jeho výšce hodnota $\min_{x_{i-1} \leq x \leq x_i}{f(x)}$.\par
 Pokud bychom si však interval $\langle a,b \rangle$ rozdělili ještě "jemněji", není těžké vidět, že odhad by se zpřesnil (viz obrázek \ref{fig:urcity_integral_aproximace2}).
 \begin{figure}[H]
 	\centering	\includegraphics[scale=\normalipe]{ch01_urcity_integral_aproximace2.pdf}

@@ -14,7 +14,7 @@ a mnohé jiné (u každého z nich jsme schopni jednoznačně určit jeho pravdi
 Mezi logické spojky řadíme \emph{negaci} $\neg$, \emph{konjunkci} $\land$, \emph{disjunkci} $\lor$, \emph{implikaci} $\implies$ a~\emph{ekvivalenci} $\iff$. Připomeňme si stručně jejich významy.
 \begin{convention}[Abeceda pro výrokové proměnné]
     \label{conv:abeceda_vyrokovych_promennych}
-    Pro označení \emph{výroků} nebo též \emph{výrokových proměnných} budeme používat velká písmena latinské abecedy\linebreak $A,B,\dots,X,Y,Z$, případně opatřená indexy.
+    Pro označení \emph{výroků} nebo též \emph{výrokových proměnných} (tj. proměnných, které mohou nabývat pravdivostních hodnot 0, nebo 1) budeme používat velká písmena latinské abecedy $A,B,\dots,Y,Z$, případně opatřená indexy.
 \end{convention}
 Uvažujme libovolné výroky $A$ a~$B$.
 \begin{itemize}
@@ -38,10 +38,10 @@ Výroky uvedené výše obsahující dané logické spojky lze přehledně zapsa
     \caption{Tabulka pravdivostních hodnot pro základní logické spojky}
     \label{tab:logicke_spojky}
 \end{table}
-Vraťme se nyní ještě ke zmíněné implikaci. Ve skutečnosti tato logická spojka je pravděpodobně tou nejsložitější na pochopení ze všech čtyř zmíněných, neboť při neobezřetnosti je často (a to i~v~běžné mluvě) zaměňována za ekvivalenci. Uvažme tvrzení "Jestliže nebudeš jíst, nedostaneš zmrzlinu.". Synáček by v~takovou chvíli očekával, že když naopak oběd sní, tak zmrzlinu dostane, avšak ze striktně matematického hlediska mu ji tatínek i~tak dát nemusí a~přesto by nelhal. Je důležité si uvědomit, že v~případě nesplnění předpokladu nám implikace o~závěru nic neříká.\par
+Vraťme se nyní ještě k implikaci. Ve skutečnosti tato logická spojka je pravděpodobně tou nejsložitější na pochopení ze všech čtyř zmíněných, neboť při neobezřetnosti je často (a to i~v~běžné mluvě) zaměňována za ekvivalenci. Uvažme tvrzení "Jestliže nebudeš jíst, nedostaneš zmrzlinu.". Synáček by v~takovou chvíli očekával, že když naopak oběd sní, tak zmrzlinu dostane, avšak ze striktně matematického hlediska mu ji tatínek i~tak dát nemusí a~přesto by nelhal. Je důležité si uvědomit, že v~případě nesplnění předpokladu nám implikace o~závěru nic neříká.\par
 
 \subsection{Výrokové formule}
-Pokud se ohlédneme za výroky, které jsme zatím uvažovali, vždy se jednalo o~výroky \emph{složené}. Vezmeme-li např. výrok "Číslo 2 je sudé nebo liché.", tak jej lze rozdělit na dva "jednodušší" výroky, tj. "Číslo 2 je sudé." a~"Číslo 2 je liché.", přičemž dané výroky jsou spojeny disjunkcí $\lor$. Tyto výroky však již žádné logické spojky neobsahuje a~tedy je nelze dále "rozložit".
+Pokud se ohlédneme za výroky, které jsme zatím uvažovali, vždy se jednalo o~výroky \emph{složené}. Vezmeme-li např. výrok "Číslo 2 je sudé, nebo liché.", tak jej lze rozdělit na dva "jednodušší" výroky, tj. "Číslo 2 je sudé." a~"Číslo 2 je liché.", přičemž dané výroky jsou spojeny disjunkcí $\lor$. Tyto výroky však již žádné logické spojky neobsahuje a~tedy je nelze dále "rozložit".
 \begin{convention}[Abeceda pro výrokové formule]
     Pro označení výrokových formulí budeme používat malá písmena řecké abecedy, tj. $\alpha,\beta,\gamma,\dots$, případně opatřená indexy.
 \end{convention}
@@ -56,12 +56,12 @@ Tento popis však nelze považovat za definici, neboť je zde pochopitelně řad
 \end{remark}
 \begin{convention}["Rovnost" výrokových formulí]
     \label{conv:rovnost_logickych_formuli}
-    Uvažujme, že máme libovolné výrokové formule $\varphi$ a~$\psi$. Pokud $\varphi$ a~$\psi$ vyjadřují stejnou výrokovou formuli, pak budeme psát $\varphi\sim\psi$.
+    Uvažujme, že máme libovolné výrokové formule $\varphi$ a~$\psi$. Pokud $\varphi$ a~$\psi$ jsou stejné výrokové formule, pak budeme psát $\varphi\sim\psi$.
 \end{convention}
 Řekneme-li, že výrokové formule "jsou stejné", pak se formule shodují ve svém zápisu. Máme-li např. výrokové formule
 \begin{align*}
     \varphi_1&\sim (A) \land \bigl((B) \lor (C)\bigr),\\
-    \varphi_2&\sim \bigl((A) \land (B)\bigr) \lor \bigl((A) \land (C)\bigr)\;\text{a}\\
+    \varphi_2&\sim \bigl((A) \land (B)\bigr) \lor \bigl((A) \land (C)\bigr)\;\quad\text{a}\\
     \varphi_3&\sim \bigl((A) \land (B)\bigr) \lor \bigl((A) \land (C)\bigr),
 \end{align*}
 pak můžeme psát, že $\varphi_2\sim\varphi_3$, ale nikoliv $\varphi_1\sim\varphi_2$, byť $\varphi_1$ a~$\varphi_2$ mají shodnou tabulku pravdivostních hodnot.\par
@@ -83,13 +83,11 @@ Z příkladu výše lze však vidět poměrně nadměrné používání závorek
     \end{enumerate}
 \end{example}
 
-Nyní se vraťme k~původní definici výrokové formule \ref{def:vyrokova_a_atomicka_formule}, kterou jsme zavedli. S ní souvisí známý postup pro vyhodnocování logických formulí, a~to sice \emph{tabulková metoda}. Její myšlenkou bylo rozdělit danou výrokovou formuli postupně na dílčí formule a~takto postupovat u i~daných dílčích formulí. Tímto způsobem nakonec dojdeme ae k~pamotným atomickým formulím, kde zkoumáme všechny možné kombinace jejich pravdivostních hodnot (resp. kombinace pravdivostních hodnot jejich výrokových proměnných).\par
-
+Nyní si připomeňme asi nejznámější postup pro vyhodnocování logických formulí, a~to sice \emph{tabulkovou metodu}. Její myšlenkou bylo rozdělit danou výrokovou formuli postupně na dílčí formule a~takto postupovat i~u~daných dílčích formulí. Tímto způsobem nakonec dojdeme k~samotným atomickým formulím, kde zkoumáme všechny možné kombinace jejich pravdivostních hodnot (resp. kombinace pravdivostních hodnot jejich výrokových proměnných).\par
 Před ukázkou na příkladech si ještě zavedeme jedno značení, které budeme potřebovat.
 \begin{definition}[Logická ekvivalence výrokových formulí]
     Mějme výrokové formule $\varphi$ a~$\psi$. Řekneme, že $\varphi$ a~$\psi$ jsou \emph{logicky ekvivalentní}, což zapisujeme jako $\varphi\equiv\psi$, pokud je formule $\varphi \iff \psi$ pro všechny pravdivostní hodnoty výrokových proměnných obsažených ve $\varphi$ a~$\psi$ pravdivá.
 \end{definition}
-
 Pokud tedy budeme mít např. formule
 \begin{align*}
     \varphi_1 &\sim \neg (A \land B),\\
@@ -97,7 +95,6 @@ Pokud tedy budeme mít např. formule
 \end{align*}
 pak můžeme psát $\varphi\equiv\psi$, neboť jak se lze přesvědčit, formule $\neg (A \land B) \iff \neg A \lor \neg B$ je vždy pravdivá.\par
 Jaký je rozdíl mezi $\equiv$ a~$\iff$? Formálně vzato bychom mohli mezi formule jednoduše vkládat ekvivalenci, avšak pak by se nám tato logická spojka mohla plést s ekvivalencemi, které jsou součástí $\varphi$ a~$\psi$.
-
 \begin{example}\label{ex:vyrokova_formule_1}
     Mějme formuli
     \begin{equation*}
@@ -176,7 +173,7 @@ Tento středoškolský postup je zcela jistě vždy funkční. Avšak ne vždy j
         \end{equation*}
         je také vždy pravdivý (viz tabulka \ref{tab:logicke_spojky}). Celkově se tedy výroková formule $\psi$ zjednoduší takto
         \begin{align*}
-            \psi&\sim (\overbrace{0 \implies B}^{\equiv 1}) \lor \bigl(\overbrace{(A \iff B) \land 1}^{\equiv A \iff B}\bigr)\equiv  \\ &\equiv 1 \lor (A \iff B).
+            \psi&\sim (\overbrace{0 \implies B}^{\equiv 1}) \lor \bigl((A \iff B) \land 1\bigr)\equiv  \\ &\equiv 1 \lor \bigl((A \iff B) \land 1\bigr).
         \end{align*}
         Disjunkce je však pravdivá právě tehdy, když je alespoň jeden z výroků pravdivý, což zde platí. Z tohoto dostáváme výsledek, že
         \begin{equation*}
@@ -221,9 +218,8 @@ Tento středoškolský postup je zcela jistě vždy funkční. Avšak ne vždy j
 \end{example}
 Tento typ formulí je poměrně významný, a~proto pro ně zavádíme speciální pojmenování v~definici \ref{def:tautologie}.
 \begin{definition}[Tautologie]\label{def:tautologie}
-    Výrokovou formuli $\varphi$ nazveme \emph{tautologií}, pokud $\varphi\equiv 1$.
+    Výrokovou formuli $\varphi$ nazveme \emph{tautologií}, pokud $\varphi\equiv 1$. To znamená, že formule $\varphi$ je pravdivá pro všechny pravdivostní hodnoty výrokových proměnných.
 \end{definition}
-
 Některé tautologie jsme využili již pri řešení příkladu \ref{ex:vyrokova_formule_2}. Uveďme si zde ještě několik dalších významných příkladů.
 \begin{theorem}[Významné tautologie]\label{thm:vyznamne_tautologie}
     Následující výrokové formule jsou tautologie:
@@ -231,12 +227,12 @@ Některé tautologie jsme využili již pri řešení příkladu \ref{ex:vyrokov
         \item\label{item:tautologie_1} $\neg (A \iff \neg A)$
         \item\label{item:zakon_vylouceneho_tretiho} $A \lor \neg A$ \rightnote{zákon vyloučeného třetího}
         \item\label{item:zakon_identity} $A \iff A$ \rightnote{zákon identity}
-        \item\label{item:zakon_dvoji_negace} $\neg\neg A \iff A$ \rightnote{zákon dvojí negace}
-        \item\label{item:de_morgan_1} $\neg (A \land B) \iff \neg A \lor \neg B$ \rightnote{de Morganovo pravidlo}
-        \item\label{item:de_morgan_2} $\neg (A \lor B) \iff \neg A \land \neg B$ \rightnote{de Morganovo pravidlo}
+        \item\label{item:zakon_dvoji_negace} $\neg\neg A \iff A$ \rightnote{zákon Dvojí negace}
+        \item\label{item:de_morgan_1} $\neg (A \land B) \iff \neg A \lor \neg B$ \rightnote{De Morganovo pravidlo}
+        \item\label{item:de_morgan_2} $\neg (A \lor B) \iff \neg A \land \neg B$ \rightnote{De Morganovo pravidlo}
         \item\label{item:modus_ponens} $\bigl(A \land (A \implies B)\bigr) \implies B)$ \rightnote{pravidlo Modus ponens\footnote{Česky \emph{pravidlo vynětí}}}
         \item\label{item:modus_tollens_1} $\bigl((A \implies B) \land \neg B\bigr) \implies \neg A$ \rightnote{pravidlo Modus tollens\footnote{Česky \emph{popírání důsledku}}}
-        \item\label{item:reductio_ad_absurdum} $(A \implies \neg A) \implies \neg A$\rightnote{reductio ad absurdum}
+        \item\label{item:reductio_ad_absurdum} $(A \implies \neg A) \implies \neg A$\rightnote{reductio ad absurdum\footnote{Česky \emph{důkaz sporem}}}
         \item\label{item:tautologie_5} $(A \implies B) \iff (\neg B \implies \neg A)$
         \item\label{item:tautologie_2} $(A \iff B) \iff (A \implies B) \land (B \implies A)$
         \item\label{item:tautologie_3} $(A \implies B) \iff B \lor \neg A$
