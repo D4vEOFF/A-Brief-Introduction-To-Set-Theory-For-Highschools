@@ -1,5 +1,4 @@
 \chapter{Dodatky k~axiomům teorie množin}\label{chap:dodatky_k_axiomum_tm}
-\section{Důkazy aritmetických vlastností množin}
 Ještě jedny známé vztahy pro množiny jsou tzv. \emph{De Morganovy vzorce} (viz obrázek \ref{fig:de_morgan}), které si zde zformulujeme jako větu.
 \begin{theorem}[De Morganovy vzorce]
     Nechť $A,X_1,\dots,X_n$ jsou libovolné množiny. Pak platí
@@ -10,14 +9,14 @@ Ještě jedny známé vztahy pro množiny jsou tzv. \emph{De Morganovy vzorce} (
 \end{theorem}
 \begin{proof}
     Nejdříve se zamysleme, co vlastně říkají dané rovnosti. Vyjadřují, že množiny na pravé a~levé straně jsou si rovny. Z axiomu extenzionality \ref{item:axiom_extenzionality} víme, že to platí právě tehdy, když mají dané množiny stejné prvky.\par
-    Ukážeme pouze platnost \ref{item:de_morgan_1}, avšak důkaz \ref{item:de_morgan_2} je zcela analogický.
-    \textit{($\implies$)}. Budiž dán libovolný prvek $x\in A \setminus \left(\bigcup_{i=1}^{n}{X_i}\right)$. Ukážeme, že $x\in\bigcap_{i=1}^{n}{(A \setminus X_i)}$. Z definice rozdílu množin (viz \ref{def:prunik_rozdil}) musí podle předpokladu platit
+    Ukážeme pouze platnost \ref{item:de_morgan_1}, avšak důkaz \ref{item:de_morgan_2} je zcela analogický.\par
+    \textit{($\implies$)}. Budiž dán libovolný prvek $x\in A \setminus \left(\bigcup_{i=1}^{n}{X_i}\right)$. Ukážeme, že platí $x\in\bigcap_{i=1}^{n}{(A \setminus X_i)}$. Z definice rozdílu množin (viz \ref{def:prunik_rozdil}) musí podle předpokladu platit
     \begin{equation*}
         x\in A \setminus \left(\bigcup\limits_{i=1}^{n}{X_i}\right)\iff x\in A \land x\notin \bigcup\limits_{i=1}^{n}{X_i}.
     \end{equation*}
     Protože však $x$ nenáleží sjednocení množin $X_1,\dots,X_n$, pak nenáleží (podle definice \ref{def:sjednoceni}) žádné z nich:
     \begin{equation*}
-        x\notin\bigcup\limits_{i=1}^{n}{X_i}\iff\forall i\in\set{1,\dots,n}: x\notin X_i.
+        x\notin\bigcup\limits_{i=1}^{n}{X_i}\implies\forall i\in\set{1,\dots,n}: x\notin X_i.
     \end{equation*}
     Tedy víme, že platí:
     \begin{equation*}
