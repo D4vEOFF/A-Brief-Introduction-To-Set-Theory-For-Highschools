@@ -1,10 +1,10 @@
 \section{Relace podrobněji}\label{sec:relace_podrobneji}
-U relací ještě chvíli zůstaneme, neboť ty budou pro nás v~dalším textu nejpodstatnější. Mezi nimi lze najít mnoho zvláštních typů, které jsou svojí strukturou zajímavější než ty, které jsme si ukazovali doteď. Pokud se čtenář do této chvíle stihl ztratit v~záplavě nových pojmů a~znalostí, doporučuji se vrátit k~sekcím \ref{sec:zavedeni_relace} o~relacích a~\ref{sec:zobrazeni} o~zobrazeních.
+U relací ještě chvíli zůstaneme, neboť ty budou pro nás v~dalším textu nejpodstatnější. Mezi nimi lze najít mnoho zvláštních typů, které jsou svojí strukturou velmi význačné. Pokud se čtenář do této chvíle stihl ztratit v~záplavě nových pojmů a~znalostí, doporučuji se vrátit k~sekcím \ref{sec:zavedeni_relace} o~relacích a~\ref{sec:zobrazeni} o~zobrazeních.
 
 \subsection{Druhy relací}\label{subsec:druhy_relaci}
-Zatím jsme si uvedli pouze jeden zvláštní typ relace, který nám (nejspíše) byl již trochu povědomý, a~to sice zobrazení. Lze se však setkat i~s relacemi, které jsou svojí povahou zcela odlišné. V této sekci si zavedeme dva takové typy. Nejdříve se však podíváme na nejdůležitější 4 druhy relací.\par
+Zatím jsme si uvedli pouze jeden zvláštní typ relace, který nám (nejspíše) byl již trochu povědomý, a~to sice zobrazení. Lze se však setkat i~s relacemi, které jsou svojí povahou zcela odlišné. V této sekci si zavedeme dva takové typy. Nejdříve se však podíváme na čtyři nejdůležitější druhy relací.\par
 Ačkoliv jsme si zaváděli relaci obecně mezi dvěma množinami $X$ a~$Y$, v~dalším textu se omezíme již pouze na relace na množině.
-\begin{definition}[Důležité druhy relací]\label{def:dulezite_druhy_relaci}
+\begin{definition}[Důležité vlastnosti relací]\label{def:dulezite_vlastnosti_relaci}
     Nechť $R$ je relace na množině $X$. Pak $R$ je
     \begin{enumerate}[label=(\roman*)]
         \item \emph{reflexivní}, jestliže $\forall x\in X: xRx$.
@@ -19,14 +19,14 @@ Reflexivní relace je jednoduše taková relace, kdy jsou všechny prvky v~relac
     \begin{subfigure}{6cm}
         \centering
         \includegraphics[scale=\normalipe]{ch02_reflexivni_relace.pdf}
-        \caption{Reflexivní relace na čtyřech prvcích.}
+        \caption{Příklad reflexivní relace na čtyřech prvcích.}
         \label{subfig:reflexivni_relace}
     \end{subfigure}
     \quad
     \begin{subfigure}{6cm}
         \centering
         \includegraphics[scale=\normalipe]{ch02_nejmensi_reflexivni_relace.pdf}
-        \caption{Reflexivní relace na třech prvcích.}
+        \caption{Příklad minimální reflexivní relace na třech prvcích.}
         \label{subfig:nejmensi_reflexivni_relace}
     \end{subfigure}
     \caption{Příklady reflexivních relací.}
@@ -48,7 +48,7 @@ U tranzitivity musí platit, že pokud máme šipku mezi $x$ a~$y$ a~zároveň m
     \caption{Tranzitivní relace na čtyřech prvních.}
     \label{fig:priklad_tranzitivni_relace}
 \end{figure}
-Antisymetrie je pravděpodobně nejtěžší z těchto druhů relací, co se týče definice. Zatímco u symetrie platí, že relace musí být "vzájemná", u antisymetrie naopak říkáme, že pokud jsou prvky ve "vzájemné" relaci, pak se jedná o~tentýž prvek. Z toho si však můžeme uvědomit, že u antisymetrické relace nemůže tedy nastat, že by mezi dvěma prvky vedly šipky oběma směry, jak lze vidět na obrázku \ref{fig:priklad_antisymetricke_relace}.
+Antisymetrie je pravděpodobně nejtěžší z těchto vlastností, co se týče definice. Zatímco u symetrie platí, že relace musí být "vzájemná", u antisymetrie naopak říkáme, že pokud jsou prvky ve "vzájemné" relaci, pak se jedná o~tentýž prvek. Z toho si však můžeme uvědomit, že u antisymetrické relace nemůže nastat, že by mezi dvěma různými prvky vedly šipky oběma směry, jak lze vidět na obrázku \ref{fig:priklad_antisymetricke_relace}.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=\normalipe]{ch02_antisymetricka_relace.pdf}
@@ -72,19 +72,19 @@ Ovšem víme, že když $xRy$, pak $yR^{-1}x$, což znamená, že $x(R\circ R^{-
 \end{equation*}
 Stejně je tomu i~u zobrazení. Čtenář pravděpodobně již slyšel termín \emph{inverzní funkce}. Zde se nám tato znalost krásně propojuje se středoškolským učivem.
 \begin{remark}\label{rem:existence_inv_zobrazeni}
-    Inverzní zobrazení $f^{-1}$ k $f$ existuje právě tehdy, když $f$ je \textbf{prosté}.
+    Inverzní zobrazení $f^{-1}$ k $f$ existuje právě tehdy, když $f$ je \textbf{prosté} (pro připomenutí viz definice \ref{def:druhy_zobrazeni}).
 \end{remark}
 Některé příklady jsou níže.
 \createcnt{funcex_cnt}
 \begin{enumerate}[label=(\roman*)]
-\item Funkce $\map{f_{\printnstepcnt{funcex_cnt}}}{\R}{\R^+}$, kde $f_{\printcnt{funcex_cnt}}(x)=e^x$; inverzní funkce $\map{f_{\printcnt{funcex_cnt}}^{-1}}{\R^+}{\R}$, kde $f_{\printcnt{funcex_cnt}}^{-1}(x)=\ln{x}$.
-\item \sloppy Funkce $\map{f_{\printnstepcnt{funcex_cnt}}}{\left\langle-\frac{\pi}{2},\frac{\pi}{2}\right\rangle}{\langle-1,1\rangle}$, kde $f_{\printcnt{funcex_cnt}}(x)=\sin{x}$; inverzní funkce ${\map{f_{\printcnt{funcex_cnt}}^{-1}}{\langle-1,1\rangle}{\left\langle-\frac{\pi}{2},\frac{\pi}{2}\right\rangle}}$, kde $f_{\printcnt{funcex_cnt}}^{-1}=\arcsin{x}$,
-\item Funkce $\map{f_{\printnstepcnt{funcex_cnt}}}{\R}{\R}$, kde $f_{\printcnt{funcex_cnt}}(x)=x^3-1$; inverzní funkce $\map{f_{\printcnt{funcex_cnt}}^{-1}}{\R}{\R}$, kde $f_{\printcnt{funcex_cnt}}^{-1}(x)=\sqrt[3]{x+1}$.
+\item Funkce $\map{f_{\printnstepcnt{funcex_cnt}}}{\R}{(0,\infty)}$, kde $f_{\printcnt{funcex_cnt}}(x)=e^x$; inverzní funkce $\map{f_{\printcnt{funcex_cnt}}^{-1}}{\R^+}{\R}$ je $f_{\printcnt{funcex_cnt}}^{-1}(x)=\ln{x}$.
+\item \sloppy Funkce $\displaystyle\map{f_{\printnstepcnt{funcex_cnt}}}{\left\langle-\frac{\pi}{2},\frac{\pi}{2}\right\rangle}{\langle-1,1\rangle}$, kde $f_{\printcnt{funcex_cnt}}(x)=\sin{x}$; inverzní funkce $\displaystyle\map{f_{\printcnt{funcex_cnt}}^{-1}}{\langle-1,1\rangle}{\left\langle-\frac{\pi}{2},\frac{\pi}{2}\right\rangle}$ je $f_{\printcnt{funcex_cnt}}^{-1}(x)=\arcsin{x}$,
+\item Funkce $\displaystyle\map{f_{\printnstepcnt{funcex_cnt}}}{\R}{\R}$, kde $f_{\printcnt{funcex_cnt}}(x)=x^3-1$; inverzní funkce je $\displaystyle\map{f_{\printcnt{funcex_cnt}}^{-1}}{\R}{\R}$ je $f_{\printcnt{funcex_cnt}}^{-1}(x)=\sqrt[3]{x+1}$.
 \end{enumerate}
 Je vidět, že složením libovolné $f_i$ s $f_i^{-1}$ dostaneme identitu $\bigl(f_i\circ f_i^{-1}\bigr)(x)=x$.
 
 \subsection{Relace uspořádání}\label{subsec:relace_usporadani}
-Relace lze dále klasifikovat podle jejich typů. Každý z nich se vyznačuje právě podle definovaných druhů v~\ref{def:dulezite_druhy_relaci}, do nichž spadají. Pro nás bude velmi podstatné tzv. \emph{uspořádání}. (Vedle tohoto typu ještě existuje tzv. \emph{relace ekvivalence}, o~které si lze přečíst v~příloze \ref{chap:dodatky_k_porovnavani_nekonecnych_mn}.)
+Relace lze dále klasifikovat podle jejich typů. Každý z nich se vyznačuje právě podle definovaných druhů v~\ref{def:dulezite_vlastnosti_relaci}, do nichž spadají. Pro nás bude velmi podstatné tzv. \emph{uspořádání}. (Vedle tohoto typu ještě existuje tzv. \emph{relace ekvivalence}, o~které si lze přečíst v~příloze \ref{chap:dodatky_k_porovnavani_nekonecnych_mn}.)
 \begin{definition}[Uspořádání]\label{def:usporadani}
     Nechť $R$ je relace na množině $X$. Řekneme, že $R$ je relací \emph{uspořádání} (též jen \emph{uspořádání}), pokud je \emph{reflexivní}, \emph{antisymetrická} a~\emph{tranzitivní}.
 \end{definition}
@@ -123,14 +123,14 @@ Naopak ukázky modifikací relací $R_1,R_2$ na obrázcích \ref{fig:relace_neus
         \item Relace "$\subseteq$" na množině $\powset{X}$ je uspořádání, kde $X$ je konečná množina.
     \end{enumerate}
 \end{example}
-Zde si můžeme všimnout jisté redundance při zakreslování. Konkrétně dvojice vyplývající z tranzitivity a~reflexivity bychom v~těchto případech mohli klidně vynechat a~považovat za samozřejmé. Zároveň jsme cíleně zakreslili relace $R_1$ a~$R_2$ tak, aby šipky vedly pouze nahoru, neboť to činí obrázek přehlednějším. (Toto funguje díky tomu, že v~relaci uspořádání se nemohou vyskytnout cykly kvůli podmínce antisymetrie a~tranzitivity, nepočítáme-li cykly z reflexivity.) Zkuste se schválně podívat na znázornění relace $R_1$ na obrázku \ref{fig:relace_usporadani_1_jinak} pro srovnání.
+Zde si můžeme všimnout jisté redundance při zakreslování. Konkrétně šipky vyplývající z tranzitivity a~reflexivity bychom v~těchto případech mohli klidně vynechat a~považovat za samozřejmé. Zároveň jsme cíleně zakreslili relace $R_1$ a~$R_2$ tak, aby šipky vedly pouze nahoru, neboť to činí obrázek přehlednějším. (Toto funguje díky tomu, že v~relaci uspořádání se nemohou vyskytnout "cykly" kvůli podmínce antisymetrie a~tranzitivity, nepočítáme-li "cykly" z reflexivity.) Zkuste se schválně podívat na znázornění relace $R_1$ na obrázku \ref{fig:relace_usporadani_1_jinak} pro srovnání.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=\normalipe]{ch02_relace_usporadani_1_jinak.pdf}
     \caption{Relace $R_1$ zakreslená podle pořadí indexů prvků.}
     \label{fig:relace_usporadani_1_jinak}
 \end{figure}
-Tím se dostáváme k~tzv. \emph{Hasseovým diagramům}, které se nám poskytují velmi komfortní reprezentaci uspořádání. Dosavadní způsoby reprezentace relací v~sobě obsahovaly jistou míru libovůle, co do umístění prvků v~diagramech, neboť důležité byly pouze šipky mezi nimi. Zde toto již neplatí, neboť umístěním prvků budeme určovat, které jsou společné v~relaci. Přijmeme konvenci, že šipky mezi prvky povedou pouze směrem nahoru. Tzn. pokud $xRy$, pak $x$ bude nakresleno níž oproti $y$. Na obrázku \ref{fig:relace_usporadani_zakresleni} máme zakreslené uspořádání na množině $\set{y_1,y_2,y_3,y_4}$.
+Tím se dostáváme k~tzv. \emph{Hasseovým diagramům}, které nám poskytují velmi komfortní reprezentaci uspořádání. Dosavadní způsoby reprezentace relací v~sobě obsahovaly jistou míru libovůle, co do umístění prvků v~diagramech, neboť důležité byly pouze šipky mezi nimi. Zde toto již neplatí, neboť umístěním prvků budeme určovat, které jsou společné v~relaci. Přijmeme konvenci, že šipky mezi prvky povedou pouze směrem nahoru. Tzn. pokud $xRy$, pak $x$ bude nakresleno níž oproti $y$. Na obrázku \ref{fig:relace_usporadani_zakresleni} máme zakreslené uspořádání na množině $\set{y_1,y_2,y_3,y_4}$.
 \begin{figure}[H]
     \centering
     \begin{subfigure}{6cm}
@@ -149,7 +149,7 @@ Tím se dostáváme k~tzv. \emph{Hasseovým diagramům}, které se nám poskytuj
     \caption{Relace $S$ zakreslená standardně a~pomocí Hasseova diagramu.}
     \label{fig:relace_usporadani_zakresleni}
 \end{figure}
-Podobně bychom můžeme zakreslit i~relaci $R_1$ z obrázku \ref{fig:relace_usporadani_1} (viz obrázek \ref{fig:relace_usporadani_1_hasseuv_diagram}).
+Podobně můžeme zakreslit i~relaci $R_1$ z obrázku \ref{fig:relace_usporadani_1} (viz obrázek \ref{fig:relace_usporadani_1_hasseuv_diagram}).
 \begin{figure}[H]
     \centering
     \includegraphics[scale=\normalipe]{ch02_relace_usporadani_1_hasseuv_diagram.pdf}

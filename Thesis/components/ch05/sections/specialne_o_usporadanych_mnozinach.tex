@@ -4,7 +4,6 @@ V ohledu, v~jakém se budeme dále uspořádáním věnovat, se nám bude lépe 
 \begin{definition}[Uspořádaná množina]
     Nechť $R$ je uspořádání na množině $X$. Pak uspořádanou dvojici $(X,R)$ nazýváme \emph{uspořádaná množina}.
 \end{definition}
-Uveďme si nejdříve definici těchto pojmů a~poté si vysvětleme jejich význam.
 \begin{definition}[Lineární uspořádání]
     Nechť $(X,R)$ je uspořádaná množina. Pak $R$, resp. $(X,R)$ nazýváme \emph{lineárním uspořádáním}, resp. \emph{lineárně uspořádanou množinou}, jestliže $\forall x,y\in X: xRy \lor yRx$.
 \end{definition}
@@ -61,21 +60,22 @@ Lze si všimnout, že díky antisymetrii tvoří prvky jistou "hierarchii". Nap�
 \begin{definition}[Porovnatelné prvky]\label{def:porovnatelnost}
     Nechť $(X,R)$ je uspořádaná množina. Řekneme, že prvky $x,y\in X$ jsou \emph{porovnatelné}, pokud $xRy \lor yRx$.
 \end{definition}
-Pro příklad nemusíme chodit daleko. Vezměme si všechny třeba všechny dělitele čísla 20, tj. $(\set{1,2,4,5,10,20},\mid)$, na obrázku \ref{fig:porovnatelnost_prvku} níže, kde je zeleně zvýrazněn příklad porovnatelných prvků a~červeně příklad prvků, které nejsou porovnatelné.
+Lineární uspořádaná množina $(X,R)$ je tak jednoduše uspořádaná množina, kde jsou každé dva prvky porovnatelné.\\
+Pro příklad porovnatelných prvků nemusíme chodit daleko. Vezměme si všechny třeba všechny dělitele čísla 20, tj. $(\set{1,2,4,5,10,20},\mid)$, na obrázku \ref{fig:porovnatelnost_prvku} níže, kde je zeleně zvýrazněn příklad porovnatelných prvků a~červeně příklad prvků, které nejsou porovnatelné.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=\normalipe]{ch02_porovnatelnost_prvku.pdf}
     \caption{Diagram uspořádané množiny $(\set{1,2,4,5,10,20},\mid)$ se zvýrazněním porovnatelných a~neporovnatelných prvků.}
     \label{fig:porovnatelnost_prvku}
 \end{figure}
-Naopak u lineárního uspořádání si můžeme snad uvědomit, že každá dvojice prvků je porovnatelná (z definice). S tím se pojí již trochu významově "užší" termíny, které pro nás budou stěžejní.
+S porovnatelností prvků se pojí již trochu významově "užší" termíny, které pro nás budou stěžejní.
 \begin{definition}[Minimální/maximální prvek, nejmenší/největší prvek]
-    Nechť $(X,R)$ je uspořádaná množina. Mějme prvek $a\in X$. Prvek $a$ nazveme
+    Nechť $(X,\preceq)$ je uspořádaná množina. Mějme prvek $a\in X$. Prvek $a$ nazveme
     \begin{enumerate}[label=(\roman*)]
-        \item \emph{minimálním}, pokud $\forall x\in X,\,x\neq a: x\cancel{R}a$.
-        \item \emph{maximálním}, pokud $\forall x\in X,\,x\neq a: a\cancel{R}x$.
-        \item \emph{nejmenším}, pokud $\forall x\in X: aRx$.
-        \item \emph{největším}, pokud $\forall x\in X: xRa$.
+        \item \emph{minimálním}, pokud $\forall x\in X,\,x\neq a: x\not\preceq a$.
+        \item \emph{maximálním}, pokud $\forall x\in X,\,x\neq a: a\not\preceq x$.
+        \item \emph{nejmenším}, pokud $\forall x\in X: a\preceq x$.
+        \item \emph{největším}, pokud $\forall x\in X: x\preceq a$.
     \end{enumerate}
 \end{definition}
 Na první pohled nemusí být rozdíl v~definici jednotlivých termínů zřejmý. Zkuste se však nad nimi zamyslet z pohledu porovnatelnosti prvků. Ve skutečnosti termíny \emph{nejmenší a~největší prvek} jsou "silnější". Je-li např. prvek maximální, pak tvrdíme, že není s žádným z ostatních prvků množiny v~relaci. To ale však neznamená, že je se všemi prvky porovnatelný. (Opět vyzývám čtenáře, aby si zkusil rozmyslet.) Podobně je tomu i~pro minimální prvek. Naopak největší a~nejmenší prvek jsou vždy s každým prvkem porovnatelné. Lépe bude rozdíl v~těchto termínech vidět opět na příkladech.

@@ -1,5 +1,9 @@
 # Záznam změn
 
+## 11. 5. 2022
+- Opravena první polovina práce.
+- 
+
 ## 10. 5. 2022
 - Sekce o axiomatice v kapitole **"Historický úvod k teorii množin"** obsažena v samotné sekci **Axiomatická výstavba**.
 - Provedena korektura prvních tří kapitol.

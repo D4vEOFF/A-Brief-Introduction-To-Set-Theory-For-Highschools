@@ -9,28 +9,39 @@ Ještě jedny známé vztahy pro množiny jsou tzv. \emph{De Morganovy vzorce} (
     \end{enumerate}
 \end{theorem}
 \begin{proof}
-    Nejdříve se zamysleme, co vlastně říkají dané rovnosti. Vyjadřují, že množiny a~pravé a~levé straně jsou si rovny. Z axiomu extenzionality \ref{item:axiom_extenzionality} víme, že to platí právě tehdy, když mají dané množiny stejné prvky.\par
-    Ukážeme pouze platnost \ref{item:de_morgan_1}, avšak důkaz \ref{item:de_morgan_2} je zcela analogický. Budiž dán libovolný prvek $x\in A \setminus \left(\bigcup_{i=1}^{n}{X_i}\right)$. Ukážeme, že $x\in\bigcap_{i=1}^{n}{(A \setminus X_i)}$. Z definice rozdílu množin (viz \ref{def:prunik_rozdil}) tedy musí platit
+    Nejdříve se zamysleme, co vlastně říkají dané rovnosti. Vyjadřují, že množiny na pravé a~levé straně jsou si rovny. Z axiomu extenzionality \ref{item:axiom_extenzionality} víme, že to platí právě tehdy, když mají dané množiny stejné prvky.\par
+    Ukážeme pouze platnost \ref{item:de_morgan_1}, avšak důkaz \ref{item:de_morgan_2} je zcela analogický.
+    \textit{($\implies$)}. Budiž dán libovolný prvek $x\in A \setminus \left(\bigcup_{i=1}^{n}{X_i}\right)$. Ukážeme, že $x\in\bigcap_{i=1}^{n}{(A \setminus X_i)}$. Z definice rozdílu množin (viz \ref{def:prunik_rozdil}) musí podle předpokladu platit
     \begin{equation*}
         x\in A \setminus \left(\bigcup\limits_{i=1}^{n}{X_i}\right)\iff x\in A \land x\notin \bigcup\limits_{i=1}^{n}{X_i}.
     \end{equation*}
     Protože však $x$ nenáleží sjednocení množin $X_1,\dots,X_n$, pak nenáleží (podle definice \ref{def:sjednoceni}) žádné z nich:
     \begin{equation*}
-        x\in\bigcup\limits_{i=1}^{n}{X_i}\iff\forall i\in\set{1,\dots,n}: x\notin X_i.
+        x\notin\bigcup\limits_{i=1}^{n}{X_i}\iff\forall i\in\set{1,\dots,n}: x\notin X_i.
     \end{equation*}
     Tedy víme, že platí:
     \begin{equation*}
         x\in A \land \forall i\in\set{1,\dots,n}: x\notin X_i.
     \end{equation*}
-    Pokud prvek $x$ náleží množině $A$ a~zároveň nenáleží žádné z množin $X_1,\dots,X_n$, pak nenáleží ani množině $A\setminus X_i$ pro libovolné $i$, kde $1\leq i\leq n$. Tj.
+    Pokud prvek $x$ náleží množině $A$ a~zároveň nenáleží žádné z množin $X_1,\dots,X_n$, pak náleží množině $A\setminus X_i$ pro libovolné $i$, kde $1\leq i\leq n$. Tj.
     \begin{equation*}
-        x\in A \land (\forall i\in\set{1,\dots,n}: x\notin X_i)\iff \forall i\in\set{1,\dots,n}: x\in A\setminus X_i.
+        x\in A \land (\forall i\in\set{1,\dots,n}: x\notin X_i)\implies \forall i\in\set{1,\dots,n}: x\in A\setminus X_i.
     \end{equation*}
     Z tohoto faktu již lze vidět, že $x$ nutně leží v~průniku těchto množin, tzn.
     \begin{equation*}
         x\in\bigcap\limits_{i=1}^{n}{(A \setminus X_i)},
     \end{equation*} 
-    což jsme chtěli dokázat.
+    což jsme chtěli dokázat.\par
+    \textit{($\impliedby$)}. Podobně ukážeme opačnou implikaci, tj. pokud $x\in\bigcap_{i=1}^{n}{(A \setminus X_i)}$, pak $x\in A\setminus\left(\bigcup_{i=1}^{n}{X_i}\right)$. Nechť je tedy dáno $x\bigcap_{i=1}^{n}{(A \setminus X_i)}$. Z předchozího již víme, že
+    \begin{align*}
+        x\in\bigcap_{i=1}^{n}{(A \setminus X_i)} &\implies \forall i\in\set{1,\dots,n}: x\in A\setminus X_i\\
+        &\implies x\in A\land\forall i\in\set{1,\dots,n}: x\notin X_i\\
+        &\implies x\in A\land x\notin\bigcup_{i=1}^{n}{X_i}
+    \end{align*}
+    a tedy
+    \begin{equation*}
+        x\in A\in \left(\bigcup_{i=1}^{n}{X_i}\right).
+    \end{equation*}
 \end{proof}
 \begin{figure}[H]
 	\centering
@@ -55,10 +66,10 @@ Ten udává, jakou vlastnost musí splňovat formule $\varphi(u,v)$. Tvrzení je
 Toto by nám již mělo být povědomé. Podobně jsme definovali zobrazení v~definici \ref{def:zobrazeni}. V tomto případě můžeme tak $\varphi$ chápat jako formuli udávající, zda obrazem prvku $u$ je prvek $v$.\par
 Druhá část
 \begin{equation*}
-    \forall a\,\exists z\,\forall x\,\bigl(x\in z \iff \exists y\,(y\in a~\land \varphi(y,x))\bigr)
+    \forall a\,\exists z\,\forall x\,\bigl(x\in z \iff \exists y\,(y\in a \land \varphi(y,x))\bigr)
 \end{equation*}
 nám zaručuje, že všechny prvky $v$, kterým odpovídá (v rámci formule $\varphi(u,v)$) nějaký prvek $u\in a$, tvoří množinu $z$. Stručně řečeno, \textbf{obrazem libovolné množiny při definovatelném zobrazení je opět množina}.\par
-Tento axiom nebyl součástí původních Zermelových axiomů. Posléze se však ukázalo, že existují množiny, jejichž existence není zbývajícími axiomy implikovaná. Např.
+Tento axiom nebyl součástí původních Zermelových axiomů. Posléze se však ukázalo, že lze uvažovat "rozumné soubory", které bez schématu axiomů nahrazení nejsou množinami. Např.
 \begin{equation*}
     m=\set{x,\powset{x},\powset{\powset{x}},\powset{\powset{\powset{x}}},\dots},
 \end{equation*}
@@ -70,22 +81,22 @@ tvoří opět množinu.
 
 \section{Axiom fundovanosti}\label{sec:axiom_fundovanosti}
 \begin{equation*}
-    \forall a\,\Bigl(a\neq\emptyset \implies \exists x:\bigl(x\in a~\land x\cap a=\emptyset\bigr)\Bigr)
+    \forall a\,\Bigl(a\neq\emptyset \implies \exists x:\bigl(x\in a\land x\cap a=\emptyset\bigr)\Bigr)
 \end{equation*}
 Tento axiom slouží svým způsobem jako omezení množin, které lze uvažovat. Tvrzení je takové, že každá neprázdná množina musí obsahovat alespoň jeden prvek, který je s ní \emph{disjunktní} (tj. má s ní prázdný průnik). Tím zamezujeme existenci některých typů množin, jako třeba množiny obsahující samy sebe, tj. $a\in a$. Jmenovitě např.
 \begin{equation*}
     a=\set{a},\;b=\set{b,\emptyset}\;\text{a jiné.}
 \end{equation*}
-Lze se snadno přesvědčit, že při existenci takových množin by axiom fundovanosti byl porušen. Pokud bychom připustili např. existenci množiny $x^\prime$, pro kterou by platilo, že $x^\prime\in x^\prime$, pak podle axiomu dvojice \ref{item:axiom_dvojice} je též množinou i~$u=\set{x^\prime}$. Podle axiomu fundovanosti musí $u$ obsahovat prvek $x$, takový, že $x\cap x^\prime=\emptyset$. Protože však pouze $x^\prime$ je prvkem $u$, pak musí nutně platit (protože $x^\prime\neq\emptyset$), že $x^\prime\cap u=\emptyset$. To ale neplatí!
+Lze se snadno přesvědčit, že při existenci takových množin by axiom fundovanosti byl porušen. Pokud bychom připustili např. existenci množiny $x^\prime$, pro kterou by platilo, že $x^\prime\in x^\prime$, pak podle axiomu dvojice \ref{item:axiom_dvojice} je též množinou i~$u=\set{x^\prime}$. Podle axiomu fundovanosti musí $u$ obsahovat prvek $x$, takový, že $x\cap u=\emptyset$. Protože však pouze $x^\prime$ je prvkem $u$, pak musí nutně platit (protože $x^\prime\neq\emptyset$), že $x^\prime\cap u=\emptyset$. To ale neplatí!
 \begin{equation*}
-    x^\prime\cap\set{x^\prime}=x^\prime,
+    x^\prime\cap u=x^\prime\cap\set{x^\prime}=x^\prime,
 \end{equation*}
-neboť $x^\prime\in x^\prime$. Tzn. $u$ tedy \textbf{nesplňuje} axiom fundovanosti a~není tak množinou v~\ZF{}.\par
+neboť $x^\prime\in x^\prime$. Tzn. $u$ tedy \textbf{nesplňuje} axiom fundovanosti a~není tak množinou v~\ZF{}. Tím pádem nemůže být množina ani $x^\prime$ (kdyby ano, tak i $u$ je množina podle axiomu dvojice \ref{item:axiom_dvojice}).\par
 Dalšími důsledky axiomu fundovanosti je vyloučení cyklů v~relaci "býti prvkem", tj. např.
 \begin{equation*}
     x_1\in x_2\in x_3\in x_1.
 \end{equation*}
-Trochu obecněji lze nahlédnout, že nikdy tak nemůže nastat situace, kdy bychom našli nekonečný řetězec "do sebe zanořených" množin
+Trochu obecněji lze nahlédnout, že nikdy tak nemůže nastat situace, kdy bychom našli nekonečný řetězec "$\in$" množin
 \begin{equation*}
     \dots \in x_n\in \dots\in x_2\in x_1\in x_0.
 \end{equation*}

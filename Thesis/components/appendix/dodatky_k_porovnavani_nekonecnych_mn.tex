@@ -7,7 +7,7 @@ Dodatečná ukázka Cantorova diagonálního argumentu při důkazu Cantorovy v�
     \end{equation*}
 \end{theorem}
 \begin{proof}
-    Ukážeme, že $X\napprox\powset{X}$ (případ $X\preccurlyeq\powset{X}$ již známe). K tomu lze přistoupit sporem. Pro spor nechť $X\approx\powset{X}$, tzn. existuje bijektivní zobrazení $\map{f}{X}{\powset{X}}$. Obdobně jako v~důkazu věty \ref{thm:N_a_R}, i~zde ukážeme, že $f$ není surjektivní. Obrazy prvků $x_i\in X$ tak můžeme "uspořádat" do "seznamu" $f(x_1),f(x_2),f(x_3),\dots$. Podmnožinu $A$ můžeme z množiny sestrojit $X$ tak, že pro každý z prvků množiny $X$ určíme, zda náleží $A$ či nikoliv. Označíme-li si případ $x\in A$ písmenem A a~případ $x\notin A$ jako N, pak zmíněný "seznam" bychom mohli znázornit podobně jako na obrázku \ref{fig:seznam_podmnoziny}.
+    Ukážeme, že $X\napprox\powset{X}$ (případ $X\preccurlyeq\powset{X}$ již známe). K tomu lze přistoupit sporem. Pro spor nechť $X\approx\powset{X}$, tzn. existuje bijekce $\map{f}{X}{\powset{X}}$. Obdobně jako v~důkazu věty \ref{thm:N_a_R}, i~zde ukážeme, že $f$ není na. Obrazy prvků $x_i\in X$ tak můžeme "uspořádat" do "seznamu" $f(x_1),f(x_2),f(x_3),\dots$. Podmnožinu $A$ můžeme z množiny sestrojit $X$ tak, že pro každý z prvků množiny $X$ určíme, zda náleží $A$ či nikoliv. Označíme-li si případ $x\in A$ písmenem A a~případ $x\notin A$ jako N, pak zmíněný "seznam" bychom mohli znázornit podobně jako na obrázku \ref{fig:seznam_podmnoziny}.
     \begin{figure}[H]
         \centering
         \includegraphics[scale=\normalipe]{ch06_seznam_podmnoziny.pdf}
@@ -32,7 +32,7 @@ Ač se to nemusí zdát, tento typ relace má velmi příjemné vlastnosti. Jak 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=\normalipe]{ch02_relace_ekvivalence.pdf}
-    \caption{Relace ekvivalence $R$ na $X$.}
+    \caption{Příklad relace ekvivalence $R$ na $X$.}
     \label{fig:priklad_relace_ekvivalence}
 \end{figure}
 Pokud by však byl např. prvek $x_3$ v~relaci prvkem $x_4$, pak by již $R$ nebyla ekvivalencí, jak lze naopak vidět z obrázku \ref{fig:priklad_relace_neekvivalence}.
@@ -42,7 +42,7 @@ Pokud by však byl např. prvek $x_3$ v~relaci prvkem $x_4$, pak by již $R$ neb
     \caption{Relace $R \cup (x_3,x_4)$ na $X$.}
     \label{fig:priklad_relace_neekvivalence}
 \end{figure}
-Všimněte si, že na obrázku \ref{fig:priklad_relace_ekvivalence} jsou prvky rozděleny na "ostrůvky", kde v~rámci každého z nich jsou spolu všechny prvky v~relaci\footnote{U relace ekvivalence též říkáme, že prvky jsou spolu \emph{ekvivalentní}.}. (Zkuste si z definice rozmyslet, že to tak vždy musí být.) Zakreslovat relaci ekvivalence dosavadním se tak stává již celkem nevýhodným, neboť pro větší množství ekvivalentních prvků již zakreslovat všechny vztahy šipkami je v~tomto případě poměrně zdlouhavý proces (např. pro 5 ekvivalentních prvků bychom museli kreslit 25 šipek). Úspornější a~taktéž názornější pro nás bude si pouze schématicky rozdělit prvky do skupinek (relace mezi nimi z definice ekvivalence považujeme za samozřejmé), např. jako na obrázku \ref{fig:relace_ekvivalence_tridy}.
+Všimněte si, že na obrázku \ref{fig:priklad_relace_ekvivalence} jsou prvky rozděleny na "ostrůvky", kde v~rámci každého z nich jsou spolu všechny prvky v~relaci\footnote{U relace ekvivalence též říkáme, že prvky jsou spolu \emph{ekvivalentní}.}. (Zkuste si z definice rozmyslet, že to tak vždy musí být.) Zakreslovat relaci ekvivalence dosavadním způsobem se tak stává již celkem nevýhodným, neboť pro větší množství ekvivalentních prvků již zakreslovat všechny vztahy šipkami je v~tomto případě poměrně zdlouhavý proces (např. pro 5 ekvivalentních prvků bychom museli kreslit 25 šipek). Úspornější a~taktéž názornější pro nás bude si pouze schématicky rozdělit prvky do skupinek (relace mezi nimi z definice ekvivalence považujeme za samozřejmé), např. jako na obrázku \ref{fig:relace_ekvivalence_tridy}.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=\normalipe]{ch02_relace_ekvivalence_tridy.pdf}
@@ -57,7 +57,7 @@ Definujme si nyní tyto "ostrůvky" trochu formálněji.
     \end{equation*}
     kterou nazýváme \emph{třída ekvivalence $R$ určená prvkem $x$}.
 \end{definition}
-Třída ekvivalence $[x]_R$ jistého prvku $x$ tak obsahuje všechny prvky, které jsou s $x$ ekvivalentní. Z příkladu výše je vidět že platí:
+Třída ekvivalence $[x]_R$ jistého prvku $x$ tak obsahuje všechny prvky, které jsou s $x$ ekvivalentní, tj. v relaci $R$. Z příkladu výše je vidět že platí:
 \begin{itemize}
     \item $[x_1]_R=[x_2]_R=[x_3]_R=\set{x_1,x_2,x_3}$,
     \item $[x_4]_R=[x_5]_R=\set{x_4,x_5}$,
@@ -98,8 +98,8 @@ Třída ekvivalence $[x]_R$ jistého prvku $x$ tak obsahuje všechny prvky, kter
 \end{example}
 
 \section{Mohutnost množiny}\label{sec:mohutnost_mnoziny}
-V sekci jsme v~definici subvalence a~ekvipotence \ref{def:subvalence_a_ekvipotence} zmínili pojem "mohutnost" (ostatně zmínili jsme jej ue v~distorickém úvodu). Již víme, co je míněno pod tvrzením, že množina "má větší/stejnou mohutnost" jako jiná množina. To nám však pouze dává představu, jak mohutnosti porovnávat. Jak tuto vlastnost množiny explicitně vyjádřit?\par
-V případě konečných množin rozumíme pod "mohutností" množiny jednoduše její velikost (tj. počet prvků), kterou reprezentuje nějaké přirozené číslo. U nekonečných množin je to však složitější. Nelze říci, že mohutnost je $\infty$. Podle této logiky by pak muselo platit např. $\sizeof{\N}=\sizeof{\R}=\infty$. To by však nebylo konzistentní s definicí, že dvě množiny mají stejnou mohutnost, když mezi nimi existuje bijekce, protože podle věty \ref{thm:N_a_R} víme, že $\R\preccurlyeq\N$. Na mohutnost množiny lze nahlížet i~trochu abstraktněji.
+V sekci jsme v~definici subvalence a~ekvipotence \ref{def:subvalence_a_ekvipotence} zmínili pojem "mohutnost" (ostatně zmínili jsme jej ue v~historickém úvodu). Již víme, co je míněno pod tvrzením, že množina "má větší/stejnou mohutnost" jako jiná množina. To nám však pouze dává představu, jak mohutnosti porovnávat. Jak tuto vlastnost množiny explicitně vyjádřit?\par
+V případě konečných množin rozumíme pod "mohutností" množiny jednoduše její velikost (tj. počet prvků), kterou reprezentuje nějaké přirozené číslo. U nekonečných množin je to však složitější. Nelze říci, že mohutnost je $\infty$. Podle této logiky by pak muselo platit např. $\sizeof{\N}=\sizeof{\R}=\infty$. To by však nebylo konzistentní s definicí, že dvě množiny mají stejnou mohutnost, když mezi nimi existuje bijekce, protože podle věty \ref{thm:N_a_R} víme, že $\N\prec\R$. Na mohutnost množiny lze nahlížet i~trochu abstraktněji.
 \medskip
 
 Pro lehčí pochopení se na chvíli přesuňme ke geometrii. Uvážíme-li relaci "být rovnoběžný s", tj. "$\parallel$" na množině všech přímek v~rovině, jaké vlastnosti splňuje?
@@ -108,8 +108,8 @@ Pro lehčí pochopení se na chvíli přesuňme ke geometrii. Uvážíme-li rela
     \item \textbf{Symetrie}. Platí-li $p\parallel q$, pak platí i~$q\parallel p$.
     \item \textbf{Tranzitivita}. Je-li přímka $p$ rovnoběžná s přímkou $q$ a~zároveň $q$ je rovnoběžná s přímkou $r$, pak určitě $p\parallel r$.
 \end{itemize}
-Tedy "$\parallel$" je relací ekvivalence. Na základě tohoto poznatku, máme-li libovolnou přímku $p$, jaké přímky obsahuje třída ekvivalence $[p]_\parallel$? Budou to právě takové přímky, které jsou rovnoběžné s přímkou $p$. Jak bychom definovali \emph{směr} přímky? Zkuste se zamyslet, než budete pokračovat.\par
-Zkusme se ale zpětně zaměřit na třídy ekvivalence "$\parallel$". Uvážíme-li libovolnou z nich, pak přímky jí náležící mají vždy shodný směr. To znamená, že výběrem kterékoliv třídy ekvivalence je směr jednoznačně určen podle náležících přímek. Tedy celkově: za směr přímky $p$ prohlásíme třídu ekvivalence $[p]_\parallel$.
+Tedy "$\parallel$" je relací ekvivalence na množině přímek v rovině. Na základě tohoto poznatku, máme-li libovolnou přímku $p$, jaké přímky obsahuje třída ekvivalence $[p]_\parallel$? Budou to právě takové přímky, které jsou rovnoběžné s přímkou $p$. Jak bychom definovali \emph{směr} přímky?\par
+Uvážíme-li libovolnou třídu ekvivalence relace "$\parallel$", pak přímky jí náležící mají vždy shodný směr. To znamená, že výběrem kterékoliv třídy ekvivalence je směr jednoznačně určen podle náležících přímek. Tedy celkově: za \textbf{směr} přímky $p$ prohlásíme třídu ekvivalence $[p]_\parallel$.
 \medskip
 
 Tato úvaha nám zde velmi pomůže. Ačkoliv sice netušíme, co je to mohutnost množiny, přesto dokážeme určit (v principu), zda libovolné množiny $X$ a~$Y$ mají stejnou mohutnost, nebo nemají.
@@ -119,7 +119,7 @@ Tato úvaha nám zde velmi pomůže. Ačkoliv sice netušíme, co je to mohutnos
 \begin{proof}
     Z definice relace ekvivalence stačí ověřit, že $\approx$ je reflexivní, symetrická a~tranzitivní. Mějme libovolné množiny $X,Y,Z$.
     \begin{itemize}
-        \item \textbf{Reflexivita}. Jistě platí $X\approx X$. Za bijektivní zobrazení stačí zvolit identitu $1_X$.
+        \item \textbf{Reflexivita}. Jistě platí $X\approx X$. Za bijekci stačí zvolit identitu $1_X$.
         \item \textbf{Symetrie}. Pokud $X\approx Y$, pak existuje bijekce $\map{f}{X}{Y}$. Protože $f$ je bijekce, existuje inverzní zobrazení $\map{f^{-1}}{Y}{X}$, které je též bijekcí. Tzn. platí i~$Y\approx X$.
         \item \textbf{Tranzitivita}. Nechť $X\approx Y$ a~zároveň $Y\approx Z$. Pišme $\map{f}{X}{Y}$ a~$\map{g}{Y}{Z}$. Definujme zobrazení $h=g\circ f$. Podle tvrzení \ref{prop:vlastnosti_skladani_zobrazeni} je $\map{h}{X}{Z}$ bijekce a~tedy $X\approx Z$.
     \end{itemize}

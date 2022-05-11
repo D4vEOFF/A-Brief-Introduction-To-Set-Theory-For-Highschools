@@ -1,7 +1,7 @@
 \chapter{Dodatky k~logice}\label{chap:dodatky_k_logice}
 V kapitole o~výrokovém a~predikátovém počtu jsme pracovali s výrokovými a~později predikátovými formulemi, kde jsme si pouze neformálně vysvětlili, co pod těmito termíny rozumíme. Formálněji můžeme k~těmto záležitostem přistoupit pomocí následující metadefinice.
 \begin{definition}[Výroková a~atomická formule]\label{def:vyrokova_a_atomicka_formule}
-    Termíny definujeme rekurzivně:
+    Termíny definujeme rekurentně:
     \begin{enumerate}[label=(\roman*)]
         \item\label{item:formule_1} Každá výroková proměnná je \emph{výroková formule} (tzv. \emph{atomická formule}).
         \item\label{item:formule_2} Jsou-li $\varphi$ a~$\psi$ výrokové formule, pak $\neg (\varphi)$, $(\varphi) \land (\psi)$, $(\varphi) \lor (\psi)$, $(\varphi) \implies (\psi)$ a~$(\varphi) \iff (\psi)$ jsou také výrokové formule.
@@ -46,4 +46,4 @@ není podle \ref{def:vyrokova_a_atomicka_formule} výrokovou formulí. I přesto
 \begin{equation*}\label{eq:vypusteni_uzavorkovani}
     A \lor B \implies \neg C
 \end{equation*}
-jako výrok "Jestliže platí $A$ a~zároveň $B$, pak neplatí $C$.".
+jako výrok "Jestliže platí $A$ nebo $B$, pak neplatí $C$.".
