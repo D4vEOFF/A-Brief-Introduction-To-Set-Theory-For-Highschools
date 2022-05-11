@@ -2,3 +2,4 @@ Otázky:
 - Uvést seznam obrázků před hlavním obsahem nebo za?
 - Smazat "ordinál" z klíčových slov? (V práci se termín nevyskytuje)
 - Přejmenovat kapitolu "Zavedení číselných oborů"? (Pozornost je věnována jen přirozeným číslům)
+- Jak správně konstatovat asociativitu kartézského součinu po úmluvě pro uspořádané n-tice?

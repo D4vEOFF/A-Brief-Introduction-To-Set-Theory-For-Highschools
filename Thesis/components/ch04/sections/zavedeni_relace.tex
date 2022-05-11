@@ -18,20 +18,20 @@ Relace můžeme znázornit více způsoby v~závislosti na jejich typu. Např. m
     \caption{Grafické znázornění relace $R$ mezi množinami $A$ a~$B$.}
     \label{fig:relace_mezi_mnozinami}
 \end{figure}
-Avšak pokud máme relaci $S$ \textbf{na množině} $C=\set{x,y,z}$, kupříkladu $S=\set{(x,z),\,(x,y),\,(y,x),\,(z,y),\,(z,z)}$, pak volíme spíše znázornění na obrázku \ref{fig:relace_mezi_mnozinami}.
+Avšak pokud máme relaci $S$ \textbf{na množině} $C=\set{x,y,z}$, kupříkladu $S=\set{(x,z),\,(x,y),\,(y,x),\,(z,y),\,(z,z)}$, pak volíme spíše znázornění na obrázku \ref{fig:relace_na_mnozine}.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=\normalipe]{ch02_relace_na_mnozine.pdf}
     \caption{Grafické znázornění relace $S$ na množině $C$.}
-    \label{fig:relace_mezi_mnozinami}
+    \label{fig:relace_na_mnozine}
 \end{figure}
 Jako poslední si ještě zmíníme tzv. \emph{skládání relací}.
 \begin{definition}[Složení relací]\label{def:skladani_relaci}
-    Nechť $X,Y,Z$ jsou libovolné množiny, $R\subseteq X\times Y$ a~$S\subseteq Y\times Z$. Relaci $T\subseteq X\times Z$ definujeme následovně:
+    Nechť $X,Y,Z$ jsou libovolné množiny, $R\subseteq X\times Y$ a~$S\subseteq Y\times Z$. Relace $T\subseteq X\times Z$ je složení relací $R$ a $S$, pokud
     \begin{equation*}
         xTz \iff \exists y\in Y : xRy \land ySz.
     \end{equation*}
-    Složení relací $R$ a~$S$ značíme $S\circ R$, tzn. $T=S\circ R$.
+    Složení relací $R$ a~$S$ značíme $S\circ R$, tzn. $T=S\circ R$. (Všimněte si pořadí zápisu!)
 \end{definition}
 \begin{example}\label{ex:skladani_relaci}
     Mějme množiny $A=\set{a,b,c}$, $B=\set{x,y,z}$ a~$C=\set{i,j,k,l}$. Na nich definujme relace
@@ -45,7 +45,7 @@ Jako poslední si ještě zmíníme tzv. \emph{skládání relací}.
     \begin{align*}
         aRj \land zSj &\implies aTj,\\
         aRy \land ySi &\implies aTi,\\
-        aRy \land ySj &\implies aTj\;\text{(duplikátní)},\\
+        aRy \land ySj &\implies aTj\;\text{(duplicitní)},\\
         cRx \land xSk &\implies cTk.
     \end{align*}
     Tedy $T=\set{(a,i),\,(a,j),\,(c,k)}$.
@@ -67,11 +67,11 @@ Podívejme se ještě na jeden příklad:
         xRx \land xSz &\implies xTz\\
         yRz \land zSy &\implies yTy
     \end{align*}
-    Tzn. $T=\set{(x,z),\,(y,y)}$. Nyní analogicky pro $T\prime$.
+    Tzn. $T=\set{(x,z),\,(y,y)}$. Nyní analogicky pro $T^\prime$.
     \begin{align*}
         zSy \land yRz \implies zTz
     \end{align*}
     Tím získáváme $T^\prime=\set{(z,z)}$.
 \end{solution}
 Z příkladu \ref{ex:skladani_relaci_2} lze vidět, že skládání relací není komutativní a~tedy záleží na pořadí.\\
-(Sekce inspirována \cite{MatousekNesetril2009}, str. 34--39.)
+(Sekce inspirována knihou \cite{MatousekNesetril2009}, str. 34-39.)

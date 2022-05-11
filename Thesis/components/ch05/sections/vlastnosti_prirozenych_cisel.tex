@@ -3,7 +3,7 @@ Podívejme se nyní blíže na vlastnosti přirozených čísel, které plynou z
 \begin{equation*}
     0=\emptyset,\quad 1=\set{0},\quad 2=\set{0,1},\quad 3=\set{0,1,2},\quad 4=\set{0,1,2,3},\quad\dots
 \end{equation*}
-splňuje tyto axiomy. Mějme na paměti, že v~rámci teorie množin \textbf{Peanovy axiomy} již nejsou v~\ZF{} axiomy, nýbrž věty (tvrzení, která lze odvodit z axiomů \ZF{}). Jejich platnost zde dokazovat nebudeme, avšak budeme je v~dalším textu používat. Důkazy lze najít v~knize \cite{Goldrei2017}, str. 40--41 a~str. 43--44.\par
+splňuje tyto axiomy. Mějme na paměti, že v~rámci teorie množin \textbf{Peanovy axiomy} již nejsou v~\ZF{} axiomy, nýbrž věty (tvrzení, která lze odvodit z axiomů \ZF{}). Jejich platnost zde dokazovat nebudeme, avšak budeme je v~dalším textu používat. Důkazy lze najít v~knize \cite{Goldrei2017}, str. 40-41 a~str. 43-44.\par
 Na konci sekce \ref{sec:prirozena_cisla} jsme poukázali na to, že zavedení přirozených čísel použitým způsobem má za důsledek, že každý z prvků obsahuje všechny své předchůdce.
 To nám umožňuje zformulovat poznatek \ref{lem:vlastnosti_prirozenych_cisel_1}. Zároveň nám to poslouží jako ukázka využití indukce při studiu tohoto modelu přirozených čísel v~\ZF{}.
 \begin{lemma}\label{lem:vlastnosti_prirozenych_cisel_1}
@@ -27,7 +27,7 @@ To nám umožňuje zformulovat poznatek \ref{lem:vlastnosti_prirozenych_cisel_1}
     Předpokládejme, že $n\in X$. Ukážeme, že $n^+\in X$. Vezměme si libovolný prvek $m\in n^+=n\cup\set{n}$. Z toho vyplývá, že buď $m\in n$, nebo $m=n$. V prvním případě $m\in n$ z indukčního předpokladu platí $m\subseteq n$. V druhém případě $m=n$ platí totéž. Tím jsme ukázali, že $n^+\in X$ a~podle principu indukce tedy platí $X=\N_0$.\par
     \textit{\ref{item:vlastnost_1_3}}. Pro nulu tvrzení platí. Opět předpokládejme, že tvrzení platí pro $n\in\N_0$, tj. $n\notin n$. Indukční krok dokážeme sporem. Pro spor nechť platí $n^+\in n^+$. Pak z definice $n^+$ musí platit buď $n^+\in n$, nebo $n^+=n$. Použitím tvrzení \ref{item:vlastnost_1_2} v~obou případech dostáváme, že $n^+=n\cup\set{n}\subseteq n$. To znamená, že $\set{n}\subseteq n$, z čehož již odvodíme $n\in n$. To je však spor s indukčním předpokladem, že $n\notin n$. Tím dostáváme, že $n^+\notin n^+$.
 \end{proof}
-(Převzato z \cite{BalcarStepanek1986}, str. 86--87.)\par
+(Převzato z \cite{BalcarStepanek1986}, str. 86-87.)\par
 Všimněte si, že bod \ref{item:vlastnost_1_2} jsme dokázali definováním množiny prvků, které splňují dokazované tvrzení a~ukázali jsme, že taková množina jsou všechna přirozená čísla. Ostatní body \ref{item:vlastnost_1_1} a~\ref{item:vlastnost_1_3} jsme dokázali "běžnou" indukcí. Jedná se však o~zcela ekvivalentní přístupy.
 \medskip
 
@@ -62,7 +62,7 @@ O relaci "$\leq$" jsme již v~minulé sekci o~uspořádáních \ref{sec:specialn
     V obou případech jsme tak dokázali indukční krok.\par
     \textit{\ref{item:vlastnost_2_2}}. Důkaz je trochu složitější a~proto jej zde vynecháme, nicméně čtenář jej může nalézt v~knize \cite{BalcarStepanek1986}, str. 88.
 \end{proof}
-(Převzato z \cite{BalcarStepanek1986}, str. 87--88.)\par
+(Převzato z \cite{BalcarStepanek1986}, str. 87-88.)\par
 \begin{corollary}\label{cor:porovnatelnost}
     $\forall n,m\in\N_0: n\leq m \lor m\leq n$.
 \end{corollary}
