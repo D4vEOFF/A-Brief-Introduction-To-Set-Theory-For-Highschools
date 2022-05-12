@@ -1,0 +1,17 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=2.0cm,y=2.0cm]
+    \begin{axis}[
+    x=2.0cm,y=2.0cm,
+    axis lines=middle,
+    xmin=-2.0,
+    xmax=2.0,
+    ymin=-1.0,
+    ymax=3.0,
+    xtick={-2.0,-1.0,...,2.0},
+    ytick={-1.0,0.0,...,3.0},]
+    \clip(-2.,-1.) rectangle (2.,3.);
+    \draw[line width=1.2pt,smooth,samples=100,domain=-2.0:2.0] plot(\x,{(\x)^(3)-(\x)^(2)+1});
+    \begin{scriptsize}
+    \draw[color=black] (-1.296792449902299,-2.9137778105094547) node {$f$};
+    \end{scriptsize}
+    \end{axis}
+\end{tikzpicture}

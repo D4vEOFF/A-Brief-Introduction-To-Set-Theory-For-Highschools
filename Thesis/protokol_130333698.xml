@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<report>
+  <buildInformation>
+    <releaseDetails id="core" version="1.16.1" buildDate="2020-05-12T00:43:00+02:00"></releaseDetails>
+    <releaseDetails id="validation-model" version="1.16.1" buildDate="2020-05-12T00:45:00+02:00"></releaseDetails>
+    <releaseDetails id="gui" version="1.16.0-RC1" buildDate="2020-06-23T08:22:00+02:00"></releaseDetails>
+  </buildInformation>
+  <jobs>
+    <job>
+      <item size="3447658">
+        <name>/net/uloziste/verapdf/validace/130333698.pdf</name>
+      </item>
+      <validationReport profileName="Custom profile for Charles University, version 0.8" statement="PDF file is not compliant with Validation Profile requirements." isCompliant="false">
+        <details passedRules="113" failedRules="1" passedChecks="268789" failedChecks="1">
+          <rule specification="ISO 19005-2:2011" clause="6.2.11.7" testNumber="1" status="failed" passedChecks="0" failedChecks="1">
+            <description>The Font dictionary of all fonts shall define the map of all used character codes to Unicode values, either via a ToUnicode entry,
+			or other mechanisms as defined in ISO 19005-2, 6.2.11.7.2.</description>
+            <object>Glyph</object>
+            <test>toUnicode != null</test>
+            <check status="failed">
+              <context>root/document[0]/pages[70](1916 0 obj PDPage)/contentStream[0](1917 0 obj PDContentStream)/operators[687]/usedGlyphs[0](ETXCTV+LINE10 0 0  0)</context>
+            </check>
+          </rule>
+        </details>
+      </validationReport>
+      <duration start="1652352604325" finish="1652352606521">00:00:02.196</duration>
+    </job>
+  </jobs>
+  <batchSummary totalJobs="1" failedToParse="0" encrypted="0">
+    <validationReports compliant="0" nonCompliant="1" failedJobs="0">1</validationReports>
+    <featureReports failedJobs="0">0</featureReports>
+    <repairReports failedJobs="0">0</repairReports>
+    <duration start="1652352604260" finish="1652352606552">00:00:02.292</duration>
+  </batchSummary>
+</report>

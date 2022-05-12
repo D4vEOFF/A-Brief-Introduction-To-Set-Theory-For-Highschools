@@ -1,0 +1,76 @@
+\section{Vlastnosti přirozených čísel}\label{sec:vlastnosti_prirozenych_cisel}
+Podívejme se nyní blíže na vlastnosti přirozených čísel, které plynou z definice v~sekci \ref{sec:prirozena_cisla}. Již jsme si ukazovali, jak lze axiomaticky zavést přirozená čísla pomocí Peanových axiomů (viz \ref{sec:peanovy_axiomy}), které nám dávaly poměrně jednoznačnou představu, co od takové množiny požadujeme. Skutečně, množina přirozených čísel zavedená jako
+\begin{equation*}
+    0=\emptyset,\quad 1=\set{0},\quad 2=\set{0,1},\quad 3=\set{0,1,2},\quad 4=\set{0,1,2,3},\quad\dots
+\end{equation*}
+společně se zobrazením $s$ (následník) definovaným předpisem $s(x)=x\cup\set{x}$ splňuje tyto axiomy. Mějme na paměti, že v~rámci teorie množin \textbf{Peanovy axiomy} již nejsou v~\ZF{} axiomy, nýbrž věty (tvrzení, která lze odvodit z axiomů \ZF{}). Jejich platnost zde dokazovat nebudeme, avšak budeme je v~dalším textu používat. Důkazy lze najít v~knize \cite{Goldrei2017}, str. 40-41 a~str. 43-44.\par
+Na konci sekce \ref{sec:prirozena_cisla} jsme poukázali na to, že zavedení přirozených čísel použitým způsobem má za důsledek, že každý z prvků obsahuje všechny své předchůdce.
+To nám umožňuje zformulovat poznatek \ref{lem:vlastnosti_prirozenych_cisel_1}. Zároveň nám to poslouží jako ukázka využití indukce při studiu tohoto modelu přirozených čísel v~\ZF{}.
+\begin{lemma}\label{lem:vlastnosti_prirozenych_cisel_1}
+    Nechť jsou dána přirozená čísla $n,m\in\N_0$. Pak platí:
+    \begin{enumerate}[label=(\roman*)]
+        \item\label{item:vlastnost_1_1} $n\in\N_0\implies n\subseteq\N_0$,
+        \item\label{item:vlastnost_1_2} $m\in n\implies m\subseteq n$,
+        \item\label{item:vlastnost_1_3} $n\notin n$.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    Všechny body tohoto tvrzení samostatně dokážeme indukcí.\par
+    \textit{\ref{item:vlastnost_1_1}}. Pro začátek ověříme platnost tvrzení pro nulu. To jistě platí, neboť $0=\emptyset$ a~prázdná množina je podmnožinou každé množiny, jak jsme si již dokázali v~tvrzení \ref{lem:o_prazdne_mnozine}, tedy i $0\subseteq\N_0$.\par
+    Předpokládejme, že tvrzení platí pro jisté přirozené číslo $n$, tzn. $n\subseteq\N_0$. Ukážeme, že tvrzení platí i~pro $n^+$. Protože $n\in\N_0$, pak $\set{n}\subseteq\N_0$, z čehož již plyne, že $n^+=n\cup\set{n}\subseteq\N_0$, neboť sjednocením podmnožin je opět podmnožina. Z principu indukce tak \ref{item:vlastnost_1_1} platí pro všechna $n\in\N_0$.\par
+    \textit{\ref{item:vlastnost_1_2}}. Definujme množinu
+    \begin{equation*}
+        X=\set{n\in\N_0\admid \forall m\,(m\in n\implies m\subseteq n)}.
+    \end{equation*} 
+    Naším cílem je indukcí ukázat, že $X=\N_0$.\par
+    Určitě platí, že $0\in X$. (Ačkoliv $\emptyset$ neobsahuje žádné prvky, podmínka přesto platí. Vysvětlení v~sekci \ref{sec:axiomy_4_az_6} v~důkazu lemmatu \ref{lem:o_prazdne_mnozine}.)\par
+    Předpokládejme, že $n\in X$. Ukážeme, že $n^+\in X$. Vezměme si libovolný prvek $m\in n^+=n\cup\set{n}$. Z toho vyplývá, že buď $m\in n$, nebo $m=n$. V prvním případě $m\in n$ z indukčního předpokladu platí $m\subseteq n$, tedy i $m\subseteq n\cup\set{n}=n^+$. V druhém případě $m=n$ platí totéž. Tím jsme ukázali, že $n^+\in X$ a~podle principu indukce tedy platí $X=\N_0$.\par
+    \textit{\ref{item:vlastnost_1_3}}. Pro nulu tvrzení platí. Opět předpokládejme, že tvrzení platí pro $n\in\N_0$, tj. $n\notin n$. Indukční krok dokážeme sporem. Pro spor nechť platí $n^+\in n^+$. Pak z definice $n^+$ musí platit buď $n^+\in n$, nebo $n^+=n$. Použitím tvrzení \ref{item:vlastnost_1_2} v~obou případech dostáváme, že $n^+=n\cup\set{n}\subseteq n$. To znamená, že $\set{n}\subseteq n$, z čehož již odvodíme $n\in n$. To je však spor s indukčním předpokladem, že $n\notin n$. Tím dostáváme, že $n^+\notin n^+$.
+\end{proof}
+(Převzato z \cite{BalcarStepanek1986}, str. 86-87.)\par
+Všimněte si, že bod \ref{item:vlastnost_1_2} jsme dokázali definováním množiny prvků, které splňují dokazované tvrzení a~ukázali jsme, že taková množina jsou všechna přirozená čísla. Ostatní body \ref{item:vlastnost_1_1} a~\ref{item:vlastnost_1_3} jsme dokázali "běžnou" indukcí. Jedná se však o ekvivalentní přístupy.
+\medskip
+
+Je tak docela pěkně vidět, co v~řeči množin znamená, když je nějaké přirozené číslo větší/menší než jiné.
+\begin{definition}\label{def:nerovnosti}
+    Nechť $n,m\in\N_0$. Pak definujeme
+    \begin{enumerate}[label=(\roman*)]
+        \item $m<n\stackrel{\text{def.}}{\iff}m\in n$,
+        \item $m\leq n\stackrel{\text{def.}}{\iff}m<n\lor m=n$,
+        \item $m>n\stackrel{\text{def.}}{\iff}n<m$,
+        \item $m\geq n\stackrel{\text{def.}}{\iff}n\leq m$.
+    \end{enumerate}
+\end{definition}
+O relaci "$\leq$" jsme již v~minulé sekci o~uspořádáních \ref{sec:specialne_o_usporadanych_mozinach} ukázali, že na $\N$ se jedni o~uineární uspořádání (konkrétně v~příkladu \ref{ex:cast_a_lin_usporadani}). Zde jsme s ní však nepracovali ve smyslu definice \ref{def:nerovnosti}. Zkusme se tedy přesvědčit, že je takto definovaná relaci skutečně lineárním uspořádáním na $\N_0$ (pro připomenutí definice viz \ref{def:usporadani}). Nejdříve si však zformulujme následující lemma, které později využijeme.
+\begin{lemma}\label{lem:vlastnosti_prirozenych_cisel_2}
+    Nechť jsou dána přirozená čísla $n,m\in\N_0$. Pak platí:
+    \begin{enumerate}[label=(\roman*)]
+        \item\label{item:vlastnost_2_1} $m<n\iff m\subset n$,
+        \item\label{item:vlastnost_2_2} $m<n \lor m=n \lor m>n$.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    \textit{\ref{item:vlastnost_2_1}}. \textit{($\implies$)}. Z definice máme $m\in n$. Platnost této implikace je pouze důsledkem lemmatu \ref{lem:vlastnosti_prirozenych_cisel_1} (bodu \ref{item:vlastnost_1_2}) a~faktu $m\in m$ (bod \ref{item:vlastnost_1_3}).\par
+    \textit{($\impliedby$)}. Postupujeme indukcí podle $n$. Zvolme si pevné $m\in\N_0$. Pro $n=0$ lze vidět, že tvrzení platí.\par
+    Předpokládejme, že tvrzení platí pro $n$ (a všechna $m$), tj. $m<n\iff m\subset n$. Zvolme $m\subset n^+$. Ukážeme, že z toho plyne $m<n^+$.\par
+    Ukažme nejprve, že $m\subseteq n$. Na to lze nahlédnout sporem. Kdyby platilo $n>m$, tzn. $n\in m$, pak by podle tvrzení \ref{item:vlastnost_1_2} v~lemmatu \ref{lem:vlastnosti_prirozenych_cisel_1} dostáváme $n\subseteq m$ a~tedy i~$n^+\subseteq m$ (opět nemůže platit, že $n\in n$). To je však v~rozporu s předpokladem, že $m\subset n^+$.\par
+    Již tedy víme, že $n\in m$ a~$m\subseteq n$. Z definice podmnožiny mohou nastat dva případy (pro připomenutí viz definice \ref{def:podmnozina}).
+    \begin{itemize}
+        \item $m\subset n$. Podle indukčního předpokladu platí $m<n$ a~tedy i~$m<n^+$.
+        \item $m=n$. Pak z faktu $n<n^+$ plyne $m<n^+$.
+    \end{itemize}
+    V obou případech jsme tak dokázali indukční krok.\par
+    \textit{\ref{item:vlastnost_2_2}}. Důkaz je trochu složitější a~proto jej zde vynecháme, nicméně čtenář jej může nalézt v~knize \cite{BalcarStepanek1986}, str. 88.
+\end{proof}
+(Převzato z \cite{BalcarStepanek1986}, str. 87-88.)\par
+\begin{corollary}\label{cor:porovnatelnost}
+    $\forall n,m\in\N_0: n\leq m \lor m\leq n$.
+\end{corollary}
+\begin{proof}
+    Přímo plyne z tvrzení \ref{item:vlastnost_2_2} lemmatu \ref{lem:vlastnosti_prirozenych_cisel_2}.
+\end{proof}
+Díky lemmatům \ref{lem:vlastnosti_prirozenych_cisel_1}, \ref{lem:vlastnosti_prirozenych_cisel_2} a~důsledku \ref{cor:porovnatelnost} můžeme již zformulovat větu \ref{thm:usporadanost_N}. Důkaz lze nalézt v~příloze \ref{chap:dodatky_k_budovani_cis_mn}.
+\begin{theorem}\label{thm:usporadanost_N}
+    $(\N_0,\leq)$ je lineárně uspořádaná množina.
+\end{theorem}
+Co kdybychom uvážili relaci "$<$" na $\N_0$? Striktně podle definice \ref{def:usporadani} by $(\N_0,<)$ nebyla uspořádaná množina, neboť "$<$" není reflexivní. Nicméně zbývající vlastnosti jsou zachovány. V matematice se občas dále rozlišuje tzv. \emph{ostré} a~\emph{neostré} uspořádání, kdy ostré oproti neostrému je \emph{antireflexivní}, tj. pro všechna $x$ z dané množiny platí $x\cancel{R}x$.

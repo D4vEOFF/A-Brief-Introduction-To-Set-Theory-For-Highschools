@@ -1,0 +1,205 @@
+\section{Axiomy 4 až 6}\label{sec:axiomy_4_az_6}
+První trojice axiomů se zdá být dobrým základem, avšak stále je zde hodně typů množin, jejichž existence z nich neplyne. Trochu "podvodným" způsobem jsme jeden takový typ použili (a pokud čtenář odpustí, budeme i~nadále používat pro lepší názornost) v~diskuzi axiomu extenzionality, konkrétně množinu $\set{a,b,c}$. Při zamyšlení totiž zjistíme, že čistě z axiomů \ref{item:axiom_extenzionality}, \ref{item:axiom_existence} a~\ref{item:axiom_dvojice} nelze takovou množinu "sestrojit". Pomocí axiomu dvojice plyne pro množiny $a,b,c$ existence množin
+\begin{equation*}
+    \set{a,b}\;\text{a tudíž i}\;\set{\set{a,b},c},
+\end{equation*}
+což jak víme, není to samé jako $\set{a,b,c}$. Její existenci a~existenci mnoha dalších množin nám zaručí (společně se \ref{item:axiom_existence}, \ref{item:axiom_extenzionality} a~\ref{item:axiom_dvojice}) axiomy \ref{item:schema_axiomu_vydeleni}, \ref{item:axiom_potence} a~\ref{item:axiom_sumy}.
+
+\subsection{Schéma axiomů vydělení}
+\begin{equation}\label{eq:schema_axiomu_vydeleni}
+    \forall a\,\exists y\,\forall x\,(x\in y \iff x\in a \land \varphi(x)),
+\end{equation}
+kde $\varphi(x)$ je formule neobsahující proměnnou $y$.\par
+Často potřebujeme z určité množiny prvků vybrat množinu prvků s jistou vlastností. Např.
+\begin{itemize}
+    \item všechna sudá čísla z množiny $\Z$,
+    \item všechna nezáporná čísla z množiny $\R$,
+    \item všechna prvočísla z množiny $\N$, apod.
+\end{itemize}
+Schéma axiomů vydělení\footnote{Slovo "schéma" přidáváme z důvodu, že pro každou volbu formule $\varphi$ dostáváme jeden konkrétní axiom teorie -- axiom vydělení. Tedy schéma axiomů vydělení představuje nekonečně mnoho různých axiomů, které vzniknou tím, že $\varphi$ proběhne všechny možné formule s proměnnou $x$ (těch je pochopitelně nekonečně mnoho).} nám obecně říká, že pro každou množinu $a$ existuje množina $y$ taková, že každý její prvek $x$, který je zároveň prvek $a$, splňuje určitou formuli $\varphi(x)$ (ta reprezentuje danou vlastnost). Podle axiomu extenzionality \ref{item:axiom_extenzionality} je množina v~\eqref{eq:schema_axiomu_vydeleni} jednoznačně určena. Čtenář je nejspíše zvyklý množiny všech objektů s jistou vlastností zapisovat např. jako
+\begin{equation*}
+    \set{x\in\R \admid x\geq 0}.
+\end{equation*}
+Obecněji množinu z \eqref{eq:schema_axiomu_vydeleni} zapíšeme výrazem
+\begin{equation*}
+    \set{x \admid x\in a \land \varphi(x)}\;\text{nebo též}\;\set{x\in a\admid \varphi(x)}.
+\end{equation*}
+Toto schéma axiomů má následující důsledek.
+\needspace{6mm}
+\begin{corollary}
+    Existuje množina, která nemá žádné prvky.
+\end{corollary}
+\begin{proof}
+    Důkaz je jednoduchý. Máme-li libovolnou množinu $a$, pak podle schématu axiomů vydělení lze sestrojit množinu, která nemá žádné prvky. Toho docílíme, zvolíme-li za $\varphi(x)$ formuli $x\neq x$. Z axiomu extenzionality je vidět, že takovou vlastnost nesplňuje žádná množina, neboť každá množina má stejné prvky jako ona sama. Podle schématu axiomů vydělení je
+    \begin{equation*}
+        \set{x\in a \admid x\neq x}
+    \end{equation*}
+    také množina.
+\end{proof}
+Takovou množinu pak nazýváme \emph{prázdná množina} a~typicky ji označujeme znakem $\emptyset$ nebo též někdy prázdnými složenými závorkami $\set{}$. Toto tvrzení se v~jiných variantách \ZF{} považuje za axiom a~nahrazuje axiom existence. Všimněte si, že důkaz výše (a prakticky důkazy všech zatím zformulovaných tvrzení) závisely (mimo jiné) právě na axiomu existence. Jinak bychom množinu $a$ vůbec nemohli uvažovat. Naopak pokud bychom přijali existenci prázdné množiny jako axiom, pak to automaticky implikuje existenci množiny obecně.\par
+Nyní můžeme definovat některé základní operace s množinami a pomocí schématu axiomů vydělení jsme schopni dokázat existenci výsledné množiny.
+\begin{definition}[Průnik a~rozdíl množin]\label{def:prunik_rozdil}
+    Nechť jsou dány libovolné množiny $a$ a~$b$, pak
+    \begin{enumerate}[label=(\roman*)]
+        \item \emph{průnikem} množin $a$ a~$b$ rozumíme množinu $a \cap b$, kterou definujeme
+        \begin{equation*}
+            a\cap b=\set{x \admid x\in a \land x\in b}.
+        \end{equation*}
+        \item \emph{rozdílem} množin $a$ a~$b$ rozumíme množinu $a \setminus b$, kterou definujeme
+        \begin{equation*}
+            a\setminus b=\set{x \admid x\in a \land x\notin b}.
+        \end{equation*}
+    \end{enumerate}
+\end{definition}
+\begin{example}
+    Ukázky průniku a~rozdílu množin:
+    \begin{enumerate}[label=(\roman*)]
+        \item $\set{a,b,c}\cap\set{a,c,d}=\set{a,c}$,
+        \item $\set{a,b,c}\cap\emptyset=\emptyset$,
+        \item $\set{x,y,z}\setminus\set{y}=\set{x,z}$,
+        \item $\set{y,z}\setminus\emptyset=\set{y,z}$.
+    \end{enumerate}
+\end{example}
+\begin{remark}
+    Speciálně, pokud pro množiny $a,b$ platí, že $a\cap b=\emptyset$ (tzn. $a$ a~$b$ nemají žádný společný prvek), pak říkáme, že jsou \emph{disjunktní}.
+\end{remark}
+Proč rovnou nedefinovat i~\emph{sjednocení} množin? Protože schéma axiomů vydělení \ref{item:schema_axiomu_vydeleni} garantuje existenci pouze takové množiny $y$, že \textbf{všechny} její prvky náleží množině $a$. To však při sjednocení množin neplatí, neboť některé prvky množiny $b$ nemusí být prvky množiny $a$. S touto vlastností všech množin, jejichž existenci máme díky schématu axiomů vydělení, se pojí ještě jeden termín.
+\begin{definition}[Podmnožina a~vlastní podmnožina]\label{def:podmnozina}
+    Nechť $a$ je libovolná množina. Pak $b$ nazveme \emph{podmnožinou} množiny $a$, pokud
+    \begin{equation*}
+        \forall x\,(x\in b \implies x\in a).
+    \end{equation*}
+    Pokud navíc platí, že $a\neq b$, pak $b$ nazýváme \emph{vlastní podmnožinou}. Píšeme $b\subseteq a$, resp. $b\subset a$\footnote{V jiných textech se symbolem "$\subset$" rozumí podmnožina. Toto značení nebývá zcela jednotné.}.
+\end{definition}
+\begin{example}
+    Ukázky vztahů množin mezi sebou:
+    \begin{enumerate}[label=(\roman*)]
+        \item $x_1=\set{a,b},\; x_2=\set{a,b,c}$, pak platí $x_1 \subset x_2$ a~tj. i~$x_1 \subseteq x_2$, ale nikoliv $x_2 \subseteq x_1$ ;
+        \item $y_1=\set{a,b,c},\; y_2=\set{a,b,c}$, pak platí $y_1 \subseteq y_2$ a~i $y_2 \subseteq y_1$, ale nikoliv $y_1 \subset y_2$ nebo $y_2 \subset y_1$ ;
+        \item $z_1=\emptyset,\; z_2=\set{k}$, pak platí $z_1 \subset z_2$ a~tudíž i~$z_1 \subseteq z_2$.
+    \end{enumerate}
+\end{example}
+Poslední ze zmíněných příkladů je celkem pozoruhodný, neboť plyne z následujícího lemmatu.
+\begin{lemma}\label{lem:o_prazdne_mnozine}
+    Platí:
+    \begin{enumerate}[label=(\roman*)]
+        \item\label{item:prazdna_mnozina_i} $\forall x: \emptyset\subseteq x$,
+        \item\label{item:prazdna_mnozina_ii} $\forall x: x\subseteq\emptyset\iff x=\emptyset$.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    \textit{(i)}. Zde se dostáváme k~poměrně zajímavé části logiky. Pokud bychom si rozepsali definici podmnožiny (viz \ref{def:podmnozina}), formule by vypadala takto:
+    \begin{equation}\label{eq:podmnozina_prazdna_mnozina}
+        \forall y\,(y\in\emptyset \implies y\in a)\;\text{nebo ekvivalentně}\;\forall y\in\emptyset: y\in a.
+    \end{equation}
+    Problém je však, že prázdná množina žádné prvky nemá. Jak tedy rozhodnout o~pravdivosti formule v \eqref{eq:podmnozina_prazdna_mnozina}? Ve skutečnosti, jakékoliv tvrzení obsahující obecný kvantifikátor, kde množina, z níž $x$ uvažujeme, je prázdná, je vždy pravdivé. Tzn. výrok
+    \begin{equation*}
+        \alpha\sim\forall x\in\emptyset: \varphi,
+    \end{equation*}
+    kde $\varphi$ je libovolná formule, je vždy pravdivý\footnote{Analogicky výroky s existenčním kvantifikátorem, kde $x$ uvažujeme z prázdné množiny, jsou vždy nepravdivé.}. Pokud není čtenáři jasné, že $\alpha$ platí, pak snad bude jasnější se přesvědčit, že opačné tvrzení $\neg\alpha$ neplatí, tj.
+    \begin{equation*}
+        \exists x\in\emptyset: \neg\varphi
+    \end{equation*}
+    (tzn. nutně platí $\alpha$).\par
+    \textit{(ii)}. \textit{$(\implies)$}. Pokud pro libovolné $x$ platí $x\subseteq\emptyset$, pak z definice
+    \begin{equation*}
+        \forall y\,(y\in x \implies y\in\emptyset)
+    \end{equation*}
+    je vidět, že tvrzení platí pouze pro $x=\emptyset$ (pro neprázdnou množinu $x$ by libovolný její prvek nikdy neležel v~$\emptyset$).\par
+    \textit{$(\impliedby)$}. Plyne přímo z (i). Prázdná množina je podmnožinou každé množiny, tedy i~sebe sama.
+\end{proof}
+
+\subsection{Axiom potence}
+\begin{equation*}
+    \forall a\,\exists y\,\forall x\,\bigl(x\in y \iff x\subseteq a\bigr)
+\end{equation*}
+Pro každou množinu $a$ existuje množina $y$ taková, že obsahuje \textbf{právě} všechny její podmnožiny. Z axiomu extenzionality navíc opět platí, že taková množina je vždy jediná. Na základě tohoto axiomu můžeme definovat:
+\begin{definition}[Potenční množina]
+    Nechť $a$ je libovolná množina. Pak \emph{potenční množinu} (též \emph{potenci}) $\powset{a}$\footnote{V jiných textech se lze též setkat se značením $2^a$.} množiny $a$ definujeme
+    \begin{equation*}
+        \powset{a}=\set{x \admid x\subseteq a}.
+    \end{equation*}
+\end{definition}
+\begin{example}\label{ex:potence}
+    Příklady potenčních množin:
+    \begin{enumerate}[label=(\roman*)]
+        \item $\powset{\set{a,b}}=\set{\emptyset,\set{a},\set{b},\set{a,b}}$,
+        \item $\powset{\set{x,y,z}}=\set{\emptyset,\set{x},\set{y},\set{z},\set{x,y},\set{x,z},\set{y,z},\set{x,y,z}}$,
+        \item $\powset{\emptyset}=\set{\emptyset}$ (potence má jeden prvek podle \ref{item:prazdna_mnozina_ii}). 
+    \end{enumerate}
+\end{example}
+
+\subsection{Axiom sumy}
+\begin{equation*}
+    \forall a\,\exists z\,\forall x\,\bigl(x\in z\iff \exists y\,(x\in y \land y\in a)\bigr)
+\end{equation*}
+Ke každé množině $a$ existuje (podle axiomu extenzionality jediná) množina $y$ obsahující \textbf{právě} takové prvky (připomeňme, že v \ZF{} jsou prvky zase množiny), které jsou prvkem některého z prvků (tj. množin) množiny $a$. To znamená, existuje množina obsahující prvky množin v ní obsažených. Obdobně jako potenční množinu můžeme i~tento typ množiny definovat.
+\begin{definition}[Suma množiny]
+    Nechť $a$ je libovolná množina. \emph{Sumou množiny} $a$ rozumíme množinu $\bigcup a$ definovanou
+    \begin{equation*}
+        \bigcup a=\set{x \admid \exists y\,(x\in y \land y\in a)}.
+    \end{equation*}
+\end{definition}
+\begin{example}\label{ex:sumy_mnozin}
+    Ukázky sum množin:
+    \begin{enumerate}[label=(\roman*)]
+        \item\label{item:suma_mnoziny_1} $\displaystyle\bigcup\set{\set{a,b},\set{c}}=\set{a,b,c}$,
+        \item\label{item:suma_mnoziny_2} $\displaystyle\bigcup\set{\set{x}}=\set{x}$.
+    \end{enumerate}
+\end{example}
+Jak lze vidět vidět z příkladu \ref{item:suma_mnoziny_1}, axiom sumy nám dovoluje opět pracovat s větším spektrem množin, kde můžeme uvažovat množiny libovolné (konečné) velikosti. Trochu precizněji, společně s axiomem dvojice \ref{item:axiom_dvojice} a~axiomem extenzionality \ref{item:axiom_extenzionality}, víme, že pro množiny $a$ a~$b$ existuje jediná dvojice $\set{a,b}$ a~pro množinu $c$ existuje dvojice $\set{c,c}\stackrel{\text{\ref{item:axiom_extenzionality}}}{=}\set{c}$. Opět podle axiomu dvojice pak je i~množinou
+\begin{equation*}
+    \set{\set{a,b},\set{c}}
+\end{equation*}
+a nakonec podle axiomu sumy \ref{item:axiom_sumy} je množina i
+\begin{equation*}
+    \set{a,b,c}.
+\end{equation*}
+\medskip
+
+Díky axiomu sumy můžeme repertoár základních množinových operací rozšířit o~sjednocení.
+\begin{definition}[Sjednocení množin]\label{def:sjednoceni}
+    Nechť $a,b$ jsou libovolné množiny. \emph{Sjednocením množin} $a$ a~$b$ rozumíme množinu $a\cup b$ definovanou
+    \begin{equation*}
+        a\cup b=\set{x \admid x\in a \lor x\in b}.
+    \end{equation*}
+\end{definition}
+Zde si můžeme všimnout souvislosti se sumou množiny, neboť sjednocení množin $a,b$ lze zapsat i~takto:
+\begin{equation*}
+    a\cup b=\bigcup\set{a,b}.
+\end{equation*}
+(Zkuste si rozmyslet z definice.) Z toho je také vidět, že definice sjednocení množin je zcela oprávněná, neboť je v~souladu s axiomem sumy.
+\begin{example}
+    Ukázky sjednocení:
+    \begin{enumerate}[label=(\roman*)]
+        \item $\set{a,b,c}\cup\set{c,d}=\set{a,b,c,d}$,
+        \item $\set{x,y}\cup\emptyset=\set{x,y}$
+    \end{enumerate}
+\end{example}
+
+Nyní se ještě chvíli budeme držet zavedených operací \textbf{sjednocení, průniku a~rozdílu}. Celkově o~sjednocení, průniku a~rozdílu dvou množin lze ukázat řadu vlastností. Pro operace sjednocení a~průniku platí jak \emph{komutativní}, tak i~\emph{asociativní zákon}:
+\begin{align*}
+    X \cup Y&=Y \cup X,\\
+    X \cap Y&=Y \cap X,\\
+    (X \cup Y) \cup Z &= X \cup (Y \cup Z),\\
+    (X \cap Y) \cap Z &= X \cap (Y \cap Z).
+\end{align*}
+Navíc sjednocení a~průnik jsou vzájemně vůči sobě \emph{distributivní}:
+\begin{align*}
+    X \cup (Y \cap Z) &= (X \cup Y) \cap (X \cup Z),\\
+    X \cap (Y \cup Z) &= (X \cap Y) \cup (X \cap Z).
+\end{align*}
+Máme-li množiny $X_1,\,\dots,\,X_n$, pak jejich sjednocení můžeme zapsat jako
+\begin{equation*}
+    \bigcup\limits_{i=1}^{n}{X_i}=X_1 \cup X_2 \cup \cdots \cup X_n\;
+\end{equation*}
+a průnik jako
+\begin{equation*}
+    \bigcap\limits_{i=1}^{n}{X_i}=X_1 \cap X_2 \cap \cdots \cap X_n.
+\end{equation*}
+Ačkoliv jsme si společně ukázali, že sjednocení $\bigcup_{i=1}^{n}$ lze ekvivalentně zapsat pomocí sumy $\bigcup$, přesto se nejedná o~stejné operace a~je důležité vnímat rozdíl v~jejich značení.\par
+Poznatek o distributivitě sjednocení a průniku můžeme zobecnit užitím velkých operátorů $\bigcup,\;\bigcap$ jako
+\begin{align*}
+    A \cup \left(\bigcap\limits_{i=1}^{n}{X_i}\right)&=\bigcap\limits_{i=1}^{n}{(A \cup X_i)},\\
+    A \cap \left(\bigcup\limits_{i=1}^{n}{X_i}\right)&=\bigcup\limits_{i=1}^{n}{(A \cap X_i)}.
+\end{align*}

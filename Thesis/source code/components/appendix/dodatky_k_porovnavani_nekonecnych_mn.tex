@@ -1,0 +1,133 @@
+\chapter{Dodatky k~porovnávání nekonečných množin}\label{chap:dodatky_k_porovnavani_nekonecnych_mn}
+Dodatečná ukázka Cantorova diagonálního argumentu při důkazu Cantorovy věty pro spočetné množiny.
+\begin{theorem}\label{thm:cantorova_veta_spocetne}
+    Pro libovolnou spočetnou množinu $X$ platí
+    \begin{equation*}
+        X\prec\powset{X}.
+    \end{equation*}
+\end{theorem}
+\begin{proof}
+    Ukážeme, že $X\napprox\powset{X}$ (případ $X\preccurlyeq\powset{X}$ již známe). K tomu lze přistoupit sporem. Pro spor nechť $X\approx\powset{X}$, tzn. existuje bijekce $\map{f}{X}{\powset{X}}$. Obdobně jako v~důkazu věty \ref{thm:N_a_R}, i~zde ukážeme, že $f$ není na. Obrazy prvků $x_i\in X$ tak můžeme "uspořádat" do "seznamu" $f(x_1),f(x_2),f(x_3),\dots$. Podmnožinu $A$ můžeme z množiny sestrojit $X$ tak, že pro každý z prvků množiny $X$ určíme, zda náleží $A$ či nikoliv. Označíme-li si případ $x\in A$ písmenem A a~případ $x\notin A$ jako N, pak zmíněný "seznam" bychom mohli znázornit podobně jako na obrázku \ref{fig:seznam_podmnoziny}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=\normalipe]{ch06_seznam_podmnoziny.pdf}
+        \caption{Podmnožiny (obrazy) množiny $X$ určené náležením každého z prvků.}
+        \label{fig:seznam_podmnoziny}
+    \end{figure}
+    Opět se zaměříme na diagonálu tohoto seznamu.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=\normalipe]{ch06_diagonala_podmnoziny.pdf}
+        \caption{Diagonála seznamu podmnožin množiny $X$.}
+        \label{fig:diagonala_podmnoziny}
+    \end{figure}
+    Zkonstruujeme množinu $S$ tak, že každý prvek $x$ na diagonále jí náleží právě tehdy, když nenáleží podmnožině (tedy obrazu $f(x)$) v~příslušném řádku. Evidentně množina $S$ je podmnožinou $X$. Zároveň se však od každé podmnožiny na seznamu liší minimálně v~prvku na diagonále. To znamená, že $S$ nemůže být na seznamu, čímž dostáváme spor.
+\end{proof}
+\section{Relace ekvivalence}\label{sec:relace_ekvivalence}
+Zmíněné druhy relací nám dovolují definovat dva jejich nejdůležitější typy, jednomu z nichž se budeme dále přednostně věnovat. Začneme prvním z nich.
+\begin{definition}[Relace ekvivalence]\label{def:relace_ekvivalence}
+    Nechť $R$ je relace na množině $X$. Řekneme, že $R$ je \emph{relací ekvivalence na $X$} (nebo jen \emph{ekvivalencí na $X$}), pokud je \emph{reflexivní}, \emph{symetrická} a~\emph{tranzitivní}.
+\end{definition}
+Ač se to nemusí zdát, tento typ relace má velmi příjemné vlastnosti. Jak si ji představit? Příkladem může být třeba relace $R$ na množině $X=\set{x_1,\dots,x_7}$ znázorněná na obrázku \ref{fig:priklad_relace_ekvivalence} níže.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=\normalipe]{ch02_relace_ekvivalence.pdf}
+    \caption{Příklad relace ekvivalence $R$ na $X$.}
+    \label{fig:priklad_relace_ekvivalence}
+\end{figure}
+Pokud by však byl např. prvek $x_3$ v~relaci prvkem $x_4$, pak by již $R$ nebyla ekvivalencí, jak lze naopak vidět z obrázku \ref{fig:priklad_relace_neekvivalence}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=\normalipe]{ch02_relace_neekvivalence.pdf}
+    \caption{Relace $R \cup (x_3,x_4)$ na $X$.}
+    \label{fig:priklad_relace_neekvivalence}
+\end{figure}
+Všimněte si, že na obrázku \ref{fig:priklad_relace_ekvivalence} jsou prvky rozděleny na "ostrůvky", kde v~rámci každého z nich jsou spolu všechny prvky v~relaci\footnote{U relace ekvivalence též říkáme, že prvky jsou spolu \emph{ekvivalentní}.}. (Zkuste si z definice rozmyslet, že to tak vždy musí být.) Zakreslovat relaci ekvivalence dosavadním způsobem se tak stává již celkem nevýhodným, neboť pro větší množství ekvivalentních prvků již zakreslovat všechny vztahy šipkami je v~tomto případě poměrně zdlouhavý proces (např. pro 5 ekvivalentních prvků bychom museli kreslit 25 šipek). Úspornější a~taktéž názornější pro nás bude si pouze schématicky rozdělit prvky do skupinek (relace mezi nimi z definice ekvivalence považujeme za samozřejmé), např. jako na obrázku \ref{fig:relace_ekvivalence_tridy}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=\normalipe]{ch02_relace_ekvivalence_tridy.pdf}
+    \caption{Schématické znázornění ekvivalence $R$ na $X$.}
+    \label{fig:relace_ekvivalence_tridy}
+\end{figure}
+Definujme si nyní tyto "ostrůvky" trochu formálněji.
+\begin{definition}[Třída ekvivalence]
+    Nechť $R$ je relace ekvivalence na množině $X$ a~nechť $x\in X$. Pak definujeme množinu
+    \begin{equation*}
+        [x]_R=\set{y \admid xRy},
+    \end{equation*}
+    kterou nazýváme \emph{třída ekvivalence $R$ určená prvkem $x$}.
+\end{definition}
+Třída ekvivalence $[x]_R$ jistého prvku $x$ tak obsahuje všechny prvky, které jsou s $x$ ekvivalentní, tj. v relaci $R$. Z příkladu výše je vidět že platí:
+\begin{itemize}
+    \item $[x_1]_R=[x_2]_R=[x_3]_R=\set{x_1,x_2,x_3}$,
+    \item $[x_4]_R=[x_5]_R=\set{x_4,x_5}$,
+    \item $[x_6]_R=[x_7]_R=[x_8]_R=\set{x_6,x_7,x_8}$.
+\end{itemize}
+\begin{example}
+    Další příklady relací ekvivalence a~jejich tříd.
+    \begin{enumerate}[label=(\roman*)]
+        \item $(\N,=)$ (rovnost přirozených čísel) je relace ekvivalence, kde každý prvek tvoří samostatnou třídu ekvivalence.
+        \begin{align*}
+            [1]_R&=\set{1}\\
+            [2]_R&=\set{2}\\
+            &\vdots
+        \end{align*}
+        \item Relace \emph{"mít stejnou paritu"}\footnote{Tzn. obě čísla jsou sudá nebo lichá.} na množině $\Z$ je relace ekvivalence o~dvou třídách (sudá a~lichá čísla).
+        \begin{align*}
+            [1]_R&=\set{-1,1,-3,3,-5,5,\dots}\\
+            [2]_R&=\set{0,-2,2,-4,4\dots}\\
+            &\vdots
+        \end{align*}
+        \item Relace "mít stejný zbytek po celočíselném dělení 5" na množině $\Z$ je relace ekvivalence o~pěti třídách (čísla 0--4 jako zbytek po celočíselném dělení).
+        \begin{align*}
+            [0]_R&=\set{0,5,10,\dots}\\
+            [1]_R&=\set{1,6,11,\dots}\\
+            [2]_R&=\set{2,7,12,\dots}\\
+            [3]_R&=\set{3,8,13,\dots}\\
+            [4]_R&=\set{4,9,14,\dots}
+        \end{align*}
+        \item Relace "mít stejnou absolutní hodnotu" na množině $\R$ je relace ekvivalence, kde každá třída obsahuje prvek $x$ a~$-x$ pro všechna $x\in\R$.
+        \begin{align*}
+            [0]_R&=\set{0}\\
+            [1]_R&=\set{-1,1}\\
+            [\sqrt{2}]_R&=\set{\sqrt{2},-\sqrt{2}}\\
+            [\sqrt[4]{30}]_R&=\set{\sqrt[4]{30},-\sqrt[4]{30}}\\
+            &\vdots
+        \end{align*}
+    \end{enumerate}
+\end{example}
+
+\section{Mohutnost množiny}\label{sec:mohutnost_mnoziny}
+V sekci jsme v~definici subvalence a~ekvipotence \ref{def:subvalence_a_ekvipotence} zmínili pojem "mohutnost" (ostatně zmínili jsme jej ue v~historickém úvodu). Již víme, co je míněno pod tvrzením, že množina "má větší/stejnou mohutnost" jako jiná množina. To nám však pouze dává představu, jak mohutnosti porovnávat. Jak tuto vlastnost množiny explicitně vyjádřit?\par
+V případě konečných množin rozumíme pod "mohutností" množiny jednoduše její velikost (tj. počet prvků), kterou reprezentuje nějaké přirozené číslo. U nekonečných množin je to však složitější. Nelze říci, že mohutnost je $\infty$. Podle této logiky by pak muselo platit např. $\sizeof{\N}=\sizeof{\R}=\infty$. To by však nebylo konzistentní s definicí, že dvě množiny mají stejnou mohutnost, když mezi nimi existuje bijekce, protože podle věty \ref{thm:N_a_R} víme, že $\N\prec\R$. Na mohutnost množiny lze nahlížet i~trochu abstraktněji.
+\medskip
+
+Pro lehčí pochopení se na chvíli přesuňme ke geometrii. Uvážíme-li relaci "být rovnoběžný s", tj. "$\parallel$" na množině všech přímek v~rovině, jaké vlastnosti splňuje?
+\begin{itemize}
+    \item \textbf{Reflexivita}. Každá přímka je rovnoběžná sama se sebou, tj. pro přímku $p$ platí $p\parallel p$.
+    \item \textbf{Symetrie}. Platí-li $p\parallel q$, pak platí i~$q\parallel p$.
+    \item \textbf{Tranzitivita}. Je-li přímka $p$ rovnoběžná s přímkou $q$ a~zároveň $q$ je rovnoběžná s přímkou $r$, pak určitě $p\parallel r$.
+\end{itemize}
+Tedy "$\parallel$" je relací ekvivalence na množině přímek v rovině. Na základě tohoto poznatku, máme-li libovolnou přímku $p$, jaké přímky obsahuje třída ekvivalence $[p]_\parallel$? Budou to právě takové přímky, které jsou rovnoběžné s přímkou $p$. Jak bychom definovali \emph{směr} přímky?\par
+Uvážíme-li libovolnou třídu ekvivalence relace "$\parallel$", pak přímky jí náležící mají vždy shodný směr. To znamená, že výběrem kterékoliv třídy ekvivalence je směr jednoznačně určen podle náležících přímek. Tedy celkově: za \textbf{směr} přímky $p$ prohlásíme třídu ekvivalence $[p]_\parallel$.
+\medskip
+
+Tato úvaha nám zde velmi pomůže. Ačkoliv sice netušíme, co je to mohutnost množiny, přesto dokážeme určit (v principu), zda libovolné množiny $X$ a~$Y$ mají stejnou mohutnost, nebo nemají.
+\begin{lemma}
+    Ekvipotence $\approx$ je relací ekvivalence\footnote{Zde se jedná o~tzv. \emph{třídovou relaci} na tzv. \emph{univerzální třídě} (často označované $\mathbb{V}$), tedy "souhrnu" všech množin. Tento "souhrn" nemůže být množinou, neboť bychom tak došli ke sporu v~\ZF{}. Třídy představují v~teorii množin "nadstavbu" termínu množina. Obecně platí, že každá množina je třída, ale ne každá třída je množina. Pro hlubší pochopení doporučuji knihu \cite{BalcarStepanek1986}, str. 45-50}.
+\end{lemma}
+\begin{proof}
+    Z definice relace ekvivalence stačí ověřit, že $\approx$ je reflexivní, symetrická a~tranzitivní. Mějme libovolné množiny $X,Y,Z$.
+    \begin{itemize}
+        \item \textbf{Reflexivita}. Jistě platí $X\approx X$. Za bijekci stačí zvolit identitu $1_X$.
+        \item \textbf{Symetrie}. Pokud $X\approx Y$, pak existuje bijekce $\map{f}{X}{Y}$. Protože $f$ je bijekce, existuje inverzní zobrazení $\map{f^{-1}}{Y}{X}$, které je též bijekcí. Tzn. platí i~$Y\approx X$.
+        \item \textbf{Tranzitivita}. Nechť $X\approx Y$ a~zároveň $Y\approx Z$. Pišme $\map{f}{X}{Y}$ a~$\map{g}{Y}{Z}$. Definujme zobrazení $h=g\circ f$. Podle tvrzení \ref{prop:vlastnosti_skladani_zobrazeni} je $\map{h}{X}{Z}$ bijekce a~tedy $X\approx Z$.
+    \end{itemize}
+    Tedy $\approx$ je relací ekvivalence.
+\end{proof}
+Pro libovolnou množinu $X$ tak třída ekvivalence $[X]_\approx$ obsahuje všechny množiny, které mají stejnou mohutnost jako $X$. Tzn.
+\begin{equation*}
+    \forall Y\in [X]_\approx: Y\approx X.
+\end{equation*}
+Víme tak, že každá z množin v~libovolné třídě ekvivalence má stejnou mohutnost. Tuto třídu bychom pak mohli prohlásit za její mohutnost. V případě konečných množin, kde za mohutnost považujeme přirozené číslo, se jedná o~alternativní pohled.\par
+Mohutnosti představují v~teorii množin tzv. \emph{kardinální čísla}, která lze definovat způsobem popsaným výše. Jedná se tak o~zobecnění myšlenky počtu prvků u konečných množin. Podobně jako na přirozených číslech, i~na kardinálních číslech lze definovat smysluplnou aritmetiku.
