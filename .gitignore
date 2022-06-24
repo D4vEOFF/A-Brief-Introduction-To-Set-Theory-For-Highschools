@@ -1,5 +1,5 @@
 # Exceptions
-!/Releases/
+!/Releases/*
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
