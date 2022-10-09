@@ -1,14 +1,10 @@
 # Obsah
 - [Obsah](#obsah)
-- [Bakalářská práce](#bakalářská-práce)
 - [Základní informace](#základní-informace)
 - [Abstrakt (abstract)](#abstrakt-abstract)
   - [Česká verze](#česká-verze)
   - [English version](#english-version)
 - [Obsah práce](#obsah-práce)
-
-# Bakalářská práce
-Bakalářská práce psaná na MFF UK.
 
 # Základní informace
 - **Název**: ***Stručný úvod do teorie množin pro středoškoláky***
