@@ -5,13 +5,13 @@ Relace (jak název napovídá) odpovídá jistému "vztahu". Z reálného život
 \end{equation*}
 To~však v~řeči matematiky není nic jiného, než uspořádaná dvojice prvků. K tomu se nám bude hodit již zavedený kartézský součin.
 \begin{definition}[Relace]\label{def:relace}
-    Nechť $X,Y$ jsou libovolné množiny. Pak \emph{relací mezi $X$ a~$X$} nazýváme libovolnou podmnožinu $R$ kartézského součinu $X\times Y$, tj. $R\subseteq X \times Y$. Speciálně, pokud $X=Y$, pak mluvíme o~\emph{relaci na množině $X$}, tzn. $R\subseteq X^2$.
+    Nechť $X,Y$ jsou libovolné množiny. Pak \emph{binární relací mezi $X$ a~$Y$} nazýváme libovolnou podmnožinu $R$ kartézského součinu $X\times Y$, tj. $R\subseteq X \times Y$. Speciálně, pokud $X=Y$, pak mluvíme o~\emph{relaci na množině $X$}, tzn. $R\subseteq X^2$.
 \end{definition}
 Pokud $(x,y)\in R$, pak říkáme, že \emph{prvky $x$ a~$y$ jsou v~relaci $R$}, což ekvivalentně zapisujeme jako $xRy$. Jak už jsme si zmínili, tak relace již známe a~i v~tomto textu jsme je mnohokrát použili. Např. relace rovnosti "$=$" na $\N$ by obsahovala prvky $(1,1),\,(2,2),\,(3,3),\dots$. Pochopitelně bychom mohli psát "$(2,2)\in\;=$", ale to neděláme; místo toho zkrátka píšeme "$2=2$". Podobně např. relace "$\leq$" na množině $\R$, "$>$", "$\geq$", aj.
 \begin{convention}
     Pro značení relací budeme používat velká písmena latinské abecedy $A,B,C,\dots,X,Y,Z$.
 \end{convention}
-Relace můžeme znázornit více způsoby v~závislosti na jejich typu. Např. máme-li relaci $R=\set{(1,b),\,(1,d),\,(2,d),\,(3,c),\,(4,a)}$ mezi množinami $A=\set{1,2,3,4}$ a~$B=\set{1,2,3,4,5}$, pak ji můžeme znázornit způsobem uvedeným na obrázku \ref{fig:relace_mezi_mnozinami}.
+Relace můžeme znázornit více způsoby v~závislosti na jejich typu. Např. máme-li relaci $R=\set{(1,b),\,(1,d),\,(2,d),\,(3,c),\,(4,a)}$ mezi množinami $A=\set{1,2,3,4}$ a~$B=\set{a,b,c,d,e}$, pak ji můžeme znázornit způsobem uvedeným na obrázku \ref{fig:relace_mezi_mnozinami}.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=\normalipe]{ch02_relace_mezi_mnozinami.pdf}
@@ -27,7 +27,7 @@ Avšak pokud máme relaci $S$ \textbf{na množině} $C=\set{x,y,z}$, kupříklad
 \end{figure}
 Jako poslední si ještě zmíníme tzv. \emph{skládání relací}.
 \begin{definition}[Složení relací]\label{def:skladani_relaci}
-    Nechť $X,Y,Z$ jsou libovolné množiny, $R\subseteq X\times Y$ a~$S\subseteq Y\times Z$. Relace $T\subseteq X\times Z$ je složení relací $R$ a $S$, pokud
+    Nechť $X,Y,Z$ jsou libovolné množiny, $R\subseteq X\times Y$ a~$S\subseteq Y\times Z$. Relace $T\subseteq X\times Z$ nazýváme \emph{složení relací} $R$ a $S$, pokud
     \begin{equation*}
         xTz \iff \exists y\in Y : xRy \land ySz.
     \end{equation*}
@@ -41,9 +41,9 @@ Jako poslední si ještě zmíníme tzv. \emph{skládání relací}.
     Určete $T=S\circ R$.
 \end{example}
 \begin{solution}
-    Postupujme podle definice \ref{def:skladani_relaci} výše. Pro každou z dvojic v~$R$ se podíváme, zda existuje nějaká dvojice v~$s$ taková, že platí: $t_1Rt_2$ a~$t_2St_3$, kde $t_1\in a$ $t_2\in b$ a~$t_3\in C$.
+    Postupujme podle definice \ref{def:skladani_relaci} výše. Pro každou z dvojic v~$R$ se podíváme, zda existuje nějaká dvojice v~$S$ taková, že platí: $t_1Rt_2$ a~$t_2St_3$, kde $t_1\in A$, $t_2\in B$ a~$t_3\in C$.
     \begin{align*}
-        aRj \land zSj &\implies aTj,\\
+        aRz \land zSj &\implies aTj,\\
         aRy \land ySi &\implies aTi,\\
         aRy \land ySj &\implies aTj\;\text{(duplicitní)},\\
         cRx \land xSk &\implies cTk.
@@ -54,7 +54,7 @@ Jako poslední si ještě zmíníme tzv. \emph{skládání relací}.
     \centering
     \includegraphics[scale=\normalipe]{ch02_skladani_relaci.pdf}
     \caption{Grafické znázornění relace složení relací $R$ a~$S$ z příkladu \ref{ex:skladani_relaci}.}
-    \label{fig:relace_mezi_mnozinami}
+    \label{fig:skladani_relaci}
 \end{figure}
 
 Podívejme se ještě na jeden příklad:

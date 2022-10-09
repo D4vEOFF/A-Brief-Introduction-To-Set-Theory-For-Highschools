@@ -1,8 +1,11 @@
 # Záznam změn
 
+## 18. 9. 2022
+- Opraveny chyby uvedené v posudku paní doktorky Škorpilové.
+- Zejména opravena část v kapitole **"Logika"** při zavedení úmluvy o pořadí logických operací v sekci **"Výroková logika"** (odstranění nadbytečných závorek u výrokových proměnných).
+
 ## 11. 5. 2022
 - Opravena první polovina práce.
-- 
 
 ## 10. 5. 2022
 - Sekce o axiomatice v kapitole **"Historický úvod k teorii množin"** obsažena v samotné sekci **Axiomatická výstavba**.

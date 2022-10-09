@@ -19,7 +19,7 @@ Mezi logické spojky řadíme \emph{negaci} $\neg$, \emph{konjunkci} $\land$, \e
 Uvažujme libovolné výroky $A$ a~$B$.
 \begin{itemize}
     \item Negace $\neg A$ má opačnou pravdivostní hodnotu než $A$.
-    \item Konjunkce $A \land B$ je pravdivá, pokud je pravdivý výrok $A$ \textbf{a současně} je pravdivý výrok $B$. Tedy má-li $A$ nebo $B$ pravdivostní hodnotu 0, pak i~$A \land B$ má pravdivostní hodnotu 0. Čteme \emph{"$A$ a~(zároveň) $B$"}.
+    \item Konjunkce $A \land B$ je pravdivá právě tehdy, když je pravdivý výrok $A$ \textbf{a současně} je pravdivý výrok $B$. Tedy má-li $A$ nebo $B$ pravdivostní hodnotu 0, pak i~$A \land B$ má pravdivostní hodnotu 0. Čteme \emph{"$A$ a~(zároveň) $B$"}.
     \item Disjunkce $A \lor B$ je pravdivá, pokud alespoň jeden z výroků $A$ a~$B$ je pravdivý. Výrok $A \lor B$ je tedy nepravdivý pouze pokud jsou současně nepravdivé výroky $A$ i~$B$. Čteme \emph{"$A$ nebo $B$"}
     \item U implikace se často mluví o~výroku $A$ jako o~\emph{předpokladu} a~o~$B$ jako o~\emph{závěru}. Výrok $A \implies B$ pak říká, že pokud platí výrok $A$, \textbf{pak nutně platí} i~výrok $B$. Čteme \emph{"jestliže $A$, pak $B$", "z $A$ vyplývá $B$" či "$A$ implikuje $B$"}. Zde se hodí upozornit na to, že mezi předpokladem a~závěrem nemusí být nutně souvislost.
     \item Ekvivalence $A \iff B$ je pravdivá, pokud jsou výroky $A$ a~$B$ \textbf{současně pravdivé} nebo \textbf{současně nepravdivé}. Čteme \emph{"$A$ právě tehdy, když $B$"}.
@@ -60,12 +60,12 @@ Tento popis však nelze považovat za definici, neboť je zde pochopitelně řad
 \end{convention}
 Řekneme-li, že výrokové formule "jsou stejné", pak se formule shodují ve svém zápisu. Máme-li např. výrokové formule
 \begin{align*}
-    \varphi_1&\sim (A) \land \bigl((B) \lor (C)\bigr),\\
-    \varphi_2&\sim \bigl((A) \land (B)\bigr) \lor \bigl((A) \land (C)\bigr)\;\quad\text{a}\\
-    \varphi_3&\sim \bigl((A) \land (B)\bigr) \lor \bigl((A) \land (C)\bigr),
+    \varphi_1&\sim (\neg A) \land \bigl(B \lor C\bigr),\\
+    \varphi_2&\sim \bigl((\neg A) \land B\bigr) \lor \bigl((\neg A) \land C\bigr)\;\quad\text{a}\\
+    \varphi_3&\sim \bigl((\neg A) \land B\bigr) \lor \bigl((\neg A) \land C\bigr),
 \end{align*}
 pak můžeme psát, že $\varphi_2\sim\varphi_3$, ale nikoliv $\varphi_1\sim\varphi_2$, byť $\varphi_1$ a~$\varphi_2$ mají shodnou tabulku pravdivostních hodnot.\par
-Z příkladu výše lze však vidět poměrně nadměrné používání závorek. Ačkoliv bychom tak jednoznačně určili pořadí jednotlivých logických operací, existuje o~něco příjemnější přístup. Pro zjednodušení zápisu dalších výrokových formulí se proto budeme držet následující úmluvy \ref{conv:poradi_operaci}.
+Nyní se nabízí otázka ohledně pořadí logických operací. Mohli bychom si pomoci používáním závorek, existuje však o~něco příjemnější přístup.  Pro zjednodušení zápisu dalších výrokových formulí se proto budeme držet následující úmluvy \ref{conv:poradi_operaci}.
 \begin{convention}[Pořadí logických operací]\label{conv:poradi_operaci}
     Budeme dodržovat následující pořadí logických operací:
     \begin{enumerate}[label=(\arabic*)]
@@ -76,10 +76,9 @@ Z příkladu výše lze však vidět poměrně nadměrné používání závorek
 \begin{example}
     Zjednodušení některých formulí při aplikaci zavedeného pořadí logických operací v~úmluvě \ref{conv:poradi_operaci}.
     \begin{enumerate}[label=(\roman*)]
-        \item $(A) \land (B)\quad\rightsquigarrow\quad A \land B$,
+        \item $(\neg A) \land (\neg B)\quad\rightsquigarrow\quad \neg A \land \neg B$,
         \item $\neg(\neg A)\quad\rightsquigarrow\quad \neg\neg A$,
-        \item $\neg \bigl((A) \lor (B)\bigr)\quad \rightsquigarrow\quad \neg(A \lor B)$,
-        \item $\Bigl(\bigl((A) \land (B)\bigr) \lor \bigl(\neg (C)\bigr)\Bigr) \implies \bigl(\neg (A)\bigr) \land \bigl(\neg (C)\bigr)\\ \rightsquigarrow\quad(A \land B) \lor \neg C \implies \neg A \land \neg C$.
+        \item $\Bigl(\bigl(A \land B\bigr) \lor \bigl(\neg C\bigr)\Bigr) \implies \bigl(\neg A\bigr) \land \bigl(\neg C\bigr)\\ \rightsquigarrow\quad(A \land B) \lor \neg C \implies \neg A \land \neg C$.
     \end{enumerate}
 \end{example}
 
@@ -90,8 +89,8 @@ Před ukázkou na příkladech si ještě zavedeme jedno značení, které budem
 \end{definition}
 Pokud tedy budeme mít např. formule
 \begin{align*}
-    \varphi_1 &\sim \neg (A \land B),\\
-    \varphi_2 &\sim \neg A \lor \neg B,
+    \varphi &\sim \neg (A \land B),\\
+    \psi &\sim \neg A \lor \neg B,
 \end{align*}
 pak můžeme psát $\varphi\equiv\psi$, neboť jak se lze přesvědčit, formule $\neg (A \land B) \iff \neg A \lor \neg B$ je vždy pravdivá.\par
 Jaký je rozdíl mezi $\equiv$ a~$\iff$? Formálně vzato bychom mohli mezi formule jednoduše vkládat ekvivalenci, avšak pak by se nám tato logická spojka mohla plést s ekvivalencemi, které jsou součástí $\varphi$ a~$\psi$.
@@ -173,7 +172,7 @@ Tento středoškolský postup je zcela jistě vždy funkční. Avšak ne vždy j
         \end{equation*}
         je také vždy pravdivý (viz tabulka \ref{tab:logicke_spojky}). Celkově se tedy výroková formule $\psi$ zjednoduší takto
         \begin{align*}
-            \psi&\sim (\overbrace{0 \implies B}^{\equiv 1}) \lor \bigl((A \iff B) \land 1\bigr)\equiv  \\ &\equiv 1 \lor \bigl((A \iff B) \land 1\bigr).
+            \psi&\sim (\overbrace{0 \implies B}^{\equiv 1}) \lor \bigl((A \iff B) \land 1\bigr)\equiv  \\ &\equiv 1 \lor (A \iff B).
         \end{align*}
         Disjunkce je však pravdivá právě tehdy, když je alespoň jeden z výroků pravdivý, což zde platí. Z tohoto dostáváme výsledek, že
         \begin{equation*}
