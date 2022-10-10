@@ -14,6 +14,7 @@
 - **Vedoucí práce:** *RNDr. Martin Rmoutil, Ph.D.*
 - **Katedra**: *Katedra didaktiky matematiky*
 - **Rok:** *2021/2022*
+- **Psáno v**: TeX (PDFLaTeX)
 
 # Abstrakt (abstract)
 
