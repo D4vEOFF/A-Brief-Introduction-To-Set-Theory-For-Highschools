@@ -12,6 +12,7 @@
 - **Autor:** *David Weber*
 - **Studijní obor:** *Matematika se zaměřením na vzdělávání se sdruženým studiem informatika se zaměřením na vzdělávání*
 - **Vedoucí práce:** *RNDr. Martin Rmoutil, Ph.D.*
+- **Škola**: Univerzita Karlova
 - **Katedra**: *Katedra didaktiky matematiky*
 - **Rok:** *2021/2022*
 - **Psáno v**: TeX (PDFLaTeX)
