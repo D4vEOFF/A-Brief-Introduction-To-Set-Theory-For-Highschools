@@ -18,4 +18,4 @@ compile-no-bibtex:
 	${TEXCOMPILER} bachelor_thesis.tex
 
 clean:
-	del *.log *.dvi *.aux *.toc *.lof *.lot *.out *.bbl *.blg *.xmpi *.synctex.gz /f /s
+	find . -type f -name '*.(aux|dvi|aux|toc|lof|lot|out|bbl|blg|xmpi|synctex.gz)' -delete
