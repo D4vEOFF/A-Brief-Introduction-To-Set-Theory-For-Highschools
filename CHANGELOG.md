@@ -1,5 +1,8 @@
 # Záznam změn
 
+## 11. 10. 2022
+- Opravena chyba ve větě 2.1.11 (xiii)
+
 ## 18. 9. 2022
 - Opraveny chyby uvedené v posudku paní doktorky Škorpilové.
 - Zejména opravena část v kapitole **"Logika"** při zavedení úmluvy o pořadí logických operací v sekci **"Výroková logika"** (odstranění nadbytečných závorek u výrokových proměnných).
